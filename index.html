@@ -1,17 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>XploRayl</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-</head>
 
-<body>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
 
-</body>
+    <!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
+    <!-- For iPhone 4 with high-resolution Retina display: -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="apple-touch-icon.png"
+    />
+    <!-- For first-generation iPad: -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="apple-touch-icon.png"
+    />
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="apple-touch-icon-precomposed.png"
+    />
+    <!-- For nokia devices and desktop browsers : -->
+    <link rel="shortcut icon" href="favicon.ico" />
 
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <meta http-equiv="cleartype" content="on" />
+
+    <!-- jQuery Mobile CSS bits -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Javascript includes -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/mobileinit.js"></script>
+    <script src="js/ios-orientationchange-fix.min.js"></script>
+    <script src="js/jquery.mobile-1.4.0.js"></script>
+    <script src="js/application.js"></script>
+    <!-- Startup Images for iDevices -->
+    <script>
+      (function () {
+        var a;
+        if (navigator.platform === "iPad") {
+          a =
+            window.orientation !== 90 || window.orientation === -90
+              ? "images/startup-tablet-landscape.png"
+              : "images/startup-tablet-portrait.png";
+        } else {
+          a =
+            window.devicePixelRatio === 2
+              ? "images/startup-retina.png"
+              : "images/startup.png";
+        }
+        document.write(
+          '<link rel="apple-touch-startup-image" href="' + a + '"/>'
+        );
+      })();
+    </script>
+    <!-- The script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
+    <script>
+      (function (a, b, c) {
+        if (c in b && b[c]) {
+          var d,
+            e = a.location,
+            f = /^(a|html)$/i;
+          a.addEventListener(
+            "click",
+            function (a) {
+              d = a.target;
+              while (!f.test(d.nodeName)) d = d.parentNode;
+              "href" in d &&
+                (d.href.indexOf("http") || ~d.href.indexOf(e.host)) &&
+                (a.preventDefault(), (e.href = d.href));
+            },
+            !1
+          );
+        }
+      })(document, window.navigator, "standalone");
+    </script>
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header">
+        <h1>
+          <img src="./assets/xplo_logo.png" alt="XPLORAYL" width="70%" />
+        </h1>
+      </div>
+      <div class="grid-container">
+        <div><img src="./assets/profile.jpg" alt="Profile Picture" width="100px" style="vertical-align:middle; margin:20px 20px; border-radius: 60%;">
+        </div>
+        <div class="grid-item"><b>Orlando Smith</b><label style="color: #04D3D9;">Edit</label></div>
+      </div>
+      <div>
+        
+      </div>
+      <div class="ui-grid-b" data-theme="b">
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="text-align: center;">40</div>
+          <div class="ui-bar ui-bar-a" style="text-align: center;">Hunts</div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="text-align: center;">340</div>
+          <div class="ui-bar ui-bar-a" style="text-align: center;">Points</div>
+        </div
+        ><div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="text-align: center;">41</div>
+          <div class="ui-bar ui-bar-a" style="text-align: center;">Reviews</div>
+        </div>
+      </div>
+    
+      <div data-role="content">
+        <ul
+          data-role="listview"
+          data-inset="true"
+          data-theme="c"
+          data-dividertheme="b"
+        >
+          <li><a href="buttons.html">Achievements</a></li>
+          <li><a href="grids.html">Coupons</a></li>
+          <li><a href="collapsibles.html">Favourites</a></li>
+          <li><a href="collapsible-sets.html">Tickets</a></li>
+          <li><a href="forms.html">Payment methods</a></li>
+          <li><a href="lists.html">Sign Out</a></li>
+        </ul>
+      </div>
+       <!-- Navigation Bar -->
+       <div data-role="navbar">
+        <div data-role="footer" data-position="fixed">
+        <ul>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+            <g id="compass" transform="translate(0.5 1)">
+              <path id="Path_1136" data-name="Path 1136" d="M12,0A12,12,0,1,1,0,12,12,12,0,0,1,12,0Z" transform="translate(0.5)" fill="none" stroke="#404e5a" stroke-linecap="round" stroke-width="2"/>
+              <path id="Path_999" data-name="Path 999" d="M17.869,7.76l-2.527,8.023L7.76,18.457l2.527-8.023Z" transform="translate(-0.544 -0.992)" fill="none" stroke="#404e5a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23.713" height="26.503" viewBox="0 0 23.713 26.503">
+            <g id="search" transform="translate(1.419 1)">
+              <ellipse id="Ellipse_514" data-name="Ellipse 514" cx="10" cy="10.5" rx="10" ry="10.5" transform="translate(-0.419)" fill="none" stroke="#404e5a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <line id="Line_236" data-name="Line 236" x1="5.186" y1="5.487" transform="translate(15.694 18.602)" fill="none" stroke="#404e5a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </svg>
+          </a></li>
+          <li><a href="#"><img src="./assets/x_black.png" alt="XPLORAYL" width="50%" /></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="23" viewBox="0 0 16 23">
+            <g id="bar-chart-2" transform="translate(0.541 1)">
+              <line id="Line_233" data-name="Line 233" y1="13" transform="translate(14.459 8)" fill="none" stroke="#404e5a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <line id="Line_234" data-name="Line 234" y1="21" transform="translate(8.459)" fill="none" stroke="#404e5a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <line id="Line_235" data-name="Line 235" y1="7" transform="translate(0.459 14)" fill="none" stroke="#404e5a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </svg>
+          </a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26.04" height="24.05" viewBox="0 0 26.04 24.05">
+            <g id="user" transform="translate(1 1)">
+              <path id="Path_1000" data-name="Path 1000" d="M28.04,22.186v-2.4c0-2.646-2.691-4.791-6.01-4.791H10.01C6.691,15,4,17.145,4,19.791v2.4" transform="translate(-4 -0.136)" fill="none" stroke="#04d3d9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <ellipse id="Ellipse_515" data-name="Ellipse 515" cx="5.457" cy="5.6" rx="5.457" ry="5.6" transform="translate(6.67 0)" fill="none" stroke="#04d3d9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    .grid-item {
+      padding-top: 40px;
+      margin-left: -100px;
+      font-size: 20px;
+    }
+    </style>
 </html>
