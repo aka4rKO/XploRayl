@@ -1,0 +1,84 @@
+/* colors hex codes
+cyan 04d3d9
+dark grey 404e5a
+medium grey 748a9d
+light grey dbe2ed
+black 000
+white fff */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: #f0f4f8 !important;
+}
+
+.header-logo {
+  margin: 1em 0;
+  width: 5em;
+}
+
+.hero {
+  background-color: tomato;
+}
+
+.navbar-logo {
+  width: 1.87em;
+  padding: 1em;
+}
+
+.circle {
+  background-color: #404e5a !important;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-btn {
+  padding: 1.5em 0;
+  border: none;
+  background-color: #f0f4f8 !important;
+}
+
+.nav-btn-logo {
+  height: 3.85em;
+  border: none;
+  background-color: #f0f4f8 !important;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  border: none;
+  background-color: #f0f4f8 !important;
+}
+
+.active-navbar-icon {
+  filter: invert(67%) sepia(91%) saturate(1467%) hue-rotate(130deg)
+    brightness(93%) contrast(97%);
+}
+
+.ui-btn:focus {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.hero {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("../assets/images/hero.jpg");
+
+  /* Set a specific height */
+  height: 100% !important;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
