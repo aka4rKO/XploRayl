@@ -6,7 +6,187 @@ light grey dbe2ed
 black 000
 white fff */
 
-.header {
+/* Fonts */
+@font-face {
+  font-family: "Poppins regular";
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins light";
+  src: url("../assets/fonts/Poppins-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins medium";
+  src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins semibold";
+  src: url("../assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins bold";
+  src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+}
+
+.placeholder-text {
+  font-family: "Poppins light" !important;
+  font-size: 14px !important;
+  color: #748a9d !important;
+}
+
+.label-text {
+  font-family: "Poppins regular" !important;
+  font-size: 16px !important;
+  color: #404e5a !important;
+}
+
+.link-text {
+  font-family: "Poppins regular" !important;
+  font-size: 16px !important;
+  color: #04d3d9 !important;
+}
+
+.body-text {
+  font-family: "Poppins regular" !important;
+  font-size: 16px !important;
+  color: #748a9d !important;
+}
+
+.heading1-text {
+  font-family: "Poppins bold" !important;
+  font-size: 30px !important;
+  color: #000 !important;
+}
+
+.heading2-text {
+  font-family: "Poppins bold" !important;
+  font-size: 24px !important;
+  color: #404e5a !important;
+}
+
+.heading3-text {
+  font-family: "Poppins bold" !important;
+  font-size: 20px !important;
+  color: #748a9d !important;
+}
+
+.card1-text {
+  font-family: "Poppins medium" !important;
+  font-size: 16px !important;
+  color: #fff !important;
+}
+
+.card2-text {
+  font-family: "Poppins regular" !important;
+  font-size: 14px !important;
+  color: #dbe2ed !important;
+}
+
+.card3-text {
+  font-family: "Poppins regular" !important;
+  font-size: 15px !important;
+  color: #404e5a !important;
+}
+
+/* Buttons */
+.ui-btn {
+  padding: 1em 0;
+  width: 21.5em !important;
+  border-radius: 3em !important;
+  background-color: #04d3d9 !important;
+  border: 3px solid #04d3d9 !important;
+  font-family: "Poppins semibold" !important;
+  font-size: 14px !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+.ui-btn:focus {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.ui-btn:active {
+  background-color: #05a5aa !important;
+  border: 3px solid #05a5aa !important;
+}
+
+.ui-btn-disabled {
+  background-color: #748a9d !important;
+  border: 3px solid #748a9d !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.ui-btn-secondary {
+  border: 3px solid #04d3d9 !important;
+  background-color: transparent !important;
+  color: #04d3d9 !important;
+}
+
+.ui-btn-secondary:active {
+  background-color: #04d3d9 !important;
+  color: #fff !important;
+  border: 3px solid #04d3d9 !important;
+}
+
+.hero-btn {
+  border: 3px solid #fff !important;
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.hero-btn:active {
+  border: 3px solid #fff !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+/* Other */
+.ui-page-theme-a {
+  text-shadow: none !important;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 25vw auto;
+}
+
+.side {
+  width: 25vw;
+  height: 100vh;
+  position: fixed;
+  background: #f0f4f8;
+}
+
+.main {
+  grid-column-start: 2;
+  display: grid;
+}
+
+.hero {
+  height: 105vh;
+  background-image: url("../assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 0em 0em 2em 2em;
+}
+
+.categories {
+  background: #fff;
+}
+
+.footer {
+  background: green;
+}
+
+/* .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +197,6 @@ white fff */
 .header-logo {
   margin: 1em 0;
   width: 5em;
-}
-
-.hero {
-  background-color: tomato;
 }
 
 .navbar-logo {
@@ -63,22 +239,22 @@ white fff */
     brightness(93%) contrast(97%);
 }
 
-.ui-btn:focus {
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
-.hero {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+ .hero {
+  Sizing
+  width: 100vw;
+  height: 78vh;
+  Background styles
   background-image: url("../assets/images/hero.jpg");
-
-  /* Set a specific height */
-  height: 100% !important;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 0em 0em 2em 2em;
+  display: flex;
 }
+
+.hero-flex {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+} */
