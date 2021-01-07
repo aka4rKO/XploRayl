@@ -1,10 +1,13 @@
 /* colors hex codes
-cyan 04d3d9
-dark grey 404e5a
-medium grey 748a9d
-light grey dbe2ed
-black 000
-white fff */
+cyan #04d3d9
+dark grey #404e5a
+medium grey #748a9d
+light grey #dbe2ed
+black #000
+white #fff 
+red #ef5350
+green #7bed8d
+*/
 
 /* Fonts */
 @font-face {
@@ -44,31 +47,32 @@ white fff */
   color: #404e5a !important;
 }
 
-.link-text {
+a {
   font-family: "Poppins regular" !important;
   font-size: 16px !important;
   color: #04d3d9 !important;
+  text-decoration: none !important;
 }
 
-.body-text {
+p {
   font-family: "Poppins regular" !important;
   font-size: 16px !important;
   color: #748a9d !important;
 }
 
-.heading1-text {
+h1 {
   font-family: "Poppins bold" !important;
   font-size: 30px !important;
   color: #000 !important;
 }
 
-.heading2-text {
+h2 {
   font-family: "Poppins bold" !important;
   font-size: 24px !important;
   color: #404e5a !important;
 }
 
-.heading3-text {
+h3 {
   font-family: "Poppins bold" !important;
   font-size: 20px !important;
   color: #748a9d !important;
@@ -90,6 +94,32 @@ white fff */
   font-family: "Poppins regular" !important;
   font-size: 15px !important;
   color: #404e5a !important;
+}
+
+.hero-text {
+  font-family: "Poppins bold" !important;
+  font-size: 30px !important;
+  color: #fff !important;
+  margin-top: 5em;
+}
+
+.footer-heading-text {
+  font-family: "Poppins bold" !important;
+  font-size: 15px !important;
+  color: #fff !important;
+}
+
+.footer-copyright-text {
+  font-family: "Poppins light" !important;
+  font-size: 12px !important;
+  color: #dbe2ed !important;
+  margin-bottom: 1em;
+}
+
+.footer-address-text {
+  font-family: "Poppins regular" !important;
+  font-size: 12px !important;
+  color: #fff !important;
 }
 
 /* Buttons */
@@ -147,14 +177,89 @@ white fff */
   color: #000 !important;
 }
 
+.subscribe-btn {
+  padding: 0.5em 0;
+  width: 10em !important;
+}
+
+/* Horizontal scroll */
+.pois-container {
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pois {
+  display: flex;
+  overflow: auto;
+  padding: 0 1em;
+}
+
+.poi {
+  min-width: 13em;
+  height: 15em;
+  margin-right: 1em;
+  position: relative;
+}
+
+.poi:before {
+  border-radius: 1em;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.poi img {
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poi .poi-info {
+  padding: 1em;
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  left: 0px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.poi .poi-info img {
+  width: 1em;
+}
+
 /* Other */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.ui-content {
+  padding-bottom: 0;
+}
+
+.ui-page-theme-a {
+  background-color: #fff;
+}
+
 .ui-page-theme-a {
   text-shadow: none !important;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 25vw auto;
+  grid-template-columns: 25vw 75vw;
 }
 
 .side {
@@ -173,18 +278,132 @@ white fff */
   height: 105vh;
   background-image: url("../assets/images/hero.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center 90%;
   background-repeat: no-repeat;
   border-radius: 0em 0em 2em 2em;
+  background-size: 110%;
 }
 
 .categories {
   background: #fff;
 }
 
-.footer {
-  background: green;
+.center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.footer {
+  margin-top: 4em;
+  background-color: #404e5a;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 3fr;
+  grid-row-gap: 1em;
+}
+
+.footer-logo-container {
+  /* background-color: crimson; */
+  grid-column: 1/4;
+}
+
+.contact-us-container {
+  /* background-color: aqua; */
+}
+
+.follow-us-container {
+  /* background-color: red; */
+}
+
+.newsletter-container {
+  /* background-color: blueviolet; */
+}
+
+.copyright-container {
+  grid-column: 1/4;
+  /* background-color: brown; */
+}
+
+.footer-logo {
+  width: 5em;
+}
+
+.follow-us-container img {
+  width: 2.5em;
+}
+
+.active-navbar-icon {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(91%) saturate(1467%)
+    hue-rotate(130deg) brightness(93%) contrast(97%);
+}
+
+.poi-img-icon-color {
+  filter: brightness(0) saturate(100%) invert(90%) sepia(16%) saturate(116%)
+    hue-rotate(184deg) brightness(93%) contrast(82%);
+}
+
+.center-vertically-margin-top {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.header-logo-sidebar {
+  margin: 1em 0 2em 0;
+  width: 7em;
+}
+
+.sidebar-nav-btn-contents {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-nav-btn-contents img {
+  margin: 0 0.5em 0 1em;
+  width: 2em;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(3%) saturate(7500%)
+    hue-rotate(195deg) brightness(93%) contrast(103%);
+}
+
+.sidebar-nav-btn-contents span {
+  font-size: 1.5em !important;
+  color: #000;
+}
+
+.sidebar-nav-btn {
+  padding: 1em 0;
+  border-radius: 0em 2em 2em 0em;
+  width: 15em;
+}
+
+.sidebar-nav-btn-active {
+  background-color: #04d3d9 !important;
+  padding: 1em 0;
+  border-radius: 0em 2em 2em 0em;
+  width: 15em;
+}
+
+.sidebar-nav-btn-content-active {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(6737%)
+    hue-rotate(168deg) brightness(145%) contrast(126%) !important;
+}
+
+/* testing styles */
+
+/* testing styles */
 
 /* .header {
   display: flex;
@@ -192,11 +411,6 @@ white fff */
   align-items: center;
   border: 0;
   background-color: #f0f4f8 !important;
-}
-
-.header-logo {
-  margin: 1em 0;
-  width: 5em;
 }
 
 .navbar-logo {
@@ -232,11 +446,6 @@ white fff */
 .footer {
   border: none;
   background-color: #f0f4f8 !important;
-}
-
-.active-navbar-icon {
-  filter: invert(67%) sepia(91%) saturate(1467%) hue-rotate(130deg)
-    brightness(93%) contrast(97%);
 }
 
  .hero {
