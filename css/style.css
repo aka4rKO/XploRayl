@@ -7,6 +7,9 @@ black #000
 white #fff 
 red #ef5350
 green #7bed8d
+
+both landscape sidebar
+both portrait navbar
 */
 
 /* Fonts */
@@ -100,7 +103,7 @@ h3 {
   font-family: "Poppins bold" !important;
   font-size: 30px !important;
   color: #fff !important;
-  margin-top: 5em;
+  margin-top: 8em;
 }
 
 .footer-heading-text {
@@ -196,6 +199,15 @@ h3 {
   padding: 0 1em;
 }
 
+.pois::after {
+  content: "";
+  min-width: 0.1px;
+  height: 15em;
+  margin-right: 1em;
+  position: relative;
+  background-color: lawngreen;
+}
+
 .poi {
   min-width: 13em;
   height: 15em;
@@ -232,8 +244,6 @@ h3 {
   z-index: 3;
   bottom: 0px;
   left: 0px;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 .poi .poi-info img {
@@ -366,6 +376,19 @@ h3 {
   width: 7em;
 }
 
+.header-logo {
+  margin: 1em 0;
+  width: 6em;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background-color: #f0f4f8 !important;
+}
+
 .sidebar-nav-btn-contents {
   display: flex;
   align-items: center;
@@ -401,21 +424,15 @@ h3 {
     hue-rotate(168deg) brightness(145%) contrast(126%) !important;
 }
 
-/* testing styles */
-
-/* testing styles */
-
-/* .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0;
+/* Navbar */
+.footer-navbar {
+  border: none;
   background-color: #f0f4f8 !important;
+  position: fixed !important;
 }
 
 .navbar-logo {
   width: 1.87em;
-  padding: 1em;
 }
 
 .circle {
@@ -423,47 +440,55 @@ h3 {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  margin-top: 0.7em;
 }
 
 .nav-btn {
   padding: 1.5em 0;
   border: none;
   background-color: #f0f4f8 !important;
+  padding: 1.5em 0;
+  border: none !important;
+  background-color: #f0f4f8 !important;
+  width: auto !important;
+  border-radius: unset !important;
 }
 
 .nav-btn-logo {
-  height: 3.85em;
-  border: none;
-  background-color: #f0f4f8 !important;
+  padding: 0;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* iPad portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .side {
+    display: none !important;
+  }
+
+  .wrapper {
+    display: block;
+    grid-template-columns: 100vw;
+  }
+
+  .pois-container {
+    width: 100vw;
+  }
+
+  .hero {
+    height: 85vh;
+  }
+
+  .hero-text {
+    margin-top: 10em;
+  }
 }
 
-.footer {
-  border: none;
-  background-color: #f0f4f8 !important;
-}
+/* iPad landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .header {
+    display: none;
+  }
 
- .hero {
-  Sizing
-  width: 100vw;
-  height: 78vh;
-  Background styles
-  background-image: url("../assets/images/hero.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border-radius: 0em 0em 2em 2em;
-  display: flex;
+  .footer-navbar {
+    display: none !important;
+  }
 }
-
-.hero-flex {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  height: 100%;
-} */
