@@ -123,6 +123,7 @@ h3 {
   font-family: "Poppins regular" !important;
   font-size: 12px !important;
   color: #fff !important;
+  text-align: center;
 }
 
 /* Buttons */
@@ -205,7 +206,6 @@ h3 {
   height: 15em;
   margin-right: 1em;
   position: relative;
-  background-color: lawngreen;
 }
 
 .poi {
@@ -323,28 +323,30 @@ h3 {
   display: grid;
   grid-template-columns: 2fr 1.5fr 3fr;
   grid-row-gap: 1em;
+  grid-template-areas:
+    "footer-logo-container footer-logo-container footer-logo-container"
+    "contact-us-container follow-us-container newsletter-container"
+    "copyright-container copyright-container copyright-container";
 }
 
 .footer-logo-container {
-  /* background-color: crimson; */
-  grid-column: 1/4;
+  grid-area: footer-logo-container;
 }
 
 .contact-us-container {
-  /* background-color: aqua; */
+  grid-area: contact-us-container;
 }
 
 .follow-us-container {
-  /* background-color: red; */
+  grid-area: follow-us-container;
 }
 
 .newsletter-container {
-  /* background-color: blueviolet; */
+  grid-area: newsletter-container;
 }
 
 .copyright-container {
-  grid-column: 1/4;
-  /* background-color: brown; */
+  grid-area: copyright-container;
 }
 
 .footer-logo {
@@ -449,9 +451,13 @@ h3 {
   background-color: #f0f4f8 !important;
   padding: 1.5em 0;
   border: none !important;
-  background-color: #f0f4f8 !important;
   width: auto !important;
   border-radius: unset !important;
+}
+
+.nav-btn:active {
+  background-color: #f0f4f8 !important;
+  border: none !important;
 }
 
 .nav-btn-logo {
@@ -490,5 +496,105 @@ h3 {
 
   .footer-navbar {
     display: none !important;
+  }
+}
+
+/* iPhone portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .side {
+    display: none !important;
+  }
+
+  .wrapper {
+    display: block;
+    grid-template-columns: 100vw;
+  }
+
+  .pois-container {
+    width: 100vw;
+  }
+
+  .hero {
+    height: 76vh;
+  }
+
+  .hero-text {
+    margin: 0 0 10.5em 0;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "footer-logo-container"
+      "contact-us-container"
+      "follow-us-container"
+      "newsletter-container"
+      "copyright-container";
+  }
+}
+
+/* iPhone landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .header {
+    display: none;
+  }
+
+  .footer-navbar {
+    display: none !important;
+  }
+
+  .hero {
+    height: 107vh;
+    background-size: 100%;
+    background-position: center 90%;
+  }
+
+  .hero-text {
+    margin-top: 4em;
+  }
+
+  .sidebar-nav-btn-contents span {
+    display: none;
+  }
+
+  .sidebar-nav-btn-contents img {
+    margin: 0em auto;
+    width: 1.5em;
+  }
+
+  .sidebar-nav-btn {
+    padding: 0.7em 0em;
+    width: auto;
+  }
+
+  .sidebar-nav-btn-active {
+    padding-left: 0.7em;
+    width: 6em;
+  }
+
+  .header-logo-sidebar {
+    width: 5em;
+  }
+
+  .side {
+    width: 18vw;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 18vw 82vw;
+  }
+
+  .pois-container {
+    width: 82vw;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "footer-logo-container footer-logo-container"
+      "contact-us-container follow-us-container"
+      "newsletter-container newsletter-container"
+      "copyright-container copyright-container";
   }
 }
