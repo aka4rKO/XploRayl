@@ -1,0 +1,68 @@
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.2fr 1.5fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr;
+    grid-template-areas: 
+    "img profile-header signout"
+    "img stats-data stats-data";
+  }
+  
+  .profile-pic {
+    vertical-align: middle;
+    margin: 40px;
+    border-radius: 60%;
+    height: 150px;
+    width: 150px;
+    grid-area: img;
+  }
+  .stats-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: 120px;
+    border-radius: 10px;
+    background-color: #404e5a;
+    padding: 10px;
+    text-align: center;
+    grid-area: stats-data;
+  }
+  #profile-header {
+    margin-top: 50px;
+    grid-area: profile-header;
+  }
+
+  #signout {
+    margin-top: 50px;
+    grid-area: signout;
+  }
+  
+  h2 {
+    margin: 1px;
+  }
+  h3 {
+      margin: 1px;
+      color: white !important;
+    }
+    p {
+      margin: 1px;
+      color: white !important;
+    }
+  
+    @media only screen and (max-width: 550px){
+        .profile-pic {
+            vertical-align: middle;
+            margin: 40px;
+            border-radius: 60%;
+            height: 100px;
+            width: 100px;
+          }
+      .grid-container2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+
+          border-radius: 10px;
+          background-color: #404e5a;
+          padding: 10px;
+          text-align: center;
+        }
+    }
