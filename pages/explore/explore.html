@@ -2,22 +2,20 @@
 <html lang="en">
   <head>
     <title>XploRayl</title>
+    <link rel="icon" type="image/png" href="./../../favicon.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./../../style.css" />
+    <link rel="stylesheet" href="./explore.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".footer-navbar").removeClass("slideup");
-      });
-    </script>
+    <script src="./../../script.js"></script>
+    <script src="./explore.js"></script>
   </head>
-
   <body>
     <div data-role="page">
       <!-- Sidebar start -->
@@ -25,17 +23,17 @@
         <div class="ui-content center-column">
           <img
             class="header-logo-sidebar"
-            src="../assets/images/full logo black color.png"
+            src="./../../assets/images/logos/full logo black color.png"
             alt=""
           />
         </div>
         <div>
           <div class="sidebar-nav-btn-active">
-            <a href="">
+            <a href="#">
               <div class="sidebar-nav-btn-contents">
                 <img
                   class="sidebar-nav-btn-content-active"
-                  src="../assets/icons/compass.svg"
+                  src="./../../assets/icons/compass.svg"
                   alt=""
                 />
                 <span class="sidebar-nav-btn-content-active">Explore</span>
@@ -43,33 +41,37 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="">
+            <a href="./../search/search.html" data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img class="" src="../assets/icons/search.svg" alt="" />
+                <img class="" src="./../../assets/icons/search.svg" alt="" />
                 <span>Search</span>
               </div>
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="">
+            <a href="./../my-hunts/my-hunts.html" data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img class="" src="../assets/icons/x white.svg" alt="" />
+                <img class="" src="./../../assets/icons/x white.svg" alt="" />
                 <span>My Hunts</span>
               </div>
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="">
+            <a href="./../leaderboard/leaderboard.html" data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img class="" src="../assets/icons/bar-chart-2.svg" alt="" />
+                <img
+                  class=""
+                  src="./../../assets/icons/bar-chart-2.svg"
+                  alt=""
+                />
                 <span>Leaderboard</span>
               </div>
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="">
+            <a href="./../profile/profile.html" data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img class="" src="../assets/icons/user.svg" alt="" />
+                <img class="" src="./../../assets/icons/user.svg" alt="" />
                 <span>Profile</span>
               </div>
             </a>
@@ -83,7 +85,7 @@
           <div class="header" data-role="header">
             <img
               class="header-logo"
-              src="..\assets\images\full logo black color.png"
+              src="./../../assets/images/logos/full logo black color.png"
               alt=""
             />
           </div>
@@ -107,7 +109,7 @@
                 <div class="pois">
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -115,7 +117,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -124,7 +126,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -132,7 +134,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -141,7 +143,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -149,7 +151,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -158,7 +160,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -166,7 +168,24 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
+                          alt=""
+                        />
+                        <span class="card2-text">&nbsp;London</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div class="card1-text">British Museum</div>
+                      <div class="center-vertically-margin-top">
+                        <img
+                          class="poi-img-icon-color"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -185,7 +204,7 @@
                 <div class="pois">
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -193,7 +212,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -202,7 +221,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -210,7 +229,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -219,7 +238,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -227,7 +246,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -236,7 +255,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -244,7 +263,24 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
+                          alt=""
+                        />
+                        <span class="card2-text">&nbsp;London</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div class="card1-text">British Museum</div>
+                      <div class="center-vertically-margin-top">
+                        <img
+                          class="poi-img-icon-color"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -263,7 +299,7 @@
                 <div class="pois">
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -271,7 +307,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -280,7 +316,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -288,7 +324,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -297,7 +333,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -305,7 +341,7 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -314,7 +350,7 @@
                   </div>
                   <div class="poi">
                     <img
-                      src="../assets/images/pois/british-museum.jpg"
+                      src="./../../assets/images/pois/british-museum.jpg"
                       alt=""
                     />
                     <div class="poi-info">
@@ -322,7 +358,24 @@
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
-                          src="../assets/icons/map-pin.svg"
+                          src="./../../assets/icons/map-pin.svg"
+                          alt=""
+                        />
+                        <span class="card2-text">&nbsp;London</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div class="card1-text">British Museum</div>
+                      <div class="center-vertically-margin-top">
+                        <img
+                          class="poi-img-icon-color"
+                          src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
                         <span class="card2-text">&nbsp;London</span>
@@ -339,7 +392,7 @@
             <div class="footer-logo-container center-column">
               <img
                 class="footer-logo"
-                src="../assets/images/full logo white.png"
+                src="./../../assets/images/logos/full logo white.png"
                 alt=""
               />
             </div>
@@ -348,7 +401,7 @@
               <div class="center-vertically-margin-top">
                 <img
                   class="active-navbar-icon"
-                  src="../assets/icons/phone-call.svg"
+                  src="./../../assets/icons/phone-call.svg"
                   alt=""
                 />
                 <span class="card2-text">&nbsp;+44 7911 123456</span>
@@ -356,7 +409,7 @@
               <div class="center-vertically-margin-top">
                 <img
                   class="active-navbar-icon"
-                  src="../assets/icons/mail.svg"
+                  src="./../../assets/icons/mail.svg"
                   alt=""
                 />
                 <span class="card2-text">&nbsp;info@xploray.com</span>
@@ -366,16 +419,16 @@
               <div class="footer-heading-text">Follow Us</div>
               <div class="center-vertically-margin-top">
                 <a href=""
-                  ><img src="../assets/icons/facebook-logo.svg" alt=""
+                  ><img src="./../../assets/icons/facebook-logo.svg" alt=""
                 /></a>
                 <a href=""
                   ><img
-                    src="../assets/icons/twitter-social-logotype.svg"
+                    src="./../../assets/icons/twitter-social-logotype.svg"
                     alt=""
                 /></a>
                 <a href=""
                   ><img
-                    src="../assets/icons/instagram-social-network-logo-of-photo-camera.svg"
+                    src="./../../assets/icons/instagram-social-network-logo-of-photo-camera.svg"
                     alt=""
                 /></a>
               </div>
@@ -407,34 +460,47 @@
                   <a class="nav-btn ui-btn-active" href="#"
                     ><img
                       class="active-navbar-icon"
-                      src="../assets/icons/compass.svg"
+                      src="./../../assets/icons/compass.svg"
                       alt=""
                   /></a>
                 </li>
                 <li>
-                  <a class="nav-btn" href="#"
-                    ><img src="../assets/icons/search.svg" alt=""
+                  <a
+                    class="nav-btn"
+                    href="./../search/search.html"
+                    data-prefetch="true"
+                    ><img src="./../../assets/icons/search.svg" alt=""
                   /></a>
                 </li>
                 <li class="center-column">
-                  <a class="nav-btn nav-btn-logo" href="#">
+                  <a
+                    class="nav-btn nav-btn-logo"
+                    href="./../my-hunts/my-hunts.html"
+                    data-prefetch="true"
+                  >
                     <div class="circle center-column">
                       <img
                         class="navbar-logo"
-                        src="../assets/icons/x white.svg"
+                        src="./../../assets/icons/x white.svg"
                         alt=""
                       />
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a class="nav-btn" href="#"
-                    ><img src="../assets/icons/bar-chart-2.svg" alt=""
+                  <a
+                    class="nav-btn"
+                    href="./../leaderboard/leaderboard.html"
+                    data-prefetch="true"
+                    ><img src="./../../assets/icons/bar-chart-2.svg" alt=""
                   /></a>
                 </li>
                 <li>
-                  <a class="nav-btn" href="#"
-                    ><img src="../assets/icons/user.svg" alt=""
+                  <a
+                    class="nav-btn"
+                    href="./../profile/profile.html"
+                    data-prefetch="true"
+                    ><img src="./../../assets/icons/user.svg" alt=""
                   /></a>
                 </li>
               </ul>
