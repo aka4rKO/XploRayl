@@ -32,8 +32,6 @@
 .pois-container {
   width: 75vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .pois {
