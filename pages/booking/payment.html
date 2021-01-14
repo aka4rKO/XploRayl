@@ -9,7 +9,6 @@
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
-    <link rel="stylesheet" href="./../../style.css" />
     <link rel="stylesheet" href="./booking.css" />
     <link
       rel="stylesheet"
@@ -19,6 +18,12 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<link rel="stylesheet" href="./../../style.css" />
 
     <script src="./../../script.js"></script>
     <script src="./booking.js"></script>
@@ -107,7 +112,19 @@
           <div class="order-field center-column center-row placeholder-text">
           <div class="field-placeholder add-card-placeholder label-text center-column">
             <img style="width: 4em;" src="../../assets/icons/plus-circle.svg" class="icon-grey" alt="">
-            <div>ADD CARD</div>
+
+            
+            <a href="#common-modal" rel="modal:open"> <h3>ADD CARD</h3></a>
+
+            <div id="common-modal" class="modal ui-modal">
+              <h1 class="center-column center-row">Add Card</h1>
+              <p >Thanks for clicking. That felt good.</p>
+              <a href="#" rel="modal:close">Close</a>
+            </div>
+            
+            <!-- Link to open the modal -->
+        
+
           </div>
         </div>
           <div class="card-list">
