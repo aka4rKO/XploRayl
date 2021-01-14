@@ -3,5 +3,6 @@ $(document).ready(function () {
 });
 
 $(function () {
-  $("a").attr("rel", "external");
+  $(".anchor-external").attr("rel", "external");
 });
+
