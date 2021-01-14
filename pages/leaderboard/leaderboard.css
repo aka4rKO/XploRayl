@@ -1,24 +1,127 @@
 .leaderboard {
-  height: 95vh;
   background-image: url("./../../assets/images/celebration.png");
-  background-position: 93% 82%;
+  background-position: 75% 40%;
   background-repeat: no-repeat;
-  background-size: 148%;
+  background-size: 120%;
+  background-attachment: fixed;
   object-fit: cover;
+}
+
+.first-three-place {
+  background-color: #7bed8d;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.card-text-main-white {
+  font-family: "Poppins bold" !important;
+  font-size: 20px !important;
+  color: #fff !important;
+  margin: 0 0.5em;
+}
+
+.card-text-main-white-pts {
+  font-family: "Poppins regular" !important;
+  font-size: 20px !important;
+  color: #fff !important;
+  margin: 0 0.5em;
+}
+
+.float-right {
+  margin-left: auto;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+.center-row-card {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
 .footer {
   margin-top: 0;
-}
-
-.trophy {
-  /* background-color: yellow; */
+  z-index: 5;
 }
 
 .first-three-places {
-  /* background-color: teal; */
+  margin-top: 4em;
 }
 
 .other-places {
-  /* background-color: tomato; */
+  margin-top: 4em;
+}
+
+.other {
+  background-color: #dbe2ed;
+}
+
+.color-grey-text {
+  color: #748a9d !important;
+}
+
+.main-character {
+  background-color: #04d3d9;
+}
+
+.main-character * {
+  color: #fff !important;
+}
+
+.main-character-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 72vw;
+}
+
+/* iPad portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .leaderboard {
+    background-position: 98% 0%;
+    background-size: 145%;
+  }
+
+  .main-character-fixed {
+    bottom: 55px;
+    width: 96vw;
+  }
+}
+
+/* iPad landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* iPhone portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .leaderboard {
+    background-position: 75% 15%;
+    background-size: 166%;
+  }
+
+  .main-character-fixed {
+    bottom: 55px;
+    width: 92vw;
+  }
+
+  .card-text-main-white {
+    font-size: 15px !important;
+  }
+
+  .card-text-main-white-pts {
+    font-size: 15px !important;
+  }
+}
+
+/* iPhone landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .main-character-fixed {
+    bottom: -16px;
+    width: 77.5vw;
+  }
 }
