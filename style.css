@@ -164,7 +164,57 @@ h3 {
   width: 10em !important;
 }
 
+/* Input */
+legend {
+  margin-left: 0.5em;
+}
+
+.ui-page-theme-a .ui-body-inherit {
+  border-color: #f0f4f8;
+}
+
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0px solid #ccc;
+  font-size: 16px;
+  background-color: #f0f4f8;
+  background-image: url("./../../assets/icons/input/mail.svg");
+  background-position: 20px 0px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0px 25px 15px 60px;
+}
+
+input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0px solid #ccc;
+  font-size: 16px;
+  background-color: #f0f4f8;
+  background-image: url("./../../assets/icons/input/key.svg");
+  background-position: 20px 0px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0px 25px 15px 60px;
+}
+
+fieldset {
+  border: 1px solid #000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  background-color: #f0f4f8;
+  height: 4em;
+}
+
 /* Other */
+.ui-focus {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -203,6 +253,14 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.right-align {
+  margin-left: auto;
+}
+
+.left-align {
+  margin-right: auto;
 }
 
 .center-row {
@@ -361,6 +419,16 @@ h3 {
 
 .nav-btn-logo {
   padding: 0;
+}
+
+/* Spash */
+.splash-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.splash-logo {
+  width: 10em;
 }
 
 /* iPad portrait */
