@@ -263,6 +263,20 @@ fieldset {
   margin-right: auto;
 }
 
+.left-column {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.right-column {
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .center-row {
   display: flex;
   justify-content: center;
@@ -373,6 +387,19 @@ fieldset {
   border-radius: 0em 2em 2em 0em;
   width: 15em;
 }
+.sidebar-nav-booking-active {
+  padding: 1em 0;
+  border-radius: 0em 2em 2em 0em;
+  width: 15em;
+}
+
+.booking-complete {
+  color: #04d3d9 !important;
+}
+.booking-complete img {
+  filter: invert(111%) sepia(95%) saturate(3725%) hue-rotate(141deg)
+    brightness(108%) contrast(97%);
+}
 
 .sidebar-nav-btn-content-active {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(6737%)
@@ -429,6 +456,21 @@ fieldset {
 
 .splash-logo {
   width: 10em;
+}
+
+.field-placeholder {
+  background-color: #f0f4f8;
+  height: 3em;
+  margin-bottom: 0.5em;
+  border-radius: 3px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 1.5em;
+  color: #748a9d;
+}
+
+.coupon-field {
+  margin-top: 6em;
 }
 
 /* iPad portrait */
