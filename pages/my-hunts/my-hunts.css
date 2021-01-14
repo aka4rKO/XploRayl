@@ -1,0 +1,12 @@
+.modal a.close-modal{
+    position: absolute;
+    top: 14.5px;
+    right: 22.5px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('/assets/icons/x.svg')

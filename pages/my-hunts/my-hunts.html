@@ -5,6 +5,10 @@
     <link rel="icon" type="image/png" href="./../../favicon.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -17,7 +21,7 @@
     <script src="./my-hunts.js"></script>
   </head>
   <body>
-    <div data-role="page">
+    <div>
       <!-- Sidebar start -->
       <div class="side">
         <div class="ui-content center-column">
@@ -89,6 +93,21 @@
               alt=""
             />
           </div>
+
+          <div class="body-content">
+                <h1>My Hunts</h1>
+
+                <div id="common-modal" class="modal ui-modal">
+                  <h1 class="center-column center-row">Add Card</h1>
+                  <p >Thanks for clicking. That felt good.</p>
+                  <a href="#" rel="modal:close">Close</a>
+                </div>
+                
+                <!-- Link to open the modal -->
+                <p><a href="#common-modal" rel="modal:open">Open Modal</a></p>
+            
+          </div>
+      
           <!-- Header end -->
           <!-- Footer start -->
           <div class="footer ui-content">
