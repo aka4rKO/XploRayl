@@ -35,6 +35,10 @@ green #7bed8d
   src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
 }
 
+.icon-grey{
+  filter: invert(49%) sepia(2%) saturate(3170%) hue-rotate(166deg) brightness(108%) contrast(104%);
+}
+
 .placeholder-text {
   font-family: "Poppins light" !important;
   font-size: 14px !important;
@@ -483,7 +487,13 @@ fieldset > div {
   color: #748a9d;
 }
 
-.coupon-field {
+
+.add-card-placeholder{
+  height: 10em;
+  width: 18em;
+}
+
+.coupon-field{
   margin-top: 6em;
 }
 

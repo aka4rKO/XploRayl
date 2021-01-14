@@ -5,5 +5,6 @@ $(document).ready(function () {
 
 // Removes the default ajax loading in anchor tags in mobile jquery
 $(function () {
-  $("a").attr("rel", "external");
+  $(".anchor-external").attr("rel", "external");
 });
+
