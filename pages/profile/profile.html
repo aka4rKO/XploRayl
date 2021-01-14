@@ -11,8 +11,14 @@
     />
     <link rel="stylesheet" href="./../../style.css" />
     <link rel="stylesheet" href="./profile.css" />
+
+    
+
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./../profile/circle-progress.min.js"></script>
+    
     <script src="./../../script.js"></script>
     <script src="./profile.js"></script>
   </head>
@@ -91,7 +97,7 @@
           <div class="grid-container">
             <img
               class="profile-pic"
-              src="./../../assets/images/profile/profile.jpg"
+              src="./../../assets/images/avatars/profile.jpg"
               alt="Profile Picture"
             />
             <div id="profile-header">
@@ -125,28 +131,55 @@
               <div data-role="navbar">
                 <ul>
                   <li>
-                    <a class="tab-nav" href="#one" data-theme="a" data-ajax="false">Achievements</a>
+                    <a class="tab-nav" href="#tab-one" data-theme="a" data-ajax="false">Achievements</a>
                   </li>
                   <li>
-                    <a class="tab-nav" href="#two" data-theme="a" data-ajax="false">Coupons</a>
+                    <a class="tab-nav" href="#tab-two" data-theme="a" data-ajax="false">Coupons</a>
                   </li>
                   <li>
-                    <a class="tab-nav" data-theme="a" data-ajax="false">Favourites</a>
+                    <a class="tab-nav" href="#tab-three" data-theme="a" data-ajax="false">Favourites</a>
                   </li>
                   <li>
-                    <a class="tab-nav" data-theme="a" data-ajax="false">Tickets</a>
+                    <a class="tab-nav" href="#tab-four" data-theme="a" data-ajax="false">Tickets</a>
                   </li>
                   <li>
-                    <a class="tab-nav" data-theme="a" data-ajax="false">Payment methods</a>
+                    <a class="tab-nav" href="#tab-five" data-theme="a" data-ajax="false">Payment methods</a>
                   </li>
                 </ul>
               </div>
-              <div id="one" class="ui-content"><h1>First tab contents</h1></div>
-              <div id="two" class="ui-content"><h1>Two tab contents</h1></div>
-
-            </div>
-            <div id="tabname">
-              <h2 id="tab-title"></h2>
+              <div id="tab-one" class="ui-content">
+                <h1 style="margin: -20px 0px 0px 5px !important;">Achievements</h1>
+                <div class="tab-item" style="margin: 50px;">
+                  <div style="margin-top: 110px;">
+                    <h3 style="color: cyan !important; text-align: center;">7th<h3>
+                    <h3 style="color: rgb(0, 0, 0) !important; text-align: center;">Position<h3>
+                  </div>
+                  <div >
+                    <div id="circle" style="margin: 20px; text-align: center;"></div>
+                    
+                  </div>
+                  <div style="margin-top: 110px;">
+                    <h3 style="color: cyan !important; text-align: center;">Second Mate<h3>
+                      <h3 style="color: rgb(0, 0, 0) !important; text-align: center;">Rank<h3>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-two" class="ui-content">
+                <h1 style="margin: -20px 0px 0px 5px !important;">Coupons</h1>
+                <h1>Two tab contents</h1>
+              </div>
+              <div id="tab-three" class="ui-content">
+                <h1 style="margin: -20px 0px 0px 5px !important;">Favourites</h1>
+                <h1>Two tab contents</h1>
+              </div>
+              <div id="tab-four" class="ui-content">
+                <h1 style="margin: -20px 0px 0px 5px !important;">Tickets</h1>
+                <h1>Two tab contents</h1>
+              </div>
+              <div id="tab-five" class="ui-content">
+                <h1 style="margin: -20px 0px 0px 5px !important;">Payment methods</h1>
+                <h1>Two tab contents</h1>
+              </div>
             </div>
           </div>
           
