@@ -1,0 +1,24 @@
+.leaderboard {
+  height: 95vh;
+  background-image: url("./../../assets/images/celebration.png");
+  background-position: 93% 82%;
+  background-repeat: no-repeat;
+  background-size: 148%;
+  object-fit: cover;
+}
+
+.footer {
+  margin-top: 0;
+}
+
+.trophy {
+  /* background-color: yellow; */
+}
+
+.first-three-places {
+  /* background-color: teal; */
+}
+
+.other-places {
+  /* background-color: tomato; */
+}
