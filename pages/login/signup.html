@@ -29,67 +29,123 @@
             />
           </div>
           <!-- Header end -->
-          <!-- <div class="ui-content center-column">
-              <h1>Sign In</h1>
-          </div> -->
 
-          <div class="ui-content login-form">
+          <div role="main" class="ui-content">
+            <h1 style="text-align: center">Sign Up</h1>
+            <!-- <form name="myForm" action="#" onsubmit=""> -->
+            <p class="success" style="color: green"></p>
+			
+            <fieldset id="ffname">
+              <legend>Full Name</legend>
+              <input
+                type="text"
+                name="email"
+                id="fname"
+                value=""
+                placeholder="John Doe"
+              />
+            </fieldset>
+            <p class="nameErr"></p>
+
+            <fieldset id="fuserid">
+              <legend>Email</legend>
+              <input
+                type="text"
+                name="email"
+                id="userid"
+                value=""
+                placeholder="example@email.com"
+              />
+            </fieldset>
+			<p class="useridErr"></p>
+			
+			<!-- <div class="form-group">
+				<fieldset id="fpw">
+				  <legend class="label-text">Password</legend>
+				  <input
+					type="password"
+					name=""
+					id="pw"
+					class="form-control placeholder-text"
+					placeholder="password"
+				  />
+				</fieldset>
+				<p class="passwordErr err-text"></p>
+			  </div>
+
+			  <div class="form-group">
+				<fieldset id="fpw">
+				  <legend class="label-text">Password</legend>
+				  <input
+					type="password"
+					name=""
+					id="pw"
+					class="form-control placeholder-text"
+					placeholder="password"
+				  />
+				</fieldset>
+				<p class="passwordErr err-text"></p>
+			  </div> -->
+
+            <fieldset id="fpw">
+              <legend>Password</legend>
+              <input
+                type="password"
+                name="password"
+                id="pw"
+                value=""
+                placeholder="password"
+              />
+              <span id="passstren" class="step"></span>
+            </fieldset>
+            <p class="pwErr"></p>
+
+            <fieldset id="fconpw">
+              <legend>Confirm Password</legend>
+              <input
+                type="password"
+                name="password"
+                id="conpw"
+                value=""
+                placeholder="password"
+              />
+            </fieldset>
+            <p class="conpwErr" id="passstregnth"></p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <!-- <p class="pwstrength"></p> -->
+
+            <!-- <button name="login-btn" id="log-btn" onclick="callSignUp()">
+              SIGN UP
+            </button>
+            <button
+              name="login-btn"
+              id="log-in"
+              onclick="window.location.href='index.html';"
+            >
+              SIGN IN
+			</button> -->
+
             <div class="center-column">
-              <h1>Sign In</h1>
-            </div>
-
-            <div class="form-group">
-              <p class="credentialErr err-text"></p>
-
-              <fieldset id="fuserid">
-                <legend class="label-text">Email</legend>
-                <input
-                  type="text"
-                  name=""
-                  id="userid"
-                  class="form-control placeholder-text"
-                  placeholder="example@email.com"
-                />
-              </fieldset>
-              <p class="nameErr err-text"></p>
-            </div>
-
-            <div class="form-group">
-              <fieldset id="fpw">
-                <legend class="label-text">Password</legend>
-                <input
-                  type="password"
-                  name=""
-                  id="pw"
-                  class="form-control placeholder-text"
-                  placeholder="password"
-                />
-              </fieldset>
-              <p class="passwordErr err-text"></p>
-            </div>
-
-            <div class="left-column">
-              <a class="left-column" href="forgotPassword.html"
-                >Forgot password?</a
-              >
-            </div>
-
-            <p class="line"><span>or</span></p>
-
-            <!-- <div class="btns center-column"> -->
-            <div class="center-column">
-              <button class="ui-btn" onclick="Validated()">SIGN IN</button>
+              <button class="ui-btn" onclick="callSignUp()">SIGN UP</button>
             </div>
             <div class="center-column">
               <button
                 class="ui-btn-secondary"
                 onclick="window.location.href='signup.html';"
               >
-                SIGN UP
+                SIGN IN
               </button>
             </div>
-            <!-- </div> -->
+
+            <!-- </form>	 -->
           </div>
+
           <!-- Footer start -->
           <div class="footer ui-content">
             <div class="footer-logo-container center-column">

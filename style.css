@@ -116,6 +116,13 @@ h3 {
   text-align: center;
 }
 
+.err-text {
+  font-family: "Poppins light" !important;
+  font-size: 14px !important;
+  color: #ef5350 !important;
+  margin-top: 0.5em;
+}
+
 /* Buttons */
 .ui-btn {
   padding: 1em 0;
@@ -206,6 +213,13 @@ fieldset {
   border-radius: 8px;
   background-color: #f0f4f8;
   height: 4em;
+}
+
+fieldset > div {
+  -webkit-box-shadow: unset !important;
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: unset !important;
+  background: unset !important;
 }
 
 /* Other */

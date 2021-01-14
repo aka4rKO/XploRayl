@@ -11,6 +11,15 @@
   padding: 0 10px;
 }
 
+.btns {
+    position: absolute;
+    bottom: 32em;
+}
+
+.login-form {
+    /* height: 80vh; */
+}
+
 /* #log-in {
   border-radius: 50px;
   background-color: #04d3d9;
