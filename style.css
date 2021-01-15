@@ -101,6 +101,12 @@ h3 {
   color: #404e5a !important;
 }
 
+.card4-text {
+  font-family: "Poppins medium" !important;
+  font-size: 17px !important;
+  color: #fff !important;
+}
+
 .footer-heading-text {
   font-family: "Poppins bold" !important;
   font-size: 15px !important;
@@ -285,6 +291,13 @@ fieldset > div {
 .left-column {
   display: flex;
   justify-content: left;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.bottom-column {
+  display: flex;
+  justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
 }
