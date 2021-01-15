@@ -15,6 +15,28 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="./../../script.js"></script>
     <script src="./search.js"></script>
+
+    <script src="./search/e-search.js"></script>
+    <style>
+      .form-searth{
+        width: 640px;
+        margin: 20px auto;
+      }
+      .search-item{
+        width: 100%;
+        height: 35px;
+      }
+
+      .item{
+        float: left;
+        width: 200px;
+
+        text-align: center;
+      }
+      .item img{
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div data-role="page">
@@ -36,23 +58,23 @@
               </div>
             </a>
           </div>
+          <div class="sidebar-nav-btn">
+            <a href="./../search/search.html" data-prefetch="true">
+              <div class="sidebar-nav-btn-contents">
+                <img src="./../../assets/icons/search.svg" alt="" />
+                <span>Search</span>
+              </div>
+            </a>
+          </div>
           <div class="sidebar-nav-btn-active">
             <a href="#">
               <div class="sidebar-nav-btn-contents">
                 <img
                   class="sidebar-nav-btn-content-active"
-                  src="./../../assets/icons/search.svg"
+                  src="./../../assets/icons/x white.svg"
                   alt=""
                 />
-                <span class="sidebar-nav-btn-content-active">Search</span>
-              </div>
-            </a>
-          </div>
-          <div class="sidebar-nav-btn">
-            <a href="./../my-hunts/my-hunts.html" data-prefetch="true">
-              <div class="sidebar-nav-btn-contents">
-                <img class="" src="./../../assets/icons/x white.svg" alt="" />
-                <span>My Hunts</span>
+                <span class="sidebar-nav-btn-content-active">My Hunts</span>
               </div>
             </a>
           </div>
@@ -90,6 +112,140 @@
             />
           </div>
           <!-- Header end -->
+
+          <!-- START -->
+          <div class="form-search">
+            <input type="text" id="search-item" placeholder="what are you searching for?"/>
+          </div>
+
+          <!-- filter -->
+		<ul>
+			<li class="list active" data-filter="all">All</li>
+				<li class="list active" data-filter="Art">Art</li>
+				<li class="list active" data-filter="Culture">Culture</li>
+        <li class="list active" data-filter="Fun">Fun</li>
+        <li class="list active" data-filter="Historical">Historical</li>
+    </ul>
+    
+          <div class="containerItems">
+            
+            <div data-filter="london" data-search="london eye" class="item poi itemBox Fun">
+
+              <img src="./../../assets/images/pois/londoneye.jpg"/>
+              <div class="poi-info">
+                <div class="card1-text">London Eye</div>
+                <div class="center-vertically-margin-top">
+                  <img
+                    class="poi-img-icon-color"
+                    src="./../../assets/icons/map-pin.svg"
+                    alt=""
+                  />
+                  <span class="card2-text">&nbsp;London</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div  data-search="big ben" class="item poi  itemBox Culture">
+              <img src="./../../assets/images/pois/bigben.jpg"/>
+              <div class="poi-info">
+                <div class="card1-text">Big Ben</div>
+                <div class="center-vertically-margin-top">
+                  <img
+                    class="poi-img-icon-color"
+                    src="./../../assets/icons/map-pin.svg"
+                    alt=""
+                  />
+                  <span class="card2-text">&nbsp;London</span>
+                </div>
+              </div>
+            </div>
+
+            <div  data-search="british museum" class="item poi  itemBox Historical">
+              <img src="./../../assets/images/pois/british-museum.jpg"/>
+              <div class="poi-info">
+                <div class="card1-text">British Museum</div>
+                <div class="center-vertically-margin-top">
+                  <img
+                    class="poi-img-icon-color"
+                    src="./../../assets/icons/map-pin.svg"
+                    alt=""
+                  />
+                  <span class="card2-text">&nbsp;London</span>
+                </div>
+              </div>
+            </div>
+
+            <div  data-search="stonehenge" class="item poi  itemBox Historical">
+              <img src="./../../assets/images/pois/stonehenge.jpg"/>
+              <div class="poi-info">
+                <div class="card1-text">Stonehenge</div>
+                <div class="center-vertically-margin-top">
+                  <img
+                    class="poi-img-icon-color"
+                    src="./../../assets/icons/map-pin.svg"
+                    alt=""
+                  />
+                  <span class="card2-text">&nbsp;London</span>
+                </div>
+              </div>
+            </div>
+
+            <div  data-search="tower bridge" class="item poi  itemBox Culture">
+              <img src="./../../assets/images/pois/towerbridge.png"/>
+              <div class="poi-info">
+                <div class="card1-text">Tower Bridge</div>
+                <div class="center-vertically-margin-top">
+                  <img
+                    class="poi-img-icon-color"
+                    src="./../../assets/icons/map-pin.svg"
+                    alt=""
+                  />
+                  <span class="card2-text">&nbsp;London</span>
+                </div>
+              </div>
+            </div>
+
+            <div  data-search="buckingham palace" class="item poi  itemBox Art">
+              <img src="./../../assets/images/pois/buckingham-palace.jpg"/>
+              <div class="poi-info">
+                <div class="card1-text">Buckingham Palace</div>
+                <div class="center-vertically-margin-top">
+                  <img
+                    class="poi-img-icon-color"
+                    src="./../../assets/icons/map-pin.svg"
+                    alt=""
+                  />
+                  <span class="card2-text">&nbsp;London</span>
+                </div>
+              </div>
+            </div>
+            
+
+
+          <div class="item poi  itemBox Culture"  data-search="edinburgh castle">
+            <img
+              src="./../../assets/images/pois/edinburgh-castle.jpg"
+              alt=""
+            />
+            <div class="poi-info">
+              <div class="card1-text">Edinburgh Castle</div>
+              <div class="center-vertically-margin-top">
+                <img
+                  class="poi-img-icon-color"
+                  src="./../../assets/icons/map-pin.svg"
+                  alt=""
+                />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </div>
+
+         
+        </div>
+
+
+          
           <!-- Footer start -->
           <div class="footer ui-content">
             <div class="footer-logo-container center-column">
@@ -154,6 +310,7 @@
               </div>
             </div>
           </div>
+        
           <!-- Footer end -->
           <!-- Navbar start -->
           <div class="footer-navbar" data-role="footer" data-position="fixed">
@@ -168,20 +325,16 @@
                   /></a>
                 </li>
                 <li>
-                  <a class="nav-btn ui-btn-active" href="#"
-                    ><img
-                      class="active-navbar-icon"
-                      src="./../../assets/icons/search.svg"
-                      alt=""
+                  <a
+                    class="nav-btn"
+                    href="./../search/search.html"
+                    data-prefetch="true"
+                    ><img src="./../../assets/icons/search.svg" alt=""
                   /></a>
                 </li>
                 <li class="center-column">
-                  <a
-                    class="nav-btn nav-btn-logo"
-                    href="./../my-hunts/my-hunts.html"
-                    data-prefetch="true"
-                  >
-                    <div class="circle center-column">
+                  <a class="nav-btn nav-btn-logo ui-btn-active" href="#">
+                    <div class="circle center-column circle-active">
                       <img
                         class="navbar-logo"
                         src="./../../assets/icons/x white.svg"
@@ -213,5 +366,25 @@
         </div>
       </div>
     </div>
+    
+    <script>
+      $('#search-item').search({
+
+      });
+
+      				/* filter function */
+				$(document).ready(function(){
+			$('.list').click(function(){
+				const value = $(this).attr('data-filter');
+				if(value == 'all'){
+					$('.itemBox').show('100');
+				}
+				else{
+					$('.itemBox').not('.'+value).hide('1000');
+					$('.itemBox').filter('.'+value).show('1000');
+				}
+			})
+		})
+    </script>
   </body>
 </html>

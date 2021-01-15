@@ -10,11 +10,11 @@
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
     <link rel="stylesheet" href="./../../style.css" />
-    <link rel="stylesheet" href="./my-hunts.css" />
+    <link rel="stylesheet" href="./poi.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="./../../script.js"></script>
-    <script src="./my-hunts.js"></script>
+    <script src="./poi.js"></script>
   </head>
   <body>
     <div data-role="page">
@@ -28,31 +28,31 @@
           />
         </div>
         <div>
-          <div class="sidebar-nav-btn">
-            <a href="./../explore/explore.html" data-prefetch="true">
+          <div class="sidebar-nav-btn-active">
+            <a href="#">
               <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/compass.svg" alt="" />
-                <span>Explore</span>
+                <img
+                  class="sidebar-nav-btn-content-active"
+                  src="./../../assets/icons/compass.svg"
+                  alt=""
+                />
+                <span class="sidebar-nav-btn-content-active">Explore</span>
               </div>
             </a>
           </div>
           <div class="sidebar-nav-btn">
             <a href="./../search/search.html" data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/search.svg" alt="" />
+                <img class="" src="./../../assets/icons/search.svg" alt="" />
                 <span>Search</span>
               </div>
             </a>
           </div>
-          <div class="sidebar-nav-btn-active">
-            <a href="#">
+          <div class="sidebar-nav-btn">
+            <a href="./../my-hunts/my-hunts.html" data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img
-                  class="sidebar-nav-btn-content-active"
-                  src="./../../assets/icons/x white.svg"
-                  alt=""
-                />
-                <span class="sidebar-nav-btn-content-active">My Hunts</span>
+                <img class="" src="./../../assets/icons/x white.svg" alt="" />
+                <span>My Hunts</span>
               </div>
             </a>
           </div>
@@ -90,9 +90,79 @@
             />
           </div>
           <!-- Header end -->
-
-
           
+          <!-- Musuem image end -->
+                    <div class="poi">
+                      <img
+                        src="./../../assets/images/pois/british-museum.jpg"
+                        alt=""
+                      />
+                      <div class="poi-info">
+                        <div class="mus1-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="mus2-text">&nbsp;London</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Musuem image end -->
+                    <div class="container">
+                    <div class="headings-1"><h1 class="headings">£ 100</h1>
+                    <p>The British Museum, in the Bloomsbury area of London, England, 
+                      is a public institution dedicated to human history, art and culture. 
+                      Its permanent collection of some eight million works is among the largest and most 
+                      comprehensive in existence, having been widely collected during the era of the British Empire </p>
+                    </div>
+                    <div class="headings-2" >
+                      <h1 class="headings">Map</h1>
+
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6621883781036!2d-0.12914528440765657!3d51.519413279637014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b323093d307%3A0x2fb199016d5642a7!2sThe%20British%20Museum!5e0!3m2!1sen!2slk!4v1610672267325!5m2!1sen!2slk" 
+                        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                      <!-- <img  src="./../../assets/images/pois/google-maps.jpg"> -->
+                    </div>
+
+                    <div class="headings-3" >
+                      <h1 class="headings">Hunt Details</h1>
+                      <div id="huntde-1">
+                    <div>Arrival</div>
+                    <div>Commute distance</div>
+                    <div>Walking distance</div>
+                    <div>Difficulty level</div>
+                    <div>Time</div>
+                    </div>
+
+                    <div id="huntde-2" >
+                      <div>Waterloo</div>
+                      <div>20 KM</div>
+                      <div>10 KM</div>
+                      <div>Medium</div>
+                      <div>About 3 hours</div>
+                      </div>
+
+                      <div id="huntde-3">
+                        <img style="height: 70%;" src="./../../assets/images/pois/huntdetail.png"/>
+                        </div>
+                      </div>
+
+
+                    <div class="headings-4" >
+                      <h1 class="headings">Gallery</h1></div>
+
+                    <div class="headings-5" >
+                      <h1 class="headings">Ratings & Reviews</h1></div>
+                    </div>
+
+
+                    <!-- Book Button -->
+                    <div class="center-row center-column">
+                      <button class="ui-btn book-btn">Book Now</button>
+                    </div>
+                    
+
           <!-- Footer start -->
           <div class="footer ui-content">
             <div class="footer-logo-container center-column">
@@ -163,11 +233,11 @@
             <div data-role="navbar">
               <ul>
                 <li>
-                  <a
-                    class="nav-btn"
-                    href="./../explore/explore.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/compass.svg" alt=""
+                  <a class="nav-btn ui-btn-active" href="#"
+                    ><img
+                      class="active-navbar-icon"
+                      src="./../../assets/icons/compass.svg"
+                      alt=""
                   /></a>
                 </li>
                 <li>
@@ -179,8 +249,12 @@
                   /></a>
                 </li>
                 <li class="center-column">
-                  <a class="nav-btn nav-btn-logo ui-btn-active" href="#">
-                    <div class="circle center-column circle-active">
+                  <a
+                    class="nav-btn nav-btn-logo"
+                    href="./../my-hunts/my-hunts.html"
+                    data-prefetch="true"
+                  >
+                    <div class="circle center-column">
                       <img
                         class="navbar-logo"
                         src="./../../assets/icons/x white.svg"
@@ -212,5 +286,8 @@
         </div>
       </div>
     </div>
+
+
+
   </body>
 </html>
