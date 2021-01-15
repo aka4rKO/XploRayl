@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XploRayl</title>
+    <link rel="icon" type="image/png" href="./../../favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <link rel="stylesheet" href="./../../style.css" />
+    <link rel="stylesheet" href="./my-hunts.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./simple-rating.css">
+    <script src="./../../script.js"></script>
+    <script src="./add-review.js"></script>
+    <script src="./simple-rating.js"></script>
+
+  </head>
+  <body>
+    <a href="#common-modal" rel="modal:open">
+      <button class="ui-btn">SCAN</button></a
+    >
+
+    <div class="body-content">
+      <div id="common-modal" class="modal ui-modal">
+        <h1 class="center-column center-row">Add Review</h1>
+        <p class="center-column center-row">Tell us about your hunt</p>
+        <div class="center-column center-row">
+          <img
+            class="profile-pic"
+            src="/assets/images/avatars/profile.jpg"
+            alt=""
+          />
+        </div>
+        <div class="center-row center-column">
+          <div>
+              <div class="center-column center-row">
+                    <input class="rating rate-field " id="ratingSlider" type="hidden" value="3">
+              </div>
+            <div class="">
+                <div class="form-group">
+                    <p class="credentialErr err-text"></p>
+      
+                    <fieldset id="fuserid">
+                      <legend class="label-text">Review</legend>
+                      <input
+                        type="text"
+                        name=""
+                        id="review-message"
+                        class="form-control placeholder-text"
+                        placeholder="How good was your hunt, tell me about it"
+                      />
+                    </fieldset>
+                    <p class="nameErr err-text"></p>
+                  </div>
+                  <div>
+                      <button id="review-btn" class=" ui-btn">
+                            Save
+                      </button>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

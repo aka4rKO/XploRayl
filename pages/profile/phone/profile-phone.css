@@ -25,7 +25,6 @@
   }
   #unlisted-view {
     padding: 5px !important;
-    padding-top:3em !important;
     margin: auto;
   }
   #points-value {
@@ -35,7 +34,7 @@
     color: #404e5a !important;
   }
   #circle {
-    margin: 20px;
+    margin: 10px;
     text-align: center;
   }
   .points {
@@ -43,7 +42,8 @@
     margin-top: -120px;
   }
   .tab-heading {
-    margin: -20px 0px 0px 5px !important;
+      text-align: center;
+    margin: 30px 0px 0px 0px !important;
   }
   .p {
     color: #748a9d !important;
@@ -58,8 +58,7 @@
     margin-top: 90px;
     margin-left: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 180px;
+    grid-template-columns: 1fr;
   }
   
   .collectables {
@@ -79,7 +78,7 @@
     color: #748a9d !important;
     font-weight: bold !important;
     font-size: larger;
-    margin: 5px 5px 5px 55px;
+    margin: 5px 5px 5px 95px;
   }
   
   .player-stats {
@@ -144,9 +143,11 @@
   }
   h3 {
     margin: 1px;
+    color: white !important;
   }
   p {
     margin: 1px;
+    color: white !important;
   }
   
   /* Coupons styles ---------------------------------------------------- */
@@ -167,45 +168,50 @@
   }
   
   .pois-container {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr;
-    margin-top: 17px;
-  }
-  
-  .payment-grid{
-    text-align: center;
-    margin-top: 8px;
+    margin: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.4fr 0.4fr 0.4fr;
-    grid-template-areas:
-      "add-card-img add-card-img"
-      "debit-card-img credit-card-img"
-      "card-select-btn card-select-btn";
+    margin-top: 17px;
   }
   
-  #add-card-img{
+  .payment-grid {
+    text-align: center;
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.4fr;
+    grid-template-areas:
+      "add-card-img"
+      "debit-card-img"
+      "card-select-btn";
+  }
+.main{
+  display: block !important;
+}
+
+  #add-card-img {
     margin-top: 20px;
     grid-area: add-card-img;
   }
-  #debit-card-img{
+  #debit-card-img {
+    text-align: center;
     margin-top: 20px;
     grid-area: debit-card-img;
   }
-  #credit-card-img{
+  #credit-card-img {
+    text-align: center;
     margin-top: 20px;
     grid-area: credit-card-img;
   }
-  #card-select-btn{
+  #card-select-btn {
     margin: auto;
     text-align: center;
     grid-area: card-select-btn;
   }
   .poi {
-    min-width: 340px;
-    max-width: 340px;
+    min-width: 170px;
+    max-width: 170px;
     height: 210px;
     margin: 5px;
     position: relative;
@@ -213,8 +219,8 @@
   #favourites {
     height: 25px;
     width: 30px;
-    margin-bottom: 90px;
-    margin-left: 280px;
+    margin-bottom: 70px;
+    margin-left: 110px;
   }
   .poi:before {
     border-radius: 1em;
@@ -248,8 +254,8 @@
   }
   
   .poi .poi-info img {
-    height: 25px;
-    width: 150px;
+    height: 18px;
+    width: 110px;
   }
   
   .card1-text {
@@ -258,51 +264,10 @@
     color: #fff !important;
   }
   
-  .hunt-header{
-      
-      z-index: 1;
-      background-image: url('/assets/images/headers/my\ hunts.png');
-      background-repeat: no-repeat;
-      background-size: 100%;
-
-
-  }
-  .overlay{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0.981127485173757) 80%, rgba(0, 0, 0, 0.103) 100%);
-    opacity: 0.2;
-  }
-  .hunt-home{
-    z-index: -2;
-    top: -30px;
-    background-image: url('/assets/images/pois/london-eye.jpg');
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center; 
-    height: 57vh;
-  }
   /* asdasdasds ------------------------------- */
   
   .footer {
-    margin-top: 61vh;
-  }
-  
-  .modal a.close-modal {
-    position: absolute!important;
-    top: 14.5px!important;
-    right: 22.5px!important;
-    display: block!important;
-    width: 30px!important;
-    height: 30px!important;
-    text-indent: -9999px!important;
-    background-size: contain!important;
-    background-repeat: no-repeat!important;
-    background-position: center center!important;
-    background-image: url("/assets/icons/x.svg") !important;
+    margin-top: 1em;
   }
   
   @media only screen and (max-width: 550px) {
@@ -313,7 +278,52 @@
       height: 100px;
       width: 100px;
     }
-  
+    #tab-item {
+      display: none;
+    }
+    .grid-container {
+      height: 0px;
+      -moz-box-shadow: 3px 3px 5px 6px #ccc;
+      -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+      box-shadow: 1px 1px 3px 4px #ccc;
+      background-color: rgb(255, 255, 255);
+      border-bottom-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      display: grid;
+      grid-template-columns: 0.2fr 1.5fr;
+      grid-template-rows: 130px 90px 200px;
+      grid-template-areas:
+        "img profile-header"
+        "stats-data stats-data"
+        "tab-list-view tab-list-view";
+    }
+    #tab-list-view {
+      grid-area: tab-list-view;
+    }
+    .arrow-icon {
+      margin-left: 160px;
+    }
+    .phone-tab-list-view {
+      background-color: #F0F4F8;
+      padding: 20px;
+      margin-right: 20px;
+      margin-left: 20px;
+          margin-top: 5px;
+      border-radius: 10px;
+      font-family: "Poppins medium";
+      color: #748A9D;
+      width: 295px;
+    }
+    .stats-data {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-right: 20px;
+      margin-left: 20px;
+      border-radius: 10px;
+      background-color: #404e5a;
+      padding: 10px;
+      text-align: center;
+    }
     #signout {
       display: none;
     }
@@ -328,10 +338,22 @@
       text-align: center;
     }
   }
-  
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 550px) {
+
+  }
+  @media only screen and (min-width: 768px) {
+    .phone-tab-view {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 768px) and (min-height: 1024px) {
     .footer {
       margin-top: 45vh;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .phone-tab-view {
+      display: none;
     }
   }
   

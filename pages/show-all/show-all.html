@@ -10,7 +10,7 @@
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
     <link rel="stylesheet" href="./../../style.css" />
-    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="./show-all.css" />
 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
@@ -18,7 +18,7 @@
     <script src="./../profile/circle-progress.min.js"></script>
 
     <script src="./../../script.js"></script>
-    <script src="./profile.js"></script>
+    <script src="./show-all.js"></script>
   </head>
 
   <body>
@@ -33,18 +33,22 @@
           />
         </div>
         <div>
-          <div class="sidebar-nav-btn">
-            <a href="./../explore/explore.html" data-prefetch="true">
+          <div class="sidebar-nav-btn-active">
+            <a href="#">
               <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/compass.svg" alt="" />
-                <span>Explore</span>
+                <img
+                  class="sidebar-nav-btn-content-active"
+                  src="./../../assets/icons/compass.svg"
+                  alt=""
+                />
+                <span class="sidebar-nav-btn-content-active">Explore</span>
               </div>
             </a>
           </div>
           <div class="sidebar-nav-btn">
             <a href="./../search/search.html" data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/search.svg" alt="" />
+                <img class="" src="./../../assets/icons/search.svg" alt="" />
                 <span>Search</span>
               </div>
             </a>
@@ -58,22 +62,26 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="./../leaderboard/leaderboard.html" data-prefetch="true">
+            <a
+              class="anchor-external"
+              href="./../leaderboard/leaderboard.html"
+              data-prefetch="true"
+            >
               <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/bar-chart-2.svg" alt="" />
+                <img
+                  class=""
+                  src="./../../assets/icons/bar-chart-2.svg"
+                  alt=""
+                />
                 <span>Leaderboard</span>
               </div>
             </a>
           </div>
-          <div class="sidebar-nav-btn-active">
-            <a href="#">
+          <div class="sidebar-nav-btn">
+            <a href="./../profile/profile.html" data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img
-                  class="sidebar-nav-btn-content-active"
-                  src="./../../assets/icons/user.svg"
-                  alt=""
-                />
-                <span class="sidebar-nav-btn-content-active">Profile</span>
+                <img class="" src="./../../assets/icons/user.svg" alt="" />
+                <span>Profile</span>
               </div>
             </a>
           </div>
@@ -94,14 +102,14 @@
 
           <!-- content start -->
           <div class="grid-container">
-            <img
+            <!-- <img
               class="profile-pic"
               src="./../../assets/images/avatars/profile.jpg"
               alt="Profile Picture"
             />
             <div id="profile-header">
               <h2>Orlando Smith</h2>
-              <a href="">Edit Info</a>
+              <a href="">Edit</a>
             </div>
             <div id="signout">
               <a href=""
@@ -125,58 +133,7 @@
                 <h3>41</h3>
                 <p>Reviews</p>
               </div>
-            </div>
-            <div class="phone-tab-view" id="tab-list-view">
-              <div class="phone-tab-list-view" onclick="window.location='./../../pages/profile/phone/achievements.html';" style="cursor:pointer">
-                Achievements
-                <img
-                style="float: right; margin: 5px 0px 0px 0px;"
-                  src="./../../assets/icons/icon-chevron.png"
-                  alt=""
-                />
-              </div>
-              <div class="phone-tab-list-view" onclick="window.location='./../../pages/profile/phone/coupons.html';" style="cursor:pointer">
-                Coupons
-                <img
-                  style="float: right; margin: 5px 0px 0px 0px;"
-                  src="./../../assets/icons/icon-chevron.png"
-                  alt=""
-                />
-              </div>
-              <div class="phone-tab-list-view" onclick="window.location='./../../pages/profile/phone/favourites.html';" style="cursor:pointer">
-                Favourites
-                <img
-                  style="float: right; margin: 5px 0px 0px 0px;"
-                  src="./../../assets/icons/icon-chevron.png"
-                  alt=""
-                />
-              </div>
-              <div class="phone-tab-list-view" onclick="window.location='./../../pages/profile/phone/tickets.html';" style="cursor:pointer">
-                Tickets
-                <img
-                  style="float: right; margin: 5px 0px 0px 0px;"
-                  src="./../../assets/icons/icon-chevron.png"
-                  alt=""
-                />
-              </div>
-              <div class="phone-tab-list-view" onclick="window.location='./../../pages/profile/phone/payment.html';" style="cursor:pointer">
-                Payment methods
-                <img
-                  style="float: right; margin: 5px 0px 0px 0px;"
-                  src="./../../assets/icons/icon-chevron.png"
-                  alt=""
-                />
-              </div>
-              <div class="phone-tab-list-view">
-                Sign Out
-                <img
-                  style="float: right; margin: 5px 0px 0px 0px;"
-                  src="./../../assets/icons/icon-chevron.png"
-                  alt=""
-                />
-              </div>
-            </div>
-
+            </div> -->
             <div data-role="tabs" id="tab-item">
               <div data-role="navbar">
                 <ul id="unlisted-view" data-inset="true">
@@ -186,7 +143,7 @@
                       href="#tab-one"
                       data-theme="a"
                       data-ajax="false"
-                      >Achievements</a
+                      >Popular</a
                     >
                   </li>
                   <li id="list-view">
@@ -195,7 +152,7 @@
                       href="#tab-two"
                       data-theme="a"
                       data-ajax="false"
-                      >Coupons</a
+                      >Top rated</a
                     >
                   </li>
                   <li id="list-view">
@@ -204,10 +161,10 @@
                       href="#tab-three"
                       data-theme="a"
                       data-ajax="false"
-                      >Favourites</a
+                      >Most visited</a
                     >
                   </li>
-                  <li id="list-view">
+                  <!-- <li id="list-view">
                     <a
                       class="tab-nav"
                       href="#tab-four"
@@ -224,10 +181,10 @@
                       data-ajax="false"
                       >Payment methods</a
                     >
-                  </li>
+                  </li> -->
                 </ul>
               </div>
-              <div id="tab-one" class="ui-content">
+              <!-- <div id="tab-one" class="ui-content">
                 <h1 class="tab-heading">Achievements</h1>
                 <div class="tab-item1" style="margin: 30px">
                   <div style="margin-top: 110px">
@@ -355,8 +312,8 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div id="tab-two" class="ui-content">
+              </div> -->
+              <!-- <div id="tab-two" class="ui-content">
                 <h1 class="tab-heading">Coupons</h1>
                 <div class="coupons-grid">
                   <img
@@ -400,9 +357,157 @@
                     alt="Coupon"
                   />
                 </div>
+              </div> -->
+              <!-- sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf -->
+              <div id="tab-one" class="ui-content">
+                <!-- <h1 class="tab-heading">Favourites</h1> -->
+                <div class="pois-container">
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div> -->
+                </div>
               </div>
-              <div id="tab-three" class="ui-content">
-                <h1 class="tab-heading">Favourites</h1>
+              <div id="tab-two" class="ui-content">
+                <!-- <h1 class="tab-heading">Favourites</h1> -->
                 <div class="pois-container">
                   <div class="poi">
                     <img
@@ -478,7 +583,85 @@
                   </div>
                 </div>
               </div>
-              <div id="tab-four" class="ui-content">
+              <div id="tab-three" class="ui-content">
+                <!-- <h1 class="tab-heading">Favourites</h1> -->
+                <div class="pois-container">
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- afasdasdasdasdasdasdasdasdasdasdasdasdasdasda -->
+              <!-- <div id="tab-four" class="ui-content">
                 <h1 class="tab-heading">Tickets</h1>
                 <div class="tickets-grid">
                   <img
@@ -522,8 +705,8 @@
                     alt="Ticket"
                   />
                 </div>
-              </div>
-              <div id="tab-five" class="ui-content">
+              </div> -->
+              <!-- <div id="tab-five" class="ui-content">
                 <h1 class="tab-heading">Payment methods</h1>
                 <div class="payment-grid">
                   <div id="add-card-img">
@@ -551,7 +734,7 @@
                     <button class="ui-btn subscribe-btn">SELECT</button>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <!-- content end -->
@@ -626,11 +809,11 @@
             <div data-role="navbar">
               <ul>
                 <li>
-                  <a
-                    class="nav-btn"
-                    href="./../explore/explore.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/compass.svg" alt=""
+                  <a class="nav-btn ui-btn-active" href="#"
+                    ><img
+                      class="active-navbar-icon"
+                      src="./../../assets/icons/compass.svg"
+                      alt=""
                   /></a>
                 </li>
                 <li>
@@ -665,11 +848,11 @@
                   /></a>
                 </li>
                 <li>
-                  <a class="nav-btn ui-btn-active" href="#"
-                    ><img
-                      class="active-navbar-icon"
-                      src="./../../assets/icons/user.svg"
-                      alt=""
+                  <a
+                    class="nav-btn"
+                    href="./../profile/profile.html"
+                    data-prefetch="true"
+                    ><img src="./../../assets/icons/user.svg" alt=""
                   /></a>
                 </li>
               </ul>

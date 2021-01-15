@@ -69,7 +69,7 @@ function callSignUp() {
   } else {
     if (name == "") {
       $("#ffname").css("border", "2px solid red");
-      $(".nameErr").html("Please enter your your name");
+      $(".nameErr").html("Please enter your name");
     } else if (name) {
       $("#ffname").css("border", "2px solid white");
       $(".nameErr").html("");
@@ -117,7 +117,7 @@ function callSignUp() {
 
     if (conpassword == "") {
       $("#fconpw").css("border", "2px solid red");
-      $(".conpwErr").html("Please enter your a password");
+      $(".conpwErr").html("Please enter your password");
     } else if (conpassword != password) {
       $("#fconpw").css("border", "2px solid red");
       $(".conpwErr").html("Password doesn't match");
@@ -149,3 +149,8 @@ function callSignUp() {
     $("#pwstrength").css("color", "green");
   }
 }
+
+$(function () {
+  $("#pw").passwordStrength();
+});
+
