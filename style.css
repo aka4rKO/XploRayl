@@ -267,7 +267,7 @@ fieldset > div {
 }
 
 .center-column {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -296,7 +296,7 @@ fieldset > div {
 }
 
 .center-row {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   flex-direction: row;
