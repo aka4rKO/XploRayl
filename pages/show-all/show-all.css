@@ -14,12 +14,6 @@
     "tab-item tab-item tab-item"
     "tabname tabname tabname";
 }
-
-.poi-img-icon-color {
-  filter: brightness(0) saturate(100%) invert(90%) sepia(16%) saturate(116%)
-    hue-rotate(184deg) brightness(93%) contrast(82%);
-  width: 1em;
-}
 .side {
   -moz-box-shadow: 1px 1px 3px 4px #ccc;
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
@@ -252,11 +246,18 @@ p {
   z-index: 3;
   bottom: 0px;
   left: 0px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 90%;
+}
+
+.poi-img-icon-color {
+  filter: brightness(0) saturate(100%) invert(90%) sepia(16%) saturate(116%)
+    hue-rotate(184deg) brightness(93%) contrast(82%);
 }
 
 .poi .poi-info img {
-  height: 25px;
-  width: 150px;
+  width: 1em;
 }
 
 .card1-text {

@@ -101,6 +101,12 @@ h3 {
   color: #404e5a !important;
 }
 
+.card4-text {
+  font-family: "Poppins medium" !important;
+  font-size: 17px !important;
+  color: #fff !important;
+}
+
 .footer-heading-text {
   font-family: "Poppins bold" !important;
   font-size: 15px !important;
@@ -268,7 +274,7 @@ fieldset > div {
 }
 
 .center-column {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -289,6 +295,13 @@ fieldset > div {
   flex-direction: column;
 }
 
+.bottom-column {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
 .right-column {
   display: flex;
   justify-content: right;
@@ -297,7 +310,7 @@ fieldset > div {
 }
 
 .center-row {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -533,6 +546,17 @@ fieldset > div {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url("/assets/icons/x.svg");
+}
+
+.review{
+  margin-bottom: 1em;
+  padding-bottom: 2em;
+
+}
+.review-heading{
+  bottom: -0.9em;  position: relative;
+  left: 1em;;
+  
 }
 /* iPad portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {

@@ -1,0 +1,338 @@
+.container {
+  display: grid;
+  /* height: 100vh; */
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 3fr 3fr 3fr 3fr 3fr 3fr 3fr; */
+  grid-gap: 1em;
+  grid-template-areas:
+    "main-image-poi main-image-poi"
+    "rating-description rating-description"
+    "map map"
+    "hunt-details vector"
+    "gallery gallery"
+    "ratings-reviews ratings-reviews"
+    "reviews reviews";
+}
+
+.container div {
+  /* background-color: teal; */
+}
+
+.review-text {
+  font-family: "Poppins medium" !important;
+  font-size: 16px !important;
+  color: #748a9d !important;
+}
+
+.main-image-poi {
+  grid-area: main-image-poi;
+  /* background-color: teal; */
+}
+
+.rating-description {
+  grid-area: rating-description;
+  /* background-color: teal; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  /* grid-gap: 1em; */
+  grid-template-areas:
+    "rating favourite"
+    "price price"
+    "description description";
+}
+
+.margin-left {
+  margin-left: 1em;
+}
+
+.rating {
+  grid-area: rating;
+}
+
+.favourite {
+  grid-area: favourite;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.price {
+  grid-area: price;
+}
+
+.description {
+  grid-area: description;
+}
+
+.map {
+  grid-area: map;
+  /* background-color: teal; */
+}
+
+.hunt-details {
+  grid-area: hunt-details;
+  /* background-color: teal; */
+  font-family: "Poppins regular" !important;
+  font-size: 16px !important;
+  color: #748a9d !important;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+}
+
+.vector {
+  grid-area: vector;
+  /* background-color: teal; */
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.gallery {
+  grid-area: gallery;
+  /* background-color: teal; */
+}
+
+.ratings-reviews {
+  grid-area: ratings-reviews;
+  /* background-color: teal; */
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "rating-head rating-head"
+    "ratings rating-numbers";
+}
+.rating-head {
+  grid-area: rating-head;
+}
+
+.ratings {
+  grid-area: ratings;
+}
+
+.rating-numbers {
+  grid-area: rating-numbers;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+.review-card {
+  background-color: #dbe2ed;
+  width: 20em;
+  height: 12em;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+}
+
+.reviews {
+  grid-area: reviews;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* background-color: teal; */
+}
+
+/* POIs */
+.poi-img-main-text {
+  font-family: "Poppins bold" !important;
+  font-size: 30px !important;
+  color: #fff !important;
+}
+
+.poi {
+  position: relative;
+}
+
+.poi img {
+  border-radius: 0 0 1em 1em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poi .poi-info {
+  padding: 1em;
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 95%;
+}
+
+.poi-img-icon-color {
+  filter: brightness(0) saturate(100%) invert(90%) sepia(16%) saturate(116%)
+    hue-rotate(184deg) brightness(93%) contrast(82%);
+}
+
+.poi .poi-info img {
+  width: 1em;
+}
+
+.poi:before {
+  border-radius: 1em;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+/*///////////// gallery CSS /////////////*/
+
+.-fx-image-gal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  justify-content: center;
+}
+.-fx-gal-item {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.-fx-gal-item a {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.-fx-gal-image-thumb img {
+  /* width: 100%;
+  cursor: pointer;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transform: scale(1.1);
+  transition: all 0.5s ease; */
+  width: 100%;
+  /* cursor: pointer; */
+  /* -webkit-filter: grayscale(100%); */
+  -moz-filter: grayscale(100%);
+  /* filter: grayscale(100%); */
+  transform: scale(1.1);
+  /* transition: all 0.5s ease;*/
+}
+
+.-fx-gal-image-thumb:hover img {
+  cursor: pointer;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transform: scale(1.5);
+  transition: all 0.5s ease;
+}
+@media (min-width: 420px) {
+  .-fx-image-gal {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .-fx-gal-item {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .-fx-gal-item {
+    width: 33.33%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 5px;
+}
+
+.video {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  display: block;
+  border: none;
+}
+.popup-btn,
+.close-btn {
+  width: 100px;
+  height: 50px;
+  display: block;
+  margin: 50px auto;
+  cursor: pointer;
+  outline: unset;
+  /* border: 2px solid black;
+  background-color: white; */
+}
+.popup-btn:hover {
+  color: white;
+  background-color: black;
+}
+.video-popup {
+  display: none;
+  width: 75%;
+  height: 100vh;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  box-shadow: 10px 10px 10px 10px black;
+  z-index: 7;
+}
+.popup-bg {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.popup-content {
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: auto;
+}
+
+.vid-pop {
+  background-image: url("./../../assets/images/pois/british-museum-vid-bg.jpg");
+  background-size: cover;
+}
