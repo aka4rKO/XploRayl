@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.39" height="20.321" viewBox="0 0 21.39 20.321">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="21.39" height="20.321" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1780" data-name="Group 1780" transform="translate(0)">
+    <g id="Rating" transform="translate(0)" clip-path="url(#clip-path)">
+      <g id="Rating-2" data-name="Rating">
+        <path id="Icon_material-star" data-name="Icon material-star" d="M13.7,19.331l6.61,3.989L18.551,15.8l5.839-5.059-7.69-.652L13.7,3,10.69,10.091,3,10.743,8.839,15.8,7.086,23.321Z" transform="translate(-3 -3)" fill="#04d3d9"/>
+      </g>
+    </g>
+  </g>
+</svg>

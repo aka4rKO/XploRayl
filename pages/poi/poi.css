@@ -18,6 +18,12 @@
   /* background-color: teal; */
 }
 
+.review-text {
+  font-family: "Poppins medium" !important;
+  font-size: 16px !important;
+  color: #748a9d !important;
+}
+
 .main-image-poi {
   grid-area: main-image-poi;
   /* background-color: teal; */
@@ -107,18 +113,47 @@
 
 .ratings-reviews {
   grid-area: ratings-reviews;
-  background-color: teal;
-  display: grid;
+  /* background-color: teal; */
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-columns: 3em 3em 3em 3em 3em; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "rating-head rating-head"
+    "ratings rating-numbers";
 }
-.rating-head{
+.rating-head {
+  grid-area: rating-head;
+}
 
+.ratings {
+  grid-area: ratings;
+}
+
+.rating-numbers {
+  grid-area: rating-numbers;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+.review-card {
+  background-color: #dbe2ed;
+  width: 20em;
+  height: 12em;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
 }
 
 .reviews {
   grid-area: reviews;
-  background-color: teal;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* background-color: teal; */
 }
 
 /* POIs */
