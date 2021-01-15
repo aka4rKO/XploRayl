@@ -1,390 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>XploRayl</title>
-    <link rel="icon" type="image/png" href="./../../favicon.png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
-    />
-    <link rel="stylesheet" href="./../../style.css" />
-    <link rel="stylesheet" href="./search.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="./../../script.js"></script>
-    <script src="./search.js"></script>
 
-    <script src="./search/e-search.js"></script>
-    <style>
-      .form-searth{
-        width: 640px;
-        margin: 20px auto;
-      }
-      .search-item{
-        width: 100%;
-        height: 35px;
-      }
+<head>
+  <title>XploRayl</title>
+  <link rel="icon" type="image/png" href="./../../favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="./../../style.css" />
+  <link rel="stylesheet" href="./search.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="./../../script.js"></script>
+  <script src="./search.js"></script>
 
-      .item{
-        float: left;
-        width: 200px;
+  <script src="./search/e-search.js"></script>
+  <style>
+    .form-searth {
+      width: 640px;
+      margin: 20px auto;
+    }
 
-        text-align: center;
-      }
-      .item img{
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div data-role="page">
-      <!-- Sidebar start -->
-      <div class="side">
-        <div class="ui-content center-column">
-          <img
-            class="header-logo-sidebar"
-            src="./../../assets/images/logos/full logo black color.png"
-            alt=""
-          />
+    .search-item {
+      width: 100%;
+      height: 35px;
+    }
+
+    .item {
+      float: right;
+      width: 200px;
+
+      text-align: center;
+    }
+
+    .item img {
+      width: 100%;
+    }
+
+    .containerItems {
+      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 250px 250px 250px;
+      margin: auto;
+    }
+    .ui-shadow-inset {
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.2) !important;
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.2) !important;
+}
+  </style>
+</head>
+
+<body>
+  <div data-role="page">
+    <!-- Sidebar start -->
+    <div class="side">
+      <div class="ui-content center-column">
+        <img class="header-logo-sidebar" src="./../../assets/images/logos/full logo black color.png" alt="" />
+      </div>
+      <div>
+        <div class="sidebar-nav-btn">
+          <a href="./../explore/explore.html" data-prefetch="true">
+            <div class="sidebar-nav-btn-contents">
+              <img src="./../../assets/icons/compass.svg" alt="" />
+              <span>Explore</span>
+            </div>
+          </a>
         </div>
-        <div>
-          <div class="sidebar-nav-btn">
-            <a href="./../explore/explore.html" data-prefetch="true">
-              <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/compass.svg" alt="" />
-                <span>Explore</span>
-              </div>
-            </a>
-          </div>
-          <div class="sidebar-nav-btn">
-            <a href="./../search/search.html" data-prefetch="true">
-              <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/search.svg" alt="" />
-                <span>Search</span>
-              </div>
-            </a>
-          </div>
-          <div class="sidebar-nav-btn-active">
-            <a href="#">
-              <div class="sidebar-nav-btn-contents">
-                <img
-                  class="sidebar-nav-btn-content-active"
-                  src="./../../assets/icons/x white.svg"
-                  alt=""
-                />
-                <span class="sidebar-nav-btn-content-active">My Hunts</span>
-              </div>
-            </a>
-          </div>
-          <div class="sidebar-nav-btn">
-            <a href="./../leaderboard/leaderboard.html" data-prefetch="true">
-              <div class="sidebar-nav-btn-contents">
-                <img
-                  class=""
-                  src="./../../assets/icons/bar-chart-2.svg"
-                  alt=""
-                />
-                <span>Leaderboard</span>
-              </div>
-            </a>
-          </div>
-          <div class="sidebar-nav-btn">
-            <a href="./../profile/profile.html" data-prefetch="true">
-              <div class="sidebar-nav-btn-contents">
-                <img class="" src="./../../assets/icons/user.svg" alt="" />
-                <span>Profile</span>
-              </div>
-            </a>
-          </div>
+        <div class="sidebar-nav-btn">
+          <a href="./../search/search.html" data-prefetch="true">
+            <div class="sidebar-nav-btn-contents">
+              <img src="./../../assets/icons/search.svg" alt="" />
+              <span>Search</span>
+            </div>
+          </a>
+        </div>
+        <div class="sidebar-nav-btn-active">
+          <a href="#">
+            <div class="sidebar-nav-btn-contents">
+              <img class="sidebar-nav-btn-content-active" src="./../../assets/icons/x white.svg" alt="" />
+              <span class="sidebar-nav-btn-content-active">My Hunts</span>
+            </div>
+          </a>
+        </div>
+        <div class="sidebar-nav-btn">
+          <a href="./../leaderboard/leaderboard.html" data-prefetch="true">
+            <div class="sidebar-nav-btn-contents">
+              <img class="" src="./../../assets/icons/bar-chart-2.svg" alt="" />
+              <span>Leaderboard</span>
+            </div>
+          </a>
+        </div>
+        <div class="sidebar-nav-btn">
+          <a href="./../profile/profile.html" data-prefetch="true">
+            <div class="sidebar-nav-btn-contents">
+              <img class="" src="./../../assets/icons/user.svg" alt="" />
+              <span>Profile</span>
+            </div>
+          </a>
         </div>
       </div>
-      <!-- Sidebar end -->
-      <div class="wrapper">
-        <div class="main">
-          <!-- Header start -->
-          <div class="header" data-role="header">
-            <img
-              class="header-logo"
-              src="./../../assets/images/logos/full logo black color.png"
-              alt=""
-            />
-          </div>
-          <!-- Header end -->
+    </div>
+    <!-- Sidebar end -->
+    <div class="wrapper">
+      <div class="main">
+        <!-- Header start -->
+        <div class="header" data-role="header">
+          <img class="header-logo" src="./../../assets/images/logos/full logo black color.png" alt="" />
+        </div>
+        <!-- Header end -->
 
-          <!-- START -->
-          <div class="form-search">
-            <input type="text" id="search-item" placeholder="what are you searching for?"/>
-          </div>
+        <!-- START -->
+        <div class="form-search">
+          <input type="text" id="search-item" placeholder="what are you searching for?" />
+        </div>
 
-          <!-- filter -->
-		<ul>
-			<li class="list active" data-filter="all">All</li>
-				<li class="list active" data-filter="Art">Art</li>
-				<li class="list active" data-filter="Culture">Culture</li>
-        <li class="list active" data-filter="Fun">Fun</li>
-        <li class="list active" data-filter="Historical">Historical</li>
-    </ul>
-    
-          <div class="containerItems">
-            
-            <div data-filter="london" data-search="london eye" class="item poi itemBox Fun">
+        <!-- filter -->
+        <ul>
+          <li class="list active" data-filter="all">All</li>
+          <li class="list " data-filter="Art">Art</li>
+          <li class="list " data-filter="Culture">Culture</li>
+          <li class="list " data-filter="Fun">Fun</li>
+          <li class="list " data-filter="Historical">Historical</li>
+        </ul>
 
-              <img src="./../../assets/images/pois/londoneye.jpg"/>
-              <div class="poi-info">
-                <div class="card1-text">London Eye</div>
-                <div class="center-vertically-margin-top">
-                  <img
-                    class="poi-img-icon-color"
-                    src="./../../assets/icons/map-pin.svg"
-                    alt=""
-                  />
-                  <span class="card2-text">&nbsp;London</span>
-                </div>
+        <div class="containerItems">
 
-              </div>
-            </div>
+          <div data-filter="london" data-search="london eye" class="item poi itemBox Fun">
 
-            <div  data-search="big ben" class="item poi  itemBox Culture">
-              <img src="./../../assets/images/pois/bigben.jpg"/>
-              <div class="poi-info">
-                <div class="card1-text">Big Ben</div>
-                <div class="center-vertically-margin-top">
-                  <img
-                    class="poi-img-icon-color"
-                    src="./../../assets/icons/map-pin.svg"
-                    alt=""
-                  />
-                  <span class="card2-text">&nbsp;London</span>
-                </div>
-              </div>
-            </div>
-
-            <div  data-search="british museum" class="item poi  itemBox Historical">
-              <img src="./../../assets/images/pois/british-museum.jpg"/>
-              <div class="poi-info">
-                <div class="card1-text">British Museum</div>
-                <div class="center-vertically-margin-top">
-                  <img
-                    class="poi-img-icon-color"
-                    src="./../../assets/icons/map-pin.svg"
-                    alt=""
-                  />
-                  <span class="card2-text">&nbsp;London</span>
-                </div>
-              </div>
-            </div>
-
-            <div  data-search="stonehenge" class="item poi  itemBox Historical">
-              <img src="./../../assets/images/pois/stonehenge.jpg"/>
-              <div class="poi-info">
-                <div class="card1-text">Stonehenge</div>
-                <div class="center-vertically-margin-top">
-                  <img
-                    class="poi-img-icon-color"
-                    src="./../../assets/icons/map-pin.svg"
-                    alt=""
-                  />
-                  <span class="card2-text">&nbsp;London</span>
-                </div>
-              </div>
-            </div>
-
-            <div  data-search="tower bridge" class="item poi  itemBox Culture">
-              <img src="./../../assets/images/pois/towerbridge.png"/>
-              <div class="poi-info">
-                <div class="card1-text">Tower Bridge</div>
-                <div class="center-vertically-margin-top">
-                  <img
-                    class="poi-img-icon-color"
-                    src="./../../assets/icons/map-pin.svg"
-                    alt=""
-                  />
-                  <span class="card2-text">&nbsp;London</span>
-                </div>
-              </div>
-            </div>
-
-            <div  data-search="buckingham palace" class="item poi  itemBox Art">
-              <img src="./../../assets/images/pois/buckingham-palace.jpg"/>
-              <div class="poi-info">
-                <div class="card1-text">Buckingham Palace</div>
-                <div class="center-vertically-margin-top">
-                  <img
-                    class="poi-img-icon-color"
-                    src="./../../assets/icons/map-pin.svg"
-                    alt=""
-                  />
-                  <span class="card2-text">&nbsp;London</span>
-                </div>
-              </div>
-            </div>
-            
-
-
-          <div class="item poi  itemBox Culture"  data-search="edinburgh castle">
-            <img
-              src="./../../assets/images/pois/edinburgh-castle.jpg"
-              alt=""
-            />
+            <img src="./../../assets/images/pois/londoneye.jpg" />
             <div class="poi-info">
-              <div class="card1-text">Edinburgh Castle</div>
+              <div class="card1-text">London Eye</div>
               <div class="center-vertically-margin-top">
-                <img
-                  class="poi-img-icon-color"
-                  src="./../../assets/icons/map-pin.svg"
-                  alt=""
-                />
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div data-search="big ben" class="item poi  itemBox Culture">
+            <img src="./../../assets/images/pois/bigben.jpg" />
+            <div class="poi-info">
+              <div class="card1-text">Big Ben</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
                 <span class="card2-text">&nbsp;London</span>
               </div>
             </div>
           </div>
 
-         
-        </div>
-
-
-          
-          <!-- Footer start -->
-          <div class="footer ui-content">
-            <div class="footer-logo-container center-column">
-              <img
-                class="footer-logo"
-                src="./../../assets/images/logos/full logo white.png"
-                alt=""
-              />
-            </div>
-            <div class="contact-us-container">
-              <div class="footer-heading-text">Contact Us</div>
+          <div data-search="british museum" class="item poi  itemBox Historical">
+            <img src="./../../assets/images/pois/british-museum.jpg" />
+            <div class="poi-info">
+              <div class="card1-text">British Museum</div>
               <div class="center-vertically-margin-top">
-                <img
-                  class="active-navbar-icon"
-                  src="./../../assets/icons/phone-call.svg"
-                  alt=""
-                />
-                <span class="card2-text">&nbsp;+44 7911 123456</span>
-              </div>
-              <div class="center-vertically-margin-top">
-                <img
-                  class="active-navbar-icon"
-                  src="./../../assets/icons/mail.svg"
-                  alt=""
-                />
-                <span class="card2-text">&nbsp;info@xploray.com</span>
-              </div>
-            </div>
-            <div class="follow-us-container">
-              <div class="footer-heading-text">Follow Us</div>
-              <div class="center-vertically-margin-top">
-                <a href=""
-                  ><img src="./../../assets/icons/facebook-logo.svg" alt=""
-                /></a>
-                <a href=""
-                  ><img
-                    src="./../../assets/icons/twitter-social-logotype.svg"
-                    alt=""
-                /></a>
-                <a href=""
-                  ><img
-                    src="./../../assets/icons/instagram-social-network-logo-of-photo-camera.svg"
-                    alt=""
-                /></a>
-              </div>
-            </div>
-            <div class="newsletter-container">
-              <div class="footer-heading-text">Newsletter</div>
-              <div class="card2-text center-vertically-margin-top">
-                Stay up to date on the latest hunts
-              </div>
-              <input type="text" />
-              <button class="ui-btn subscribe-btn">SUBSCRIBE</button>
-            </div>
-            <div class="copyright-container center-column">
-              <div class="footer-address-text">
-                XPLORAYL . 31 Moulton Road Street . Guestling Thorn . TN35 4YX
-                UK
-              </div>
-              <div class="footer-copyright-text">
-                Copyright ©️ 2020 All Rights Reserved
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
               </div>
             </div>
           </div>
-        
-          <!-- Footer end -->
-          <!-- Navbar start -->
-          <div class="footer-navbar" data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-              <ul>
-                <li>
-                  <a
-                    class="nav-btn"
-                    href="./../explore/explore.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/compass.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    class="nav-btn"
-                    href="./../search/search.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/search.svg" alt=""
-                  /></a>
-                </li>
-                <li class="center-column">
-                  <a class="nav-btn nav-btn-logo ui-btn-active" href="#">
-                    <div class="circle center-column circle-active">
-                      <img
-                        class="navbar-logo"
-                        src="./../../assets/icons/x white.svg"
-                        alt=""
-                      />
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="nav-btn"
-                    href="./../leaderboard/leaderboard.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/bar-chart-2.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    class="nav-btn"
-                    href="./../profile/profile.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/user.svg" alt=""
-                  /></a>
-                </li>
-              </ul>
+
+          <div data-search="stonehenge" class="item poi  itemBox Historical">
+            <img src="./../../assets/images/pois/stonehenge.jpg" />
+            <div class="poi-info">
+              <div class="card1-text">Stonehenge</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
             </div>
           </div>
-          <!-- Navbar end -->
+
+          <div data-search="tower bridge" class="item poi  itemBox Culture">
+            <img src="./../../assets/images/pois/towerbridge.png" />
+            <div class="poi-info">
+              <div class="card1-text">Tower Bridge</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </div>
+
+          <div data-search="buckingham palace" class="item poi  itemBox Art">
+            <img src="./../../assets/images/pois/buckingham-palace.jpg" />
+            <div class="poi-info">
+              <div class="card1-text">Buckingham Palace</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="item poi  itemBox Culture" data-search="edinburgh castle">
+            <img src="./../../assets/images/pois/edinburgh-castle.jpg" alt="" />
+            <div class="poi-info">
+              <div class="card1-text">Edinburgh Castle</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </div>
+
+
         </div>
+
+
+
+        <!-- Footer start -->
+        <div class="footer ui-content">
+          <div class="footer-logo-container center-column">
+            <img class="footer-logo" src="./../../assets/images/logos/full logo white.png" alt="" />
+          </div>
+          <div class="contact-us-container">
+            <div class="footer-heading-text">Contact Us</div>
+            <div class="center-vertically-margin-top">
+              <img class="active-navbar-icon" src="./../../assets/icons/phone-call.svg" alt="" />
+              <span class="card2-text">&nbsp;+44 7911 123456</span>
+            </div>
+            <div class="center-vertically-margin-top">
+              <img class="active-navbar-icon" src="./../../assets/icons/mail.svg" alt="" />
+              <span class="card2-text">&nbsp;info@xploray.com</span>
+            </div>
+          </div>
+          <div class="follow-us-container">
+            <div class="footer-heading-text">Follow Us</div>
+            <div class="center-vertically-margin-top">
+              <a href=""><img src="./../../assets/icons/facebook-logo.svg" alt="" /></a>
+              <a href=""><img src="./../../assets/icons/twitter-social-logotype.svg" alt="" /></a>
+              <a href=""><img src="./../../assets/icons/instagram-social-network-logo-of-photo-camera.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="newsletter-container">
+            <div class="footer-heading-text">Newsletter</div>
+            <div class="card2-text center-vertically-margin-top">
+              Stay up to date on the latest hunts
+            </div>
+            <input type="text" />
+            <button class="ui-btn subscribe-btn">SUBSCRIBE</button>
+          </div>
+          <div class="copyright-container center-column">
+            <div class="footer-address-text">
+              XPLORAYL . 31 Moulton Road Street . Guestling Thorn . TN35 4YX
+              UK
+            </div>
+            <div class="footer-copyright-text">
+              Copyright ©️ 2020 All Rights Reserved
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer end -->
+        <!-- Navbar start -->
+        <div class="footer-navbar" data-role="footer" data-position="fixed">
+          <div data-role="navbar">
+            <ul>
+              <li>
+                <a class="nav-btn" href="./../explore/explore.html" data-prefetch="true"><img
+                    src="./../../assets/icons/compass.svg" alt="" /></a>
+              </li>
+              <li>
+                <a class="nav-btn" href="./../search/search.html" data-prefetch="true"><img
+                    src="./../../assets/icons/search.svg" alt="" /></a>
+              </li>
+              <li class="center-column">
+                <a class="nav-btn nav-btn-logo ui-btn-active" href="#">
+                  <div class="circle center-column circle-active">
+                    <img class="navbar-logo" src="./../../assets/icons/x white.svg" alt="" />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-btn" href="./../leaderboard/leaderboard.html" data-prefetch="true"><img
+                    src="./../../assets/icons/bar-chart-2.svg" alt="" /></a>
+              </li>
+              <li>
+                <a class="nav-btn" href="./../profile/profile.html" data-prefetch="true"><img
+                    src="./../../assets/icons/user.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Navbar end -->
       </div>
     </div>
-    
-    <script>
-      $('#search-item').search({
+  </div>
 
-      });
+  <script>
+    $('#search-item').search({
 
-      				/* filter function */
-				$(document).ready(function(){
-			$('.list').click(function(){
-				const value = $(this).attr('data-filter');
-				if(value == 'all'){
-					$('.itemBox').show('100');
-				}
-				else{
-					$('.itemBox').not('.'+value).hide('1000');
-					$('.itemBox').filter('.'+value).show('1000');
-				}
-			})
-		})
-    </script>
-  </body>
+    });
+
+    /* filter function */
+    $(document).ready(function () {
+      $('.list').click(function () {
+        const value = $(this).attr('data-filter');
+        if (value == 'all') {
+          $('.itemBox').show('100');
+        }
+        else {
+          $('.itemBox').not('.' + value).hide('1000');
+          $('.itemBox').filter('.' + value).show('1000');
+        }
+      })
+    })
+  </script>
+</body>
+
 </html>
