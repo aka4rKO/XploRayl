@@ -5,23 +5,26 @@
     <link rel="icon" type="image/png" href="./../../favicon.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
     <link rel="stylesheet" href="./../../style.css" />
-    <link rel="stylesheet" href="./my-hunts.css" />
+    <link rel="stylesheet" href="./booking.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="./../../script.js"></script>
-    <script src="./my-hunts.js"></script>
+    <script src="./booking.js"></script>
   </head>
   <body>
-    <div>
+    <div data-role="page">
       <!-- Sidebar start -->
       <div class="side">
         <div class="ui-content center-column">
@@ -32,56 +35,45 @@
           />
         </div>
         <div>
-          <div class="sidebar-nav-btn">
-            <a href="./../explore/explore.html" data-prefetch="true">
-              <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/compass.svg" alt="" />
-                <span>Explore</span>
-              </div>
-            </a>
-          </div>
-          <div class="sidebar-nav-btn">
-            <a href="./../search/search.html" data-prefetch="true">
-              <div class="sidebar-nav-btn-contents">
-                <img src="./../../assets/icons/search.svg" alt="" />
-                <span>Search</span>
-              </div>
-            </a>
-          </div>
           <div class="sidebar-nav-btn-active">
             <a href="#">
               <div class="sidebar-nav-btn-contents">
                 <img
                   class="sidebar-nav-btn-content-active"
-                  src="./../../assets/icons/x white.svg"
+                  src="./../../assets/icons/map-pin.svg"
                   alt=""
                 />
-                <span class="sidebar-nav-btn-content-active">My Hunts</span>
+                <span class="sidebar-nav-btn-content-active">Booking</span>
               </div>
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="./../leaderboard/leaderboard.html" data-prefetch="true">
+            <a data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
                 <img
                   class=""
-                  src="./../../assets/icons/bar-chart-2.svg"
+                  src="./../../assets/icons/shopping-bag.svg"
                   alt=""
                 />
-                <span>Leaderboard</span>
+                <span>Order</span>
               </div>
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="./../profile/profile.html" data-prefetch="true">
+            <a data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
-                <img class="" src="./../../assets/icons/user.svg" alt="" />
-                <span>Profile</span>
+                <img
+                  class=""
+                  src="./../../assets/icons/credit-card.svg"
+                  alt=""
+                />
+                <span>Payment</span>
               </div>
             </a>
           </div>
         </div>
       </div>
+
       <!-- Sidebar end -->
       <div class="wrapper">
         <div class="main">
@@ -94,21 +86,42 @@
             />
           </div>
 
-          <div class="body-content">
-                <h1>My Hunts</h1>
-
-                <div id="common-modal" class="modal ui-modal">
-                  <h1 class="center-column center-row">Add Card</h1>
-                  <p >Thanks for clicking. That felt good.</p>
-                  <a href="#" rel="modal:close">Close</a>
-                </div>
-                
-                <!-- Link to open the modal -->
-                <p><a href="#common-modal" rel="modal:open">Open Modal</a></p>
-            
-          </div>
-      
           <!-- Header end -->
+          <!-- Booking start -->
+          <div class="booking-grid">
+            <h1 class="center-row center-column">Book Ticket</h1>
+            <div class="booking-fields">
+              <h3>Booking Information</h3>
+              <fieldset id="fuserid">
+                <legend>Departure</legend>
+                <input
+                  type="text"
+                  name=""
+                  id="userid"
+                  class="form-control"
+                  placeholder="example@email.com"
+                />
+              </fieldset>
+
+              <fieldset id="fuserid">
+                <legend>Date</legend>
+                <input type="text" id="datepicker" />
+              </fieldset>
+
+              <fieldset id="fuserid">
+                <legend>Passengers</legend>
+                <input type="number" />
+              </fieldset>
+            </div>
+            <div class="train">
+              <img id="train-img" src="../../assets/vectors/train.png" alt="" />
+            </div>
+            <div class="center-column">
+              <button id="book-now" class="ui-btn">Book Now</button>
+            </div>
+          </div>
+
+          <!-- Booking end -->
           <!-- Footer start -->
           <div class="footer ui-content">
             <div class="footer-logo-container center-column">
@@ -173,17 +186,18 @@
               </div>
             </div>
           </div>
+
           <!-- Footer end -->
           <!-- Navbar start -->
           <div class="footer-navbar" data-role="footer" data-position="fixed">
             <div data-role="navbar">
               <ul>
                 <li>
-                  <a
-                    class="nav-btn"
-                    href="./../explore/explore.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/compass.svg" alt=""
+                  <a class="nav-btn ui-btn-active" href="#"
+                    ><img
+                      class="active-navbar-icon"
+                      src="./../../assets/icons/compass.svg"
+                      alt=""
                   /></a>
                 </li>
                 <li>
@@ -195,8 +209,12 @@
                   /></a>
                 </li>
                 <li class="center-column">
-                  <a class="nav-btn nav-btn-logo ui-btn-active" href="#">
-                    <div class="circle center-column circle-active">
+                  <a
+                    class="nav-btn nav-btn-logo"
+                    href="./../my-hunts/my-hunts.html"
+                    data-prefetch="true"
+                  >
+                    <div class="circle center-column">
                       <img
                         class="navbar-logo"
                         src="./../../assets/icons/x white.svg"
