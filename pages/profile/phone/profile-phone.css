@@ -168,10 +168,10 @@
   }
   
   .pois-container {
-    margin: 20px;
+    margin: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr;
+    grid-template-rows: 0.4fr 0.4fr 0.4fr;
     margin-top: 17px;
   }
   
@@ -179,23 +179,28 @@
     text-align: center;
     margin-top: 8px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.4fr 0.4fr;
     grid-template-areas:
-      "add-card-img add-card-img"
-      "debit-card-img credit-card-img"
-      "card-select-btn card-select-btn";
+      "add-card-img"
+      "debit-card-img"
+      "card-select-btn";
   }
-  
+.main{
+  display: block !important;
+}
+
   #add-card-img {
     margin-top: 20px;
     grid-area: add-card-img;
   }
   #debit-card-img {
+    text-align: center;
     margin-top: 20px;
     grid-area: debit-card-img;
   }
   #credit-card-img {
+    text-align: center;
     margin-top: 20px;
     grid-area: credit-card-img;
   }
@@ -205,8 +210,8 @@
     grid-area: card-select-btn;
   }
   .poi {
-    min-width: 340px;
-    max-width: 340px;
+    min-width: 170px;
+    max-width: 170px;
     height: 210px;
     margin: 5px;
     position: relative;
@@ -214,8 +219,8 @@
   #favourites {
     height: 25px;
     width: 30px;
-    margin-bottom: 90px;
-    margin-left: 280px;
+    margin-bottom: 70px;
+    margin-left: 110px;
   }
   .poi:before {
     border-radius: 1em;
@@ -249,8 +254,8 @@
   }
   
   .poi .poi-info img {
-    height: 25px;
-    width: 150px;
+    height: 18px;
+    width: 110px;
   }
   
   .card1-text {
@@ -262,7 +267,7 @@
   /* asdasdasds ------------------------------- */
   
   .footer {
-    margin-top: 0em;
+    margin-top: 1em;
   }
   
   @media only screen and (max-width: 550px) {

@@ -6,10 +6,12 @@ $(document).ready(function () {
       size: 190,
       lineCap: "round",
       thickness: 20,
-      startAngle: 2,
+      startAngle: 40.5,
       animationStartValue: 5 - 5,
       fill: {
         gradient: ["cyan", "#04d9d9"],
       },
     })
 });
+
+
