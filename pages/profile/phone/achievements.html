@@ -4,10 +4,7 @@
     <title>XploRayl</title>
     <link rel="icon" type="image/png" href="./../../../../favicon.png" />
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=375px, height=900px, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -28,7 +25,6 @@
     <div data-role="page">
       <!-- Sidebar start -->
       <div class="side">
-        
         <div class="ui-content center-column">
           <img
             class="header-logo-sidebar"
@@ -92,28 +88,41 @@
         <div class="main">
           <!-- Header start -->
           <div class="header" data-role="header">
-           
+            <div onclick="history.back()" class="right-column">
+              <img
+                style="float: left; transform: rotate(180deg)"
+                height="10px"
+                width="10px"
+                src="./../../../assets/icons/icon-chevron.png"
+                alt=""
+              />
+            </div>
             <img
               class="header-logo"
               src="./../../../assets/images/logos/full logo black color.png"
               alt=""
             />
           </div>
-          <div onclick="history.back()">
-            <img
-            style="float: left; transform: rotate(180deg);"
-            height="10px"
-            width="10px"
-                    src="./../../../assets/icons/icon-chevron.png"
-                    alt=""
-                  />
-          </div>
           <!-- Header end -->
           <h1 class="tab-heading">Achievements</h1>
-          <div class="tab-item1" style="margin: 30px">
+          <div class="tab-item1">
             <div style="margin-top: 110px">
-              <h3 style="color: #04d3d9 !important; text-align: center">7th</h3>
-              <h3 style="color: rgb(0, 0, 0) !important; text-align: center">
+              <h3
+                style="
+                  color: #04d3d9 !important;
+                  text-align: center;
+                  font-size: small !important;
+                "
+              >
+                7th
+              </h3>
+              <h3
+                style="
+                  color: rgb(0, 0, 0) !important;
+                  text-align: center;
+                  font-size: small !important;
+                "
+              >
                 Position
               </h3>
             </div>
@@ -125,25 +134,39 @@
                 </div>
               </div>
             </div>
-            <div style="margin-top: 110px">
-              <h3 style="color: #04d3d9 !important; text-align: center">
-                Second Mate
-              </h3>
-              <h3 style="color: rgb(0, 0, 0) !important; text-align: center">
-                Rank
-              </h3>
-              <h4
+            <div style="margin-top: 90px">
+              <h3
                 style="
                   color: #04d3d9 !important;
-                  text-align: right;
-                  margin-top: 50px;
+                  text-align: center;
+                  font-size: small !important;
                 "
               >
-                View Ranking
-              </h4>
+                Second Mate
+              </h3>
+              <h3
+                style="
+                  color: rgb(0, 0, 0) !important;
+                  text-align: center;
+                  font-size: small !important;
+                "
+              >
+                Rank
+              </h3>
             </div>
           </div>
-
+          <a
+            style="
+              color: #04d3d9 !important;
+              font-size: small !important;
+              text-align: right;
+              margin-bottom: -100px;
+              margin-top: 35px;
+              margin-right: 15px;
+            "
+          >
+            View Ranking
+          </a>
           <div class="tab-item2">
             <div>
               <h3 style="color: #404e5a !important">Player Stats</h3>
@@ -174,9 +197,9 @@
                 </p>
               </div>
             </div>
-            <div>
+            <div style="margin-top: 30px;">
               <h3 style="color: #404e5a !important">Collectables</h3>
-              <div>
+              <div style="margin-left: -10px;">
                 <img
                   class="collectables"
                   src="./../../../../assets/images/profile/collectable.png"

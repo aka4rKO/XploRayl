@@ -34,7 +34,7 @@
     color: #404e5a !important;
   }
   #circle {
-    margin: 20px;
+    margin: 10px;
     text-align: center;
   }
   .points {
@@ -58,8 +58,7 @@
     margin-top: 90px;
     margin-left: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 180px;
+    grid-template-columns: 1fr;
   }
   
   .collectables {
@@ -79,7 +78,7 @@
     color: #748a9d !important;
     font-weight: bold !important;
     font-size: larger;
-    margin: 5px 5px 5px 55px;
+    margin: 5px 5px 5px 95px;
   }
   
   .player-stats {
@@ -263,7 +262,7 @@
   /* asdasdasds ------------------------------- */
   
   .footer {
-    margin-top: 61vh;
+    margin-top: 0em;
   }
   
   @media only screen and (max-width: 550px) {
@@ -335,9 +334,7 @@
     }
   }
   @media only screen and (max-width: 550px) {
-    .footer {
-      margin-top: 100vh;
-    }
+
   }
   @media only screen and (min-width: 768px) {
     .phone-tab-view {
