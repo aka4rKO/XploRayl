@@ -22,8 +22,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-<link rel="stylesheet" href="./../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+    <link rel="stylesheet" href="./../../style.css" />
 
     <script src="./../../script.js"></script>
     <script src="./booking.js"></script>
@@ -40,7 +43,7 @@
           />
         </div>
         <div>
-          <div class="sidebar-nav-btn booking-complete  ">
+          <div class="sidebar-nav-btn booking-complete">
             <a href="#">
               <div class="sidebar-nav-btn-contents booking-complete">
                 <img
@@ -48,24 +51,31 @@
                   src="./../../assets/icons/map-pin.svg"
                   alt=""
                 />
-                <span class="sidebar-nav-btn-content booking-complete">Booking</span>
+                <span class="sidebar-nav-btn-content booking-complete"
+                  >Booking</span
+                >
               </div>
             </a>
           </div>
-          <div class="sidebar-nav-btn booking-complete  ">
+          <div class="sidebar-nav-btn booking-complete">
             <a href="#">
               <div class="sidebar-nav-btn-contents booking-complete">
                 <img
-                style="filter: invert(74%) sepia(95%) saturate(3725%) hue-rotate(141deg) brightness(108%) contrast(97%);"
+                  style="
+                    filter: invert(74%) sepia(95%) saturate(3725%)
+                      hue-rotate(141deg) brightness(108%) contrast(97%);
+                  "
                   class="sidebar-nav-btn-content booking-complete"
                   src="./../../assets/icons/shopping-bag.svg"
                   alt=""
                 />
-                <span class="sidebar-nav-btn-content booking-complete">Order</span>
+                <span class="sidebar-nav-btn-content booking-complete"
+                  >Order</span
+                >
               </div>
             </a>
           </div>
-     
+
           <div class="sidebar-nav-btn-active">
             <a data-prefetch="true">
               <div class="sidebar-nav-btn-contents">
@@ -91,62 +101,122 @@
               src="./../../assets/images/logos/full logo black color.png"
               alt=""
             />
-    
           </div>
           <div>
             <img
               class="header-logo"
               src="./../../assets/icons/left-chevron.svg"
               alt=""
-              style="width: 0.8em; margin-left: 0.8em;"
+              style="width: 0.8em; margin-left: 0.8em"
             />
           </div>
           <!-- Header end -->
-          <!-- Booking start -->        
-          <div class="booking-grid ">
+          <!-- Booking start -->
+          <div class="booking-grid">
             <h1 class="center-row center-column">Payment</h1>
-<div class="booking-fields">
+            <div class="booking-fields">
+              <h3>Select a card</h3>
+              <div
+                class="order-field center-column center-row placeholder-text"
+              >
+                <div
+                  class="field-placeholder add-card-placeholder label-text center-column"
+                >
+                  <img
+                    style="width: 4em"
+                    src="../../assets/icons/plus-circle.svg"
+                    class="icon-grey"
+                    alt=""
+                  />
 
+                  <a href="#add-card-modal" rel="modal:open">
+                    <h3>ADD CARD</h3></a
+                  >
+                  <!-- ADD CARD MODAL START -->
+                  <div id="add-card-modal" class="modal ui-modal">
+                    <h1 class="center-column center-row">Add Card</h1>
+                    <div class="card-details double-column">
+                      <div class="row">
+                        <div class="column">
+                          <div class="mr-2">
+                            <fieldset id="fcard-name">
+                              <legend>Cardholder Name</legend>
+                              <input
+                                type="text"
+                                name="card-name"
+                                id="card-name"
+                                value=""
+                                placeholder="John Doe"
+                              />
+                            </fieldset>
+                          </div>
+                          <div  class="mr-2">
+                            <fieldset id="fexpiry-date">
+                              <legend>Expiry date</legend>
+                              <input
+                                type="date"
+                                name="expiry-date"
+                                id="expiry-date"
+                                value=""
+                                placeholder="22/07"
+                              />
+                            </fieldset>
+                            <p class="expDateErr"></p>
+                          </div>
+                        </div class="mr-2" >
+                        <div class="column">
+                          <div>
+                            <fieldset id="fcard-no">
+                              <legend>Card Number</legend>
+                              <input
+                                type="number"
+                                name="card-no"
+                                id="card-no"
+                                value=""
+                                placeholder="4216 ****"
+                              />
+                            </fieldset>
+                            <p class="card-noErr"></p>
+                          </div>
+                          <div class="mr-2" >
+                            <fieldset id="fcvv">
+                              <legend>Security Code</legend>
+                              <input
+                                type="number"
+                                name="cvv"
+                                id="cvv"
+                                value=""
+                                placeholder="123"
+                              />
+                            </fieldset>
+                            <p class="cvvErr"></p>
+                          </div>                        </div>
+                      </div>
+                    </div>
 
-            <h3>Select a card</h3>
-          <div class="order-field center-column center-row placeholder-text">
-          <div class="field-placeholder add-card-placeholder label-text center-column">
-            <img style="width: 4em;" src="../../assets/icons/plus-circle.svg" class="icon-grey" alt="">
+                    <div class="center-column center-row">
+                      <button id="save-card" class="ui-btn">Save</button>
+                    </div>
+                  </div>
+                  <!-- ADD CARD MODAL End -->
+                </div>
 
-            
-            <a href="#common-modal" rel="modal:open"> <h3>ADD CARD</h3></a>
-
-            <div id="common-modal" class="modal ui-modal">
-              <h1 class="center-column center-row">Add Card</h1>
-              <p >Thanks for clicking. That felt good.</p>
-              <a href="#" rel="modal:close">Close</a>
+                <!-- Link to open the modal -->
+              </div>
             </div>
-            
-            <!-- Link to open the modal -->
-        
-
-          </div>
-        </div>
-          <div class="card-list">
-
-          <div class="order-field center-row placeholder-text">
-            <div class=" add-card-placeholder label-text">
-
+            <div class="card-list">
+              <div class="order-field center-row placeholder-text">
+                <div class="add-card-placeholder label-text"></div>
+              </div>
+              <div class="order-field center-row placeholder-text">
+                <div class="add-card-placeholder label-text"></div>
+              </div>
             </div>
-          </div>
-          <div class="order-field center-row placeholder-text">
-            <div class=" add-card-placeholder label-text">
 
-            </div>
-          </div>
-          
-          </div>
-      
             <div class="center-column">
               <button id="book-now" class="ui-btn">Book Now</button>
             </div>
           </div>
-          
 
           <!-- Booking end -->
           <!-- Footer start -->

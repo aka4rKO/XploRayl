@@ -85,44 +85,37 @@
               alt=""
             />
           </div>
-       
+
           <!-- Header end -->
           <!-- Booking start -->
           <div class="booking-grid">
             <h1 class="center-row center-column">Book Ticket</h1>
-          <div class="booking-fields">
+            <div class="booking-fields">
+              <h3>Booking Information</h3>
+              <fieldset id="fuserid">
+                <legend>Departure</legend>
+                <input
+                  type="text"
+                  name=""
+                  id="userid"
+                  class="form-control"
+                  placeholder="example@email.com"
+                />
+              </fieldset>
 
+              <fieldset id="fuserid">
+                <legend>Date</legend>
+                <input type="text" id="datepicker" />
+              </fieldset>
 
-            <h3>Booking Information</h3>
-            <fieldset id="fuserid">
-              <legend>Departure</legend>
-              <input
-                type="text"
-                name=""
-                id="userid"
-                class="form-control"
-                placeholder="example@email.com"
-              />
-            </fieldset>
-
-            <fieldset id="fuserid">
-              <legend>Date</legend>
-              <input type="text" id="datepicker" />
-            </fieldset>
-
-            <fieldset id="fuserid">
-              <legend>Passengers</legend>
-              <input type="number" />
-            </fieldset>
-
-          </div>
-   <div class="train">
-            <img
-              id="train-img"
-              src="../../assets/vectors/train.png"
-              alt=""
-            />
-          </div>
+              <fieldset id="fuserid">
+                <legend>Passengers</legend>
+                <input type="number" />
+              </fieldset>
+            </div>
+            <div class="train">
+              <img id="train-img" src="../../assets/vectors/train.png" alt="" />
+            </div>
             <div class="center-column">
               <button id="book-now" class="ui-btn">Book Now</button>
             </div>
