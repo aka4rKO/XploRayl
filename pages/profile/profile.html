@@ -11,11 +11,16 @@
     />
     <link rel="stylesheet" href="./../../style.css" />
     <link rel="stylesheet" href="./profile.css" />
+
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./../profile/circle-progress.min.js"></script>
+
     <script src="./../../script.js"></script>
     <script src="./profile.js"></script>
   </head>
+
   <body>
     <div data-role="page">
       <!-- Sidebar start -->
@@ -86,6 +91,420 @@
             />
           </div>
           <!-- Header end -->
+
+          <!-- content start -->
+          <div class="grid-container">
+            <img
+              class="profile-pic"
+              src="./../../assets/images/avatars/profile.jpg"
+              alt="Profile Picture"
+            />
+            <div id="profile-header">
+              <h2>Orlando Smith</h2>
+              <a href="">Edit</a>
+            </div>
+            <div id="signout">
+              <a href=""
+                >Sign Out
+                <img
+                  src="./../../assets/icons/log-out.svg"
+                  style="margin-bottom: -5px"
+                  alt=""
+              /></a>
+            </div>
+            <div class="stats-data">
+              <div>
+                <h3>40</h3>
+                <p>Hunts</p>
+              </div>
+              <div>
+                <h3>340</h3>
+                <p>Points</p>
+              </div>
+              <div>
+                <h3>41</h3>
+                <p>Reviews</p>
+              </div>
+            </div>
+            <div data-role="tabs" id="tab-item">
+              <div data-role="navbar">
+                <ul id="unlisted-view" data-inset="true">
+                  <li id="list-view">
+                    <a
+                      class="tab-nav"
+                      href="#tab-one"
+                      data-theme="a"
+                      data-ajax="false"
+                      >Achievements</a
+                    >
+                  </li>
+                  <li id="list-view">
+                    <a
+                      class="tab-nav"
+                      href="#tab-two"
+                      data-theme="a"
+                      data-ajax="false"
+                      >Coupons</a
+                    >
+                  </li>
+                  <li id="list-view">
+                    <a
+                      class="tab-nav"
+                      href="#tab-three"
+                      data-theme="a"
+                      data-ajax="false"
+                      >Favourites</a
+                    >
+                  </li>
+                  <li id="list-view">
+                    <a
+                      class="tab-nav"
+                      href="#tab-four"
+                      data-theme="a"
+                      data-ajax="false"
+                      >Tickets</a
+                    >
+                  </li>
+                  <li id="list-view">
+                    <a
+                      class="tab-nav"
+                      href="#tab-five"
+                      data-theme="a"
+                      data-ajax="false"
+                      >Payment methods</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div id="tab-one" class="ui-content">
+                <h1 class="tab-heading">Achievements</h1>
+                <div class="tab-item1" style="margin: 30px">
+                  <div style="margin-top: 110px">
+                    <h3 style="color: #04d3d9 !important; text-align: center">
+                      7th
+                    </h3>
+                    <h3
+                      style="color: rgb(0, 0, 0) !important; text-align: center"
+                    >
+                      Position
+                    </h3>
+                  </div>
+                  <div>
+                    <div id="circle">
+                      <div class="points">
+                        <h3 id="points-title">TOTAL POINTS</h3>
+                        <h2 id="points-value">6,500</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top: 110px">
+                    <h3 style="color: #04d3d9 !important; text-align: center">
+                      Second Mate
+                    </h3>
+                    <h3
+                      style="color: rgb(0, 0, 0) !important; text-align: center"
+                    >
+                      Rank
+                    </h3>
+                    <h4
+                      style="
+                        color: #04d3d9 !important;
+                        text-align: right;
+                        margin-top: 50px;
+                      "
+                    >
+                      View Ranking
+                    </h4>
+                  </div>
+                </div>
+
+                <div class="tab-item2">
+                  <div>
+                    <h3 style="color: #404e5a !important">Player Stats</h3>
+                    <div class="player-stats">
+                      <p id="stat-name">Places unlocked</p>
+                      <p>
+                        <b id="stat-value">10</b>
+                      </p>
+
+                      <p id="stat-name">Collectables</p>
+                      <p>
+                        <b id="stat-value">10</b>
+                      </p>
+
+                      <p id="stat-name">Travel Distance</p>
+                      <p>
+                        <b id="stat-value">10</b>
+                      </p>
+
+                      <p id="stat-name">Task Completed</p>
+                      <p>
+                        <b id="stat-value">10</b>
+                      </p>
+
+                      <p id="stat-name">Coupons</p>
+                      <p>
+                        <b id="stat-value">10</b>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 style="color: #404e5a !important">Collectables</h3>
+                    <div>
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectable.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectable.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectable.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectableDisabled.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectableDisabled.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectableDisabled.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectableDisabled.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectableDisabled.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectableDisabled.png"
+                        alt="Collectable"
+                      />
+                      <img
+                        class="collectables"
+                        src="./../../assets/images/profile/collectableDisabled.png"
+                        alt="Collectable"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-two" class="ui-content">
+                <h1 class="tab-heading">Coupons</h1>
+                <div class="coupons-grid">
+                  <img
+                    class="coupon-image"
+                    src="./../../assets/images/profile/coupon.png"
+                    alt="Coupon"
+                  />
+                  <img
+                    class="coupon-image"
+                    src="./../../assets/images/profile/coupon.png"
+                    alt="Coupon"
+                  />
+                  <img
+                    class="coupon-image"
+                    src="./../../assets/images/profile/coupon.png"
+                    alt="Coupon"
+                  />
+                  <img
+                    class="coupon-image"
+                    src="./../../assets/images/profile/coupon.png"
+                    alt="Coupon"
+                  />
+                  <img
+                    class="coupon-image"
+                    src="./../../assets/images/profile/coupon.png"
+                    alt="Coupon"
+                  />
+                  <img
+                    class="coupon-image"
+                    src="./../../assets/images/profile/coupon.png"
+                    alt="Coupon"
+                  />
+                  <img
+                    class="coupon-image"
+                    src="./../../assets/images/profile/coupon.png"
+                    alt="Coupon"
+                  />
+                  <img
+                    class="coupon-image"
+                    src="./../../assets/images/profile/coupon.png"
+                    alt="Coupon"
+                  />
+                </div>
+              </div>
+              <div id="tab-three" class="ui-content">
+                <h1 class="tab-heading">Favourites</h1>
+                <div class="pois-container">
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-four" class="ui-content">
+                <h1 class="tab-heading">Tickets</h1>
+                <div class="tickets-grid">
+                  <img
+                    class="ticket-image"
+                    src="./../../assets/images/profile/ticket.png"
+                    alt="Ticket"
+                  />
+                  <img
+                    class="ticket-image"
+                    src="./../../assets/images/profile/ticket.png"
+                    alt="Ticket"
+                  />
+                  <img
+                    class="ticket-image"
+                    src="./../../assets/images/profile/ticket.png"
+                    alt="Ticket"
+                  />
+                  <img
+                    class="ticket-image"
+                    src="./../../assets/images/profile/ticket.png"
+                    alt="Ticket"
+                  />
+                  <img
+                    class="ticket-image"
+                    src="./../../assets/images/profile/ticket.png"
+                    alt="Ticket"
+                  />
+                  <img
+                    class="ticket-image"
+                    src="./../../assets/images/profile/ticket.png"
+                    alt="Ticket"
+                  />
+                  <img
+                    class="ticket-image"
+                    src="./../../assets/images/profile/ticket.png"
+                    alt="Ticket"
+                  />
+                  <img
+                    class="ticket-image"
+                    src="./../../assets/images/profile/ticket.png"
+                    alt="Ticket"
+                  />
+                </div>
+              </div>
+              <div id="tab-five" class="ui-content">
+                <h1 class="tab-heading">Payment methods</h1>
+                <div class="payment-grid">
+                  <div id="add-card-img">
+                    <img
+                      class="ticket-image"
+                      src="./../../assets/images/profile/add-card.png"
+                      alt="Ticket"
+                    />
+                  </div>
+                  <div id="debit-card-img">
+                    <img
+                      class="ticket-image"
+                      src="./../../assets/images/profile/debit-card.png"
+                      alt="Ticket"
+                    />
+                  </div>
+                  <div id="credit-card-img">
+                    <img
+                      class="ticket-image"
+                      src="./../../assets/images/profile/credit-card.png"
+                      alt="Ticket"
+                    />
+                  </div>
+                  <div id="card-select-btn">
+                    <button class="ui-btn subscribe-btn">SELECT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content end -->
+
           <!-- Footer start -->
           <div class="footer ui-content">
             <div class="footer-logo-container center-column">
