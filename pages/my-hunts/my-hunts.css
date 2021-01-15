@@ -304,6 +304,7 @@
     background-position: center center!important;
     background-image: url("/assets/icons/x.svg") !important;
   }
+  
   @media only screen and (max-width: 550px) {
     .profile-pic {
       vertical-align: middle;

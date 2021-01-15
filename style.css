@@ -534,6 +534,17 @@ fieldset > div {
   background-position: center center;
   background-image: url("/assets/icons/x.svg");
 }
+
+.review{
+  margin-bottom: 1em;
+  padding-bottom: 2em;
+
+}
+.review-heading{
+  bottom: -0.9em;  position: relative;
+  left: 1em;;
+  
+}
 /* iPad portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .side {

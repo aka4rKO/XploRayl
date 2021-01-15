@@ -1,0 +1,9 @@
+
+.simple-rating i{
+	
+	color: #04D3D9;
+	display: inline-block;
+	padding: 1px 2px;
+	font-size: 2em;
+	cursor: pointer;
+}
