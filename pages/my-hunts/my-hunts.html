@@ -5,18 +5,25 @@
     <link rel="icon" type="image/png" href="./../../favicon.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
+
+
     <link rel="stylesheet" href="./../../style.css" />
     <link rel="stylesheet" href="./my-hunts.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+    
     <script src="./../../script.js"></script>
     <script src="./my-hunts.js"></script>
   </head>
@@ -93,20 +100,104 @@
               alt=""
             />
           </div>
-
-          <div class="body-content">
-                <h1>My Hunts</h1>
-
-                <div id="common-modal" class="modal ui-modal">
-                  <h1 class="center-column center-row">Add Card</h1>
-                  <p >Thanks for clicking. That felt good.</p>
-                  <a href="#" rel="modal:close">Close</a>
+            <div class="main">
+              <!-- Header start -->
+              <div class="header" data-role="header">
+                <img
+                  class="header-logo"
+                  src="./../../assets/images/logos/full logo black color.png"
+                  alt=""
+                />
+              </div>
+              
+              <!-- Header end -->
+    
+              <!-- content start -->
+              <div class="grid-container hunt-header ">
+                <div id="profile-header">
+                  <h1 style="color: white !important;position: absolute;
+                  right: 30%;">My Hunt</h1>
                 </div>
-                
-                <!-- Link to open the modal -->
-                <p><a href="#common-modal" rel="modal:open">Open Modal</a></p>
             
-          </div>
+                <div data-role="tabs" id="tab-item">
+                  <div data-role="navbar">
+                    <ul id="unlisted-view" data-inset="true">
+                      <li id="list-view">
+                        <a
+                          class="tab-nav"
+                          href="#tab-one"
+                          data-theme="a"
+                          data-ajax="false"
+                          >Achievements</a
+                        >
+                      </li>
+                      <li id="list-view">
+                        <a
+                          class="tab-nav"
+                          href="#tab-two"
+                          data-theme="a"
+                          data-ajax="false"
+                          >Coupons</a
+                        >
+                      </li>
+                      <li id="list-view">
+                        <a
+                          class="tab-nav"
+                          href="#tab-three"
+                          data-theme="a"
+                          data-ajax="false"
+                          >Favourites</a
+                        >
+                      </li>
+                      <li id="list-view">
+                        <a
+                          class="tab-nav"
+                          href="#tab-four"
+                          data-theme="a"
+                          data-ajax="false"
+                          >Tickets</a
+                        >
+                      </li>
+                      <li id="list-view">
+                        <a
+                          class="tab-nav"
+                          href="#tab-five"
+                          data-theme="a"
+                          data-ajax="false"
+                          >Payment methods</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="tab-one" class="ui-content hunt-home">
+                    <div class="overlay"></div>
+                    
+                      <h1 style="    position: relative;
+                      color: white !important;
+                      top: 60%;" class=""> Seagull Hunt </h1>
+                      <div style="    position: relative;
+                      color: white !important;
+                      top: 60%;">
+                    
+                    
+                        <span>Copenhagen, Denmark</span>
+                     
+                      <div>
+                        <span>Copenhagen, Denmark</span>
+                      </div>
+                      </div>
+
+
+
+
+                      <div style="    position: relative;
+                      color: white !important;
+                      top: 50%;" class="left-column">
+                      <button class="ui-btn" >SCAN</button>
+                    </div>
+                  </div>
+                  </div>
+                </div>
       
           <!-- Header end -->
           <!-- Footer start -->
