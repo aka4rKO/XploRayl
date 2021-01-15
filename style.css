@@ -35,8 +35,9 @@ green #7bed8d
   src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
 }
 
-.icon-grey{
-  filter: invert(49%) sepia(2%) saturate(3170%) hue-rotate(166deg) brightness(108%) contrast(104%);
+.icon-grey {
+  filter: invert(49%) sepia(2%) saturate(3170%) hue-rotate(166deg)
+    brightness(108%) contrast(104%);
 }
 
 .placeholder-text {
@@ -457,6 +458,30 @@ fieldset > div {
   border-radius: unset !important;
 }
 
+.mr-2 {
+  margin: 10px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+}
+
 .nav-btn:active {
   background-color: #f0f4f8 !important;
   border: none !important;
@@ -487,16 +512,28 @@ fieldset > div {
   color: #748a9d;
 }
 
-
-.add-card-placeholder{
+.add-card-placeholder {
   height: 10em;
   width: 18em;
 }
 
-.coupon-field{
+.coupon-field {
   margin-top: 6em;
 }
 
+.modal a.close-modal {
+  position: absolute;
+  top: 14.5px;
+  right: 22.5px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/assets/icons/x.svg");
+}
 /* iPad portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .side {
