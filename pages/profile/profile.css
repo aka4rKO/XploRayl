@@ -279,7 +279,52 @@ p {
     height: 100px;
     width: 100px;
   }
-
+  #tab-item {
+    display: none;
+  }
+  .grid-container {
+    height: 0px;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 1px 1px 3px 4px #ccc;
+    background-color: rgb(255, 255, 255);
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    display: grid;
+    grid-template-columns: 0.2fr 1.5fr;
+    grid-template-rows: 130px 90px 200px;
+    grid-template-areas:
+      "img profile-header"
+      "stats-data stats-data"
+      "tab-list-view tab-list-view";
+  }
+  #tab-list-view {
+    grid-area: tab-list-view;
+  }
+  .arrow-icon {
+    margin-left: 160px;
+  }
+  .phone-tab-list-view {
+    background-color: #F0F4F8;
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+        margin-top: 5px;
+    border-radius: 10px;
+    font-family: "Poppins medium";
+    color: #748A9D;
+    width: 295px;
+  }
+  .stats-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: #404e5a;
+    padding: 10px;
+    text-align: center;
+  }
   #signout {
     display: none;
   }
@@ -294,9 +339,23 @@ p {
     text-align: center;
   }
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 550px) {
+  .footer {
+    margin-top: 100vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .phone-tab-view {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
   .footer {
     margin-top: 45vh;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .phone-tab-view {
+    display: none;
   }
 }
