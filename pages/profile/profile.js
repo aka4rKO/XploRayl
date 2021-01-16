@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $('h1').load('newnew.html');
   $("#circle")
     .circleProgress({
       value: 0.6,
