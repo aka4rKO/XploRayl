@@ -35,23 +35,24 @@
           "review": "best hunt ever chater..."
         },
         {
-            "name": "Amjad",
-            "rating": 1,
-            "review": "chater bugger"
-          }
+          "name": "Amjad",
+          "rating": 1,
+          "review": "chater bugger"
+        }
       ],
       "tasks": [
-          {
-              "name": "",
-              "points": 100,
-              "lat": "",
-              "lng": "",
-              "isComplete": false
-          }
+        {
+          "name": "",
+          "points": 100,
+          "lat": "",
+          "lng": "",
+          "isComplete": false
+        }
       ],
       "status": ""
     }
   ],
+  "favourites": [],
   "popularHunts": [1, 2, 3],
   "topRatedHunts": [1, 2, 3],
   "mostVisitedHunts": [1, 2, 3]

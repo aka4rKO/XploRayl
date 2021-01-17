@@ -16,7 +16,9 @@
     <script>
       $.getJSON("data.json", function (json) {
         console.log(json);
+        var favsArr = [];
         localStorage.setItem("data", JSON.stringify(json));
+        localStorage.setItem("favourites", JSON.stringify(favsArr));
       });
 
       setTimeout(function () {

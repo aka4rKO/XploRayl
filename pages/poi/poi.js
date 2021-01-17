@@ -1,6 +1,37 @@
-$("#click_advance").click(function () {
-  $("#display_advance").toggle("1000");
-  $("i", this).toggleClass("icon-circle-arrow-up icon-circle-arrow-down");
+$(document).ready(function () {
+  var currentPoiId = JSON.parse(sessionStorage.getItem("currentId"));
+
+  renderPOIInfo();
+
+  $(".like").click(function () {
+    $(this).toggleClass("heart");
+    var favs = JSON.parse(localStorage.getItem("favourites"));
+
+    var favouriteId = favs.filter((obj) => {
+      return obj === currentPoiId;
+    });
+
+    if (favouriteId[0] !== currentPoiId) {
+      favs.push(currentPoiId);
+      localStorage.setItem("favourites", JSON.stringify(favs));
+      $("#snackbar").text("Successfully added to favourites");
+      $(".snackbar").toggleClass("center-row space-between");
+      setTimeout(function () {
+        $(".snackbar").removeClass("center-row space-between");
+      }, 2000);
+    } else {
+      var newFavs = favs.filter((obj) => {
+        return obj !== currentPoiId;
+      });
+
+      localStorage.setItem("favourites", JSON.stringify(newFavs));
+      $("#snackbar").text("Removed from favourites");
+      $(".snackbar").toggleClass("center-row space-between");
+      setTimeout(function () {
+        $(".snackbar").removeClass("center-row space-between");
+      }, 2000);
+    }
+  });
 });
 
 function myMap() {
@@ -12,7 +43,21 @@ function myMap() {
 }
 
 function initMap() {
-  const myLatLng = { lat: 51.518757, lng: -0.126168 };
+  var poiId = JSON.parse(sessionStorage.getItem("currentId"));
+
+  var dataObj = JSON.parse(localStorage.getItem("data"));
+  var pois = dataObj["poiObjs"];
+
+  var poi = pois.filter((obj) => {
+    return obj.poiId === poiId;
+  });
+
+  var poi = poi[0];
+
+  var latitude = poi["lat"];
+  var longitude = poi["lng"];
+
+  const myLatLng = { lat: latitude, lng: longitude };
   const map = new google.maps.Map(document.getElementById("map-container"), {
     zoom: 12,
     center: myLatLng,
@@ -23,37 +68,6 @@ function initMap() {
     title: "Hello World!",
   });
 }
-
-$(document).ready(function () {
-  $(".like").click(function () {
-    $(this).toggleClass("heart");
-
-    sessionStorage.setItem("favourites", "british museum");
-    var n = document.querySelector(".snackbar");
-    $(".snackbar").toggleClass("center-row space-between");
-    setTimeout(function () {
-      $(".snackbar").removeClass("center-row space-between");
-    }, 2000);
-  });
-
-  renderPOIInfo();
-  // initMap();
-
-  // $(".popup-btn").on("click", function () {
-  //   $(".video-popup").fadeIn("slow");
-  //   return false;
-  // });
-
-  // $(".popup-bg").on("click", function () {
-  //   $(".video-popup").slideUp("slow");
-  //   return false;
-  // });
-
-  // $(".close-btn").on("click", function () {
-  //   $(".video-popup").fadeOut("slow");
-  //   return false;
-  // });
-});
 
 function renderPOIInfo() {
   var poiId = JSON.parse(sessionStorage.getItem("currentId"));
@@ -122,8 +136,8 @@ function renderPOIInfo() {
     <img src="./../../assets/icons/share-2.svg" alt="" />
 
     <div class="snackbar">
-      <span class="card1-text"
-        >Successfully added to favourites</span
+      <span class="card1-text" id="snackbar"
+        ></span
       >
     </div>
     <i class="like fa fa-heart fa-2x"></i>
@@ -184,16 +198,16 @@ function renderPOIInfo() {
       />
     </div>
     <div class="img1">
-      <img src="${poi.img}" alt="" />
+      <img src="https://i.insider.com/5a97e971aae60565008b45c8?width=1100&format=jpeg&auto=webp" alt="" />
     </div>
     <div class="img2">
-      <img src="${poi.img}" alt="" />
+      <img src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/88fab4d5-a7ba-46a2-9536-4fdd6be870f2-Natural_history_museum-Alexey_Fedorenko-shutterstock.jpg" alt="" />
     </div>
     <div class="img3">
-      <img src="${poi.img}" alt="" />
+      <img src="https://visitbath.co.uk/images/uploads/site/roman_baths_bath_historic_venues_960x480.jpg" alt="" />
     </div>
     <div class="img4">
-      <img src="${poi.img}" alt="" />
+      <img src="https://www.blogpreston.co.uk/wp-content/uploads/2011/11/harris-museum-630x364.jpg" alt="" />
     </div>
   </div>
   `;
@@ -260,6 +274,7 @@ function renderPOIInfo() {
       <img src="./../../assets/icons/star.svg" alt="" />
     `;
     }
+
     reviewDom += `
     <div class="review-card">
       <span
