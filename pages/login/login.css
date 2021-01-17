@@ -1,3 +1,30 @@
+.imgcirlce{
+  margin: 4em 1em 1em 5.8em;
+ width: 200px;
+  height: 200px;
+ background-color: white;
+ border-radius: 50%;
+}
+.box-left{ 
+  grid-area: left;
+  padding: 50px;
+
+}
+.box-right{
+  background-color: #04d3d9;
+  grid-area: right;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px}
+.box-wrapper{
+
+
+  grid-template-columns: 1.5fr 1.5fr 2fr;
+  display: grid;
+  grid-template-areas: 
+    'left left right';
+}
+
+
 .line {
   width: 100%;
   text-align: center;
@@ -50,8 +77,15 @@
   width: 100%;
 }
 
-.login-form {
-  /* height: 80vh; */
+.box-form {
+  background-color: white;
+  width: auto;
+  border-radius:  50px;
+
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 80px;
+  margin-bottom: 30px;
 }
 
 /* Hide all steps by default: */
