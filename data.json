@@ -1,0 +1,53 @@
+{
+  "users": {
+    "username": "user1",
+    "password": "123"
+  },
+  "poi-objs": [
+    {
+      "poi-id": 1,
+      "name": "British Museum",
+      "location": "London",
+      "date": "20th Sept 2020",
+      "lat": "",
+      "lng": "",
+      "img": "/assets/images/pois/british-museum.jpg",
+      "video": "https://www.youtube.com/embed/kMQgBAaUNs4",
+      "price": 100,
+      "description": "sample description",
+      "arrival": "Waterloo",
+      "commute-distance": 20,
+      "walking-distance": 10,
+      "difficulty-level": "Medium",
+      "time": 3,
+      "scanned": false,
+      "ratings": {
+        "5": 500,
+        "4": 250,
+        "3": 250,
+        "2": 250,
+        "1": 0
+      },
+      "reviews": [
+        {
+          "name": "Becky",
+          "rating": 5,
+          "review": "best hunt ever..."
+        }
+      ],
+      "tasks": [
+          {
+              "name": "",
+              "points": 100,
+              "lat": "",
+              "lng": "",
+              "is-complete": false
+          }
+      ],
+      "status": ""
+    }
+  ],
+  "popular-hunts": [1, 2, 3],
+  "top-rated-hunts": [1, 2, 3],
+  "most-visited-hunts": [1, 2, 3]
+}
