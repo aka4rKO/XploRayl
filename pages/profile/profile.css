@@ -157,14 +157,61 @@ p {
 }
 
 /* Coupons styles ---------------------------------------------------- */
+#ticket-card {
+  margin-top: 15px;
+  width: 320px;
+  background-color: #f0f4f8;
+  border-radius: 15px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 220px 100px;
+  grid-template-rows: 25px 25px 25px 25px;
+  grid-template-areas:
+    "ticketId price"
+    "from price"
+    "date price"
+    "seats price";
+}
+#ticketId {
+  grid-area: ticketId;
+  color: #000000 !important;
+  margin: 5px;
+}
+#price {
+  padding-left: 20px;
+  padding-top: 40px;
+  grid-area: price;
+  color: #748a9d !important;
+  border-left-style: dotted;
+}
+#from {
+  grid-area: from;
+  color: #748a9d !important;
+  margin: 5px;
+}
+#date {
+  grid-area: date;
+  color: #748a9d !important;
+  margin: 5px;
+}
+#seats {
+  grid-area: seats;
+  color: #748a9d !important;
+  margin: 5px;
+}
+
+.tickets-grid {
+  margin-top: 18px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
 .ticket-image {
   margin-bottom: -10px;
   margin-right: 5px;
 }
-.tickets-grid {
-  margin-top: 18px;
-  text-align: center;
-}
+
 .coupon-image {
   margin: 3px;
 }
@@ -305,14 +352,14 @@ p {
     margin-left: 160px;
   }
   .phone-tab-list-view {
-    background-color: #F0F4F8;
+    background-color: #f0f4f8;
     padding: 20px;
     margin-right: 20px;
     margin-left: 20px;
-        margin-top: 5px;
+    margin-top: 5px;
     border-radius: 10px;
     font-family: "Poppins medium";
-    color: #748A9D;
+    color: #748a9d;
     width: 295px;
   }
   .stats-data {
