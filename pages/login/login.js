@@ -119,9 +119,7 @@ function callLogin(){
     }
 }
 
-$(function () {
-  $("#newpassword").passwordStrength();
-});
+
 
 
 /* signup.html */
@@ -223,8 +221,6 @@ function callSignUp() {
   }
 }
 
-$(function () {
-  $("#pw").passwordStrength();
-});
+
 
 
