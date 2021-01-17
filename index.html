@@ -14,14 +14,14 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="./script.js"></script>
     <script>
-      // setTimeout(function () {
-      //   window.location = "./pages/login/login.html";
-      // }, 2000);
-
       $.getJSON("data.json", function (json) {
         console.log(json);
-        localStorage.setItem("data", json);
+        localStorage.setItem("data", JSON.stringify(json));
       });
+
+      setTimeout(function () {
+        window.location = "./pages/login/login.html";
+      }, 2000);
     </script>
   </head>
   <body>

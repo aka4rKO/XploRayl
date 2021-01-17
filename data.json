@@ -3,22 +3,22 @@
     "username": "user1",
     "password": "123"
   },
-  "poi-objs": [
+  "poiObjs": [
     {
-      "poi-id": 1,
+      "poiId": 1,
       "name": "British Museum",
       "location": "London",
       "date": "20th Sept 2020",
-      "lat": "",
-      "lng": "",
+      "lat": 51.518757,
+      "lng": -0.126168,
       "img": "/assets/images/pois/british-museum.jpg",
       "video": "https://www.youtube.com/embed/kMQgBAaUNs4",
       "price": 100,
       "description": "sample description",
       "arrival": "Waterloo",
-      "commute-distance": 20,
-      "walking-distance": 10,
-      "difficulty-level": "Medium",
+      "commuteDistance": 20,
+      "walkingDistance": 10,
+      "difficultyLevel": "Medium",
       "time": 3,
       "scanned": false,
       "ratings": {
@@ -30,10 +30,15 @@
       },
       "reviews": [
         {
-          "name": "Becky",
-          "rating": 5,
-          "review": "best hunt ever..."
-        }
+          "name": "Nasif",
+          "rating": 4,
+          "review": "best hunt ever chater..."
+        },
+        {
+            "name": "Amjad",
+            "rating": 1,
+            "review": "chater bugger"
+          }
       ],
       "tasks": [
           {
@@ -41,13 +46,13 @@
               "points": 100,
               "lat": "",
               "lng": "",
-              "is-complete": false
+              "isComplete": false
           }
       ],
       "status": ""
     }
   ],
-  "popular-hunts": [1, 2, 3],
-  "top-rated-hunts": [1, 2, 3],
-  "most-visited-hunts": [1, 2, 3]
+  "popularHunts": [1, 2, 3],
+  "topRatedHunts": [1, 2, 3],
+  "mostVisitedHunts": [1, 2, 3]
 }
