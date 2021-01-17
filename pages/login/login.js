@@ -41,8 +41,14 @@ function sendEmail() {
   var email = $("#veremail").val();
 
   if (email != "") {
-    $(".success").html("verification Code has been successfully sent");
-    window.location.replace("verificationCode.html");
+
+      var n = document.querySelector(".snackbar");
+      $(".snackbar").toggleClass("center-row space-between");
+      $(".ok").click(function () {
+        $(".snackbar").removeClass("center-row space-between");
+        window.location.replace("verificationCode.html");
+      });
+
   } else {
     if (email == "") {
       $("#veriuserid").css("border", "2px solid red");
@@ -59,8 +65,12 @@ function verifyCode(){
   var code = $("#code").val();
 
       if(code != ""){
-        $(".success").html("Verified!"); 
-        window.location.replace("setPassword.html");
+        var n = document.querySelector(".snackbar");
+        $(".snackbar").toggleClass("center-row space-between");
+        $(".ok").click(function () {
+          $(".snackbar").removeClass("center-row space-between");
+          window.location.replace("setPassword.html");
+        });
       }
       else{
       if (code == ""){
@@ -220,6 +230,8 @@ function callSignUp() {
     $("#pwstrength").css("color", "green");
   }
 }
+
+
 
 
 
