@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XploRayl</title>
+    <link rel="icon" type="image/png" href="./../../../favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <link rel="stylesheet" href="./../../../style.css" />
+    <link rel="stylesheet" href="./treasure-points.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="../../profile/circle-progress.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+
+    <script src="./../../../script.js"></script>
+    <script src="./treasure-points.js"></script>
+  </head>
+  <body>
+    <div class="box-div" style="display: grid">
+      <div class="right-align" onclick="window.location='../my-hunts.html';">
+        <img
+          src="/assets/icons/x.svg"
+          alt=""
+          height="50px"
+          width="50px"
+          style="margin: 10px"
+        />
+      </div>
+      <div style="text-align: center">
+        <div>
+          <h2>Treasure Chest</h2>
+          <h3>+1,500 POINTS</h3>
+        </div>
+        <div id="circle">
+          <div class="points">
+            <h3 id="points-title">TOTAL POINTS</h3>
+            <h2 id="points-value">6,500</h2>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: -20px">
+        <div class="phone-tab-view" id="tab-list-view" style="margin-top: 70px">
+          <div class="phone-tab-view" id="tab-list-view">
+            <div class="phone-tab-list-view">
+              <label>Santonian's Chest</label>
+              <label style="text-align: right">1,500 pts</label>
+              <img
+                class="points-img left-align"
+                src="./../../../assets/images/treasure.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="phone-tab-view" id="tab-list-view">
+            <div class="phone-tab-list-view">
+              <label>Mystery Chest</label>
+              <label style="text-align: right">1,500 pts</label>
+              <img
+                class="points-img left-align"
+                src="./../../../assets/images/profile/collectableDisabled.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="phone-tab-view" id="tab-list-view">
+            <div class="phone-tab-list-view">
+              <label>Mystery Chest</label>
+              <label style="text-align: right">1,500 pts</label>
+              <img
+                class="points-img left-align"
+                src="./../../../assets/images/profile/collectableDisabled.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="center-column" style="margin-top: 15px">
+          <button
+            class="ui-btn subscribe-btn"
+            onclick="window.location='../my-hunts.html';"
+          >
+            DONE
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

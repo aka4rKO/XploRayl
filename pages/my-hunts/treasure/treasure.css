@@ -1,0 +1,37 @@
+.box-div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 520px;
+  width: 700px;
+  margin: auto;
+  margin-top: 120px;
+  border-radius: 30px;
+}
+
+.treasure-img {
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+
+@media only screen and (max-width: 667px) {
+  .box-div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    height: 520px;
+    width: 700px;
+    margin: auto;
+    margin-top: 120px;
+  }
+
+  .treasure-img {
+    text-align: center;
+    height: 150px;
+
+    margin-top: 30px;
+    margin-left: 80px;
+  }
+
+  .treasure-img img {
+    height: 150px;
+  }
+}

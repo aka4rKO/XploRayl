@@ -1,0 +1,52 @@
+.points {
+  text-align: center;
+  margin-top: -120px;
+}
+.box-div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 620px;
+  width: 700px;
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 30px;
+}
+.phone-tab-list-view {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-top: 5px !important;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 2fr 2fr 0.5fr;
+  margin: auto;
+  border-radius: 10px;
+  font-family: "Poppins medium";
+  color: #748a9d;
+  width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.points-img {
+  height: 30px;
+  width: 30px;
+  align-self: center;
+  margin: -5px 0px 0px 22px;
+}
+
+#points-title {
+  color: #404e5a !important;
+  font-size: 15px !important;
+  margin: 8px !important;
+}
+#points-value {
+  color: #04d3d9 !important;
+  font-size: 20px !important;
+  margin: 8px !important;
+}
+h2 {
+  margin-top: 0px !important;
+  margin-bottom: 3px !important;
+}
+h3 {
+  color: #04d3d9 !important;
+  margin-top: 5px !important;
+}

@@ -1,17 +1,4 @@
 $(document).ready(function () {
-  $("#circle").circleProgress({
-    value: 0.6,
-    size: 190,
-    lineCap: "round",
-    thickness: 20,
-    startAngle: 40.5,
-    animationStartValue: 5 - 5,
-    fill: {
-      gradient: ["cyan", "#04d9d9"],
-    },
-  });
-
-  document.getElementsByClassName("ticketClass")[0].onclick = function () {
     var dataLayerArray = 
       {
         ticketId: 1,
@@ -54,8 +41,4 @@ $(document).ready(function () {
           "</p></div>"
       );
     }
-    $("ticketClass").click(function(event){
-      event.preventDefault();
-   });
-  };
 });
