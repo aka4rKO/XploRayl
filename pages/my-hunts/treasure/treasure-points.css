@@ -2,6 +2,9 @@
   text-align: center;
   margin-top: -120px;
 }
+#card-item{
+  margin-top: 70px;
+}
 .box-div {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 620px;
@@ -49,4 +52,81 @@ h2 {
 h3 {
   color: #04d3d9 !important;
   margin-top: 5px !important;
+}
+
+ /* iPad portrait ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .box-div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 620px;
+    width: 700px;
+    margin: auto;
+    margin-top: 180px;
+    border-radius: 30px;
+  }
+}
+ /* iPhone portrait ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .box-div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 667px;
+    width: 375px;
+    margin: 0px;
+    margin-top: 0px;
+    border-radius: 0px;
+  }
+  #treasure-info{
+    margin-top: -20px;
+  }
+  .phone-tab-list-view {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-top: 5px !important;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.1fr;
+    margin: auto;
+    border-radius: 10px;
+    font-family: "Poppins medium";
+    color: #748a9d;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #close{
+    margin-right: 0px;
+  }
+}
+ /* iPhone landscape ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .box-div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 620px;
+    width: 700px;
+    margin: auto;
+    margin-top: 0px;
+    border-radius: 0px;
+  }
+  #treasure-info{
+    margin-top: -60px;
+  }
+  .phone-tab-list-view {
+    background-color: #ffffff;
+    padding:12px;
+    margin-top: 5px !important;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.1fr;
+    margin: auto;
+    border-radius: 10px;
+    font-family: "Poppins medium";
+    color: #748a9d;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #card-item{
+    margin-top: 0px;
+  }
+  #close{
+    margin-right: 50px;
+  }
 }

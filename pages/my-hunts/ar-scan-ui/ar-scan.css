@@ -98,7 +98,8 @@
   }
 }
 
-@media only screen and (max-width: 375px) and (max-height: 667px) {
+/* iPhone portrait ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
   #logo {
     position: absolute;
     top: 250px;
@@ -114,9 +115,36 @@
     object-fit: cover;
     background-color: black;
   }
+  #scan-layout-bg {
+    position: absolute;
+    bottom: 0px;
+    height: 140vh;
+  }
+
+  .background.horizTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    /* top: -1000px !important; */
+    top: 800px !important;
+    /* top: 0px !important; */
+  }
+  .background.vertTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    top: -800px !important;
+    /* top: 0px !important; */
+  }
+
 }
 
-@media only screen and (max-width: 667px) and (max-height: 375px) {
+ /* iPhone landscape ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   #logo {
     position: absolute;
     top: 120px;
@@ -131,5 +159,30 @@
     width: -webkit-fill-available;
     object-fit: cover;
     background-color: black;
+  }
+  #scan-layout-bg {
+    position: absolute;
+    bottom: 0px;
+    height: 575vh;
+    width: 867px;
+  }
+  .background.horizTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    /* top: -1000px !important; */
+    top: 410px !important;
+    /* top: 0px !important; */
+  }
+  .background.vertTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    top: -410px !important;
+    /* top: 0px !important; */
   }
 }
