@@ -8,6 +8,21 @@ white #fff
 red #ef5350
 green #7bed8d
 */
+.snackbar {
+  background-color: #404e5a;
+  width: 69%;
+  height: 5em;
+  position: fixed;
+  border-radius: 1em;
+  bottom: 21px;
+  z-index: 5;
+  padding: 0 1em;
+  display: none;
+}
+
+body {
+  line-height: 1.5 !important;
+}
 
 /* Fonts */
 @font-face {
@@ -548,15 +563,14 @@ fieldset > div {
   background-image: url("/assets/icons/x.svg");
 }
 
-.review{
+.review {
   margin-bottom: 1em;
   padding-bottom: 2em;
-
 }
-.review-heading{
-  bottom: -0.9em;  position: relative;
-  left: 1em;;
-  
+.review-heading {
+  bottom: -0.9em;
+  position: relative;
+  left: 1em;
 }
 /* iPad portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
@@ -567,6 +581,12 @@ fieldset > div {
   .wrapper {
     display: block;
     grid-template-columns: 100vw;
+  }
+
+  .snackbar {
+    /* display: block; */
+    width: 92%;
+    bottom: 82px;
   }
 }
 
@@ -600,6 +620,12 @@ fieldset > div {
       "follow-us-container"
       "newsletter-container"
       "copyright-container";
+  }
+
+  .snackbar {
+    /* display: block; */
+    width: 83%;
+    bottom: 82px;
   }
 }
 
@@ -652,5 +678,11 @@ fieldset > div {
       "contact-us-container follow-us-container"
       "newsletter-container newsletter-container"
       "copyright-container copyright-container";
+  }
+
+  .snackbar {
+    /* display: block; */
+    width: 73%;
+    bottom: 17px;
   }
 }

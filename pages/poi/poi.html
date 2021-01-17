@@ -9,10 +9,28 @@
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
     <link rel="stylesheet" href="./../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./poi.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script> -->
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBucH80HMFY07sja5xH-LDxeBDKj7G273E&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="./../../script.js"></script>
     <script src="./poi.js"></script>
   </head>
@@ -41,7 +59,11 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="./../search/search.html" class="anchor-external" data-prefetch="true">
+            <a
+              href="./../search/search.html"
+              class="anchor-external"
+              data-prefetch="true"
+            >
               <div class="sidebar-nav-btn-contents">
                 <img class="" src="./../../assets/icons/search.svg" alt="" />
                 <span>Search</span>
@@ -49,7 +71,11 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="./../my-hunts/my-hunts.html" class="anchor-external"  data-prefetch="true">
+            <a
+              href="./../my-hunts/my-hunts.html"
+              class="anchor-external"
+              data-prefetch="true"
+            >
               <div class="sidebar-nav-btn-contents">
                 <img class="" src="./../../assets/icons/x white.svg" alt="" />
                 <span>My Hunts</span>
@@ -73,7 +99,11 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a class="anchor-external" href="./../profile/profile.html" data-prefetch="true">
+            <a
+              class="anchor-external"
+              href="./../profile/profile.html"
+              data-prefetch="true"
+            >
               <div class="sidebar-nav-btn-contents">
                 <img class="" src="./../../assets/icons/user.svg" alt="" />
                 <span>Profile</span>
@@ -113,35 +143,26 @@
                       />
                       <span class="card2-text">&nbsp;London</span>
                     </div>
-                    <!-- <div class="center-vertically-margin-top">
-                      <img
-                        class=""
-                        src="./../../assets/icons/star.png"
-                        alt=""
-                      />
-                      <span class="card2-text">&nbsp;4.78</span>
-                    </div> -->
                   </div>
-
-                  <!-- <div class="left-column bottom-column">
-                    <div class="card1-text">£ 100</div>
-                  </div> -->
                 </div>
               </div>
             </div>
             <div class="ui-content rating-description">
-              <div class="rating">
-                <img src="./../../assets/icons/star.png" alt="" />
-                <span class="card3-text"> <b>4.78</b> </span>
+              <div class="margin-top rating center-vertically">
+                <img src="./../../assets/icons/star.svg" alt="" />
+                <span class="card3-text">&nbsp;<b>4.78</b>&nbsp;</span>
                 <span class="card3-text">(1250 ratings)</span>
               </div>
-              <div class="favourite">
+              <div class="margin-top favourite">
                 <img src="./../../assets/icons/share-2.svg" alt="" />
-                <img
-                  class="margin-left"
-                  src="./../../assets/icons/heart.svg"
-                  alt=""
-                />
+
+                <div class="snackbar">
+                  <span class="card1-text"
+                    >Successfully added to favourites</span
+                  >
+                  <!-- <span><a href="">DONE</a></span> -->
+                </div>
+                <i class="like fa fa-heart fa-2x"></i>
               </div>
               <div class="price"><h2>£ 100</h2></div>
               <div class="description">
@@ -154,7 +175,7 @@
             </div>
             <div class="map">
               <h2 class="ui-content">Map</h2>
-              <div>
+              <!-- <div>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340138938!2d-0.24168153443090962!3d51.528558241258565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2slk!4v1610689654382!5m2!1sen!2slk"
                   width="100%"
@@ -165,11 +186,12 @@
                   aria-hidden="false"
                   tabindex="0"
                 ></iframe>
-              </div>
+              </div> -->
+              <div id="map-container"></div>
             </div>
             <div class="ui-content hunt-details">
               <div class="map-heading">
-                <h2 class="map-heading">Hunt details</h2>
+                <h2 class="margin-bottom map-heading">Hunt details</h2>
               </div>
               <div class="arrival center-row space-between">
                 <span>Arrival</span>
@@ -192,22 +214,21 @@
                 <span> <b>About 3 hours</b> </span>
               </div>
             </div>
-            <div class="vector center-column">
+            <div class="ui-content vector center-column">
               <img src="./../../assets/vectors/poi-vector.png" alt="" />
             </div>
-            <div class="gallery">
+            <!-- Gallery start -->
+            <!-- <div class="gallery">
               <h2 class="ui-content">Gallery</h2>
               <div>
                 <div>
                   <div class="video-popup">
                     <div class="popup-bg"></div>
                     <div class="popup-content">
-                      <!-- <p class="popup-title">Youtube</p> -->
                       <iframe
                         src="https://www.youtube.com/embed/kMQgBAaUNs4"
                         class="video"
                       ></iframe>
-                      <!-- <button class="close-btn">close</button> -->
                     </div>
                   </div>
                 </div>
@@ -219,9 +240,6 @@
                     <div class="popup-btn">
                       <img src="./../../assets/icons/play.svg" alt="" />
                     </div>
-                    <!-- <a>
-                      <img src="https://picsum.photos/id/237/300/300" />
-                    </a> -->
                   </div>
                 </div>
                 <div class="-fx-image-gal">
@@ -232,7 +250,6 @@
                       </a>
                     </div>
                   </div>
-                  <!-- /-fx-gal-item -->
 
                   <div class="-fx-gal-item">
                     <div class="-fx-gal-image-thumb" tabindex="1">
@@ -241,7 +258,6 @@
                       </a>
                     </div>
                   </div>
-                  <!-- /-fx-gal-item -->
 
                   <div class="-fx-gal-item">
                     <div class="-fx-gal-image-thumb" tabindex="1">
@@ -250,137 +266,101 @@
                       </a>
                     </div>
                   </div>
-                  <!-- /-fx-gal-item -->
-
-                  <!-- <div class="-fx-gal-item">
-                    <div class="-fx-gal-image-thumb" tabindex="1">
-                      <a>
-                        <img src="https://picsum.photos/id/240/300/300" />
-                      </a>
-                    </div>
-                  </div> -->
-                  <!-- /-fx-gal-item -->
-
-                  <!-- <div class="-fx-gal-item">
-                    <div class="-fx-gal-image-thumb" tabindex="1">
-                      <a>
-                        <img src="https://picsum.photos/id/341/300/300" />
-                      </a>
-                    </div>
-                  </div> -->
-                  <!-- /-fx-gal-item -->
-
-                  <!-- <div class="-fx-gal-item">
-                    <div class="-fx-gal-image-thumb" tabindex="1">
-                      <a>
-                        <img src="https://picsum.photos/id/142/300/300" />
-                      </a>
-                    </div>
-                  </div> -->
-                  <!-- /-fx-gal-item -->
                 </div>
-                <!-- /gallery -->
               </div>
-              <!-- Photo Grid -->
-              <!--<div class="row">
-                <div class="column">
-                  <img
-                    src="./../../assets/images/pois/big-ben.jpg"
-                    style="width: 100%"
-                  />
-                </div>
-                <div class="column">
-                  <img
-                    src="./../../assets/images/pois/big-ben.jpg"
-                    style="width: 100%"
-                  />
-                </div>
-                <div class="column">
-                  <img
-                    src="./../../assets/images/pois/big-ben.jpg"
-                    style="width: 100%"
-                  />
-                </div>
-                <div class="column">
-                  <img
-                    src="./../../assets/images/pois/big-ben.jpg"
-                    style="width: 100%"
-                  />
-                </div>
-                 <div class="column">
-                  <img src="/w3images/underwater.jpg" style="width: 100%" />
-                  <img src="/w3images/ocean.jpg" style="width: 100%" />
-                  <img src="/w3images/wedding.jpg" style="width: 100%" />
-                  <img src="/w3images/mountainskies.jpg" style="width: 100%" />
-                  <img src="/w3images/rocks.jpg" style="width: 100%" />
-                  <img src="/w3images/underwater.jpg" style="width: 100%" />
-                </div>
-                <div class="column">
-                  <img src="/w3images/wedding.jpg" style="width: 100%" />
-                  <img src="/w3images/rocks.jpg" style="width: 100%" />
-                  <img src="/w3images/falls2.jpg" style="width: 100%" />
-                  <img src="/w3images/paris.jpg" style="width: 100%" />
-                  <img src="/w3images/nature.jpg" style="width: 100%" />
-                  <img src="/w3images/mist.jpg" style="width: 100%" />
-                  <img src="/w3images/paris.jpg" style="width: 100%" />
-                </div>
-                <div class="column">
-                  <img src="/w3images/underwater.jpg" style="width: 100%" />
-                  <img src="/w3images/ocean.jpg" style="width: 100%" />
-                  <img src="/w3images/wedding.jpg" style="width: 100%" />
-                  <img src="/w3images/mountainskies.jpg" style="width: 100%" />
-                  <img src="/w3images/rocks.jpg" style="width: 100%" />
-                  <img src="/w3images/underwater.jpg" style="width: 100%" />
-                </div> 
-              </div>-->
+            </div> -->
+            <!-- Gallery end -->
+
+            <div id="video-modal" class="modal">
+              <iframe
+                src="https://www.youtube.com/embed/kMQgBAaUNs4"
+                class="video-frame"
+              ></iframe>
+              <!-- <a href="#" rel="modal:close">Close</a> -->
             </div>
+
+            <!-- Gallery start -->
+            <div class="gallery">
+              <h2 class="ui-content">Gallery</h2>
+              <div class="gallery-grid">
+                <div class="video center-column">
+                  <a class="" href="#video-modal" rel="modal:open">
+                    <img class="play-btn" src="/assets/icons/play.svg" alt="" />
+                  </a>
+
+                  <img
+                    class="vid-img"
+                    src="/assets/images/pois/british-museum.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="img1">
+                  <img src="/assets/images/pois/british-museum.jpg" alt="" />
+                </div>
+                <div class="img2">
+                  <img src="/assets/images/pois/british-museum.jpg" alt="" />
+                </div>
+                <div class="img3">
+                  <img src="/assets/images/pois/british-museum.jpg" alt="" />
+                </div>
+                <div class="img4">
+                  <img src="/assets/images/pois/british-museum.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery end -->
+
             <div class="ratings-reviews">
               <div class="ratings-reviews-header">
                 <h2 class="rating-head ui-content">Ratings & reviews</h2>
               </div>
               <div class="ratings center-row left-column">
-                <h1 style="position: absolute; left: 55%">4.7</h1>
-              </div>
-              <div class="rating-numbers">
-                <div>
-                  <span class="card3-text">500</span>
-                  <span>
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                  </span>
+                <div class="center-column" style="margin-right: 1em">
+                  <h1 style="margin: 0">4.7</h1>
+                  <div class="card3-text">out of 5</div>
                 </div>
-                <div>
-                  <span class="card3-text">500</span>
-                  <span>
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                  </span>
-                </div>
-                <div>
-                  <span class="card3-text">500</span>
-                  <span>
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                  </span>
-                </div>
-                <div>
-                  <span class="card3-text">500</span>
-                  <span>
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                  </span>
-                </div>
-                <div>
-                  <span class="card3-text">500</span>
-                  <span>
-                    <img src="./../../assets/icons/star.svg" alt="" />
-                  </span>
+                <div class="rating-numbers">
+                  <div class="center-vertically">
+                    <span class="card3-text">500</span>
+                    <span>
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                    </span>
+                  </div>
+                  <div class="center-vertically">
+                    <span class="card3-text">500</span>
+                    <span>
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                    </span>
+                  </div>
+                  <div class="center-vertically">
+                    <span class="card3-text">500</span>
+                    <span>
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                    </span>
+                  </div>
+                  <div class="center-vertically">
+                    <span class="card3-text">500</span>
+                    <span>
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                    </span>
+                  </div>
+                  <div class="center-vertically">
+                    <span class="card3-text">500</span>
+                    <span>
+                      <img src="./../../assets/icons/star.svg" alt="" />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -447,8 +427,7 @@
               </div>
             </div>
             <button
-              class="ui-btn"
-              style="position: fixed; bottom: 0; left: 46%"
+              class="ui-btn book-btn"
               onclick="window.location.href='./../booking/booking.html';"
             >
               BOOK NOW

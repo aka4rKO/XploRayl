@@ -3,7 +3,7 @@
   /* height: 100vh; */
   grid-template-columns: 1fr 1fr;
   /* grid-template-rows: 3fr 3fr 3fr 3fr 3fr 3fr 3fr; */
-  grid-gap: 1em;
+  /* grid-gap: 1em; */
   grid-template-areas:
     "main-image-poi main-image-poi"
     "rating-description rating-description"
@@ -69,6 +69,13 @@
   /* background-color: teal; */
 }
 
+#map-container {
+  height: 40vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .hunt-details {
   grid-area: hunt-details;
   /* background-color: teal; */
@@ -77,11 +84,13 @@
   color: #748a9d !important;
   /* display: grid;
   grid-template-columns: 1fr 1fr; */
+  margin-top: 1em;
 }
 
 .vector {
   grid-area: vector;
   /* background-color: teal; */
+  margin-top: 2.5em;
 }
 
 .row {
@@ -115,22 +124,47 @@
   grid-area: ratings-reviews;
   /* background-color: teal; */
   display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
     "rating-head rating-head"
-    "ratings rating-numbers";
+    "ratings ratings";
 }
+
+.container h2 {
+  margin-bottom: 0;
+}
+
+.margin-top {
+  margin-top: 1em;
+}
+
+.margin-bottom {
+  margin-bottom: 8px !important;
+}
+
+.container .ui-content {
+  padding: 0px 16px 16px 16px;
+}
+
 .rating-head {
   grid-area: rating-head;
 }
 
 .ratings {
   grid-area: ratings;
+  margin-bottom: 1em;
 }
 
 .rating-numbers {
-  grid-area: rating-numbers;
+  /* grid-area: rating-numbers; */
+}
+
+.rating-numbers div span {
+  margin-right: 1em;
+}
+
+.description p {
+  margin: 0;
 }
 
 .avatar {
@@ -140,20 +174,36 @@
   height: 3em;
 }
 
+.heart {
+  color: #ef5350;
+}
+
+.like {
+  margin-left: 0.5em;
+}
+
+.center-vertically {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  z-index: 5;
+}
+
 .review-card {
-  background-color: #dbe2ed;
-  width: 20em;
-  height: 12em;
+  background-color: #f0f4f8;
   padding: 1em;
-  margin: 1em;
   border-radius: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
 }
 
 .reviews {
   grid-area: reviews;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* background-color: teal; */
+  margin-left: 1em;
 }
 
 /* POIs */
@@ -165,6 +215,7 @@
 
 .poi {
   position: relative;
+  height: 50vh;
 }
 
 .poi img {
@@ -210,9 +261,21 @@
   );
 }
 
+.book-btn {
+  position: fixed;
+  bottom: 0;
+  right: 2%;
+  z-index: 1;
+}
+
+.center-vertically {
+  display: flex;
+  align-items: center;
+}
+
 /*///////////// gallery CSS /////////////*/
 
-.-fx-image-gal {
+/* .-fx-image-gal {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -237,20 +300,20 @@
 }
 
 .-fx-gal-image-thumb img {
-  /* width: 100%;
+   width: 100%;
   cursor: pointer;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
   transform: scale(1.1);
-  transition: all 0.5s ease; */
+  transition: all 0.5s ease; 
   width: 100%;
-  /* cursor: pointer; */
-  /* -webkit-filter: grayscale(100%); */
+   cursor: pointer; 
+   -webkit-filter: grayscale(100%); 
   -moz-filter: grayscale(100%);
-  /* filter: grayscale(100%); */
+   filter: grayscale(100%); 
   transform: scale(1.1);
-  /* transition: all 0.5s ease;*/
+   transition: all 0.5s ease;
 }
 
 .-fx-gal-image-thumb:hover img {
@@ -261,6 +324,7 @@
   transform: scale(1.5);
   transition: all 0.5s ease;
 }
+
 @media (min-width: 420px) {
   .-fx-image-gal {
     flex-direction: row;
@@ -270,6 +334,7 @@
     width: 50%;
   }
 }
+
 @media (min-width: 768px) {
   .-fx-gal-item {
     width: 33.33%;
@@ -279,6 +344,7 @@
 ::-webkit-scrollbar {
   width: 20px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: lightgray;
   border-radius: 5px;
@@ -291,6 +357,7 @@
   display: block;
   border: none;
 }
+
 .popup-btn,
 .close-btn {
   width: 100px;
@@ -299,13 +366,15 @@
   margin: 50px auto;
   cursor: pointer;
   outline: unset;
-  /* border: 2px solid black;
-  background-color: white; */
+   border: 2px solid black;
+  background-color: white; 
 }
+
 .popup-btn:hover {
   color: white;
   background-color: black;
 }
+
 .video-popup {
   display: none;
   width: 75%;
@@ -316,12 +385,14 @@
   box-shadow: 10px 10px 10px 10px black;
   z-index: 7;
 }
+
 .popup-bg {
   background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100vh;
   position: absolute;
 }
+
 .popup-content {
   background: black;
   position: absolute;
@@ -335,4 +406,134 @@
 .vid-pop {
   background-image: url("./../../assets/images/pois/british-museum-vid-bg.jpg");
   background-size: cover;
+} */
+
+/* Gallery start */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 6em 2em 6em;
+  grid-gap: 1em;
+  grid-template-areas:
+    "video video img1 img3"
+    "video video img1 img4"
+    "video video img2 img4";
+  /* height: 20vh; */
+  /* width: 75vw; */
+}
+
+.video {
+  grid-area: video;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  /* background-image: url(/assets/icons/play.svg); */
+}
+
+.video:before {
+  content: "";
+  background-color: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.play-btn {
+  position: absolute !important;
+  z-index: 1;
+  object-fit: contain !important;
+  width: 5em !important;
+  right: 39%;
+  /* display:  block !important; */
+  /* top: 5%; */
+}
+
+.video-frame {
+  display: block;
+  width: 100%;
+  height: 40vh;
+  margin-top: 3em;
+}
+
+.vid-img {
+  position: relative !important;
+  top: 10 !important;
+  left: 0 !important;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.gallery-grid div {
+  background-color: tomato;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gallery end */
+
+/* iPad portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .book-btn {
+    bottom: 80px;
+  }
+}
+
+/* iPad landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* iPhone portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .book-btn {
+    bottom: 80px;
+    right: 2.5em;
+  }
+
+  .gallery-grid {
+    grid-template-rows: 3em 2em 3em;
+  }
+
+  .play-btn {
+    width: 3em !important;
+    /* right: 39%; */
+    /* display:  block !important; */
+    /* top: 5%; */
+  }
+
+  .reviews {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* iPhone landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .play-btn {
+    width: 3em !important;
+    /* right: 39%; */
+    /* display:  block !important; */
+    /* top: 5%; */
+  }
 }
