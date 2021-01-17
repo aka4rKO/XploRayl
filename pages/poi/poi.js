@@ -11,41 +11,6 @@ function myMap() {
   var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
 
-// function initMap() {
-//   const map = new google.maps.Map(document.getElementById("map-container"), {
-//     zoom: 14,
-//     center: { lat: 51.517582, lng: -0.141525 },
-//     mapTypeId: "terrain",
-//   });
-//   // Define the LatLng coordinates for the polygon's path.
-//   const triangleCoords = [
-//     { lat: 51.521023, lng: -0.140116 },
-//     { lat: 51.522068, lng: -0.155021 },
-//     { lat: 51.515667, lng: -0.142247 },
-//     { lat: 51.521023, lng: -0.140116 },
-//   ];
-
-//   const userCircle = new google.maps.Circle({
-//     strokeColor: "#0000ff",
-//     strokeOpacity: 0.75,
-//     fillOpacity: 0,
-//     strokeWeight: 5,
-//     map: map,
-//     editable: true,
-//     visible: false }); 
-
-//   // Construct the polygon.
-//   const poiLocationTriangle = new google.maps.Circle({
-//     paths: userCircle,
-//     strokeColor: "#04d3d9",
-//     strokeOpacity: 0.8,
-//     strokeWeight: 2,
-//     fillColor: "#04d3d9",
-//     fillOpacity: 0.35,
-//   });
-//   poiLocationTriangle.setMap(map);
-// }
-
 function initMap() {
   const myLatLng = { lat: -25.363, lng: 131.044 };
   const map = new google.maps.Map(document.getElementById("map-container"), {
