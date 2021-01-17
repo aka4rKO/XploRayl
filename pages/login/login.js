@@ -1,4 +1,5 @@
-function Validated() {
+/* login.html
+ */function Validated() {
   var email = $("#userid").val();
   var password = $("#pw").val();
 
@@ -35,23 +36,95 @@ function Validated() {
   }
 }
 
+/* forgotpassword.htm */
 function sendEmail() {
-  var email = $("#userid").val();
+  var email = $("#veremail").val();
 
   if (email != "") {
     $(".success").html("verification Code has been successfully sent");
     window.location.replace("verificationCode.html");
   } else {
     if (email == "") {
-      $("#fuserid").css("border", "2px solid red");
+      $("#veriuserid").css("border", "2px solid red");
       $(".useridErr").html("Enter email address");
     } else if (email) {
-      $("#fuserid").css("border", "2px solid white");
+      $("#veriuserid").css("border", "2px solid white");
       $(".useridErr").html("");
     }
   }
 }
 
+/* verficationcode.html */
+function verifyCode(){
+  var code = $("#code").val();
+
+      if(code != ""){
+        $(".success").html("Verified!"); 
+        window.location.replace("setPassword.html");
+      }
+      else{
+      if (code == ""){
+        $("#vericode").css("border", "2px solid red"); 
+        $(".codeErr").html("Enter code");
+      }
+      else if(code){
+        $("#vericode").css("border", "2px solid white"); 
+        $(".codeErr").html("");
+      }
+      }
+
+}
+
+/* setpassword.html */
+function callLogin(){
+  var newPassword = $("#newpassword").val();
+  var conPassword = $("#conpassword").val();
+
+
+  if (newPassword != "" & conPassword != ""){
+    if(newPassword == conPassword){
+        window.location.replace("passwordUpdated.html");
+      }
+      else{
+        $("#fconpassword").css("border", "2px solid red"); 
+        $(".conpasErr").html("password doesn't match");
+      }
+    }
+    else{
+      if(newPassword == ""){
+        $("#fpw").css("border", "2px solid red"); 
+        $(".pasErr").html("enter a password");
+      }
+      else if(newPassword){
+        $("#fpw").css("border", "2px solid white"); 
+        $(".pasErr").html("");
+      }
+       if(conPassword == ""){
+        $("#fconpassword").css("border", "2px solid red"); 
+        $(".conpasErr").html("enter a password");
+      }
+      else if(conPassword){
+        $("#fconpassword").css("border", "2px solid white"); 
+        $(".conpasErr").html("");
+      }
+    }	
+
+    if(newPassword){
+      $("#fnewfpwpassword").css("border", "2px solid white"); 
+      $(".pasErr").html("");
+    }
+    else if(conPassword){
+      $("#fconpassword").css("border", "2px solid white"); 
+      $(".conpasErr").html("");
+    }
+}
+
+$(function () {
+  $("#newpassword").passwordStrength();
+});
+
+
+/* signup.html */
 function callSignUp() {
   var name = $("#fname").val();
   var email = $("#userid").val();
@@ -153,4 +226,5 @@ function callSignUp() {
 $(function () {
   $("#pw").passwordStrength();
 });
+
 

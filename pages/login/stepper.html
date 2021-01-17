@@ -18,8 +18,8 @@
   </head>
   <body>
     <div data-role="page">
-      <div class="wrapper">
-        <div class="main">
+
+        <div class="main" style="background-color: #f0f4f8">
           <!-- Header start -->
           <div class="header" data-role="header">
             <img
@@ -30,7 +30,7 @@
           </div>
           <!-- Header end -->
 
-          <div id="regForm center-column" action="">
+          <div id="regForm center-column box-form" action="">
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
               <h2 style="text-align: center">
@@ -38,7 +38,7 @@
               </h2>
 
               <br />
-              <svg
+              <svg style="display: block; margin-left: auto; margin-right: auto"
                 xmlns="http://www.w3.org/2000/svg"
                 width="315"
                 height="239.651"
@@ -419,7 +419,7 @@
               </h2>
 
               <br />
-              <svg
+              <svg style="display: block; margin-left: auto; margin-right: auto"
                 xmlns="http://www.w3.org/2000/svg"
                 width="315"
                 height="226.449"
@@ -650,7 +650,7 @@
               <h2 style="text-align: center">Play the game</h2>
 
               <br />
-              <svg
+              <svg style="display: block; margin-left: auto; margin-right: auto"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 width="315"
@@ -1383,7 +1383,7 @@
             <br />
 
             <div>
-              <div>
+              <div class="center-column">
                 <button
                   type="button"
                   id="play"
@@ -1391,10 +1391,11 @@
                 >
                   PLAY
                 </button>
-                <button type="button" id="nxt-btn" onclick="nextPrev(1)">
+                <button class="ui-btn" type="button" id="nxt-btn" onclick="nextPrev(1)">
                   NEXT
                 </button>
-                <button
+                <button 
+                  class="ui-btn-secondary"
                   type="button"
                   id="skip-btn"
                   onclick="window.location.href='./../explore/explore.html';"
