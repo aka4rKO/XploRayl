@@ -11,7 +11,7 @@ $(document).ready(function () {
     },
   });
 
-  document.getElementsByClassName("ticketClass")[0].onclick = function () {
+  //document.getElementsByClassName("ticketClass")[0].onclick = function () {
     var dataLayerArray = 
       {
         ticketId: 1,
@@ -54,8 +54,7 @@ $(document).ready(function () {
           "</p></div>"
       );
     }
-    $("ticketClass").click(function(event){
-      event.preventDefault();
-   });
-  };
+  //   $("ticketClass").click(function(event){
+  //     event.preventDefault();
+  //  });
 });

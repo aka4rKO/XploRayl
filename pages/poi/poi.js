@@ -95,12 +95,12 @@ function renderPOIInfo() {
     oneStarRating;
 
   var avgRating =
-    (fiveStarRating * 5 +
+    ((fiveStarRating * 5 +
       fourStarRating * 4 +
       threeStarRating * 3 +
       twoStarRating * 2 +
       oneStarRating * 1) /
-    totalRating;
+    totalRating).toFixed(2);
 
   console.log(avgRating);
 
@@ -112,7 +112,7 @@ function renderPOIInfo() {
     />
     <div class="poi-info">
       <div>
-        <div class="poi-img-main-text">British Museum</div>
+        <div class="poi-img-main-text">${poi.name}</div>
         <div class="center-vertically-margin-top">
           <img
             class="poi-img-icon-color"
