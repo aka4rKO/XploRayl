@@ -1,3 +1,61 @@
+.hunt-header{
+      
+  z-index: 1;
+  background-image: url('./../../assets/images/search.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+ 
+
+}
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1.2fr 1.2fr 0.8fr 0.2fr;
+  grid-template-areas:
+    "nav "
+    "sidebar "
+    "sidebar "
+    "sidebar ";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+}
+
+nav {
+  background: #a7ffeb;
+  grid-area: nav;
+}
+
+#sidebar {
+  background: #18ffff;
+  grid-area: sidebar;
+}
+#profile-header {
+  margin-top: 50px;
+  grid-area: profile-header;
+}
+#profile-footer {
+
+  grid-area: profile-footer;
+}
+.grid-container {
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 1px 1px 3px 4px #ccc;
+  background-color: rgb(255, 255, 255);
+
+  display: grid;
+
+  grid-template-rows: 110px 70px 50px 50px;
+  grid-template-areas:
+    "profile-header"
+    "profile-footer"
+    "profile-footer"
+    "profile-footer";
+}
 ul{
     display: flex;
     margin-bottom: 10px;
