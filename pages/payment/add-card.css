@@ -2,9 +2,19 @@
   position: relative;
 }
 
+.booking-fields>:first-child {
+  margin-left: 100px;
+}
+
+.field-placeholder {
+  margin: 0px;
+  border-radius: 10px;
+}
+
 .card-list {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-list>div {
@@ -16,7 +26,7 @@
   font-size: 30px;
   height: 12em;
   width: 20em;
-  border-radius: 0.2em;
+  border-radius: 10px;
 }
 
 .card-list .card-number {
@@ -35,6 +45,7 @@
   width: 75vw;
   display: flex;
   overflow: auto;
+  margin: 50px 0px 50px 0px;
 }
 
 .card-list .card-exp {
@@ -72,6 +83,30 @@
   }
   .hero-text {
     margin: 0 0 10.5em 0;
+  }
+  .booking-fields>:first-child {
+    display: none;
+  }
+  .pois-container {
+    margin: 0px;
+  }
+  .left-chevron {
+    position: absolute;
+    left: 30px;
+    top: 17px;
+  }
+  .card-list {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+  }
+  .field-placeholder {
+    padding: 0px;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 168px;
   }
 }
 
