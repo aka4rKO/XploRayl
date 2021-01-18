@@ -24,13 +24,23 @@ $(document).ready(function () {
       background.classList.remove("horizTranslate");
       background.classList.add("vertTranslate");
       setTimeout(function () {
-        window.location = "../treasure/treasure.html";
+        document.getElementById("my_div").className="show";
       }, 2000);
     }, 2000);
   };
-  console.log("over");
+  document.getElementById("my_div").onclick = function () {
+    window.location.href = "../../ar/ar.html";
+  }
 });
-
+//
+// window.onload=function()  //executes when the page finishes loading
+// {
+// 	setTimeout(func1, 2000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+// };
+// function func1()
+// {
+	
+// }
 
 function initMap() {
   var poiId = JSON.parse(sessionStorage.getItem("currentId"));
