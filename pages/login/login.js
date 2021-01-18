@@ -4,7 +4,7 @@
   var password = $("#pw").val();
 
   if (email != "" && password != "") {
-    if (email == "arshad" && password == "arshad") {
+    if (email == "arshad@gmail.com" && password == "arshad6969") {
       window.location = "./../explore/explore.html";
     } else {
       $(".credentialErr").html("Wrong password/email");
