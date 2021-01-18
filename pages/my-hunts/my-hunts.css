@@ -3,8 +3,7 @@
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow: 1px 1px 3px 4px #ccc;
     background-color: rgb(255, 255, 255);
-    border-bottom-right-radius: 40px;
-    border-bottom-left-radius: 40px;
+
     display: grid;
     grid-template-columns: 0.2fr 1.5fr 1fr;
     grid-template-rows: 110px 70px 50px 50px;
