@@ -21,80 +21,99 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
     />
-    
 
     <script src="./../../script.js"></script>
     <script src="./my-hunts.js"></script>
   </head>
   <body>
     <div>
-    <!-- Sidebar start -->
-    <div class="side">
-      <div class="ui-content center-column">
-        <img
-          class="header-logo-sidebar"
-          src="./../../assets/images/logos/full logo black color.png"
-          alt=""
-        />
-      </div>
-      <div>
-        <div class="sidebar-nav-btn">
-          <a class="anchor-external" href="./../explore/explore.html" data-prefetch="true">
-            <div class="sidebar-nav-btn-contents">
-              <img src="./../../assets/icons/compass.svg" alt="" />
-              <span>Explore</span>
-            </div>
-          </a>
-        </div>
-        <div class="sidebar-nav-btn">
-          <a class="anchor-external"  href="./../search/search.html" data-prefetch="true">
-            <div class="sidebar-nav-btn-contents">
-              <img src="./../../assets/icons/search.svg" alt="" />
-              <span>Search</span>
-            </div>
-          </a>
-        </div>
-        <div class="sidebar-nav-btn-active">
-          <a href="#">
-            <div class="sidebar-nav-btn-contents">
-              <img
-                class="sidebar-nav-btn-content-active"
-                src="./../../assets/icons/x white.svg"
-                alt=""
-              />
-              <span class="sidebar-nav-btn-content-active">My Hunts</span>
-            </div>
-          </a>
-        </div>
-        <div class="sidebar-nav-btn">
-          <a class="anchor-external" href="./../leaderboard/leaderboard.html" data-prefetch="true">
-            <div class="sidebar-nav-btn-contents">
-              <img class="" src="./../../assets/icons/bar-chart-2.svg" alt="" />
-              <span>Leaderboard</span>
-            </div>
-          </a>
-        </div>
-        <div class="sidebar-nav-btn">
-          <a class="anchor-external" href="./../profile/profile.html" data-prefetch="true">
-            <div class="sidebar-nav-btn-contents">
-              <img class="" src="./../../assets/icons/user.svg" alt="" />
-              <span>Profile</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- Sidebar end -->
-    <div class="wrapper">
-      <div class="main">
-        <!-- Header start -->
-        <div class="header" data-role="header">
+      <!-- Sidebar start -->
+      <div class="side">
+        <div class="ui-content center-column">
           <img
-            class="header-logo"
+            class="header-logo-sidebar"
             src="./../../assets/images/logos/full logo black color.png"
             alt=""
           />
         </div>
+        <div>
+          <div class="sidebar-nav-btn">
+            <a
+              class="anchor-external"
+              href="./../explore/explore.html"
+              data-prefetch="true"
+            >
+              <div class="sidebar-nav-btn-contents">
+                <img src="./../../assets/icons/compass.svg" alt="" />
+                <span>Explore</span>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar-nav-btn">
+            <a
+              class="anchor-external"
+              href="./../search/search.html"
+              data-prefetch="true"
+            >
+              <div class="sidebar-nav-btn-contents">
+                <img src="./../../assets/icons/search.svg" alt="" />
+                <span>Search</span>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar-nav-btn-active">
+            <a href="#">
+              <div class="sidebar-nav-btn-contents">
+                <img
+                  class="sidebar-nav-btn-content-active"
+                  src="./../../assets/icons/x white.svg"
+                  alt=""
+                />
+                <span class="sidebar-nav-btn-content-active">My Hunts</span>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar-nav-btn">
+            <a
+              class="anchor-external"
+              href="./../leaderboard/leaderboard.html"
+              data-prefetch="true"
+            >
+              <div class="sidebar-nav-btn-contents">
+                <img
+                  class=""
+                  src="./../../assets/icons/bar-chart-2.svg"
+                  alt=""
+                />
+                <span>Leaderboard</span>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar-nav-btn">
+            <a
+              class="anchor-external"
+              href="./../profile/profile.html"
+              data-prefetch="true"
+            >
+              <div class="sidebar-nav-btn-contents">
+                <img class="" src="./../../assets/icons/user.svg" alt="" />
+                <span>Profile</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+      <div class="wrapper">
+        <div class="main">
+          <!-- Header start -->
+          <div class="header" data-role="header">
+            <img
+              class="header-logo"
+              src="./../../assets/images/logos/full logo black color.png"
+              alt=""
+            />
+          </div>
           <!-- Header start -->
           <div class="header" data-role="header">
             <img
@@ -192,90 +211,258 @@
                     <button class="ui-btn">SCAN</button></a
                   >
                 </div>
+                
               </div>
-          <div class="body-content">
-            <div id="common-modal" class="modal ui-modal">
-              <h1 class="center-column center-row">Scan Ticket</h1>
-              <p class="center-column center-row">
-                Scan the ticket at the station terminal
-              </p>
-              <div class="center-row center-column">
-                <img src="/assets/images/qr-code.png" alt="" />
-              </div>
-              </div>
-            </div>
-            </div>
-            </div>
-        
-          
-          <!-- Header end -->
 
+              <div id="tab-two" class="ui-content">
+                <!-- <h1 class="tab-heading">Favourites</h1> -->
+                <div class="pois-container">
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
 
-          
-          <!-- Footer start -->
-          <div class="footer ui-content">
-            <div class="footer-logo-container center-column">
-              <img
-                class="footer-logo"
-                src="./../../assets/images/logos/full logo white.png"
-                alt=""
-              />
-            </div>
-            <div class="contact-us-container">
-              <div class="footer-heading-text">Contact Us</div>
-              <div class="center-vertically-margin-top">
-                <img
-                  class="active-navbar-icon"
-                  src="./../../assets/icons/phone-call.svg"
-                  alt=""
-                />
-                <span class="card2-text">&nbsp;+44 7911 123456</span>
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/british-museum.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">British Museum</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;London</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;4.78</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ 100</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="poi">
+                    <img
+                      src="./../../assets/images/pois/buckingham-palace.jpg"
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <img
+                        id="favourites"
+                        src="./../../assets/images/profile/favourites.png"
+                        alt=""
+                      />
+                      <div class="card1-text">Seagull Hunt</div>
+                      <img
+                        src="./../../assets/images/profile/rating.png"
+                        alt=""
+                      />
+                    </div>
+                  </div> -->
+                </div>
+                <div class="footer ui-content">
+                  <div class="footer-logo-container center-column">
+                    <img
+                      class="footer-logo"
+                      src="./../../assets/images/logos/full logo white.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="contact-us-container">
+                    <div class="footer-heading-text">Contact Us</div>
+                    <div class="center-vertically-margin-top">
+                      <img
+                        class="active-navbar-icon"
+                        src="./../../assets/icons/phone-call.svg"
+                        alt=""
+                      />
+                      <span class="card2-text">&nbsp;+44 7911 123456</span>
+                    </div>
+                    <div class="center-vertically-margin-top">
+                      <img
+                        class="active-navbar-icon"
+                        src="./../../assets/icons/mail.svg"
+                        alt=""
+                      />
+                      <span class="card2-text">&nbsp;info@xploray.com</span>
+                    </div>
+                  </div>
+                  <div class="follow-us-container">
+                    <div class="footer-heading-text">Follow Us</div>
+                    <div class="center-vertically-margin-top">
+                      <a href=""
+                        ><img src="./../../assets/icons/facebook-logo.svg" alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="./../../assets/icons/twitter-social-logotype.svg"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="./../../assets/icons/instagram-social-network-logo-of-photo-camera.svg"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="newsletter-container">
+                    <div class="footer-heading-text">Newsletter</div>
+                    <div class="card2-text center-vertically-margin-top">
+                      Stay up to date on the latest hunts
+                    </div>
+                    <input type="text" />
+                    <button class="ui-btn subscribe-btn">SUBSCRIBE</button>
+                  </div>
+                  <div class="copyright-container center-column">
+                    <div class="footer-address-text">
+                      XPLORAYL . 31 Moulton Road Street . Guestling Thorn . TN35 4YX
+                      UK
+                    </div>
+                    <div class="footer-copyright-text">
+                      Copyright ©️ 2020 All Rights Reserved
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="center-vertically-margin-top">
-                <img
-                  class="active-navbar-icon"
-                  src="./../../assets/icons/mail.svg"
-                  alt=""
-                />
-                <span class="card2-text">&nbsp;info@xploray.com</span>
-              </div>
-            </div>
-            <div class="follow-us-container">
-              <div class="footer-heading-text">Follow Us</div>
-              <div class="center-vertically-margin-top">
-                <a href=""
-                  ><img src="./../../assets/icons/facebook-logo.svg" alt=""
-                /></a>
-                <a href=""
-                  ><img
-                    src="./../../assets/icons/twitter-social-logotype.svg"
-                    alt=""
-                /></a>
-                <a href=""
-                  ><img
-                    src="./../../assets/icons/instagram-social-network-logo-of-photo-camera.svg"
-                    alt=""
-                /></a>
-              </div>
-            </div>
-            <div class="newsletter-container">
-              <div class="footer-heading-text">Newsletter</div>
-              <div class="card2-text center-vertically-margin-top">
-                Stay up to date on the latest hunts
-              </div>
-              <input type="text" />
-              <button class="ui-btn subscribe-btn">SUBSCRIBE</button>
-            </div>
-            <div class="copyright-container center-column">
-              <div class="footer-address-text">
-                XPLORAYL . 31 Moulton Road Street . Guestling Thorn . TN35 4YX
-                UK
-              </div>
-              <div class="footer-copyright-text">
-                Copyright ©️ 2020 All Rights Reserved
-              </div>
+
             </div>
           </div>
+
+          <!-- Header end -->
+
+          <!-- Footer start -->
+
           <!-- Footer end -->
           <!-- Navbar start -->
           <div class="footer-navbar" data-role="footer" data-position="fixed">
@@ -283,7 +470,6 @@
               <ul>
                 <li>
                   <a
-                  
                     class="anchor-external nav-btn"
                     href="./../explore/explore.html"
                     data-prefetch="true"
