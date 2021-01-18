@@ -24,46 +24,6 @@ $(document).ready(function(){
          localStorage.setItem("reviews", JSON.stringify(ratingsArray));
          console.log(ratingsArray);
 
-
-         $.ajax({
-            type: 'POST',
-            url: 'https://api.stripe.com/v1/tokens',
-            headers: {
-              Authorization: 'Bearer sk_test_51HMs5AIDK6dRU6bAiHjaW1hU95a9VHqSWXzChedCrYm2Hb2I0vaotvmOQ8l1YgCy9vWbBQJ1ZvlSjz8w41MO25M500IZSSkvaC'
-            },
-            "data": {
-                "card[number]": `${"4242 4242 4242 4242"}`,
-                "card[exp_month]": `${"5"}`,
-                "card[exp_year]": `${"2022"}`,
-                "card[cvc]": `${"422"}`
-              },
-            success: function(response){
-              console.log('successful payment: ', response);
-            },
-            error: (response) => { 
-              console.log('error payment: ', response);
-            }
-
-            
-          })
-
-        //   $.ajax({
-
-        //     url : 'http://voicebunny.comeze.com/index.php',
-        //     type : 'GET',
-        //     data : {
-        //         'numberOfWords' : 10
-        //     },
-        //     dataType:'json',
-        //     success : function(data) {              
-        //         alert('Data: '+data);
-        //     },
-        //     error : function(request,error)
-        //     {
-        //         alert("Request: "+JSON.stringify(request));
-        //     }
-        // });
-
         });
   });
 
@@ -134,6 +94,7 @@ function  makePayment(token, name){
       }).fail(function(data){
 
       })
+
  }
 
 
