@@ -113,86 +113,17 @@
           </div>
           <!-- Header end -->
           <!-- Booking start -->
-          <div class="booking-grid">
-            <h1 class="center-row center-column">Payment</h1>
-            <div class="booking-fields">
-              <h3>Select a card</h3>
-              <div
-                class="order-field center-column center-row placeholder-text"
-              >
-                <div
-                  class="field-placeholder add-card-placeholder label-text center-column"
-                >
-                  <img
-                    style="width: 4em"
-                    src="../../assets/icons/plus-circle.svg"
-                    class="icon-grey"
-                    alt=""
-                  />
+          <h1 class="center-column">Success</h1>
+          <div class="center-column">
+            <img
+              src="/assets//images/headers/bg-shadow.png"
+              style="width: 40%"
+              alt=""
+            />
 
-                  <a href="#add-card-modal" rel="modal:open">
-                    <h3>ADD CARD</h3></a
-                  >
-
-                  <!-- ADD CARD MODAL START -->
-                  <div id="add-card-modal" class="modal ui-modal">
-                    <h1 class="center-column center-row">Add Card</h1>
-
-                    <div class="card-wrapper"></div>
-                    <!-- CSS is included via this JavaScript file -->
-                    <script src="./jquery.card.min.js"></script>
-                    <form>
-                      <input
-                        type="text"
-                        placeholder="Card No"
-                        id="cardNumber"
-                        name="number"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Card Name"
-                        id="cardName"
-                        name="first-name"
-                      />
-                      <input
-                        type="text"
-                        placeholder="expiry date"
-                        id="expiryDate"
-                        name="expiry"
-                      />
-                      <input
-                        type="text"
-                        placeholder="cvc"
-                        name="cvc"
-                        id="cvc"
-                      />
-                      <p class="cardErr err-text"></p>
-                    </form>
-                    <script>
-                      var card = new Card({
-                        form: "form",
-                        container: ".card-wrapper",
-                        formSelectors: {
-                          nameInput:
-                            'input[name="first-name"], input[name="last-name"]',
-                        },
-                      });
-                    </script>
-
-                    <div class="center-column center-row">
-                      <button id="save-card" class="ui-btn">Save</button>
-                    </div>
-                  </div>
-                  <!-- ADD CARD MODAL End -->
-                </div>
-
-                <!-- Link to open the modal -->
-              </div>
-            </div>
-            <div id="card-list" class="card-list pois-container"></div>
-
-            <div class="center-column">
-              <button id="book-now" class="ui-btn">Book Now</button>
+            <div style="margin-top: -15%">
+              <h3>Your order has been confirmed!</h3>
+              <button id="success-ok-btn" class="ui-btn" >OK</button>
             </div>
           </div>
 
