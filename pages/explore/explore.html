@@ -41,7 +41,11 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="./../search/search.html" data-prefetch="true" class="anchor-external">
+            <a
+              href="./../search/search.html"
+              data-prefetch="true"
+              class="anchor-external"
+            >
               <div class="sidebar-nav-btn-contents">
                 <img class="" src="./../../assets/icons/search.svg" alt="" />
                 <span>Search</span>
@@ -49,7 +53,11 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="./../my-hunts/my-hunts.html" data-prefetch="true" class="anchor-external">
+            <a
+              href="./../my-hunts/my-hunts.html"
+              data-prefetch="true"
+              class="anchor-external"
+            >
               <div class="sidebar-nav-btn-contents">
                 <img class="" src="./../../assets/icons/x white.svg" alt="" />
                 <span>My Hunts</span>
@@ -57,7 +65,11 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a class="anchor-external" href="./../leaderboard/leaderboard.html" data-prefetch="true">
+            <a
+              class="anchor-external"
+              href="./../leaderboard/leaderboard.html"
+              data-prefetch="true"
+            >
               <div class="sidebar-nav-btn-contents">
                 <img
                   class=""
@@ -69,7 +81,11 @@
             </a>
           </div>
           <div class="sidebar-nav-btn">
-            <a href="./../profile/profile.html" data-prefetch="true" class="anchor-external">
+            <a
+              href="./../profile/profile.html"
+              data-prefetch="true"
+              class="anchor-external"
+            >
               <div class="sidebar-nav-btn-contents">
                 <img class="" src="./../../assets/icons/user.svg" alt="" />
                 <span>Profile</span>
@@ -94,37 +110,58 @@
           <div class="hero center-column">
             <div class="ui-content center-column">
               <h1 class="hero-text">Ready for your next adventure?</h1>
-              <button class="ui-btn hero-btn">EXPLORE</button>
+              <button
+                class="ui-btn hero-btn"
+                onClick="document.getElementById('categories').scrollIntoView();"
+              >
+                EXPLORE
+              </button>
             </div>
           </div>
           <!-- Hero end -->
           <!-- Categories start -->
-          <div class="categories">
+          <div class="categories" id="categories">
             <div class="category">
               <div class="ui-content center-row space-between">
                 <h3>Popular</h3>
                 <a href="./../show-all/show-all.html">Show all</a>
               </div>
               <div class="pois-container">
-                <div class="pois" id="repeat-poi">
-                  <!-- <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
+                <div class="pois" id="popular">
+                  <!-- <div class="poi" onclick="move();">
+                    <img src="${item.img}" alt="" />
                     <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
+                      <div class="card1-text">namess</div>
                       <div class="center-vertically-margin-top">
                         <img
                           class="poi-img-icon-color"
                           src="./../../assets/icons/map-pin.svg"
                           alt=""
                         />
-                        <span class="card2-text">&nbsp;London</span>
+                        <span class="card2-text">&nbsp;${item.location}</span>
                       </div>
                     </div>
                   </div> -->
-                  <!-- <<<<<<bugubjh -->
+                
+                  <!-- <a
+                    class="anchor-external"
+                    href="/pages/poi/poi.html"
+                    data-prefetch="true"
+                    ><div class="poi">
+                      <img src="${item.img}" alt="" />
+                      <div class="poi-info">
+                        <div class="card1-text">${item.name}</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;${item.location}</span>
+                        </div>
+                      </div>
+                    </div></a
+                  > -->
                 </div>
               </div>
             </div>
@@ -134,93 +171,7 @@
                 <a href="">Show all</a>
               </div>
               <div class="pois-container">
-                <div class="pois">
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="pois" id="topRated"></div>
               </div>
             </div>
             <div class="category">
@@ -229,93 +180,7 @@
                 <a href="">Show all</a>
               </div>
               <div class="pois-container">
-                <div class="pois">
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="poi">
-                    <img
-                      src="./../../assets/images/pois/british-museum.jpg"
-                      alt=""
-                    />
-                    <div class="poi-info">
-                      <div class="card1-text">British Museum</div>
-                      <div class="center-vertically-margin-top">
-                        <img
-                          class="poi-img-icon-color"
-                          src="./../../assets/icons/map-pin.svg"
-                          alt=""
-                        />
-                        <span class="card2-text">&nbsp;London</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="pois" id="mostVisited"></div>
               </div>
             </div>
           </div>

@@ -3,22 +3,22 @@
     "username": "user1",
     "password": "123"
   },
-  "poi-objs": [
+  "poiObjs": [
     {
-      "poi-id": 1,
+      "poiId": 1,
       "name": "British Museum",
       "location": "London",
-      "date": "20th Sept 2020",
-      "lat": "",
-      "lng": "",
+      "date": "10th Feb 2021",
+      "lat": 51.518757,
+      "lng": -0.126168,
       "img": "/assets/images/pois/british-museum.jpg",
       "video": "https://www.youtube.com/embed/kMQgBAaUNs4",
       "price": 100,
-      "description": "sample description",
+      "description": "The British Museum, in the Bloomsbury area of London, England, is a public institution dedicated to human history, art and culture. Its permanent collection of some eight million works is among the largest and most comprehensive in existence, having been widely collected during the era of the British Empire.",
       "arrival": "Waterloo",
-      "commute-distance": 20,
-      "walking-distance": 10,
-      "difficulty-level": "Medium",
+      "commuteDistance": 20,
+      "walkingDistance": 10,
+      "difficultyLevel": "Medium",
       "time": 3,
       "scanned": false,
       "ratings": {
@@ -30,24 +30,312 @@
       },
       "reviews": [
         {
-          "name": "Becky",
-          "rating": 5,
-          "review": "best hunt ever..."
+          "name": "Nasif Nuha",
+          "rating": 4,
+          "review": "Nice"
+        },
+        {
+          "name": "Amjad Nazar",
+          "rating": 1,
+          "review": "Good experience"
         }
       ],
       "tasks": [
-          {
-              "name": "",
-              "points": 100,
-              "lat": "",
-              "lng": "",
-              "is-complete": false
-          }
+        {
+          "name": "",
+          "points": 100,
+          "lat": "",
+          "lng": "",
+          "isComplete": false
+        }
+      ],
+      "status": ""
+    },
+    {
+      "poiId": 2,
+      "name": "Buckingham Palace",
+      "location": "London",
+      "date": "14th Feb 2021",
+      "lat": 51.501366,
+      "lng": -0.14189,
+      "img": "/assets/images/pois/buckingham-palace.jpg",
+      "video": "https://www.youtube.com/embed/_Elffjsjbio",
+      "price": 350,
+      "description": "Buckingham Palace is the London residence and administrative headquarters of the monarch of the United Kingdom. Located in the City of Westminster, the palace is often at the centre of state occasions and royal hospitality.",
+      "arrival": "Westminster",
+      "commuteDistance": 25,
+      "walkingDistance": 1,
+      "difficultyLevel": "Easy",
+      "time": 3,
+      "scanned": false,
+      "ratings": {
+        "5": 400,
+        "4": 250,
+        "3": 350,
+        "2": 250,
+        "1": 200
+      },
+      "reviews": [
+        {
+          "name": "Nasif Nuha",
+          "rating": 3,
+          "review": "Nice"
+        },
+        {
+          "name": "Amjad Nazar",
+          "rating": 2,
+          "review": "Good experience"
+        }
+      ],
+      "tasks": [
+        {
+          "name": "",
+          "points": 100,
+          "lat": "",
+          "lng": "",
+          "isComplete": false
+        }
+      ],
+      "status": ""
+    },
+    {
+      "poiId": 3,
+      "name": "Big Ben",
+      "location": "London",
+      "date": "12th Feb 2021",
+      "lat": 51.500729,
+      "lng": -0.124625,
+      "img": "/assets/images/pois/big-ben.jpg",
+      "video": "https://www.youtube.com/embed/_Elffjsjbio",
+      "price": 200,
+      "description": "Big Ben is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster; the name is frequently extended to refer to both the clock and the clock tower.",
+      "arrival": "Westminster",
+      "commuteDistance": 15,
+      "walkingDistance": 5,
+      "difficultyLevel": "Hard",
+      "time": 8,
+      "scanned": false,
+      "ratings": {
+        "5": 400,
+        "4": 250,
+        "3": 250,
+        "2": 250,
+        "1": 200
+      },
+      "reviews": [
+        {
+          "name": "Nasif Nuha",
+          "rating": 2,
+          "review": "Nice"
+        },
+        {
+          "name": "Amjad Nazar",
+          "rating": 5,
+          "review": "Good experience"
+        }
+      ],
+      "tasks": [
+        {
+          "name": "",
+          "points": 100,
+          "lat": "",
+          "lng": "",
+          "isComplete": false
+        }
+      ],
+      "status": ""
+    },
+    {
+      "poiId": 4,
+      "name": "Edinburgh Castle",
+      "location": "Edinburgh",
+      "date": "5th Feb 2021",
+      "lat": -27.399389,
+      "lng": 153.043655,
+      "img": "/assets/images/pois/edinburgh-castle.jpg",
+      "video": "https://www.youtube.com/embed/qjFzLVKeRV4",
+      "price": 400,
+      "description": "Edinburgh Castle is a historic fortress which dominates the skyline of Edinburgh, the capital city of Scotland, from its position on the Castle Rock.",
+      "arrival": "Westminster",
+      "commuteDistance": 7,
+      "walkingDistance": 6,
+      "difficultyLevel": "Medium",
+      "time": 4,
+      "scanned": false,
+      "ratings": {
+        "5": 400,
+        "4": 250,
+        "3": 250,
+        "2": 250,
+        "1": 600
+      },
+      "reviews": [
+        {
+          "name": "Nasif Nuha",
+          "rating": 4,
+          "review": "Nice"
+        },
+        {
+          "name": "Amjad Nazar",
+          "rating": 4,
+          "review": "Good experience"
+        }
+      ],
+      "tasks": [
+        {
+          "name": "",
+          "points": 100,
+          "lat": "",
+          "lng": "",
+          "isComplete": false
+        }
+      ],
+      "status": ""
+    },
+    {
+      "poiId": 5,
+      "name": "London Eye",
+      "location": "London",
+      "date": "6th Feb 2021",
+      "lat": 51.503323,
+      "lng": -0.119543,
+      "img": "/assets/images/pois/london-eye.jpg",
+      "video": "https://www.youtube.com/embed/yI98xvBJ0i4",
+      "price": 120,
+      "description": "The London Eye, or the Millennium Wheel, is a cantilevered observation wheel on the South Bank of the River Thames in London.",
+      "arrival": "London",
+      "commuteDistance": 2,
+      "walkingDistance": 10,
+      "difficultyLevel": "Hard",
+      "time": 14,
+      "scanned": false,
+      "ratings": {
+        "5": 700,
+        "4": 250,
+        "3": 200,
+        "2": 50,
+        "1": 5
+      },
+      "reviews": [
+        {
+          "name": "Nasif Nuha",
+          "rating": 4,
+          "review": "Nice"
+        },
+        {
+          "name": "Amjad Nazar",
+          "rating": 4,
+          "review": "Good experience"
+        }
+      ],
+      "tasks": [
+        {
+          "name": "",
+          "points": 100,
+          "lat": "",
+          "lng": "",
+          "isComplete": false
+        }
+      ],
+      "status": ""
+    },
+    {
+      "poiId": 6,
+      "name": "Stonehenge",
+      "location": "England",
+      "date": "6th Mar 2021",
+      "lat": 51.178883,
+      "lng": -1.826215,
+      "img": "/assets/images/pois/stonehenge.jpg",
+      "video": "https://www.youtube.com/embed/BTwuKCqFwJY",
+      "price": 250,
+      "description": "Stonehenge is a prehistoric monument in Wiltshire, England, two miles west of Amesbury. It consists of a ring of standing stones, each around 13 feet high, seven feet wide, and weighing around 25 tons.",
+      "arrival": "England",
+      "commuteDistance": 7,
+      "walkingDistance": 1,
+      "difficultyLevel": "Easy",
+      "time": 2,
+      "scanned": false,
+      "ratings": {
+        "5": 700,
+        "4": 250,
+        "3": 400,
+        "2": 50,
+        "1": 5
+      },
+      "reviews": [
+        {
+          "name": "Nasif Nuha",
+          "rating": 4,
+          "review": "Nice"
+        },
+        {
+          "name": "Amjad Nazar",
+          "rating": 4,
+          "review": "Good experience"
+        }
+      ],
+      "tasks": [
+        {
+          "name": "",
+          "points": 100,
+          "lat": "",
+          "lng": "",
+          "isComplete": false
+        }
+      ],
+      "status": ""
+    },
+    {
+      "poiId": 7,
+      "name": "Towerbridge",
+      "location": "London",
+      "date": "1st Mar 2021",
+      "lat": 51.505554,
+      "lng": -0.075278,
+      "img": "/assets/images/pois/towerbridge.png",
+      "video": "https://www.youtube.com/embed/LVurL2udOTw",
+      "price": 500,
+      "description": "Tower Bridge is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become a world-famous symbol of London. As a result, it is sometimes confused with London Bridge, about 0.5 miles upstream.",
+      "arrival": "Westminster",
+      "commuteDistance": 9,
+      "walkingDistance": 10,
+      "difficultyLevel": "Medium",
+      "time": 2,
+      "scanned": false,
+      "ratings": {
+        "5": 700,
+        "4": 250,
+        "3": 400,
+        "2": 50,
+        "1": 567
+      },
+      "reviews": [
+        {
+          "name": "Nasif Nuha",
+          "rating": 4,
+          "review": "Nice"
+        },
+        {
+          "name": "Amjad Nazar",
+          "rating": 4,
+          "review": "Good experience"
+        }
+      ],
+      "tasks": [
+        {
+          "name": "",
+          "points": 100,
+          "lat": "",
+          "lng": "",
+          "isComplete": false
+        }
       ],
       "status": ""
     }
   ],
-  "popular-hunts": [1, 2, 3],
-  "top-rated-hunts": [1, 2, 3],
-  "most-visited-hunts": [1, 2, 3]
+  "favourites": [],
+  "popularHunts": [1, 2, 3, 4, 5, 6],
+  "topRatedHunts": [1, 2, 3, 5, 6, 7],
+  "mostVisitedHunts": [3, 7, 4, 5, 6]
 }
