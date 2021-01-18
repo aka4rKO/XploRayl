@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* var header = document.getElementById("list-view");
 var btns = header.getElementsByClassName("tab-nav");
 for (var i = 0; i < btns.length; i++) {
@@ -13,7 +12,6 @@ $(document).on('click', 'tab-nav', function(){
     $(this).addClass('active')
     $(this).siblings().removeClass('active')
 })
-=======
 function myMap() {
     var mapProp = {
       center: new google.maps.LatLng(51.508742, -0.12085),
@@ -97,4 +95,3 @@ $(document).ready(function(){
   
   
   
->>>>>>> 2528fef8c81e4f5c2fe034dc72fdfb4f0ed3ce79
