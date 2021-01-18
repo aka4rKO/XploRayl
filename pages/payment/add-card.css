@@ -1,139 +1,185 @@
-
-  .add-card-placeholder{
-    
-  }
-  
-  .card-list {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  
-  .card-list > div {
-    background-color: #748A9D;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-    height: 12em;
-    width: 20em;
-    border-radius: 0.2em;
-    
-  }
-
-  .card-list .card-number{
-      position: relative;
-      top: 25%;
-      left: 10%;
-
-  }
-
-  .card-list .card-name{
-
-    right: 20%;
-    position: relative;
-    top: 15%;
-
+.add-card-placeholder {
+  position: relative;
 }
+
+.booking-fields>:first-child {
+  margin-left: 100px;
+}
+
+.field-placeholder {
+  margin: 0px;
+  border-radius: 10px;
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-list>div {
+  background-color: #748A9D;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  height: 12em;
+  width: 20em;
+  border-radius: 10px;
+}
+
+.card-list .card-number {
+  position: relative;
+  top: 25%;
+  left: 10%;
+}
+
+.card-list .card-name {
+  right: 20%;
+  position: relative;
+  top: 15%;
+}
+
 .pois-container {
-    width: 75vw;
-    display: flex;
-    overflow: auto;
-
-  }
-  
-.card-list .card-exp{
-
-    right: 0%;
-    position: relative;
-    top: 61%;
-
+  width: 75vw;
+  display: flex;
+  overflow: auto;
+  margin: 50px 0px 50px 0px;
 }
-  /* iPad portrait */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-    .pois-container {
-      width: 100vw;
-    }
-  
-    .hero {
-      height: 85vh;
-    }
-  
-    .hero-text {
-      margin-top: 10em;
-    }
-  }
-  
-  /* iPad landscape */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-  }
-  
-  /* iPhone portrait */
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .pois-container {
-      width: 100vw;
-    }
-  
-    .hero {
-      height: 76vh;
-    }
-  
-    .hero-text {
-      margin: 0 0 10.5em 0;
-    }
-  }
 
-  @keyframes drive {
-    0% {
-      transform: translateX(-150px);
-    }
-    100% {
-      transform: translateX(100vw);
-    }
+.card-list .card-exp {
+  right: 0%;
+  position: relative;
+  top: 61%;
+}
+
+/* iPad portrait */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .pois-container {
+    width: 100vw;
   }
-  
-  
- 
-  
-  /* Hide the browser's default radio button */
-input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+  .hero {
+    height: 85vh;
   }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
+  .hero-text {
+    margin-top: 10em;
   }
-  
-  /* On mouse-over, add a grey background color */
-  .credit-card:hover input ~ .checkmark {
-    background-color: #ccc;
+}
+
+/* iPad landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {}
+
+/* iPhone portrait */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .pois-container {
+    width: 100vw;
   }
-  
-  /* When the radio button is checked, add a blue background */
-  .credit-card input:checked ~ .checkmark {
-    background-color: #04D3D9;
+  .hero {
+    height: 76vh;
   }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
-    content: "";
+  .hero-text {
+    margin: 0 0 10.5em 0;
+  }
+  .booking-fields>:first-child {
     display: none;
   }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .credit-card input:checked ~ .checkmark:after {
-    display: block;
+  .pois-container {
+    margin: 0px;
   }
-  
-  /* Style the indicator (dot/circle) */
-  .credit-card .checkmark:after {
-  
-    border-radius: 50%;
-    background: white;
+  .left-chevron {
+    position: absolute;
+    left: 30px;
+    top: 17px;
   }
+  .card-list {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+  }
+  .field-placeholder {
+    padding: 0px;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 168px;
+  }
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.radio-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+
+.radio-btn input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Create a custom radio button */
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  opacity: 0
+}
+
+/* When the radio button is checked, add a blue background */
+
+.radio-btn input:checked~.checkmark {
+  background-color: #06d3da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  padding: 5px
+}
+
+/* Create the indicator (the checkmark - hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (checkmark) when checked */
+
+.radio-btn input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (checkmark) */
+
+.radio-btn .checkmark:after {
+  content: '✔';
+  color: white;
+  font-size: 15px;
+}
