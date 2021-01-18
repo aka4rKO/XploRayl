@@ -21,9 +21,25 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBucH80HMFY07sja5xH-LDxeBDKj7G273E&callback=initMap&libraries=&v=weekly"
+    ></script>
     <script src="./../../script.js"></script>
     <script src="./my-hunts.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./simple-rating.css" />
+    <script src="./simple-rating.js"></script>
   </head>
   <body>
     <div>
@@ -156,15 +172,19 @@
                   </li>
                 </ul>
               </div>
-              <div id="tab-one" class="ui-content hunt-home">
+              <div id="tab-one">
+
+                <div class="ui-content hunt-home " >
+
+                </div>
                 <h1
-                  style="position: relative; color: white !important; top: 60%"
+                  style="position: relative; color: white !important; top: 60%; padding-left: 22px"
                   class=""
                 >
                   Seagull Hunt
                 </h1>
                 <div
-                  style="position: relative; color: white !important; top: 60%"
+                  style="position: relative; color: white !important; top: 60%; padding-left: 22px"
                 >
                   <span>Copenhagen, Denmark</span>
 
@@ -176,30 +196,82 @@
                   style="position: relative; color: white !important; top: 50%"
                   class="left-column"
                 >
-                  <a href="#common-modal" rel="modal:open">
-                    <button class="ui-btn">SCAN</button></a
-                  >
+                  <a class="anchor-external" href="./ar-scan-ui/ar-scan.html" >
+                
+                    <button class="ui-btn ar-scan-btn">
+                      <img
+                        src="/assets/images/headers/ar-scan-btn.png"
+                        alt=""
+                      /></button
+                  ></a>
                 </div>
+<div>
+  <div class="map">
+    <h2 class="ui-content">Map</h2>
+    <div id="map-container"></div>
+  </div>
+
+  <img
+    src="/assets/images/treasure-task.png"
+    style="width: 95%"
+    alt=""
+  />
+
+  <div class="center-column">
+    <div id="common-modal" class="modal ui-modal">
+      <h1 class="center-column center-row">Add Review</h1>
+      <p class="center-column center-row">
+        Tell us about your hunt
+      </p>
+      <div class="center-column center-row">
+        <img
+          class="profile-pic"
+          src="/assets/images/avatars/profile.jpg"
+          alt=""
+        />
+      </div>
+      <div class="center-row center-column">
+        <div>
+          <div class="center-column center-row">
+            <input
+              class="rating rate-field"
+              id="ratingSlider"
+              type="hidden"
+              value="3"
+            />
+          </div>
+          <div class="">
+            <div class="form-group">
+              <p class="credentialErr err-text"></p>
+
+              <fieldset id="fuserid">
+                <legend class="label-text">Review</legend>
+                <input
+                  name=""
+                  id="review-message"
+                  class="form-control placeholder-text"
+                  placeholder="How good was your hunt, tell me about it"
+                />
+              </fieldset>
+              <p class="nameErr err-text"></p>
+            </div>
+            <div>
+              <button id="review-btn" class="ui-btn">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#common-modal" rel="modal:open">
+      <button class="ui-btn">End Hunt</button></a
+    >
+  </div>
+</div>
+
                 
               </div>
 
-              <div class="body-content">
-                <div id="common-modal" class="modal ui-modal">
-                  <h1 class="center-column center-row">Scan Ticket</h1>
-                  <p class="center-column center-row">
-                    Scan the ticket at the station terminal
-                  </p>
-                  <div class="center-row center-column">
-                    <img src="/assets/images/qr-code.png" alt="" />
-                  </div>
-                  <a class="anchor-external" href="./my-hunts-final.html">
-                    <button class="ui-btn close-modal" style="margin-left: 5em">
-                      DONE
-                    </button>
-                  </a>
-                </div>
-                
-              </div>
+              
 
               <div id="tab-two" class="ui-content">
                 <!-- <h1 class="tab-heading">Favourites</h1> -->

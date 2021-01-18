@@ -125,12 +125,20 @@
     padding: 0.5em 0;
     width: 10.5em !important;
     border-radius: 3em !important;
-    background-color: #04d3d9 !important;
-    border: 3px solid #04d3d9 !important;
+/*     background-color: #04d3d9 !important;
+    border: 3px solid #04d3d9 !important; */
+    background-color: white !important;
+    border: 3px solid white !important; 
     font-family: "Poppins semibold" !important;
     font-size: 13px !important;
-    color: #fff !important;
+    color: #04d3d9 !important;
     text-shadow: none !important;
+  }
+  .active, tab-nav:hover {
+
+    background-color: #04d3d9 !important;
+    border: 3px solid #04d3d9 !important;
+    color: white !important;
   }
   
   #tabname {
@@ -231,6 +239,21 @@
     );
   }
   
+
+  
+.map {
+  grid-area: map;
+  /* background-color: teal; */
+}
+
+#map-container {
+  height: 40vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
   .poi img {
     border-radius: 1em;
     width: 100%;
@@ -264,7 +287,6 @@
       background-repeat: no-repeat;
       background-size: 100%;
 
-
   }
   .overlay{
     position: absolute;
@@ -282,7 +304,9 @@
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center; 
-    height: 57vh;
+    height: 84vh;
+    margin-bottom: -223px;
+
   }
   /* asdasdasds ------------------------------- */
   
@@ -383,3 +407,14 @@
     width: 1em;
   }
   
+  .ar-scan-btn{
+    border-radius: 100%;
+    width: 171% !important;
+    left: -60% !important;
+  }
+
+  .input[type="text"] {
+
+    background-image: unset !important;
+
+  }
