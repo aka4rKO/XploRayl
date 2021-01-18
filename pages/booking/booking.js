@@ -17,6 +17,6 @@ $(function() {
 $(function() {
   $("#payment-button")
     .on("click", function(){
-      window.location.href='payment.html';
+      window.location.href='./../payment/add-card.html';
   })
 });

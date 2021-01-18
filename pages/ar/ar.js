@@ -94,6 +94,7 @@ function  makePayment(token, name){
       }).fail(function(data){
 
       })
+
  }
 
 
