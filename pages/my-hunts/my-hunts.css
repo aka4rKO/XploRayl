@@ -403,3 +403,9 @@
     width: 171% !important;
     left: -60% !important;
   }
+
+  .input[type="text"] {
+
+    background-image: unset !important;
+
+  }
