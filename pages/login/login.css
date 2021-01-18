@@ -1,5 +1,5 @@
 .err-text {
-  margin-left: 273px;
+  /* margin-left: 273px; */
 }
 .fieldset2{
   display: inline-block;
@@ -16,6 +16,11 @@
     padding-left: 384px;
 
 }
+
+.snackbar {
+  left: 9em;
+}
+
 .botton2{
   margin-left: 40px;
 }
@@ -281,7 +286,7 @@ body {
   margin-left: 21px!important;
 }
 .err-text {
-  margin-left: 23px;
+  /* margin-left: 23px; */
 }
 
 }
@@ -367,7 +372,7 @@ p {
     margin-left: 130px!important;
 }
 .err-text {
-  margin-left: 132px;
+  /* margin-left: 132px; */
 }
 
 
@@ -407,7 +412,7 @@ p {
   margin-left: 142px!important;
 }
 .err-text {
-  margin-left: 144px;
+  /* margin-left: 144px; */
 }
 
 }
