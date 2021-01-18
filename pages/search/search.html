@@ -55,54 +55,66 @@
 <body>
   <div data-role="page">
     <!-- Sidebar start -->
-    <div class="side">
-      <div class="ui-content center-column">
-        <img class="header-logo-sidebar" src="./../../assets/images/logos/full logo black color.png" alt="" />
+      <div class="side">
+        <div class="ui-content center-column">
+          <img
+            class="header-logo-sidebar"
+            src="./../../assets/images/logos/full logo black color.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <div class="sidebar-nav-btn">
+            <a href="./../explore/explore.html" data-prefetch="true" class="anchor-external">
+              <div class="sidebar-nav-btn-contents">
+                <img class="" src="./../../assets/icons/compass.svg" alt="" />
+                <span>EXPLORE</span>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar-nav-btn-active">
+            <a href="./../search/search.html" class="anchor-external">
+              <div class="sidebar-nav-btn-contents">
+                <img
+                  class="sidebar-nav-btn-content-active"
+                  src="./../../assets/icons/search.svg"
+                  alt=""
+                />
+                <span class="sidebar-nav-btn-content-active">Search</span>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar-nav-btn">
+            <a href="./../my-hunts/my-hunts.html" data-prefetch="true" class="anchor-external">
+              <div class="sidebar-nav-btn-contents">
+                <img class="" src="./../../assets/icons/x white.svg" alt="" />
+                <span>My Hunts</span>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar-nav-btn">
+            <a class="anchor-external" href="./../leaderboard/leaderboard.html" data-prefetch="true">
+              <div class="sidebar-nav-btn-contents">
+                <img
+                  class=""
+                  src="./../../assets/icons/bar-chart-2.svg"
+                  alt=""
+                />
+                <span>Leaderboard</span>
+              </div>
+            </a>
+          </div>
+          <div class="sidebar-nav-btn">
+            <a href="./../profile/profile.html" data-prefetch="true" class="anchor-external">
+              <div class="sidebar-nav-btn-contents">
+                <img class="" src="./../../assets/icons/user.svg" alt="" />
+                <span>Profile</span>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="sidebar-nav-btn">
-          <a href="./../explore/explore.html" data-prefetch="true">
-            <div class="sidebar-nav-btn-contents">
-              <img src="./../../assets/icons/compass.svg" alt="" />
-              <span>Explore</span>
-            </div>
-          </a>
-        </div>
-        <div class="sidebar-nav-btn">
-          <a href="./../search/search.html" data-prefetch="true">
-            <div class="sidebar-nav-btn-contents">
-              <img src="./../../assets/icons/search.svg" alt="" />
-              <span>Search</span>
-            </div>
-          </a>
-        </div>
-        <div class="sidebar-nav-btn-active">
-          <a href="#">
-            <div class="sidebar-nav-btn-contents">
-              <img class="sidebar-nav-btn-content-active" src="./../../assets/icons/x white.svg" alt="" />
-              <span class="sidebar-nav-btn-content-active">My Hunts</span>
-            </div>
-          </a>
-        </div>
-        <div class="sidebar-nav-btn">
-          <a href="./../leaderboard/leaderboard.html" data-prefetch="true">
-            <div class="sidebar-nav-btn-contents">
-              <img class="" src="./../../assets/icons/bar-chart-2.svg" alt="" />
-              <span>Leaderboard</span>
-            </div>
-          </a>
-        </div>
-        <div class="sidebar-nav-btn">
-          <a href="./../profile/profile.html" data-prefetch="true">
-            <div class="sidebar-nav-btn-contents">
-              <img class="" src="./../../assets/icons/user.svg" alt="" />
-              <span>Profile</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- Sidebar end -->
+      <!-- Sidebar end -->
     <div class="wrapper">
       <div class="main">
         <!-- Header start -->
@@ -293,7 +305,7 @@
   </div>
 
   <script>
-    $('#search-item').search({
+    $('input').search(function(){ 
 
     });
 
