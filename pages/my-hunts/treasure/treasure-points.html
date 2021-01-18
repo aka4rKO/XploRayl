@@ -29,7 +29,11 @@
   </head>
   <body>
     <div class="box-div" style="display: grid">
-      <div class="right-align" onclick="window.location='../my-hunts.html';">
+      <div
+        class="right-align"
+        id="close"
+        onclick="window.location='../my-hunts.html';"
+      >
         <img
           src="/assets/icons/x.svg"
           alt=""
@@ -38,7 +42,7 @@
           style="margin: 10px"
         />
       </div>
-      <div style="text-align: center">
+      <div style="text-align: center" id="treasure-info">
         <div>
           <h2>Treasure Chest</h2>
           <h3>+1,500 POINTS</h3>
@@ -50,40 +54,38 @@
           </div>
         </div>
       </div>
-      <div style="margin-top: -20px">
-        <div class="phone-tab-view" id="tab-list-view" style="margin-top: 70px">
-          <div class="phone-tab-view" id="tab-list-view">
-            <div class="phone-tab-list-view">
-              <label>Santonian's Chest</label>
-              <label style="text-align: right">1,500 pts</label>
-              <img
-                class="points-img left-align"
-                src="./../../../assets/images/treasure.png"
-                alt=""
-              />
-            </div>
+      <div id="card-item">
+        <div class="phone-tab-view" id="tab-list-view">
+          <div class="phone-tab-list-view">
+            <label>Santonian's Chest</label>
+            <label style="text-align: right">1,500 pts</label>
+            <img
+              class="points-img left-align"
+              src="./../../../assets/images/treasure.png"
+              alt=""
+            />
           </div>
-          <div class="phone-tab-view" id="tab-list-view">
-            <div class="phone-tab-list-view">
-              <label>Mystery Chest</label>
-              <label style="text-align: right">1,500 pts</label>
-              <img
-                class="points-img left-align"
-                src="./../../../assets/images/profile/collectableDisabled.png"
-                alt=""
-              />
-            </div>
+        </div>
+        <div class="phone-tab-view" id="tab-list-view">
+          <div class="phone-tab-list-view">
+            <label>Mystery Chest</label>
+            <label style="text-align: right">1,500 pts</label>
+            <img
+              class="points-img left-align"
+              src="./../../../assets/images/profile/collectableDisabled.png"
+              alt=""
+            />
           </div>
-          <div class="phone-tab-view" id="tab-list-view">
-            <div class="phone-tab-list-view">
-              <label>Mystery Chest</label>
-              <label style="text-align: right">1,500 pts</label>
-              <img
-                class="points-img left-align"
-                src="./../../../assets/images/profile/collectableDisabled.png"
-                alt=""
-              />
-            </div>
+        </div>
+        <div class="phone-tab-view" id="tab-list-view">
+          <div class="phone-tab-list-view">
+            <label>Mystery Chest</label>
+            <label style="text-align: right">1,500 pts</label>
+            <img
+              class="points-img left-align"
+              src="./../../../assets/images/profile/collectableDisabled.png"
+              alt=""
+            />
           </div>
         </div>
         <div class="center-column" style="margin-top: 15px">

@@ -30,3 +30,31 @@ $(document).ready(function () {
   };
   console.log("over");
 });
+
+
+function initMap() {
+  var poiId = JSON.parse(sessionStorage.getItem("currentId"));
+
+  var dataObj = JSON.parse(localStorage.getItem("data"));
+  var pois = dataObj["poiObjs"];
+
+  var poi = pois.filter((obj) => {
+    return obj.poiId === poiId;
+  });
+
+  var poi = poi[0];
+
+  var latitude = poi["lat"];
+  var longitude = poi["lng"];
+
+  const myLatLng = { lat: latitude, lng: longitude };
+  const map = new google.maps.Map(document.getElementById("map-container"), {
+    zoom: 12,
+    center: myLatLng,
+  });
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Hello World!",
+  });
+}

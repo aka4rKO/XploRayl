@@ -18,7 +18,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="../../profile/circle-progress.min.js"></script>
-
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBucH80HMFY07sja5xH-LDxeBDKj7G273E&callback=initMap&libraries=&v=weekly"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
@@ -40,6 +44,7 @@
           />
         </div>
         <img id="logo" class='toggleButton'src="./../../../assets/images/scan-logo.png" alt="" />
+          <div id="map-container"></div>
     </div>
   </body>
 </html>

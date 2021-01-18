@@ -12,26 +12,95 @@
   margin-top: 30px;
   margin-left: 80px;
 }
+h3 {
+  margin: 5px !important;
+}
+h2 {
+  margin: 5px !important;
+}
+#close {
+  margin: 10px;
+}
 
-@media only screen and (max-width: 667px) {
+/* / iPhone landscape ---------------------------------------------------------------------- / */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .box-div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 30px;
-    height: 520px;
-    width: 700px;
+    height: 320px;
+    width: 500px;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 0px;
   }
 
   .treasure-img {
     text-align: center;
     height: 150px;
-
     margin-top: 30px;
-    margin-left: 80px;
+    margin-left: 60px;
   }
 
   .treasure-img img {
     height: 150px;
+  }
+
+  #close {
+    margin: 10px;
+    margin-right: 10px;
+  }
+}
+/* iPhone portrait ---------------------------------------------------------------------- / */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .box-div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    height: 667px;
+    width: 400px;
+    margin: 0px;
+    justify-content: center;
+  }
+
+  .treasure-img {
+    text-align: center;
+    height: 150px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .treasure-img img {
+    margin-top: 150px;
+    margin-right: -50px;
+    height: 200px;
+  }
+
+  #close {
+    margin: 10px;
+    margin-right: 30px;
+  }
+  
+  h2 {
+    margin-top: 250px !important;
+    margin-right: 10px !important;
+  }h3 {
+    margin-top: 10px !important;
+    margin-right: 10px !important;
+    margin-bottom: 10px !important;
+  }
+}
+/* iPad portrait ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .box-div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 520px;
+    width: 700px;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 30px;
+  }
+  h3 {
+    margin: 5px !important;
+  }
+  h2 {
+    margin: 5px !important;
   }
 }
