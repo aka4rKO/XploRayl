@@ -26,7 +26,6 @@
     padding: 5px !important;
     padding-top:3em !important;
     margin: auto;
-    text-align: center;
   }
   #points-value {
     color: #04d3d9 !important;
@@ -118,6 +117,8 @@
   }
   
   #tab-item {
+    grid-area: tab-item;
+    margin: auto;
   }
   
   .tab-nav {
@@ -238,6 +239,21 @@
     );
   }
   
+
+  
+.map {
+  grid-area: map;
+  /* background-color: teal; */
+}
+
+#map-container {
+  height: 40vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
   .poi img {
     border-radius: 1em;
     width: 100%;
@@ -334,7 +350,9 @@
   }
   
   @media only screen and (max-width: 768px) {
-
+    .footer {
+      margin-top: 45vh;
+    }
   }
   
 
@@ -388,3 +406,8 @@
     width: 1em;
   }
   
+  .ar-scan-btn{
+    border-radius: 100%;
+    width: 171% !important;
+    left: -60% !important;
+  }
