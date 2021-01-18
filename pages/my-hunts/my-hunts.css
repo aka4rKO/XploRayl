@@ -125,12 +125,20 @@
     padding: 0.5em 0;
     width: 10.5em !important;
     border-radius: 3em !important;
-    background-color: #04d3d9 !important;
-    border: 3px solid #04d3d9 !important;
+/*     background-color: #04d3d9 !important;
+    border: 3px solid #04d3d9 !important; */
+    background-color: white !important;
+    border: 3px solid white !important; 
     font-family: "Poppins semibold" !important;
     font-size: 13px !important;
-    color: #fff !important;
+    color: #04d3d9 !important;
     text-shadow: none !important;
+  }
+  .active, tab-nav:hover {
+
+    background-color: #04d3d9 !important;
+    border: 3px solid #04d3d9 !important;
+    color: white !important;
   }
   
   #tabname {
