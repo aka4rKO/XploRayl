@@ -287,7 +287,6 @@
       background-repeat: no-repeat;
       background-size: 100%;
 
-
   }
   .overlay{
     position: absolute;
@@ -305,7 +304,9 @@
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center; 
-    height: 57vh;
+    height: 84vh;
+    margin-bottom: -223px;
+
   }
   /* asdasdasds ------------------------------- */
   
