@@ -14,6 +14,10 @@
   <script src="./../../script.js"></script>
   <script src="./search.js"></script>
 
+  <!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
   <script src="./search/e-search.js"></script>
   <style>
     .form-searth {
@@ -126,25 +130,43 @@
         <!-- START -->
         
         <div class="form-search">
-          <input type="text" id="search-item" placeholder="what are you searching for?" />
+          <input type="text" id="search-item" style="font-size: large;" placeholder="what are you searching for?" />
         </div>
-        <div class="filter">
-          <img 
-  
-            src="./../../assets/icons/filter.svg"
-            alt=""
-          />
-          <span >Filters</span>
-          </div>
-
-        <!-- filter -->
-        <ul>
-          <li class="list active" data-filter="all">All</li>
+        <div id="ex1" class="modal">
+          <!-- filter -->
+        <ul id="myDIV">
+          <li class="list " data-filter="all">All</li>
           <li class="list " data-filter="Art">Art</li>
           <li class="list " data-filter="Culture">Culture</li>
           <li class="list " data-filter="Fun">Fun</li>
           <li class="list " data-filter="Historical">Historical</li>
         </ul>
+          <!-- <button onclick="filter()">APPLY</button>
+          <a href="#" rel="modal:close">Close</a> -->
+        </div>
+        
+        <!-- Link to open the modal -->
+        
+        <div style="margin-left: 611px;
+        margin-bottom: 20px;" class="filter">
+          <span><img style="    height: 100%;
+          width: 35px;"
+  
+            src="./../../assets/icons/filter.svg"
+            alt=""
+          /></span>
+          <span style="color:  #04d3d9;    font-size: 20px;"><a href="#ex1" rel="modal:open">Filters</a></span>
+          </div>
+          
+
+        <!-- filter -->
+   <!--      <ul>
+          <li class="list active" data-filter="all">All</li>
+          <li class="list " data-filter="Art">Art</li>
+          <li class="list " data-filter="Culture">Culture</li>
+          <li class="list " data-filter="Fun">Fun</li>
+          <li class="list " data-filter="Historical">Historical</li>
+        </ul> -->
 
         <div class="containerItems">
 
@@ -319,6 +341,7 @@
     });
 
     /* filter function */
+/*     function filter() { */
     $(document).ready(function () {
       $('.list').click(function () {
         const value = $(this).attr('data-filter');

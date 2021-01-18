@@ -1,4 +1,15 @@
-.hunt-header{
+.close-modal {
+  width: 50px!important;
+  height: 50px!important;
+  
+}
+
+.modal{
+  box-sizing:unset!important;
+    display: inline-block;
+    max-width: none!important;
+  }
+    .hunt-header{
       
   z-index: 1;
   background-image: url('./../../assets/images/search.png');
@@ -60,7 +71,21 @@ ul{
     display: flex;
     margin-bottom: 10px;
 }
-ul li{
+.list {
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 45px 26px 62px 15px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+li{
+
+  font-family: "Poppins bold" !important;
+  font-size: 16px !important;
+  color: #748a9d !important;
+  width: 111px;
+  height: 0px;
     border-radius: 20px;
     list-style: none;
     background: #eee;
@@ -69,24 +94,25 @@ ul li{
     letter-spacing: 1px;
     cursor: pointer;
 }
-ul li.active{
-    background: #04d3d9;
+.active, .list:hover {
+  background: #04d3d9;
+  color: white;
 }
 
 input[type=text] {
-    margin: auto;
-    width: 90%;
-    box-sizing: border-box;
-    border: 0px solid black;
-    border-radius: 30px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('./../../assets/icons/search.svg');
-    background-position: 20px 10px;
-    background-color: #dbe2ed;
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    padding: 15px 20px 15px 60px;
+  margin: auto;
+  width: 408px;
+  box-sizing: border-box;
+  border: 0px solid black;
+  border-radius: 55px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url(./../../assets/icons/search.svg);
+  background-position: 20px 10px;
+  background-color: #dbe2ed;
+  background-repeat: no-repeat;
+  background-size: 53px 43px;
+  padding: 23px 20px 21px 89px;
 }
 /* Hero */
 .hero-text {
