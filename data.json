@@ -1,8 +1,4 @@
 {
-  "users": {
-    "username": "user1",
-    "password": "123"
-  },
   "poiObjs": [
     {
       "poiId": 1,
@@ -334,7 +330,6 @@
       "status": ""
     }
   ],
-  "favourites": [],
   "popularHunts": [1, 2, 3, 4, 5, 6],
   "topRatedHunts": [1, 2, 3, 5, 6, 7],
   "mostVisitedHunts": [3, 7, 4, 5, 6]

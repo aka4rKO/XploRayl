@@ -1,0 +1,70 @@
+{
+  "email": "arshad@gmail.com",
+  "password": "arshad6969",
+  "username": "Arshad Sameemdeen",
+  "totalPoints": 0,
+  "position": 0,
+  "collectables": 0,
+  "travelDistance": 0,
+  "taskCompleted": 0,
+  "tickets": [
+    {
+      "ticketId": 1,
+      "from": "Colombo",
+      "to": "kandy",
+      "departureDate": "Fri, 06 Nov 2021",
+      "seats": "23A, 24A",
+      "price": "£20.00"
+    }
+  ],
+  "coupons": [
+    {
+      "name": "",
+      "code": "",
+      "expiryDate": "",
+      "amount": 100
+    }
+  ],
+  "placesUnlocked": 0,
+  "ranking": 0,
+  "upcomingHunts": [],
+  "pastHunts": [],
+  "otherUsers": [
+    {
+      "name": "John Doyle",
+      "points": 1500
+    },
+    {
+      "name": "Naruto Uzamaki",
+      "points": 700
+    },
+    {
+      "name": "Sheldon Cooper",
+      "points": 550
+    },
+    {
+      "name": "S Sulaiman",
+      "points": 1200
+    },
+    {
+      "name": "Thomas Shelby",
+      "points": 400
+    },
+    {
+      "name": "Tobey Maguire",
+      "points": 750
+    },
+    {
+      "name": "Mufthi Menk",
+      "points": 600
+    },
+    {
+      "name": "Mohomed Sameemdeen",
+      "points": 650
+    },
+    {
+      "name": "Fazal Appa",
+      "points": 500
+    }
+  ]
+}
