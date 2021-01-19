@@ -15,6 +15,14 @@
       "departureDate": "01/05/2021",
       "seats": 2,
       "price": 20
+    },
+    {
+      "ticketId": 2,
+      "from": "Colombo",
+      "to": "Kandy",
+      "departureDate": "02/05/2021",
+      "seats": 5,
+      "price": 50
     }
   ],
   "coupons": [
@@ -26,7 +34,7 @@
     }
   ],
   "placesUnlocked": 0,
-  "ranking": 0,
+  "ranking": 4,
   "upcomingHunts": [],
   "pastHunts": [],
   "otherUsers": [

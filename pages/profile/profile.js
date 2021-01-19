@@ -42,39 +42,25 @@ $(document).ready(function () {
       gradient: ["cyan", "#04d9d9"],
     },
   });
-
-  //document.getElementsByClassName("ticketClass")[0].onclick = function () {
-  var dataLayerArray = {
-    ticketId: 1,
-    from: "Colombo",
-    to: "kandy",
-    departureDate: "Fri, 06 Nov 2021",
-    seats: "23A, 24A",
-    price: "£20.00",
-  };
-  // Store to local storage ---------------------------------------------------------------
-  // var ratingsList = JSON.parse(localStorage.getItem("tickets"))
-  // var ratingsArray = [];
-  // if(ratingsList){
-  //     ratingsArray = ratingsList;
-  // }
-  // for (let index = 0; index < 6; index++) {
-  //   ratingsArray.push(dataLayerArray)
-  // }
-  // localStorage.setItem("tickets", JSON.stringify(ratingsArray));
+  var userObj = JSON.parse(localStorage.getItem("user"));
+  if (userObj && userObj.ranking) {
+    document.getElementById("rank" + userObj.ranking).className += " active-rank";
+    document.getElementById("current-rank-image").src = "/assets/images/ranks/rank"+userObj.ranking+".png";
+  }
+  var userObj = JSON.parse(localStorage.getItem("user"));
+  var rankArr = ["Crew Lead", "Captain", "Quartermaster", "First Mate Traveler", "Second Mate"]
+  $("#user-rank-name").append(rankArr[userObj.ranking - 1]);
 
   // Retrieve from local storage ---------------------------------------------------------------
-  var ticketArr = JSON.parse(localStorage.getItem("tickets"));
-
-  for (var i = 0; i < ticketArr.length; i++) {
+  for (var i = 0; i < userObj.tickets.length; i++) {
     // Define each individual layer
-    var dataLayer = ticketArr[i];
+    var dataLayer = userObj.tickets[i];
     $(".tickets-grid").append(
       '<div id="ticket-card"><p id="ticketId">Ticket #' +
         dataLayer.ticketId +
-        '</p><p id="price">' +
+        '</p><p id="price">$' +
         dataLayer.price +
-        '</p><p id="from">' +
+        '.00</p><p id="from">' +
         dataLayer.from +
         " --> " +
         dataLayer.to +
@@ -85,10 +71,6 @@ $(document).ready(function () {
         "</p></div>"
     );
   }
-  //   $("ticketClass").click(function(event){
-  //     event.preventDefault();
-  //  });
-
   renderFavourites();
 });
 
@@ -187,12 +169,12 @@ function sendEmail() {
   var dataObj = JSON.parse(localStorage.getItem("data"));
   var pois = dataObj["poiObjs"];
 
-  var selectedPois = pois.filter(poi => {
+  var selectedPois = pois.filter((poi) => {
     return selectedFavList.includes(`${poi.poiId}`);
   });
 
   console.log(selectedPois);
-  selectedPois.forEach(item => {
+  selectedPois.forEach((item) => {
     renderdListOfFavPois += `
     <li>${item.name}</li>
     `;
@@ -221,12 +203,11 @@ function sendEmail() {
   } else {
     console.log("nothing selected to send");
     $("#snackbar").text("Nothing is selected to send");
-      $(".snackbar").toggleClass("center-row space-between");
-      setTimeout(function () {
-        $(".snackbar").removeClass("center-row space-between");
-      }, 2000);
+    $(".snackbar").toggleClass("center-row space-between");
+    setTimeout(function () {
+      $(".snackbar").removeClass("center-row space-between");
+    }, 2000);
   }
-  
 }
 
 function onSelect(id) {
@@ -236,7 +217,7 @@ function onSelect(id) {
     selectedFavList.push(id);
   } else {
     console.log(false);
-    selectedFavList = selectedFavList.filter(item => item != id);
+    selectedFavList = selectedFavList.filter((item) => item != id);
   }
 
   console.log(selectedFavList);

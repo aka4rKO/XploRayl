@@ -135,15 +135,15 @@
             </div>
             <div class="stats-data">
               <div>
-                <h3>40</h3>
+                <h3 id="stats-data-value">40</h3>
                 <p>Hunts</p>
               </div>
               <div>
-                <h3>340</h3>
+                <h3 id="stats-data-value">340</h3>
                 <p>Points</p>
               </div>
               <div>
-                <h3>41</h3>
+                <h3 id="stats-data-value">41</h3>
                 <p>Reviews</p>
               </div>
             </div>
@@ -358,23 +358,100 @@
                     </div>
                   </div>
                   <div style="margin-top: 110px">
-                    <h3 style="color: #04d3d9 !important; text-align: center">
-                      Second Mate
+                    <h3 style="color: #04d3d9 !important; text-align: center" id="user-rank-name">
                     </h3>
                     <h3
                       style="color: rgb(0, 0, 0) !important; text-align: center"
                     >
                       Rank
                     </h3>
-                    <h4
-                      style="
-                        color: #04d3d9 !important;
-                        text-align: right;
-                        margin-top: 50px;
-                      "
+
+                    <a
+                      id="add-card-title"
+                      href="#view-ranking-modal"
+                      rel="modal:open"
                     >
-                      View Ranking
-                    </h4>
+                      <h4
+                        style="
+                          color: #04d3d9 !important;
+                          text-align: right;
+                          margin-top: 50px;
+                        "
+                      >
+                        View Ranking
+                      </h4>
+                    </a>
+                    <!-- ADD CARD MODAL START -->
+                    <div id="view-ranking-modal" class="modal ui-modal">
+
+                      <div class="rank-grid">
+                        <div class="rank-img center-column" id="rank-header">
+                          <h1
+                            class="center-column"
+                            style="margin-top: 0px; margin-bottom: 0px"
+                          >
+                            Ranks
+                          </h1>
+                          <img
+                            id="current-rank-image"
+                            src=""
+                            height="140px"
+                            alt="rank image"
+                          />
+                        </div>
+                        <div id="rank-content">
+                          <div class="rank-card-view" id="rank1">
+                            <img
+                              height="50px"
+                              src="/assets/images/ranks/rank1.png"
+                              alt=""
+                            />
+                            <h3 id="rank-name">Crew Lead</h3>
+                          </div>
+                          <div class="rank-card-view" id="rank2">
+                            <img
+                              height="50px"
+                              src="/assets/images/ranks/rank2.png"
+                              alt=""
+                            />
+                            <h3 id="rank-name">Captain</h3>
+                          </div>
+                          <div class="rank-card-view" id="rank3">
+                            <img
+                              height="50px"
+                              src="/assets/images/ranks/rank3.png"
+                              alt=""
+                            />
+                            <h3 id="rank-name">Quartermaster</h3>
+                          </div>
+                          <div class="rank-card-view" id="rank4">
+                            <img
+                              height="50px"
+                              src="/assets/images/ranks/rank4.png"
+                              alt=""
+                            />
+                            <h3 id="rank-name">First Mate Traveler</h3>
+                          </div>
+                          <div class="rank-card-view" id="rank5">
+                            <img
+                              height="50px"
+                              src="/assets/images/ranks/rank5.png"
+                              alt=""
+                            />
+                            <h3 id="rank-name">Second Mate</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="center-column" style="margin-top: 5px">
+                        <button
+                          class="ui-btn subscribe-btn"
+                          onclick="window.location='./achievements.html';"
+                          style="cursor: pointer"
+                        >
+                          OK
+                        </button>
+                      </div> -->
+                    </div>
                   </div>
                 </div>
 
@@ -648,7 +725,7 @@
                 id="tab-three"
                 class=""
                 style="position: relative !important"
-              > 
+              >
                 <button
                   class="ui-btn hero-btn email-share-btn"
                   onClick="sendEmail();"
@@ -656,18 +733,14 @@
                   SHARE
                 </button>
                 <div class="snackbar">
-                  <span class="card1-text" id="snackbar"
-                    ></span
-                  >
+                  <span class="card1-text" id="snackbar"></span>
                 </div>
                 <h1 class="tab-heading">Favourites</h1>
                 <div
                   class="pois-container"
                   style="position: relative !important"
                   id="poi-list"
-                >
-                
-                </div>
+                ></div>
                 <!-- Footer start -->
                 <div class="footer ui-content">
                   <div class="footer-logo-container center-column">

@@ -210,7 +210,6 @@ p {
   margin-top: 20px;
   text-align: center;
 }
-
 .payment-grid {
   text-align: center;
   margin-top: 8px;
@@ -326,17 +325,7 @@ p {
   .arrow-icon {
     margin-left: 160px;
   }
-  .phone-tab-list-view {
-    background-color: #f0f4f8;
-    padding: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 5px;
-    border-radius: 10px;
-    font-family: "Poppins medium";
-    color: #748a9d;
-    width: 295px;
-  }
+
   .stats-data {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -364,6 +353,10 @@ p {
 
 /* iPhone portrait ---------------------------------------------------------------------- */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .close-icon {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
   #position-div {
     margin-top: 100px;
   }
@@ -375,6 +368,28 @@ p {
     font-size: small !important;
     text-align: right !important;
     padding-left: 275px;
+  }
+  #rank-name {
+    margin: auto;
+    margin-left: 0px;
+  }
+  .rank-card-view {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    background-color: #f0f4f8;
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: "Poppins medium";
+    color: #748a9d;
+    width: 295px;
+  }
+  .active-rank {
+    background-color: #748a9d;
+  }
+  .active-rank h3 {
+    color: white !important;
   }
   .tab-item2 {
     margin-top: 40px;
@@ -390,7 +405,7 @@ p {
     display: grid;
     grid-template-columns: 0.6fr 1fr;
   }
-  #back-button{
+  #back-button {
     display: none;
   }
   .poi {
@@ -420,12 +435,26 @@ p {
     grid-template-columns: 1fr;
     justify-items: center;
   }
-
 }
 /* iPhone landscape ---------------------------------------------------------------------- */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .close-icon {
+    margin-bottom: -40px;
+    margin-right: 20px;
+  }
   #position-div {
     margin-top: 100px;
+  }
+  .rank-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-areas: "rank-content rank-header";
+  }
+  #rank-content {
+    grid-area: rank-content;
+  }
+  #rank-header {
+    grid-area: rank-header;
   }
   #rank-div {
     margin-top: 100px;
@@ -435,6 +464,28 @@ p {
     font-size: small !important;
     text-align: right !important;
     padding-left: 420px;
+  }
+  #rank-name {
+    margin: auto;
+    margin-left: 0px;
+  }
+  .rank-card-view {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    background-color: #f0f4f8;
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: "Poppins medium";
+    color: #748a9d;
+    width: 295px;
+  }
+  .active-rank {
+    background-color: #748a9d;
+  }
+  .active-rank h3 {
+    color: white !important;
   }
   .tab-item2 {
     margin-top: 40px;
@@ -449,8 +500,9 @@ p {
   #phone-header {
     display: none;
   }
-  #back-button{
-    padding-left: 30px; padding-top: 30px
+  #back-button {
+    padding-left: 30px;
+    padding-top: 30px;
   }
   .tab-heading {
     text-align: center;
@@ -483,7 +535,6 @@ p {
     grid-template-columns: 1fr;
     justify-items: center;
   }
-
 }
 
 /* iPad portrait ---------------------------------------------------------------------- */

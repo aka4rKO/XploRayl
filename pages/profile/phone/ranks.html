@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XploRayl</title>
+    <link rel="icon" type="image/png" href="./../../../favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <link rel="stylesheet" href="./../phone/profile-phone.css" />
+    <link rel="stylesheet" href="./../../../style.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+    <script src="./../../../script.js"></script>
+    <script src="./rank.js"></script>
+  </head>
+  <body>
+    <div>
+      <div
+        class="left-column close-icon"
+        onclick="window.location='./achievements.html';"
+      >
+        <img
+          src="/assets/icons/x.svg"
+          alt=""
+          height="50px"
+          width="50px"
+          id="close"
+        />
+      </div>
+
+      <div class="rank-grid">
+        <div class="rank-img center-column" id="rank-header">
+          <h1 class="center-column" style="margin-top: 0px; margin-bottom: 0px">
+            Ranks
+          </h1>
+          <img id="current-rank-image" src="" height="140px" alt="rank image" />
+        </div>
+        <div id="rank-content">
+          <div class="rank-card-view" id="rank1">
+            <img height="50px" src="/assets/images/ranks/rank1.png" alt="" />
+            <h3 id="rank-name">Crew Lead</h3>
+          </div>
+          <div class="rank-card-view" id="rank2">
+            <img height="50px" src="/assets/images/ranks/rank2.png" alt="" />
+            <h3 id="rank-name">Captain</h3>
+          </div>
+          <div class="rank-card-view" id="rank3">
+            <img height="50px" src="/assets/images/ranks/rank3.png" alt="" />
+            <h3 id="rank-name">Quartermaster</h3>
+          </div>
+          <div class="rank-card-view" id="rank4">
+            <img height="50px" src="/assets/images/ranks/rank4.png" alt="" />
+            <h3 id="rank-name">First Mate Traveler</h3>
+          </div>
+          <div class="rank-card-view" id="rank5">
+            <img height="50px" src="/assets/images/ranks/rank5.png" alt="" />
+            <h3 id="rank-name">Second Mate</h3>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="center-column" style="margin-top: 5px">
+        <button
+          class="ui-btn subscribe-btn"
+          onclick="window.location='./achievements.html';"
+          style="cursor: pointer"
+        >
+          OK
+        </button>
+      </div> -->
+    </div>
+  </body>
+</html>

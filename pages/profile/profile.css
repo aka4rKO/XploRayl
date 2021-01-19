@@ -14,7 +14,32 @@
     "tab-item tab-item tab-item"
     "tabname tabname tabname";
 }
+#stats-data-value {
+  margin: 1px;
+  color: white !important;
+}
 
+#rank-name {
+  margin: auto;
+  margin-left: 0px;
+}
+.rank-card-view {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  background-color: #f0f4f8;
+  padding: 5px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-family: "Poppins medium";
+  width: 350px;
+}
+.active-rank {
+  background-color: #748a9d;
+}
+.active-rank h3 {
+  color: white !important;
+}
 .poi-img-icon-color {
   filter: brightness(0) saturate(100%) invert(90%) sepia(16%) saturate(116%)
     hue-rotate(184deg) brightness(93%) contrast(82%);
@@ -39,6 +64,7 @@
 }
 #points-title {
   color: #404e5a !important;
+  margin: 1px;
 }
 #circle {
   margin: 20px;
@@ -150,10 +176,7 @@
 h2 {
   margin: 1px;
 }
-h3 {
-  margin: 1px;
-  color: white !important;
-}
+
 p {
   margin: 1px;
   color: white !important;
