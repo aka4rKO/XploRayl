@@ -11,10 +11,10 @@
     {
       "ticketId": 1,
       "from": "Colombo",
-      "to": "kandy",
-      "departureDate": "Fri, 06 Nov 2021",
-      "seats": "23A, 24A",
-      "price": "£20.00"
+      "to": "Kandy",
+      "departureDate": "01/05/2021",
+      "seats": 2,
+      "price": 20
     }
   ],
   "coupons": [
