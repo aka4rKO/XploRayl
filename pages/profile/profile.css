@@ -84,6 +84,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 160px;
+  margin: 30px;
+  margin-top: 0px;
 }
 
 .tab-item2 {
