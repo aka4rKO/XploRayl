@@ -177,12 +177,18 @@ h2 {
   margin: 1px;
 }
 
-p {
+#stats-data-name {
   margin: 1px;
   color: white !important;
 }
 
-/* Coupons styles ---------------------------------------------------- */
+/* Ticket styles ---------------------------------------------------- */
+.tickets-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  justify-items: center;
+}
 #ticket-card {
   margin-top: 15px;
   width: 320px;
@@ -190,7 +196,7 @@ p {
   border-radius: 15px;
   padding: 10px;
   display: grid;
-  grid-template-columns: 220px 100px;
+  grid-template-columns: 1fr 0.2fr;
   grid-template-rows: 25px 25px 25px 25px;
   grid-template-areas:
     "ticketId price"
@@ -204,10 +210,10 @@ p {
   margin: 5px;
 }
 #price {
-  padding-left: 20px;
-  padding-top: 40px;
+  margin: auto;
+  padding: 25px;
   grid-area: price;
-  color: #748a9d !important;
+  color: #000000 !important;
   border-left-style: dotted;
 }
 #from {
@@ -230,23 +236,57 @@ p {
   margin-top: 15px;
 }
 
-.tickets-grid {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-}
 .ticket-image {
   margin-bottom: -10px;
   margin-right: 5px;
 }
 
-.coupon-image {
-  margin: 3px;
-}
+/* Coupon styles ---------------------------------------------------- */
 .coupons-grid {
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 18px;
+  display: grid;
+  margin-left: 12px;
+  grid-template-columns: 0.3fr 0.3fr;
+  justify-items: center;
+}
+#coupon-card {
+  background-image: url("./../../assets/images/coupon-bg.png");
+  background-size: 370px 100px;
+  margin-top: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 77px 200px 70px;
+  grid-template-rows: 28px 28px 28px;
+  grid-template-areas:
+    "coupon-img coupon-name coupon-price"
+    "coupon-img coupon-validity coupon-price"
+    "coupon-img coupon-code coupon-price";
+}
+#coupon-img {
+  grid-area: coupon-img;
+  margin: 5px;
+}
+#coupon-name {
+  grid-area: coupon-name;
+  color: #748a9d !important;
+  font-size: 20px !important;
+  margin: 5px;
+}
+#coupon-price {
+  grid-area: coupon-price;
+  color: #748a9d !important;
+  margin: auto;
+  font-size: 20px !important;
+}
+#coupon-validity {
+  grid-area: coupon-validity;
+  color: #748a9d !important;
+  margin: 5px;
+}
+#coupon-code {
+  grid-area: coupon-code;
+  color: #748a9d !important;
+  margin: 5px;
 }
 
 .pois-container {

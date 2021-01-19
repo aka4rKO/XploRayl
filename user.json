@@ -23,14 +23,70 @@
       "departureDate": "02/05/2021",
       "seats": 5,
       "price": 50
+    },
+    {
+      "ticketId": 3,
+      "from": "Colombo",
+      "to": "Kandy",
+      "departureDate": "01/05/2021",
+      "seats": 2,
+      "price": 20
+    },
+    {
+      "ticketId": 4,
+      "from": "Colombo",
+      "to": "Kandy",
+      "departureDate": "02/05/2021",
+      "seats": 5,
+      "price": 50
+    },
+    {
+      "ticketId": 5,
+      "from": "Colombo",
+      "to": "Kandy",
+      "departureDate": "01/05/2021",
+      "seats": 2,
+      "price": 20
+    },
+    {
+      "ticketId": 6,
+      "from": "Colombo",
+      "to": "Kandy",
+      "departureDate": "02/05/2021",
+      "seats": 5,
+      "price": 50
     }
   ],
   "coupons": [
     {
-      "name": "",
-      "code": "",
-      "expiryDate": "",
+      "name": "Powder Monkey",
+      "code": "POWM2021",
+      "expiryDate": "02/05/2021",
+      "amount": 500
+    },
+    {
+      "name": "Ice Monkey",
+      "code": "POWM2022",
+      "expiryDate": "02/05/2021",
+      "amount": 800
+    },
+    {
+      "name": "New Monkey",
+      "code": "POWM2021",
+      "expiryDate": "02/05/2021",
       "amount": 100
+    },
+    {
+      "name": "Awesome Monkey",
+      "code": "POWM2081",
+      "expiryDate": "02/05/2021",
+      "amount": 5000
+    },
+    {
+      "name": "Old Monkey",
+      "code": "POWM2020",
+      "expiryDate": "02/05/2021",
+      "amount": 1500
     }
   ],
   "placesUnlocked": 0,

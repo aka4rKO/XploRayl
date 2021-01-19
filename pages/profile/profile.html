@@ -21,6 +21,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./../../script.js"></script>
     <script src="./profile.js"></script>
@@ -136,15 +137,15 @@
             <div class="stats-data">
               <div>
                 <h3 id="stats-data-value">40</h3>
-                <p>Hunts</p>
+                <p id="stats-data-name">Hunts</p>
               </div>
               <div>
                 <h3 id="stats-data-value">340</h3>
-                <p>Points</p>
+                <p id="stats-data-name">Points</p>
               </div>
               <div>
                 <h3 id="stats-data-value">41</h3>
-                <p>Reviews</p>
+                <p id="stats-data-name">Reviews</p>
               </div>
             </div>
             <div class="phone-tab-view" id="tab-list-view">
@@ -358,8 +359,10 @@
                     </div>
                   </div>
                   <div style="margin-top: 110px">
-                    <h3 style="color: #04d3d9 !important; text-align: center" id="user-rank-name">
-                    </h3>
+                    <h3
+                      style="color: #04d3d9 !important; text-align: center"
+                      id="user-rank-name"
+                    ></h3>
                     <h3
                       style="color: rgb(0, 0, 0) !important; text-align: center"
                     >
@@ -383,7 +386,6 @@
                     </a>
                     <!-- ADD CARD MODAL START -->
                     <div id="view-ranking-modal" class="modal ui-modal">
-
                       <div class="rank-grid">
                         <div class="rank-img center-column" id="rank-header">
                           <h1
@@ -611,48 +613,7 @@
               </div>
               <div id="tab-two" class="">
                 <h1 class="tab-heading">Coupons</h1>
-                <div class="coupons-grid">
-                  <img
-                    class="coupon-image"
-                    src="./../../assets/images/profile/coupon.png"
-                    alt="Coupon"
-                  />
-                  <img
-                    class="coupon-image"
-                    src="./../../assets/images/profile/coupon.png"
-                    alt="Coupon"
-                  />
-                  <img
-                    class="coupon-image"
-                    src="./../../assets/images/profile/coupon.png"
-                    alt="Coupon"
-                  />
-                  <img
-                    class="coupon-image"
-                    src="./../../assets/images/profile/coupon.png"
-                    alt="Coupon"
-                  />
-                  <img
-                    class="coupon-image"
-                    src="./../../assets/images/profile/coupon.png"
-                    alt="Coupon"
-                  />
-                  <img
-                    class="coupon-image"
-                    src="./../../assets/images/profile/coupon.png"
-                    alt="Coupon"
-                  />
-                  <img
-                    class="coupon-image"
-                    src="./../../assets/images/profile/coupon.png"
-                    alt="Coupon"
-                  />
-                  <img
-                    class="coupon-image"
-                    src="./../../assets/images/profile/coupon.png"
-                    alt="Coupon"
-                  />
-                </div>
+                <div class="coupons-grid"></div>
                 <!-- Footer start -->
                 <div class="footer ui-content">
                   <div class="footer-logo-container center-column">
@@ -721,10 +682,7 @@
                 </div>
                 <!-- Footer end -->
               </div>
-              <div
-                id="tab-three"
-                class=""
-                >
+              <div id="tab-three" class="">
                 <!-- style="position: relative !important" -->
                 <button
                   class="ui-btn hero-btn email-share-btn"

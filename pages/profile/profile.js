@@ -44,31 +44,59 @@ $(document).ready(function () {
   });
   var userObj = JSON.parse(localStorage.getItem("user"));
   if (userObj && userObj.ranking) {
-    document.getElementById("rank" + userObj.ranking).className += " active-rank";
-    document.getElementById("current-rank-image").src = "/assets/images/ranks/rank"+userObj.ranking+".png";
+    document.getElementById("rank" + userObj.ranking).className +=
+      " active-rank";
+    document.getElementById("current-rank-image").src =
+      "/assets/images/ranks/rank" + userObj.ranking + ".png";
   }
   var userObj = JSON.parse(localStorage.getItem("user"));
-  var rankArr = ["Crew Lead", "Captain", "Quartermaster", "First Mate Traveler", "Second Mate"]
+  var rankArr = [
+    "Crew Lead",
+    "Captain",
+    "Quartermaster",
+    "First Mate Traveler",
+    "Second Mate",
+  ];
   $("#user-rank-name").append(rankArr[userObj.ranking - 1]);
 
   // Retrieve from local storage ---------------------------------------------------------------
+  //  TICKETS
   for (var i = 0; i < userObj.tickets.length; i++) {
     // Define each individual layer
-    var dataLayer = userObj.tickets[i];
+    var ticketObj = userObj.tickets[i];
     $(".tickets-grid").append(
       '<div id="ticket-card"><p id="ticketId">Ticket #' +
-        dataLayer.ticketId +
+        ticketObj.ticketId +
         '</p><p id="price">$' +
-        dataLayer.price +
+        ticketObj.price +
         '.00</p><p id="from">' +
-        dataLayer.from +
-        " --> " +
-        dataLayer.to +
-        '</p><p id="date">' +
-        dataLayer.departureDate +
-        '</p><p id="seats">' +
-        dataLayer.seats +
+        ticketObj.from +
+        " > " +
+        ticketObj.to +
+        '</p><p id="date">Departure: ' +
+        moment(ticketObj.departureDate, 'DD/MM/YYYY').format("Do MMM YYYY")
+         +
+        '</p><p id="seats">Seats: ' +
+        ticketObj.seats +
         "</p></div>"
+    );
+  }
+
+  //  COUPONS
+  for (var i = 0; i < userObj.coupons.length; i++) {
+    // Define each individual layer
+    var couponObj = userObj.coupons[i];
+    $(".coupons-grid").append(
+      '<div id="coupon-card"><img id="coupon-img" src="./../../assets/images/coin.png" alt="coupon" /><h2 id="coupon-name">' +
+        couponObj.name +
+        '</h2><p id="coupon-validity">Valid till ' +
+        moment(couponObj.expiryDate, 'DD/MM/YYYY').format("Do MMM YYYY")
+        +
+        '</p><p id="coupon-code">Code: ' +
+        couponObj.code +
+        '</p><h2 id="coupon-price">$' +
+        couponObj.amount +
+        "</h2></div>"
     );
   }
   renderFavourites();
