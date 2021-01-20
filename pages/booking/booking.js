@@ -57,6 +57,8 @@ function applyCoupon(name, code, amount, expiryDate) {
   $("#couponName").append(name);
   $("#couponAmount").append(`£ ${amount}`);
 
+  sessionStorage.setItem("couponAmt", amount);
+
   var tot = sessionStorage.getItem("total");
   $("#subTotal").empty().append(`£ ${tot}`);
   $("#total").empty().append(`£ ${tot - amount}`);
