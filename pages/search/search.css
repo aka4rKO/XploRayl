@@ -1,3 +1,11 @@
+.filter{
+  margin-left: 611px;
+        margin-bottom: 20px;
+}
+.poi .poi-info {
+
+  z-index: 0!important;
+}
 .close-modal {
   width: 50px!important;
   height: 50px!important;
@@ -81,9 +89,10 @@ ul{
 }
 li{
 
-  font-family: "Poppins bold" !important;
+  font-family: "Poppins regular" !important;
   font-size: 16px !important;
-  color: white !important;
+  color: #748a9d !important;
+ 
   width: 111px;
   height: 0px;
     border-radius: 20px;
@@ -234,6 +243,7 @@ input[type=text] {
   
   /* iPad landscape */
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  
   }
   
   /* iPhone portrait */
@@ -249,6 +259,56 @@ input[type=text] {
     .hero-text {
       margin: 0 0 10.5em 0;
     }
+    input[type=text] {
+      /* margin: auto; */
+      margin-left: 27px!important;
+      width: 321px;
+      box-sizing: border-box;
+      border: 0px solid black;
+      border-radius: 55px;
+      font-size: 14px!important;
+      background-color: white;
+      background-image: url(./../../assets/icons/search.svg);
+      background-position: 21px 4px;
+      background-color: #dbe2ed;
+      background-repeat: no-repeat;
+      background-size: 31px 43px;
+      padding: 4px 23px 23px 75px;
+  }
+  .filter{
+    margin-left: 257px;
+    margin-bottom: 20px;
+  }
+  .item {
+    float: right;
+    width: 157px!important;
+    text-align: center;
+}
+.poi {
+    min-width: 5em;
+    max-width: 13em;
+    height: 12em;
+    margin-right: 1em;
+    position: relative;
+}
+.containerItems {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr!important;
+  grid-template-rows: 250px 250px 250px;
+  margin: auto;
+
+}
+.card1-text {
+  font-family: "Poppins medium" !important;
+  font-size: 12px !important;
+  color: #fff !important;
+}
+.card2-text {
+  font-family: "Poppins regular" !important;
+  font-size: 10px !important;
+  color: #dbe2ed !important;
+}
   }
   
   /* iPhone landscape */
@@ -266,5 +326,28 @@ input[type=text] {
     .pois-container {
       width: 82vw;
     }
+    .item {
+      float: right;
+      width: 157px!important;
+      text-align: center;
+  }
+  .poi {
+      min-width: 5em;
+      max-width: 13em;
+      height: 12em;
+      margin-right: 1em;
+      position: relative;
+  }
+  .containerItems {
+
+    margin-right: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+  }
+  .filter{
+    margin-left: 432px;
+    margin-bottom: 20px;
+  }
   }
   
