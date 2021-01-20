@@ -13,6 +13,16 @@
     "tab-item tab-item tab-item"
     "tabname tabname tabname";
 }
+#hunt-location {
+  color: white !important;
+  font-size: 17px !important;
+  margin-top: -3px;
+}
+#hunt-date {
+  color: white !important;
+  font-size: 17px !important;
+  margin-top: -3px;
+}
 .side {
   -moz-box-shadow: 1px 1px 3px 4px #ccc;
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
@@ -529,22 +539,34 @@ p {
 
 /* iPad portrait ----------------------------------------------------------------------  */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  #review-btn{
+  #review-btn {
     margin: 0px !important;
     width: 240px !important;
     padding: 10px;
     margin-top: 50px !important;
   }
+  #hunt-date {
+    color: white !important;
+    font-size: 17px !important;
+    margin-top: -3px;
+    margin-bottom: 10px;
+  }
 }
 
 /* iPad landscape ----------------------------------------------------------------------  */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-  #review-btn{
+  #hunt-date {
+    color: white !important;
+    font-size: 17px !important;
+    margin-top: -3px;
+    margin-bottom: 10px;
+  }
+  #review-btn {
     margin: 0px !important;
     width: 240px !important;
     padding: 10px;
     margin-top: 50px !important;
-  } 
+  }
   .hunt-info-final {
     background-image: url(./../../assets/images/black-layer.png);
     padding-top: 322px;
@@ -553,9 +575,9 @@ p {
     padding-right: 20px;
     padding-bottom: 6px;
   }
-.footer{
-  margin-top: 0px;
-} 
+  .footer {
+    margin-top: 0px;
+  }
   .hunt-info {
     background-image: url(./../../assets/images/black-layer.png);
     padding-top: 260px;
@@ -582,6 +604,15 @@ p {
     font-size: 18px !important;
     color: #04d3d9 !important;
     text-shadow: none !important;
+  }
+  .scan-float-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    right: 20px;
+    border-radius: 50px;
+    text-align: center;
   }
   .hunt-header {
     z-index: 1;
@@ -673,26 +704,26 @@ p {
   .center-column {
     text-align: center;
   }
-  #review-btn{
+  #review-btn {
     margin: 0px !important;
     width: 240px !important;
     padding: 10px;
     margin-top: 50px !important;
   }
-  .add-review-modal{
+  .add-review-modal {
     height: 500px;
   }
-  #review-message{
+  #review-message {
     font-size: 13px !important;
   }
-  .label-text{
+  .label-text {
     margin: 0px;
     text-align: left;
   }
-  .form-group{
+  .form-group {
     margin-top: 20px;
   }
-  #qr-code-size{
+  #qr-code-size {
     height: 150px;
     width: 150px;
   }
@@ -804,31 +835,31 @@ p {
   .center-column {
     text-align: center;
   }
-  #review-btn{
+  #review-btn {
     margin: 0px !important;
     width: 240px !important;
     padding: 10px;
     margin-top: 50px !important;
   }
-  .add-review-modal{
+  .add-review-modal {
     width: 350px;
     height: 500px;
   }
-  #add-review-heading{
+  #add-review-heading {
     margin-top: 0px;
     margin-bottom: 10px;
   }
-  .profile-pic{
+  .profile-pic {
     margin: 20px;
   }
-  #review-message{
+  #review-message {
     font-size: 13px !important;
   }
-  .label-text{
+  .label-text {
     margin: 0px;
     text-align: left;
   }
-  .form-group{
+  .form-group {
     margin-top: 20px;
   }
   .poi {
@@ -854,15 +885,15 @@ p {
     border-radius: 50px;
     text-align: center;
   }
-  .common-modal{
+  .common-modal {
     width: 350px;
     height: 400px;
   }
-  #qr-code-size{
+  #qr-code-size {
     height: 150px;
     width: 150px;
   }
-  #scan-ticket-heading{
+  #scan-ticket-heading {
     margin-top: 0px !important;
     margin-bottom: 3px !important;
   }
