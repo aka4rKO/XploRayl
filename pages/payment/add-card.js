@@ -1,12 +1,14 @@
+var ticket;
+
 $(document).ready(function () {
   $(".ui-input-text").css("border", "unset");
 
   loadCardList();
+  loadInfo();
 
-  $('#save-card').click(()=>{
+  $("#save-card").click(() => {
     saveCard();
-
-  })
+  });
 });
 
 function loadInfo() {
@@ -70,11 +72,7 @@ function loadInfo() {
   <div class="right-align light-card-text marg-top">Ticket #${ticketId}</div>
   `);
 
-  var userObj = JSON.parse(localStorage.getItem("user"));
-  var tickets = userObj["tickets"];
-  console.log(userObj);
-
-  var ticket = {
+  ticket = {
     ticketId: ticketId,
     from: from,
     to: to,
@@ -82,12 +80,6 @@ function loadInfo() {
     seats: passengers,
     price: totalTicketPrice,
   };
-
-  tickets.push(ticket);
-
-  userObj["tickets"] = tickets;
-  console.log(userObj);
-  localStorage.setItem("user", JSON.stringify(userObj));
 }
 
 function loadCardList() {
@@ -166,12 +158,8 @@ function saveCard() {
     },
   });
 
-// no need to specify document ready
-
-
+  // no need to specify document ready
 }
-
-
 
 $(document).ready(function () {
   $("#book-now").on("click", function () {
@@ -213,6 +201,14 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
   $("#goto-hunt").on("click", function () {
+    var userObj = JSON.parse(localStorage.getItem("user"));
+    var tickets = userObj["tickets"];
+    console.log(userObj);
+    tickets.push(ticket);
+
+    userObj["tickets"] = tickets;
+    console.log(userObj);
+    localStorage.setItem("user", JSON.stringify(userObj));
     location.href = "./../my-hunts/my-hunts.html";
   });
 });
