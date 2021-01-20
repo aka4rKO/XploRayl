@@ -85,14 +85,40 @@
               alt=""
             />
           </div>
-
+          <div>
+            <a href="/pages/explore/explore.html" class="anchor-external">
+              <img
+                class="header-logo"
+                src="./../../assets/icons/left-chevron.svg"
+                alt=""
+                style="width: 0.8em; margin-left: 0.8em"
+              />
+            </a>
+          </div>
           <!-- Header end -->
           <!-- Booking start -->
           <div class="booking-grid">
             <h1 class="center-row center-column">Book Ticket</h1>
-            <div class="booking-fields">
+            <div class="booking-fields ui-content">
               <h3>Booking Information</h3>
-              <fieldset id="fuserid">
+
+              <div class="center-column">
+                <div class="arrival">
+                  <div class="center-vertically">
+                    <img
+                      class="right-align arrival-icon"
+                      src="/assets/icons/input/arrow-down-left.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="center-column">
+                    <div class="card3-text">Arrival at</div>
+                    <div class="card3-text"><b id="arrival"></b></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <fieldset id="fuserid">
                 <legend>Departure</legend>
                 <input
                   type="text"
@@ -101,9 +127,24 @@
                   class="form-control"
                   placeholder="example@email.com"
                 />
-              </fieldset>
+              </fieldset> -->
+              <div class="form-group deptInput">
+                <p class="credentialErr err-text"></p>
 
-              <fieldset id="fuserid">
+                <fieldset id="depaturedId">
+                  <legend class="label-text">Depature</legend>
+                  <input
+                    type="text"
+                    name=""
+                    id="dept"
+                    class="form-control placeholder-text"
+                    placeholder=""
+                  />
+                </fieldset>
+                <p class="nameErr err-text"></p>
+              </div>
+
+              <!-- <fieldset id="fuserid">
                 <legend>Date</legend>
                 <input type="text" id="datepicker" />
               </fieldset>
@@ -111,13 +152,45 @@
               <fieldset id="fuserid">
                 <legend>Passengers</legend>
                 <input type="number" />
-              </fieldset>
+              </fieldset> -->
+
+              <div class="form-group dateInput">
+                <p class="credentialErr err-text"></p>
+
+                <fieldset id="dateId">
+                  <legend class="label-text">Date</legend>
+                  <input
+                    type="text"
+                    name=""
+                    id="datepicker"
+                    class="form-control placeholder-text"
+                    placeholder=""
+                  />
+                </fieldset>
+                <p class="nameErr err-text"></p>
+              </div>
+
+              <div class="form-group passengerInput">
+                <p class="credentialErr err-text"></p>
+
+                <fieldset id="passengersId">
+                  <legend class="label-text">Passengers</legend>
+                  <input
+                    type="number"
+                    name=""
+                    id="passengers"
+                    class="form-control placeholder-text"
+                    placeholder=""
+                  />
+                </fieldset>
+                <p class="nameErr err-text"></p>
+              </div>
             </div>
             <div class="train">
               <img id="train-img" src="../../assets/vectors/train.png" alt="" />
             </div>
             <div class="center-column">
-              <button id="book-now" class="ui-btn">Book Now</button>
+              <button id="book-now" class="ui-btn">BOOK NOW</button>
             </div>
           </div>
 
@@ -188,61 +261,6 @@
           </div>
 
           <!-- Footer end -->
-          <!-- Navbar start -->
-          <div class="footer-navbar" data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-              <ul>
-                <li>
-                  <a class="nav-btn ui-btn-active anchor-external" href="#"
-                    ><img
-                      class="active-navbar-icon"
-                      src="./../../assets/icons/compass.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    class="nav-btn"
-                    href="./../search/search.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/search.svg" alt=""
-                  /></a>
-                </li>
-                <li class="center-column">
-                  <a
-                    class="nav-btn nav-btn-logo"
-                    href="./../my-hunts/my-hunts.html"
-                    data-prefetch="true"
-                  >
-                    <div class="circle center-column">
-                      <img
-                        class="navbar-logo"
-                        src="./../../assets/icons/x white.svg"
-                        alt=""
-                      />
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="nav-btn"
-                    href="./../leaderboard/leaderboard.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/bar-chart-2.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    class="nav-btn"
-                    href="./../profile/profile.html"
-                    data-prefetch="true"
-                    ><img src="./../../assets/icons/user.svg" alt=""
-                  /></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Navbar end -->
         </div>
       </div>
     </div>

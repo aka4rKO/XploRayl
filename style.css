@@ -391,6 +391,11 @@ fieldset > div {
   margin-top: 6px;
 }
 
+.center-vertically {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo-sidebar {
   margin: 1em 0 2em 0;
   width: 7em;

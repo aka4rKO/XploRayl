@@ -18,6 +18,72 @@
   color: #000 !important;
 }
 
+.arrival {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2em;
+}
+
+.arrival-icon {
+  margin-right: 1em;
+}
+
+.coupons-grid {
+  margin-top: 18px;
+  display: grid;
+  margin-left: 12px;
+  /* grid-template-columns: 0.3fr 0.3fr; */
+  grid-auto-rows: min-content;
+  justify-items: center;
+  height: 22em;
+  overflow: auto;
+}
+
+.coupon-card {
+  background-image: url("./../../assets/images/coupon-bg.png");
+  background-size: 370px 100px;
+  margin-top: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 77px 200px 70px;
+  grid-template-rows: 28px 28px 28px;
+  grid-template-areas:
+    "coupon-img coupon-name coupon-price"
+    "coupon-img coupon-validity coupon-price"
+    "coupon-img coupon-code coupon-price";
+}
+
+.coupon-img {
+  grid-area: coupon-img;
+  margin: 5px;
+}
+
+.coupon-name {
+  grid-area: coupon-name;
+  color: #748a9d !important;
+  font-size: 20px !important;
+  margin: 5px;
+}
+
+.coupon-price {
+  grid-area: coupon-price;
+  color: #748a9d !important;
+  margin: auto;
+  font-size: 20px !important;
+}
+
+.coupon-validity {
+  grid-area: coupon-validity;
+  color: #748a9d !important;
+  margin: 5px;
+}
+
+.coupon-code {
+  grid-area: coupon-code;
+  color: #748a9d !important;
+  margin: 5px;
+}
+
 .hero {
   height: 105vh;
   background-image: url("./../../assets/images/hero.jpg");
@@ -96,26 +162,24 @@
   width: 1em;
 }
 
-.order-field{
+.order-field {
   margin-top: 2em;
 }
 /* Other */
 .categories {
   background: #fff;
 }
-.sub-total-card{
+.sub-total-card {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
-.total-card{
+.total-card {
   font: bold !important;
   margin-bottom: 1.5em;
   font-weight: bold;
-
 }
-.add-card-placeholder{
-  
+.add-card-placeholder {
 }
 
 .card-list {
@@ -124,7 +188,7 @@
 }
 
 .card-list > div {
-  background-color: #9A7745;
+  background-color: #9a7745;
   width: 100px;
   margin: 10px;
   text-align: center;
@@ -148,10 +212,19 @@
   .hero-text {
     margin-top: 10em;
   }
+
+  .booking-fields {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
 }
 
 /* iPad landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .booking-fields {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
 }
 
 /* iPhone portrait */
@@ -166,6 +239,29 @@
 
   .hero-text {
     margin: 0 0 10.5em 0;
+  }
+
+  .coupon-img {
+    display: none;
+  }
+
+  .modal {
+    padding: 0 !important;
+    padding-right: 10px !important;
+  }
+
+  .coupon-card {
+    background-image: url(./../../assets/images/coupon-bg.png);
+    background-size: 370px 100px;
+    margin-top: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 200px 70px;
+    grid-template-rows: 28px 28px 28px;
+    grid-template-areas:
+      "coupon-name coupon-price"
+      "coupon-validity coupon-price"
+      "coupon-code coupon-price";
   }
 }
 
@@ -186,28 +282,54 @@
   }
 }
 
-
-
 .train-animation {
-  position: relative;
+  /* position: relative; */
   animation: drive 1.5s linear;
-
 }
 
-.coupon-btn{
+.coupon-btn {
   width: 12em !important ;
 }
-.booking-fields{
-  margin-left: 5em;
-  margin-right: 5em;
+
+.booking-fields {
+  /* margin-left: 5em;
+  margin-right: 5em; */
+  margin-bottom: 3em;
 }
-.train{
-  margin-top: 2%;
+
+.side {
+  z-index: 2;
+}
+
+.deptInput input[type="text"] {
+  background-image: url("/assets/icons/input/arrow-up-right.svg");
+}
+
+.dateInput input[type="text"] {
+  background-image: url("/assets/icons/input/calendar.svg");
+}
+
+.passengerInput input[type="number"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0px solid #ccc;
+  font-size: 16px;
+  background-color: #f0f4f8;
+  background-image: url("/assets/icons/input/users.svg");
+  background-position: 20px 0px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0px 25px 15px 60px;
+}
+
+.train {
+  /* margin-top: 2%; */
   margin-bottom: 2%;
 }
-.train img{
-  width: 700px;
+.train img {
+  width: 90%;
   position: relative;
+  left: -40%;
 }
 
 @keyframes drive {
@@ -218,5 +340,3 @@
     transform: translateX(100vw);
   }
 }
-
-
