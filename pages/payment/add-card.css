@@ -1,5 +1,6 @@
 .add-card-placeholder {
   position: relative;
+  margin-left: 10px;
 }
 
 .booking-fields > :first-child {
@@ -11,8 +12,9 @@
   border-radius: 10px;
 }
 .card-list .cardName {
-  right: 125px;
-  position: inherit;
+  right: 70px;
+  top: 8px;
+  position: relative;
 }
 .card-list {
   display: flex;
@@ -33,14 +35,14 @@
 }
 
 .card-list .card-number {
-  position: relative;
+  /* position: relative; */
   top: 30px;
   left: 43px;
 }
 
 .card-list .card-name {
   right: 20%;
-  position: relative;
+  /* position: relative; */
   top: 15%;
 }
 
@@ -72,8 +74,8 @@
 }
 
 .card-list .card-exp {
-  right: 10px;
-  top: 87px;
+  right: -52px;
+  top: 80px;
   position: relative;
 }
 
