@@ -2,7 +2,7 @@
   text-align: center;
   margin-top: -120px;
 }
-#card-item{
+#card-item {
   margin-top: 70px;
 }
 .box-div {
@@ -54,7 +54,7 @@ h3 {
   margin-top: 5px !important;
 }
 
- /* iPad portrait ----------------------------------------------------------------------  */
+/* iPad portrait ----------------------------------------------------------------------  */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .box-div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -65,7 +65,7 @@ h3 {
     border-radius: 30px;
   }
 }
- /* iPhone portrait ----------------------------------------------------------------------  */
+/* iPhone portrait ----------------------------------------------------------------------  */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
   .box-div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -75,7 +75,7 @@ h3 {
     margin-top: 0px;
     border-radius: 0px;
   }
-  #treasure-info{
+  #treasure-info {
     margin-top: -20px;
   }
   .phone-tab-list-view {
@@ -92,11 +92,11 @@ h3 {
     width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  #close{
+  #close {
     margin-right: 0px;
   }
 }
- /* iPhone landscape ----------------------------------------------------------------------  */
+/* iPhone landscape ----------------------------------------------------------------------  */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .box-div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -106,12 +106,12 @@ h3 {
     margin-top: 0px;
     border-radius: 0px;
   }
-  #treasure-info{
+  #treasure-info {
     margin-top: -60px;
   }
   .phone-tab-list-view {
     background-color: #ffffff;
-    padding:12px;
+    padding: 12px;
     margin-top: 5px !important;
     cursor: pointer;
     display: grid;
@@ -123,10 +123,10 @@ h3 {
     width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  #card-item{
+  #card-item {
     margin-top: 0px;
   }
-  #close{
+  #close {
     margin-right: 50px;
   }
 }
