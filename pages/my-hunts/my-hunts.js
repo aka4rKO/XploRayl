@@ -19,6 +19,8 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
   }
+
+
   
   function initMap() {
     var poiId = JSON.parse(sessionStorage.getItem("currentId"));
@@ -27,34 +29,85 @@ function myMap() {
     var pois = dataObj["poiObjs"];
   
     var poi = pois.filter((obj) => {
-      return obj.poiId === poiId;
+      return obj.poiId == poiId;
     });
   
-    var poi = poi[0];
   
     var latitude = poi["lat"];
     var longitude = poi["lng"];
-  
+
+    var taskList = poi[0].tasks;
+    console.log(">>>>>>",poi);
+    center = { lat: Number(taskList[0].lat), lng: Number(taskList[0].lng) };
+    
     const myLatLng = { lat: latitude, lng: longitude };
     const map = new google.maps.Map(document.getElementById("map-container"), {
-      zoom: 12,
-      center: myLatLng,
+      zoom: 13,
+      center: center,
     });
-    new google.maps.Marker({
-      position: myLatLng,
-      map,
-      title: "Hello World!",
-    });
+
+
+
+    var icon = {
+      url: "./../../../assets/images/treasure_transparent.png", // url
+      scaledSize: new google.maps.Size(50, 50), // scaled size
+
+  };
+    taskList.forEach(task=>{
+      var latLng = { lat: Number(task.lat), lng: Number(task.lng) };
+      new google.maps.Marker({
+        position: latLng,
+        map,
+        title: "Mystery Chest!",
+        icon:icon
+      });
+      const cityCircle = new google.maps.Circle({
+        strokeColor: "#04d3d9",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#04d3d9",
+        fillOpacity: 0.20,
+        map,
+        center: latLng,
+        radius: 1200
+      });
+    })
+
   }
 
 
 
 $(document).ready(function(){
+  var dataObj = JSON.parse(localStorage.getItem("data"));
+    var pois = dataObj["poiObjs"];
+  
+    var poi = pois.filter((obj) => {
+      return obj.poiId == poiId;
+    })
+
     $('.rating').rating();
   });
       
   
   $(document).ready(function(){
+
+    var poiId = JSON.parse(sessionStorage.getItem("currentId"));
+  
+    var dataObj = JSON.parse(localStorage.getItem("data"));
+    var pois = dataObj["poiObjs"];
+  
+    var poi = pois.filter((obj) => {
+      return obj.poiId == poiId;
+    });
+  
+
+    var taskList = poi[0].tasks;
+
+    $("#hunt-name").text(poi[0].name);
+    $("#hunt-location").text(poi[0].location);
+    $("#hunt-date").text(poi[0].date);
+    $('.hunt-home').css('background-image',`url(${poi[0].img})`)
+
       $("#review-btn" ).click(function() {
            var reviewMessage = $("#review-message").val();
            var ratings = $("#ratingSlider").val()
@@ -75,8 +128,6 @@ $(document).ready(function(){
            localStorage.setItem("reviews", JSON.stringify(ratingsArray));
            console.log(ratingsArray);
            window.location.href = "../profile/profile.html"
-
-  
           });
 
     });
@@ -89,7 +140,38 @@ $(document).ready(function(){
           });
     });
   
-  
+    $(document).ready(function () {
+
+      currentId = sessionStorage.getItem("currentId");
+
+      loadTaskList();
+    }
+    );
+    
+    function loadTaskList() {
+      var cardsComp = "";
+      var cardList = JSON.parse(localStorage.getItem("task-list"))
+      var dataObj = JSON.parse(localStorage.getItem("data"));
+      var pois = dataObj["poiObjs"][0];
+      var taskList = pois.tasks;
+   
+    
+      if (taskList) {
+        taskList.forEach(task => {
+          cardsComp += `
+          <div class="phone-tab-list-view ">
+          <label>${task.name}</label>
+          <label style="text-align: right">${task.points} pts</label>
+          <img
+            class="points-img left-align"
+            src=${task.isComplete ? "./../../../assets/images/treasure.png" : "./../../../assets/images/task-disabled.svg"}
+            alt=""
+          />
+        </div>`;
+        });
+      }
+      $("#task-list").append(cardsComp);
+    }
   
     
   

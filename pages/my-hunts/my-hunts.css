@@ -1,246 +1,274 @@
 .grid-container {
-    -moz-box-shadow: 3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow: 1px 1px 3px 4px #ccc;
-    background-color: rgb(255, 255, 255);
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 1px 1px 3px 4px #ccc;
+  background-color: rgb(255, 255, 255);
 
-    display: grid;
-    grid-template-columns: 0.2fr 1.5fr 1fr;
-    grid-template-rows: 110px 70px 50px 50px;
-    grid-template-areas:
-      "img profile-header signout"
-      "img stats-data stats-data"
-      "tab-item tab-item tab-item"
-      "tabname tabname tabname";
-  }
-  .side {
-    -moz-box-shadow: 1px 1px 3px 4px #ccc;
-    -webkit-box-shadow: 1px 1px 3px 4px #ccc;
-    box-shadow: 1px 1px 3px 4px #ccc;
-  }
-  #list-view {
-    width: 140px !important;
-    margin: 5px !important;
-  }
-  #unlisted-view {
-    padding: 5px !important;
-    padding-top:3em !important;
-    margin: auto;
-  }
-  #points-value {
-    color: #04d3d9 !important;
-  }
-  #points-title {
-    color: #404e5a !important;
-  }
-  #circle {
-    margin: 20px;
-    text-align: center;
-  }
-  .points {
-    text-align: center;
-    margin-top: -120px;
-  }
-  .tab-heading {
-    margin: -20px 0px 0px 5px !important;
-  }
-  .p {
-    color: #748a9d !important;
-  }
-  .tab-item1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 160px;
-  }
-  
-  .tab-item2 {
-    margin-top: 90px;
-    margin-left: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 180px;
-  }
-  
-  .collectables {
-    vertical-align: middle;
-    margin: 5px;
-    border-radius: 60%;
-    height: 50px;
-    width: 50px;
-    grid-area: collectables;
-  }
-  
-  #stat-name {
-    color: #748a9d !important;
-    margin: 5px 5px 5px 0px;
-  }
-  #stat-value {
-    color: #748a9d !important;
-    font-weight: bold !important;
-    font-size: larger;
-    margin: 5px 5px 5px 55px;
-  }
-  
-  .player-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  }
-  
-  .profile-pic {
-    vertical-align: middle;
-    margin: 40px;
-    border-radius: 60%;
-    height: 140px;
-    width: 140px;
-    grid-area: img;
-  }
-  .stats-data {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-right: 120px;
-    border-radius: 10px;
-    background-color: #404e5a;
-    padding: 10px;
-    text-align: center;
-    grid-area: stats-data;
-    height: min-content;
-  }
-  #profile-header {
-    margin-top: 50px;
-    grid-area: profile-header;
-  }
-  
-  #signout {
-    margin-top: 50px;
-    grid-area: signout;
-  }
-  
-  #tab-item {
-    grid-area: tab-item;
-    margin: auto;
-  }
-  
-  .tab-nav {
-    padding: 0.5em 0;
-    width: 10.5em !important;
-    border-radius: 3em !important;
-/*     background-color: #04d3d9 !important;
-    border: 3px solid #04d3d9 !important; */
-    background-color: white !important;
-    border: 3px solid white !important; 
-    font-family: "Poppins semibold" !important;
-    font-size: 13px !important;
-    color: #04d3d9 !important;
-    text-shadow: none !important;
-  }
-  .active, tab-nav:hover {
+  display: grid;
+  grid-template-columns: 0.2fr 1.5fr 1fr;
+  grid-template-rows: 110px 70px 50px 50px;
+  grid-template-areas:
+    "img profile-header signout"
+    "img stats-data stats-data"
+    "tab-item tab-item tab-item"
+    "tabname tabname tabname";
+}
+.side {
+  -moz-box-shadow: 1px 1px 3px 4px #ccc;
+  -webkit-box-shadow: 1px 1px 3px 4px #ccc;
+  box-shadow: 1px 1px 3px 4px #ccc;
+}
+#list-view {
+  width: 140px !important;
+  margin: 5px !important;
+}
+#unlisted-view {
+  padding: 5px !important;
+  margin: auto;
+}
+#points-value {
+  color: #04d3d9 !important;
+}
+#points-title {
+  color: #404e5a !important;
+}
+#circle {
+  margin: 20px;
+  text-align: center;
+}
+.points {
+  text-align: center;
+  margin-top: -120px;
+}
+.tab-heading {
+  margin: -20px 0px 0px 5px !important;
+}
+.p {
+  color: #748a9d !important;
+}
+.tab-item1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 160px;
+}
 
-    background-color: #04d3d9 !important;
-    border: 3px solid #04d3d9 !important;
-    color: white !important;
-  }
-  
-  #tabname {
-    grid-area: tabname;
-    margin-left: 20px;
-    margin-top: 5px;
-  }
-  h2 {
-    margin: 1px;
-  }
-  h3 {
-    margin: 1px;
-  }
-  p {
-    margin: 1px;
-  }
-  
-  /* Coupons styles ---------------------------------------------------- */
-  .ticket-image {
-    margin-bottom: -10px;
-    margin-right: 5px;
-  }
-  .tickets-grid {
-    margin-top: 18px;
-    text-align: center;
-  }
-  .coupon-image {
-    margin: 3px;
-  }
-  .coupons-grid {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .pois-container {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr;
-    margin-top: 17px;
-  }
-  
-  .payment-grid{
-    text-align: center;
-    margin-top: 8px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.4fr 0.4fr;
-    grid-template-areas:
-      "add-card-img add-card-img"
-      "debit-card-img credit-card-img"
-      "card-select-btn card-select-btn";
-  }
-  
-  #add-card-img{
-    margin-top: 20px;
-    grid-area: add-card-img;
-  }
-  #debit-card-img{
-    margin-top: 20px;
-    grid-area: debit-card-img;
-  }
-  #credit-card-img{
-    margin-top: 20px;
-    grid-area: credit-card-img;
-  }
-  #card-select-btn{
-    margin: auto;
-    text-align: center;
-    grid-area: card-select-btn;
-  }
-  .poi {
-    min-width: 340px;
-    max-width: 340px;
-    height: 210px;
-    margin: 5px;
-    position: relative;
-  }
-  #favourites {
-    height: 25px;
-    width: 30px;
-    margin-bottom: 90px;
-    margin-left: 280px;
-  }
-  .poi:before {
-    border-radius: 1em;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 60%;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(0, 0, 0, 0.9)
-    );
-  }
-  
+.tab-item2 {
+  margin-top: 90px;
+  margin-left: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 180px;
+}
 
-  
+.collectables {
+  vertical-align: middle;
+  margin: 5px;
+  border-radius: 60%;
+  height: 50px;
+  width: 50px;
+  grid-area: collectables;
+}
+
+#stat-name {
+  color: #748a9d !important;
+  margin: 5px 5px 5px 0px;
+}
+#stat-value {
+  color: #748a9d !important;
+  font-weight: bold !important;
+  font-size: larger;
+  margin: 5px 5px 5px 55px;
+}
+
+.player-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.ui-tabs {
+  padding: 0px;
+}
+.hunt-tab-title {
+  color: white !important;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 50px;
+}
+.profile-pic {
+  vertical-align: middle;
+  margin: 40px;
+  border-radius: 60%;
+  height: 140px;
+  width: 140px;
+  grid-area: img;
+}
+.stats-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: 120px;
+  border-radius: 10px;
+  background-color: #404e5a;
+  padding: 10px;
+  text-align: center;
+  grid-area: stats-data;
+  height: min-content;
+}
+#profile-header {
+  margin-top: 0px;
+  grid-area: profile-header;
+}
+
+#signout {
+  margin-top: 50px;
+  grid-area: signout;
+}
+
+#tab-item {
+  grid-area: tab-item;
+  margin: auto;
+  margin-top: -140px;
+}
+
+.tab-nav {
+  padding: 0.5em 0;
+  width: 10.5em !important;
+  border-radius: 3em !important;
+  background-color: transparent !important;
+  border: 1px transparent !important;
+  font-family: "Poppins semibold" !important;
+  font-size: 18px !important;
+  color: #04d3d9 !important;
+  text-shadow: none !important;
+}
+.active,
+tab-nav:hover {
+  background-color: #04d3d9 !important;
+  border: 3px solid #04d3d9 !important;
+  color: white !important;
+}
+
+#tabname {
+  grid-area: tabname;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+h2 {
+  margin: 1px;
+}
+h3 {
+  margin: 1px;
+}
+p {
+  margin: 1px;
+}
+
+/* Coupons styles ---------------------------------------------------- */
+.ticket-image {
+  margin-bottom: -10px;
+  margin-right: 5px;
+}
+.tickets-grid {
+  margin-top: 18px;
+  text-align: center;
+}
+.coupon-image {
+  margin: 3px;
+}
+.coupons-grid {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pois-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr;
+  padding: 10px;
+}
+
+.payment-grid {
+  text-align: center;
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 0.4fr 0.4fr;
+  grid-template-areas:
+    "add-card-img add-card-img"
+    "debit-card-img credit-card-img"
+    "card-select-btn card-select-btn";
+}
+
+#add-card-img {
+  margin-top: 20px;
+  grid-area: add-card-img;
+}
+#debit-card-img {
+  margin-top: 20px;
+  grid-area: debit-card-img;
+}
+#credit-card-img {
+  margin-top: 20px;
+  grid-area: credit-card-img;
+}
+#card-select-btn {
+  margin: auto;
+  text-align: center;
+  grid-area: card-select-btn;
+}
+.poi {
+  min-width: 340px;
+  max-width: 340px;
+  height: 210px;
+  margin: 5px;
+  position: relative;
+}
+#favourites {
+  height: 25px;
+  width: 30px;
+  margin-bottom: 90px;
+  margin-left: 280px;
+}
+.poi:before {
+  border-radius: 1em;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+.scan-float-button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 130px;
+  right: 40px;
+  border-radius: 50px;
+  text-align: center;
+}
+.hunt-info {
+  background-image: url(./../../assets/images/black-layer.png);
+  padding-top: 410px;
+  background-size: 100% 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+}
+.hunt-info-final {
+  background-image: url(./../../assets/images/black-layer.png);
+  padding-top: 480px;
+  background-size: 100% 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+}
 .map {
   grid-area: map;
   /* background-color: teal; */
@@ -253,168 +281,296 @@
   padding: 0;
 }
 
+.poi img {
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .poi img {
-    border-radius: 1em;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .poi .poi-info {
-    padding: 1em;
-    position: absolute;
-    z-index: 3;
-    bottom: 0px;
-    left: 0px;
-  }
-  
-  .poi .poi-info img {
-    height: 25px;
-    width: 150px;
-  }
-  
-  .card1-text {
-    font-family: "Poppins bold" !important;
-    font-size: 25px !important;
-    color: #fff !important;
-  }
-  
-  .hunt-header{
-      
-      z-index: 1;
-      background-image: url('/assets/images/headers/my\ hunts.png');
-      background-repeat: no-repeat;
-      background-size: 100%;
+.poi .poi-info {
+  padding: 1em;
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  left: 0px;
+}
 
-  }
-  .overlay{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0.981127485173757) 80%, rgba(0, 0, 0, 0.103) 100%);
-    opacity: 0.2;
-  }
-  .hunt-home{
-    z-index: -2;
-    top: -30px;
-    background-image: url('/assets/images/pois/london-eye.jpg');
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center; 
-    height: 84vh;
-    margin-bottom: -223px;
+.poi .poi-info img {
+  height: 25px;
+  width: 150px;
+}
 
-  }
-  /* asdasdasds ------------------------------- */
-  
+.card1-text {
+  font-family: "Poppins bold" !important;
+  font-size: 25px !important;
+  color: #fff !important;
+}
 
-  
-  .modal a.close-modal {
-    position: absolute!important;
-    top: 14.5px!important;
-    right: 22.5px!important;
-    display: block!important;
-    width: 30px!important;
-    height: 30px!important;
-    text-indent: -9999px!important;
-    background-size: contain!important;
-    background-repeat: no-repeat!important;
-    background-position: center center!important;
-    background-image: url("/assets/icons/x.svg") !important;
-  }
-  
-  @media only screen and (max-width: 550px) {
-    .profile-pic {
-      vertical-align: middle;
-      margin: 20px;
-      border-radius: 60%;
-      height: 100px;
-      width: 100px;
-    }
-  
-    #signout {
-      display: none;
-    }
-    .grid-container2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  
-      border-radius: 10px;
-      background-color: #404e5a;
-      padding: 10px;
-      text-align: center;
-    }
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .footer {
-      margin-top: 45vh;
-    }
-  }
-  
+.hunt-header {
+  z-index: 1;
+  background-image: url(/assets/images/headers/my\ hunts.png);
+  background-repeat: no-repeat;
+  height: 300px;
+  background-size: 800px 200px;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.981127485173757) 80%,
+    rgba(0, 0, 0, 0.103) 100%
+  );
+  opacity: 0.2;
+}
+.hunt-home {
+  z-index: -2;
+  top: -30px;
+  background-image: url("/assets/images/pois/london-eye.jpg");
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 60vh;
+  /* margin-bottom: -223px; */
+}
+/* checkbox ------------------------------- */
 
-  .pois-container {
+.radio-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+
+.radio-btn input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Create a custom radio button */
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+/* When the radio button is checked, add a blue background */
+
+.radio-btn input:checked ~ .checkmark {
+  background-color: #06d3da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  padding: 5px;
+}
+
+/* Create the indicator (the checkmark - hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (checkmark) when checked */
+
+.radio-btn input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (checkmark) */
+
+.radio-btn .checkmark:after {
+  content: "✔";
+  color: white;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 550px) {
+  .profile-pic {
+    vertical-align: middle;
     margin: 20px;
+    border-radius: 60%;
+    height: 100px;
+    width: 100px;
+  }
+
+  #signout {
+    display: none;
+  }
+  .grid-container2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr;
-    margin-top: 17px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    border-radius: 10px;
+    background-color: #404e5a;
+    padding: 10px;
+    text-align: center;
   }
-  .poi:before {
-    border-radius: 1em;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 60%;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(0, 0, 0, 0.9)
-    );
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    margin-top: 0vh;
   }
-  
-  .poi img {
-    border-radius: 1em;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .poi .poi-info {
-    padding: 1em;
-    position: absolute;
-    z-index: 3;
-    bottom: 0px;
-    left: 0px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    width: 90%;
-  }
-  
-  .poi-img-icon-color {
-    filter: brightness(0) saturate(100%) invert(90%) sepia(16%) saturate(116%)
-      hue-rotate(184deg) brightness(93%) contrast(82%);
-  }
-  
-  .poi .poi-info img {
-    width: 1em;
-  }
-  
-  .ar-scan-btn{
-    border-radius: 100%;
-    width: 171% !important;
-    left: -60% !important;
+}
+
+.pois-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr;
+  margin-top: 0px;
+}
+.poi:before {
+  border-radius: 1em;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.poi img {
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poi .poi-info {
+  padding: 1em;
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 90%;
+}
+
+.poi-img-icon-color {
+  filter: brightness(0) saturate(100%) invert(90%) sepia(16%) saturate(116%)
+    hue-rotate(184deg) brightness(93%) contrast(82%);
+}
+
+.poi .poi-info img {
+  width: 1em;
+}
+
+.ar-scan-btn {
+  border-radius: 100%;
+  width: 171% !important;
+  left: -60% !important;
+}
+
+.input[type="text"] {
+  background-image: unset !important;
+}
+
+.phone-tab-list-view {
+  background-color: #f0f4f8;
+  padding: 15px;
+  margin-top: 5px !important;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 2fr 2fr 0.5fr;
+  margin: auto;
+  border-radius: 10px;
+  font-family: "Poppins medium";
+  color: #748a9d;
+  width: 700px;
+}
+
+.points-img {
+  height: 30px;
+  width: 30px;
+  align-self: center;
+  margin: -5px 0px 0px 22px;
+}
+
+/* iPad portrait ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* iPad landscape ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .hunt-info-final {
+    background-image: url(./../../assets/images/black-layer.png);
+    padding-top: 322px;
+    background-size: 100% 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 6px;
   }
 
-  .input[type="text"] {
-
-    background-image: unset !important;
-
+  .hunt-info {
+    background-image: url(./../../assets/images/black-layer.png);
+    padding-top: 260px;
+    background-size: 100% 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 6px;
   }
+}
+
+/* iPhone landscape ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* iPhone portrait ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  #list-view {
+    width: 110px !important;
+    margin: 5px !important;
+  }
+  .tab-nav {
+    padding: 10px;
+    width: 110px !important;
+    border-radius: 3em !important;
+    background-color: transparent !important;
+    border: 1px transparent !important;
+    font-family: "Poppins semibold" !important;
+    font-size: 18px !important;
+    color: #04d3d9 !important;
+    text-shadow: none !important;
+  }
+  .hunt-header {
+    z-index: 1;
+    background-image: url(/assets/images/headers/my\ hunts.png);
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size: 375px 200px;
+  }
+}

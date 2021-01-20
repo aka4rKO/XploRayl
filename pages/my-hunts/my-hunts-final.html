@@ -9,8 +9,6 @@
       rel="stylesheet"
       href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
-    <link rel="stylesheet" href="./../../style.css" />
-    <link rel="stylesheet" href="./my-hunts.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
@@ -33,12 +31,15 @@
     ></script>
     <script src="./../../script.js"></script>
     <script src="./my-hunts.js"></script>
+    <link rel="stylesheet" href="./../../style.css" />
 
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./simple-rating.css" />
+    <link rel="stylesheet" href="./my-hunts.css" />
+
     <script src="./simple-rating.js"></script>
   </head>
   <body>
@@ -133,15 +134,13 @@
           <!-- Header end -->
 
           <!-- content start -->
-          <div class="hunt-header">
-            <div id="profile-header">
-              <h1 style="color: white !important; text-align: center">
-                My Hunt
-              </h1>
+          <div>
+            <div id="profile-header" class="hunt-header">
+              <h1 class="hunt-tab-title">My Hunt</h1>
             </div>
 
             <div data-role="tabs" id="tab-item">
-              <div data-role="navbar" class="center-column">
+              <div data-role="navbar">
                 <ul id="unlisted-view" data-inset="true">
                   <li id="list-view">
                     <a
@@ -172,32 +171,36 @@
                   </li>
                 </ul>
               </div>
-              <div id="tab-one">
-
-                <div class="ui-content hunt-home " >
-
-                </div>
-                <h1
-                  style="position: relative; color: white !important; top: 60%; padding-left: 22px"
-                  class=""
-                >
-                  Seagull Hunt
-                </h1>
-                <div
-                  style="position: relative; color: white !important; top: 60%; padding-left: 22px"
-                >
-                  <span>Copenhagen, Denmark</span>
-
-                  <div>
-                    <span>Date: 20th Sept 2020</span>
+              <div id="tab-one" class="hunt-home">
+                <div  class="hunt-info-final">
+                  <h1
+                  id="hunt-name"
+                    style="
+                      position: relative;
+                      color: white !important;
+                      top: 60%;
+                    "
+                    class=""
+                  >
+                    Seagull Hunt
+                  </h1>
+                  <div
+                    style="
+                      position: relative;
+                      color: white !important;
+                      top: 60%;
+                    "
+                  >
+                    <p id="hunt-location">Copenhagen, Denmark</p>
+                    <div>
+                      <p id="hunt-date">Date: 20th Sept 2020</p>
+                    </div>
                   </div>
                 </div>
                 <div
-                  style="position: relative; color: white !important; top: 50%"
-                  class="left-column"
+                  class="left-column scan-float-button"
                 >
-                  <a class="anchor-external" href="./ar-scan-ui/ar-scan.html" >
-                
+                  <a class="anchor-external" href="./ar-scan-ui/ar-scan.html">
                     <button class="ui-btn ar-scan-btn">
                       <img
                         src="/assets/images/headers/ar-scan-btn.png"
@@ -205,75 +208,142 @@
                       /></button
                   ></a>
                 </div>
-<div>
-  <div class="map">
-    <h2 class="ui-content">Map</h2>
-    <div id="map-container"></div>
-  </div>
 
-  <img
-    src="/assets/images/treasure-task.png"
-    style="width: 95%"
-    alt=""
-  />
+                <div>
+                  <div class="map">
+                    <h2 class="ui-content">Map</h2>
+                    <div id="map-container"></div>
+                  </div>
 
-  <div class="center-column">
-    <div id="common-modal" class="modal ui-modal">
-      <h1 class="center-column center-row">Add Review</h1>
-      <p class="center-column center-row">
-        Tell us about your hunt
-      </p>
-      <div class="center-column center-row">
-        <img
-          class="profile-pic"
-          src="/assets/images/avatars/profile.jpg"
-          alt=""
-        />
-      </div>
-      <div class="center-row center-column">
-        <div>
-          <div class="center-column center-row">
-            <input
-              class="rating rate-field"
-              id="ratingSlider"
-              type="hidden"
-              value="3"
-            />
-          </div>
-          <div class="">
-            <div class="form-group">
-              <p class="credentialErr err-text"></p>
+                  <div>
+                    <h2 class="ui-content">Tresures</h2>
+                    <div id="task-list"></div>
+                  </div>
 
-              <fieldset id="fuserid">
-                <legend class="label-text">Review</legend>
-                <input
-                  name=""
-                  id="review-message"
-                  class="form-control placeholder-text"
-                  placeholder="How good was your hunt, tell me about it"
-                />
-              </fieldset>
-              <p class="nameErr err-text"></p>
-            </div>
-            <div>
-              <button id="review-btn" class="ui-btn">Save</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#common-modal" rel="modal:open">
-      <button class="ui-btn">End Hunt</button></a
-    >
-  </div>
-</div>
+                  <div class="center-column">
+                    <div id="common-modal" class="modal ui-modal">
+                      <h1 class="center-column center-row">Add Review</h1>
+                      <p class="center-column center-row">
+                        Tell us about your hunt
+                      </p>
+                      <div class="center-column center-row">
+                        <img
+                          class="profile-pic"
+                          src="/assets/images/avatars/profile.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="center-row center-column">
+                        <div>
+                          <div class="center-column center-row">
+                            <input
+                              class="rating rate-field"
+                              id="ratingSlider"
+                              type="hidden"
+                              value="3"
+                            />
+                          </div>
+                          <div class="">
+                            <div class="form-group">
+                              <p class="credentialErr err-text"></p>
 
-                
+                              <fieldset id="fuserid">
+                                <legend class="label-text">Review</legend>
+                                <input
+                                  name=""
+                                  id="review-message"
+                                  class="form-control placeholder-text"
+                                  placeholder="How good was your hunt, tell me about it"
+                                />
+                              </fieldset>
+                              <p class="nameErr err-text"></p>
+                            </div>
+                            <div>
+                              <button id="review-btn" class="ui-btn">
+                                Save
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a
+                      href="#common-modal"
+                      rel="modal:open"
+                      style="padding: 10px"
+                    >
+                      <button class="ui-btn">End Hunt</button></a
+                    >
+                  </div>
+                </div>
+                <div class="footer ui-content">
+                  <div class="footer-logo-container center-column">
+                    <img
+                      class="footer-logo"
+                      src="./../../assets/images/logos/full logo white.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="contact-us-container">
+                    <div class="footer-heading-text">Contact Us</div>
+                    <div class="center-vertically-margin-top">
+                      <img
+                        class="active-navbar-icon"
+                        src="./../../assets/icons/phone-call.svg"
+                        alt=""
+                      />
+                      <span class="card2-text">&nbsp;+44 7911 123456</span>
+                    </div>
+                    <div class="center-vertically-margin-top">
+                      <img
+                        class="active-navbar-icon"
+                        src="./../../assets/icons/mail.svg"
+                        alt=""
+                      />
+                      <span class="card2-text">&nbsp;info@xploray.com</span>
+                    </div>
+                  </div>
+                  <div class="follow-us-container">
+                    <div class="footer-heading-text">Follow Us</div>
+                    <div class="center-vertically-margin-top">
+                      <a href=""
+                        ><img
+                          src="./../../assets/icons/facebook-logo.svg"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="./../../assets/icons/twitter-social-logotype.svg"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="./../../assets/icons/instagram-social-network-logo-of-photo-camera.svg"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="newsletter-container">
+                    <div class="footer-heading-text">Newsletter</div>
+                    <div class="card2-text center-vertically-margin-top">
+                      Stay up to date on the latest hunts
+                    </div>
+                    <input type="text" />
+                    <button class="ui-btn subscribe-btn">SUBSCRIBE</button>
+                  </div>
+                  <div class="copyright-container center-column">
+                    <div class="footer-address-text">
+                      XPLORAYL . 31 Moulton Road Street . Guestling Thorn . TN35
+                      4YX UK
+                    </div>
+                    <div class="footer-copyright-text">
+                      Copyright ©️ 2020 All Rights Reserved
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              
-
-              <div id="tab-two" class="ui-content">
+              <div id="tab-two">
                 <!-- <h1 class="tab-heading">Favourites</h1> -->
                 <div class="pois-container">
                   <div class="poi">
@@ -517,7 +587,7 @@
                 </div>
               </div>
 
-              <div id="tab-three" class="ui-content">
+              <div id="tab-three">
                 <!-- <h1 class="tab-heading">Favourites</h1> -->
                 <div class="pois-container">
                   <div class="poi">
@@ -774,7 +844,12 @@
 
           <!-- Footer end -->
           <!-- Navbar start -->
-          <div class="footer-navbar" data-role="footer" data-position="fixed">
+          <div
+            class="footer-navbar"
+            data-role="footer"
+            data-position="fixed"
+            style="z-index: 1"
+          >
             <div data-role="navbar">
               <ul>
                 <li>
