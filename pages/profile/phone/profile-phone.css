@@ -15,14 +15,13 @@
     "tabname tabname tabname";
 }
 .side {
-  -moz-box-shadow: 1px 1px 3px 4px #ccc;
+  /* -moz-box-shadow: 1px 1px 3px 4px #ccc;
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
-  box-shadow: 1px 1px 3px 4px #ccc;
+  box-shadow: 1px 1px 3px 4px #ccc; */
 }
 
-.acheivement-text{
-
-  color: #748a9d  !important;
+.acheivement-text {
+  color: #748a9d !important;
 }
 #list-view {
   width: 140px !important;
@@ -208,6 +207,8 @@ p {
   margin-right: 5px;
 }
 
+
+
 /* Coupon styles ---------------------------------------------------- */
 .coupons-grid {
   margin-top: 18px;
@@ -289,6 +290,27 @@ p {
   grid-area: card-select-btn;
 }
 
+.no-favs {
+  width: 100%;
+  grid-column: 1/3;
+  height: 60vh !important;
+}
+
+#snackbar {
+  font-size: 16px !important;
+  margin-top: 0;
+  height: unset !important;
+}
+
+.snackbar {
+  right: 1em;
+}
+
+.no-favs p {
+  color: #748a9d !important;
+  margin-bottom: 1em !important;
+}
+
 .poi:before {
   border-radius: 1em;
   content: "";
@@ -324,7 +346,7 @@ p {
   /* max-width: 170px; */
   height: 210px;
 }
-.poi-grid-style{
+.poi-grid-style {
   padding-top: 20px;
   padding-right: 10px;
   padding-left: 10px;
@@ -509,6 +531,7 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.4fr;
     margin-top: 17px;
+    min-height: 64vh;
   }
   #favourites {
     height: 25px;
@@ -526,6 +549,10 @@ p {
 }
 /* iPhone landscape ---------------------------------------------------------------------- */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .email-share-btn {
+    bottom: 3px;
+  }
+  
   .close-icon {
     margin-bottom: -40px;
     margin-right: 20px;
@@ -542,7 +569,7 @@ p {
     max-width: 300px;
     height: 180px;
   }
-  .poi-grid-style{
+  .poi-grid-style {
     padding-top: 20px;
     padding-right: 10px;
     padding-left: 10px;
@@ -554,7 +581,7 @@ p {
     height: 18px;
     width: 110px;
   }
-  
+
   .card1-text {
     font-family: "Poppins bold" !important;
     font-size: 15px !important;

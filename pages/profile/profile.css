@@ -357,6 +357,12 @@ h2 {
   right: 12px;
 }
 
+.no-favs {
+  width: 100%;
+  grid-column: 1/3;
+  height: 27vh;
+}
+
 .check {
   position: relative;
   top: 2em;
