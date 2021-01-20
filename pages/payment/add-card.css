@@ -10,7 +10,10 @@
   margin: 0px;
   border-radius: 10px;
 }
-
+.card-list .cardName {
+  right: 125px;
+  position: inherit;
+}
 .card-list {
   display: flex;
   /* justify-content: center;
@@ -31,8 +34,8 @@
 
 .card-list .card-number {
   position: relative;
-  top: 25%;
-  left: 10%;
+  top: 30px;
+  left: 43px;
 }
 
 .card-list .card-name {
@@ -69,9 +72,9 @@
 }
 
 .card-list .card-exp {
-  right: 0%;
+  right: 10px;
+  top: 87px;
   position: relative;
-  top: 61%;
 }
 
 .cardErr {
@@ -230,9 +233,10 @@
 
 .radio-btn {
   position: absolute;
+  padding-right: 50px;
   right: 10px;
   top: 10px;
-  padding-left: 35px;
+  padding-left: 5px;
   margin-bottom: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -251,8 +255,8 @@
 
 .checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -3px;
+  left: 85%;
   height: 25px;
   width: 25px;
   background-color: #eee;

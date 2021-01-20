@@ -48,15 +48,17 @@ function renderFavourites() {
           alt=""
         />
         <div class="poi-info">
+        <div class="poi-grid-style">
           <input class="check" type="checkbox" id="${item.poiId}" value="${item.poiId}" onclick="onSelect('${item.poiId}');">
           <img
+          style="padding-left:50px"
             class="favourites"
             src="/assets/images/profile/favourites.png"
             alt=""
             onclick="removeFavourite('${item.poiId}')"
           />
+        </div>
           <div class="card1-text">${item.name}</div>
-          
         </div>
       </div>
       `;
