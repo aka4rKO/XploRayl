@@ -19,6 +19,11 @@
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
   box-shadow: 1px 1px 3px 4px #ccc;
 }
+
+.acheivement-text{
+
+  color: #748a9d  !important;
+}
 #list-view {
   width: 140px !important;
   margin: 5px !important;
