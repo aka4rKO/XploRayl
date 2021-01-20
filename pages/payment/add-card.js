@@ -2,6 +2,11 @@ $(document).ready(function () {
   $(".ui-input-text").css("border", "unset");
 
   loadCardList();
+
+  $('#save-card').click(()=>{
+    saveCard();
+
+  })
 });
 
 function loadCardList() {
@@ -10,9 +15,10 @@ function loadCardList() {
   if (cardList) {
     cardList.forEach((card) => {
       cardsComp += `
-    <div class="order-field center-row placeholder-text">
-      <div class="add-card-placeholder label-text">
+    <div class="order-field center-row placeholder-text ">
+      <div class="add-card-placeholder label-text ">
           <span class="card-number">•••• •••• •••• ${card.last4}</span>
+          <span class="cardName" style="float:left">${card.name}</span>
           <span class="card-exp">${card.exp_month}/${card.exp_year}</span>
           <label class="radio-btn">
             <input type="radio" checked="checked" name="radio">
@@ -69,6 +75,8 @@ function saveCard() {
       }
       cardsArray.push(postReqData);
       localStorage.setItem("cardList", JSON.stringify(cardsArray));
+      location.reload();
+
       console.log(cardsArray);
     },
     error: (response) => {
@@ -76,8 +84,13 @@ function saveCard() {
       $(".cardErr").html(response.responseJSON.error.message);
     },
   });
-  loadCardList();
+
+// no need to specify document ready
+
+
 }
+
+
 
 $(document).ready(function () {
   $("#book-now").on("click", function () {
