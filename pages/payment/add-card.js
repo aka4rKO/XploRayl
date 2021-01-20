@@ -17,13 +17,13 @@ function loadCardList() {
       cardsComp += `
     <div class="order-field center-row placeholder-text ">
       <div class="add-card-placeholder label-text ">
+        <label class="radio-btn">
           <span class="card-number">•••• •••• •••• ${card.last4}</span>
-          <span class="cardName" style="float:left">${card.name}</span>
           <span class="card-exp">${card.exp_month}/${card.exp_year}</span>
-          <label class="radio-btn">
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-          </label>
+          <span class="cardName">${(card.name).split(' ')[0]}</span>
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark"></span>
+        </label>
       </div>
     </div>`;
     });
