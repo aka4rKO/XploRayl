@@ -14,17 +14,21 @@
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
     <a-assets>
       <!-- <a-asset-item id="smiley" src="https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/9176d098/1.0/SmilingFace/glTF/SmilingFace.gltf"></a-asset-item> -->
-      <a-asset-item id="smiley" src="/assets/ar/treasure-chest.gltf"></a-asset-item>
+      <!-- <a-asset-item id="smiley" src="/assets/ar/treasure-chest.gltf"></a-asset-item> -->
+      <!-- <a-entity gltf-model="url(models/shampu/shampu.glb)" scale="0.2 0.2 0.2"> -->
+
+
     </a-assets>
   	<a-marker preset="hiro" id="ar-marker-s">
-      <a-entity gltf-model="#smiley" rotation= "180 0 0">
+      <a-entity gltf-model="url(/assets/ar/treasure.glb)" scale="0.2 0.2 0.2">
+      <!-- <a-entity gltf-model="#smiley" rotation= "180 0 0">
         <a-animation attribute="rotation"
         dur="2000"
         fill="forwards"
         from="0 0 0"
         to="0 360 0"
         repeat="indefinite"></a-animation>
-      </a-entity>
+      </a-entity> -->
   	</a-marker>
   	<a-entity camera id="ar-body"></a-entity>
     </a-scene>
