@@ -19,6 +19,11 @@
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
   box-shadow: 1px 1px 3px 4px #ccc;
 }
+
+.acheivement-text{
+
+  color: #748a9d  !important;
+}
 #list-view {
   width: 140px !important;
   margin: 5px !important;
@@ -324,6 +329,34 @@ p {
   font-family: "Poppins bold" !important;
   font-size: 25px !important;
   color: #fff !important;
+}
+
+.favourites {
+  height: 25px !important;
+  width: 30px !important;
+  /* margin-bottom: 105px;
+  margin-left: 280px; */
+}
+
+.footer {
+  z-index: 5 !important;
+}
+
+#snackbar {
+  font-size: 14px !important;
+  right: 1em;
+}
+
+/* .snackbar {
+  right: 12px;
+} */
+
+.email-share-btn {
+  width: 6em !important;
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 5;
 }
 
 /* asdasdasds ------------------------------- */

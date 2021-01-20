@@ -1,4 +1,30 @@
 var selectedFavList = [];
+var  userObj = JSON.parse(localStorage.getItem("user"));
+
+$(document).ready(function() {
+
+
+
+  var  userObj = JSON.parse(localStorage.getItem("user"));
+  console.log(userObj);
+  $('#points-value').text(userObj.totalPoints)
+  $('#user-rank-position').text(userObj.position)
+  $('#places-unlocked').text(userObj.placesUnlocked)
+  $('#collected').text(userObj.collectables)
+  $('#travel-distance').text(userObj.travelDistance)
+  $('#task-completed').text(userObj.taskCompleted)
+  $('#coupons-count').text(userObj.coupons.length)
+  $('#hunt-count').text(userObj.pastHunts.length)
+  $('#username').text(userObj.username)
+  $('#review-count').text(userObj.coupons.length)
+  
+
+
+
+
+
+})
+
 
 $(document).ready(function () {
   $(".favourites").click(function () {
