@@ -191,9 +191,9 @@
                       top: 60%;
                     "
                   >
-                    <p id="hunt-location">Copenhagen, Denmark</p>
+                    <p style="color: white !important;" id="hunt-location">London Eye</p>
                     <div>
-                      <p id="hunt-date">Date: 20th Sept 2020</p>
+                      <p style="color: white !important;" id="hunt-date">20th Sept 2020</p>
                     </div>
                   </div>
                 </div>
@@ -221,8 +221,8 @@
                   </div>
 
                   <div class="center-column">
-                    <div id="common-modal" class="modal ui-modal">
-                      <h1 class="center-column center-row">Add Review</h1>
+                    <div id="common-modal" class="modal ui-modal add-review-modal">
+                      <h1 class="center-column center-row" id="add-review-heading">Add Review</h1>
                       <p class="center-column center-row">
                         Tell us about your hunt
                       </p>
@@ -249,12 +249,12 @@
 
                               <fieldset id="fuserid">
                                 <legend class="label-text">Review</legend>
-                                <input
+                                <textarea
                                   name=""
                                   id="review-message"
                                   class="form-control placeholder-text"
                                   placeholder="How good was your hunt, tell me about it"
-                                />
+                                ></textarea>
                               </fieldset>
                               <p class="nameErr err-text"></p>
                             </div>

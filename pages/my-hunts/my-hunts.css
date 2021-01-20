@@ -18,6 +18,15 @@
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
   box-shadow: 1px 1px 3px 4px #ccc;
 }
+.scan-button {
+  position: relative;
+  color: white !important;
+  top: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  flex-direction: column;
+}
 #list-view {
   width: 140px !important;
   margin: 5px !important;
@@ -520,11 +529,22 @@ p {
 
 /* iPad portrait ----------------------------------------------------------------------  */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-
+  #review-btn{
+    margin: 0px !important;
+    width: 240px !important;
+    padding: 10px;
+    margin-top: 50px !important;
+  }
 }
 
 /* iPad landscape ----------------------------------------------------------------------  */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  #review-btn{
+    margin: 0px !important;
+    width: 240px !important;
+    padding: 10px;
+    margin-top: 50px !important;
+  } 
   .hunt-info-final {
     background-image: url(./../../assets/images/black-layer.png);
     padding-top: 322px;
@@ -533,7 +553,9 @@ p {
     padding-right: 20px;
     padding-bottom: 6px;
   }
-
+.footer{
+  margin-top: 0px;
+} 
   .hunt-info {
     background-image: url(./../../assets/images/black-layer.png);
     padding-top: 260px;
@@ -542,11 +564,6 @@ p {
     padding-right: 20px;
     padding-bottom: 6px;
   }
-}
-
-/* iPhone landscape ----------------------------------------------------------------------  */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-
 }
 
 /* iPhone portrait ----------------------------------------------------------------------  */
@@ -568,9 +585,285 @@ p {
   }
   .hunt-header {
     z-index: 1;
-    background-image: url(/assets/images/headers/my\ hunts.png);
+    background-image: none;
+  }
+  .hunt-tab-title {
+    display: none;
+  }
+  #profile-header {
+    display: none;
+  }
+  #tab-item {
+    grid-area: tab-item;
+    margin: auto;
+    margin-top: 0px;
+  }
+  .hunt-info {
+    background-image: url(./../../assets/images/black-layer.png);
+    padding-top: 240px;
+    padding-bottom: 45px;
+    background-size: 100% 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .hunt-info-final {
+    background-image: url(./../../assets/images/black-layer.png);
+    padding-top: 300px;
+    padding-bottom: 45px;
+    background-size: 100% 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .phone-tab-list-view {
+    background-color: #f0f4f8;
+    padding: 15px;
+    margin-top: 5px !important;
+    cursor: pointer;
+    display: grid;
+    margin: auto;
+    border-radius: 10px;
+    font-family: "Poppins medium";
+    color: #748a9d;
+    grid-template-columns: 1fr 0.5fr 0.1fr;
+    width: 300px;
+  }
+  .hunt-home {
+    z-index: -2;
+    top: -30px;
+    background-image: url("/assets/images/pois/london-eye.jpg");
+    background-size: cover; /* <------ */
     background-repeat: no-repeat;
-    height: 300px;
-    background-size: 375px 200px;
+    background-position: center center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 72vh;
+    /* margin-bottom: -223px; */
+  }
+  .scan-button {
+    position: relative;
+    color: white !important;
+    top: 50%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .pois-container {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr;
+    padding: 10px;
+  }
+  #unlisted-view {
+    padding: 5px !important;
+    margin: auto;
+    margin-top: -15px;
+    background-color: #f0f4f8 !important;
+  }
+  .scan-done {
+    margin: 0px !important;
+    width: 240px !important;
+    padding: 10px;
+  }
+  .center-column {
+    text-align: center;
+  }
+  #review-btn{
+    margin: 0px !important;
+    width: 240px !important;
+    padding: 10px;
+    margin-top: 50px !important;
+  }
+  .add-review-modal{
+    height: 500px;
+  }
+  #review-message{
+    font-size: 13px !important;
+  }
+  .label-text{
+    margin: 0px;
+    text-align: left;
+  }
+  .form-group{
+    margin-top: 20px;
+  }
+  #qr-code-size{
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/* iPhone landscape ----------------------------------------------------------------------  */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  #list-view {
+    width: 130px !important;
+    margin: 5px !important;
+  }
+  .tab-nav {
+    padding: 10px;
+    width: 110px !important;
+    border-radius: 3em !important;
+    background-color: transparent !important;
+    border: 1px transparent !important;
+    font-family: "Poppins semibold" !important;
+    font-size: 18px !important;
+    color: #04d3d9 !important;
+    text-shadow: none !important;
+  }
+  .hunt-header {
+    z-index: 1;
+    background-image: none;
+  }
+  .hunt-tab-title {
+    display: none;
+  }
+  #profile-header {
+    display: none;
+  }
+  #tab-item {
+    grid-area: tab-item;
+    margin: auto;
+    margin-top: 0px;
+  }
+  .hunt-info {
+    background-image: url(./../../assets/images/black-layer.png);
+    padding-top: 110px;
+    padding-bottom: 0px;
+    background-size: 100% 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .hunt-info-final {
+    background-image: url(./../../assets/images/black-layer.png);
+    padding-top: 160px;
+    padding-bottom: 15px;
+    background-size: 100% 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .phone-tab-list-view {
+    background-color: #f0f4f8;
+    padding: 15px;
+    margin-top: 5px !important;
+    cursor: pointer;
+    display: grid;
+    margin: auto;
+    border-radius: 10px;
+    font-family: "Poppins medium";
+    color: #748a9d;
+    grid-template-columns: 1fr 0.5fr 0.1fr;
+    width: 460px;
+  }
+  .hunt-home {
+    z-index: -2;
+    top: -30px;
+    background-image: url("/assets/images/pois/london-eye.jpg");
+    background-size: cover; /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 82vh;
+    /* margin-bottom: -223px; */
+  }
+  .scan-button {
+    position: relative;
+    color: white !important;
+    top: 50%;
+  }
+  .pois-container {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr;
+    padding: 10px;
+  }
+  #unlisted-view {
+    padding: 5px !important;
+    padding-left: 50px !important;
+    margin: auto;
+    border-radius: 0px;
+    margin-top: 0px;
+    background-color: #f0f4f8 !important;
+  }
+  .scan-done {
+    margin: 0px !important;
+    width: 240px !important;
+    padding: 10px;
+    margin-left: 95px !important;
+  }
+  .center-column {
+    text-align: center;
+  }
+  #review-btn{
+    margin: 0px !important;
+    width: 240px !important;
+    padding: 10px;
+    margin-top: 50px !important;
+  }
+  .add-review-modal{
+    width: 350px;
+    height: 500px;
+  }
+  #add-review-heading{
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .profile-pic{
+    margin: 20px;
+  }
+  #review-message{
+    font-size: 13px !important;
+  }
+  .label-text{
+    margin: 0px;
+    text-align: left;
+  }
+  .form-group{
+    margin-top: 20px;
+  }
+  .poi {
+    min-width: 250px;
+    max-width: 250px;
+    height: 180px;
+    margin: 5px;
+    position: relative;
+  }
+  .pois-container {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr;
+    padding: 10px;
+  }
+  .scan-float-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 50px;
+    text-align: center;
+  }
+  .common-modal{
+    width: 350px;
+    height: 400px;
+  }
+  #qr-code-size{
+    height: 150px;
+    width: 150px;
+  }
+  #scan-ticket-heading{
+    margin-top: 0px !important;
+    margin-bottom: 3px !important;
   }
 }

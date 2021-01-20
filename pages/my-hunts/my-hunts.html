@@ -174,18 +174,13 @@
                       top: 60%;
                     "
                   >
-                    <span>Copenhagen, Denmark</span>
+                    <p style="color: white !important;">London Eye</p>
                     <div>
-                      <span>Date: 20th Sept 2020</span>
+                      <p style="color: white !important;">20th Sept 2020</p>
                     </div>
                   </div>
                   <div
-                    style="
-                      position: relative;
-                      color: white !important;
-                      top: 50%;
-                    "
-                    class="left-column"
+                    class="scan-button"
                   >
                     <a href="#common-modal" rel="modal:open">
                       <button class="ui-btn">SCAN</button></a
@@ -194,16 +189,16 @@
                 </div>
                 <div class="body-content">
                   <div id="common-modal" class="modal ui-modal">
-                    <h1 class="center-column center-row">Scan Ticket</h1>
+                    <h1 class="center-column center-row" id="scan-ticket-heading">Scan Ticket</h1>
                     <p class="center-column center-row">
                       Scan the ticket at the station terminal
                     </p>
                     <div class="center-row center-column">
-                      <img src="/assets/images/qr-code.png" alt="" />
+                      <img src="/assets/images/qr-code.png" id="qr-code-size" alt="" />
                     </div>
                     <a class="anchor-external" href="./my-hunts-final.html">
                       <button
-                        class="ui-btn close-modal"
+                        class="ui-btn close-modal scan-done"
                         style="margin-left: 5em"
                       >
                         DONE
