@@ -106,7 +106,7 @@
 
 .player-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 146px 137px;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -156,6 +156,12 @@
   text-shadow: none !important;
 }
 
+.player-stats-values{
+    font-family: "Poppins regular" !important;
+    font-size: 16px !important;
+    color: #748a9d !important;
+    text-align: right;
+}
 #tabname {
   grid-area: tabname;
   margin-left: 20px;
@@ -669,6 +675,11 @@ p {
     padding: 10px;
     grid-template-columns: 0.7fr 0.7fr;
     grid-template-rows: 0.4fr 0.4fr 0.4fr;
+  }
+  .player-stats {
+    display: grid;
+    grid-template-columns: 214px 114px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
   #favourites {
     height: 25px;
