@@ -9,3 +9,7 @@ for (var i = 0; i < btns.length; i++) {
   this.className += "active";
   });
 }
+
+function setCurrentId(id) {
+  sessionStorage.setItem("currentId", id);
+}
