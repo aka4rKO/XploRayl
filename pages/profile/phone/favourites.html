@@ -16,9 +16,9 @@
 
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="./../circle-progress.min.js"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./../../../script.js"></script>
-    <script src="./../profile.js"></script>
+    <script src="/pages/profile/phone/favourite-phone.js"></script>
   </head>
 
   <body>
@@ -88,7 +88,10 @@
         <div class="main">
           <!-- Header start -->
           <div class="header" data-role="header" id="phone-header">
-            <div onclick="window.location='./../../../pages/profile/profile.html'" style="padding-left: 15px; padding-top: 8px">
+            <div
+              onclick="window.location='./../../../pages/profile/profile.html'"
+              style="padding-left: 15px; padding-top: 8px"
+            >
               <img
                 height="20px"
                 width="20px"
@@ -98,13 +101,16 @@
             </div>
             <div>
               <img
-              class="header-logo"
-              src="./../../../assets/images/logos/full logo black color.png"
-              alt=""
-            />
+                class="header-logo"
+                src="./../../../assets/images/logos/full logo black color.png"
+                alt=""
+              />
             </div>
           </div>
-          <div onclick="window.location='./../../../pages/profile/profile.html'" id="back-button">
+          <div
+            onclick="window.location='./../../../pages/profile/profile.html'"
+            id="back-button"
+          >
             <img
               height="20px"
               width="20px"
@@ -113,10 +119,24 @@
             />
           </div>
           <!-- Header end -->
-          
+
           <h1 class="tab-heading">Favourites</h1>
-          <div class="pois-container">
-            <div class="poi">
+          <!-- <div class="pois-container"> -->
+          <button
+            class="ui-btn hero-btn email-share-btn"
+            onClick="sendEmail();"
+          >
+            SHARE
+          </button>
+          <div class="snackbar">
+            <span class="card1-text" id="snackbar"></span>
+          </div>
+          <div
+            class="pois-container"
+            style="position: relative !important"
+            id="poi-list"
+          ></div>
+          <!-- <div class="poi">
               <img
                 src="./../../../assets/images/pois/buckingham-palace.jpg"
                 alt=""
@@ -205,8 +225,8 @@
                   <div class="card1-text">Seagull Hunt</div>
                   <img src="./../../../assets/images/profile/rating.png" alt="" />
                 </div>
-              </div>
-          </div>
+              </div> -->
+          <!-- </div> -->
           <!-- Footer start -->
           <div class="footer ui-content">
             <div class="footer-logo-container center-column">

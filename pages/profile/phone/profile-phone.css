@@ -286,6 +286,34 @@ p {
   color: #fff !important;
 }
 
+.favourites {
+  height: 25px !important;
+  width: 30px !important;
+  /* margin-bottom: 105px;
+  margin-left: 280px; */
+}
+
+.footer {
+  z-index: 5 !important;
+}
+
+#snackbar {
+  font-size: 14px !important;
+  right: 1em;
+}
+
+/* .snackbar {
+  right: 12px;
+} */
+
+.email-share-btn {
+  width: 6em !important;
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 5;
+}
+
 /* asdasdasds ------------------------------- */
 
 .footer {
