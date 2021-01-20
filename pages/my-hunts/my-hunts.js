@@ -49,7 +49,7 @@ function myMap() {
 
 
     var icon = {
-      url: "./../../../assets/images/treasure.png", // url
+      url: "./../../../assets/images/treasure_transparent.png", // url
       scaledSize: new google.maps.Size(50, 50), // scaled size
 
   };

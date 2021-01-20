@@ -117,15 +117,13 @@
           <!-- Header end -->
 
           <!-- content start -->
-          <div class="hunt-header">
-            <div id="profile-header">
-              <h1 style="color: white !important; text-align: center">
-                My Hunt
-              </h1>
+          <div>
+            <div id="profile-header" class="hunt-header">
+              <h1 class="hunt-tab-title">My Hunt</h1>
             </div>
 
             <div data-role="tabs" id="tab-item">
-              <div data-role="navbar" class="center-column">
+              <div data-role="navbar">
                 <ul id="unlisted-view" data-inset="true">
                   <li id="list-view">
                     <a
@@ -156,52 +154,131 @@
                   </li>
                 </ul>
               </div>
-              <div id="tab-one" class="ui-content hunt-home">
-                <h1
-                  style="position: relative; color: white !important; top: 60%"
-                  class=""
-                >
-                  Seagull Hunt
-                </h1>
-                <div
-                  style="position: relative; color: white !important; top: 60%"
-                >
-                  <span>Copenhagen, Denmark</span>
 
-                  <div>
-                    <span>Date: 20th Sept 2020</span>
-                  </div>
-                </div>
-                <div
-                  style="position: relative; color: white !important; top: 50%"
-                  class="left-column"
-                >
-                  <a href="#common-modal" rel="modal:open">
-                    <button class="ui-btn">SCAN</button></a
+              <div id="tab-one" class="hunt-home">
+                <div class="hunt-info">
+                  <h1
+                    style="
+                      position: relative;
+                      color: white !important;
+                      top: 60%;
+                    "
+                    class=""
                   >
-                </div>
-                
-              </div>
-
-              <div class="body-content">
-                <div id="common-modal" class="modal ui-modal">
-                  <h1 class="center-column center-row">Scan Ticket</h1>
-                  <p class="center-column center-row">
-                    Scan the ticket at the station terminal
-                  </p>
-                  <div class="center-row center-column">
-                    <img src="/assets/images/qr-code.png" alt="" />
+                    Seagull Hunt
+                  </h1>
+                  <div
+                    style="
+                      position: relative;
+                      color: white !important;
+                      top: 60%;
+                    "
+                  >
+                    <span>Copenhagen, Denmark</span>
+                    <div>
+                      <span>Date: 20th Sept 2020</span>
+                    </div>
                   </div>
-                  <a class="anchor-external" href="./my-hunts-final.html">
-                    <button class="ui-btn close-modal" style="margin-left: 5em">
-                      DONE
-                    </button>
-                  </a>
+                  <div
+                    style="
+                      position: relative;
+                      color: white !important;
+                      top: 50%;
+                    "
+                    class="left-column"
+                  >
+                    <a href="#common-modal" rel="modal:open">
+                      <button class="ui-btn">SCAN</button></a
+                    >
+                  </div>
                 </div>
-                
+                <div class="body-content">
+                  <div id="common-modal" class="modal ui-modal">
+                    <h1 class="center-column center-row">Scan Ticket</h1>
+                    <p class="center-column center-row">
+                      Scan the ticket at the station terminal
+                    </p>
+                    <div class="center-row center-column">
+                      <img src="/assets/images/qr-code.png" alt="" />
+                    </div>
+                    <a class="anchor-external" href="./my-hunts-final.html">
+                      <button
+                        class="ui-btn close-modal"
+                        style="margin-left: 5em"
+                      >
+                        DONE
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="footer ui-content" style="margin-top: 10px">
+                  <div class="footer-logo-container center-column">
+                    <img
+                      class="footer-logo"
+                      src="./../../assets/images/logos/full logo white.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="contact-us-container">
+                    <div class="footer-heading-text">Contact Us</div>
+                    <div class="center-vertically-margin-top">
+                      <img
+                        class="active-navbar-icon"
+                        src="./../../assets/icons/phone-call.svg"
+                        alt=""
+                      />
+                      <span class="card2-text">&nbsp;+44 7911 123456</span>
+                    </div>
+                    <div class="center-vertically-margin-top">
+                      <img
+                        class="active-navbar-icon"
+                        src="./../../assets/icons/mail.svg"
+                        alt=""
+                      />
+                      <span class="card2-text">&nbsp;info@xploray.com</span>
+                    </div>
+                  </div>
+                  <div class="follow-us-container">
+                    <div class="footer-heading-text">Follow Us</div>
+                    <div class="center-vertically-margin-top">
+                      <a href=""
+                        ><img
+                          src="./../../assets/icons/facebook-logo.svg"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="./../../assets/icons/twitter-social-logotype.svg"
+                          alt=""
+                      /></a>
+                      <a href=""
+                        ><img
+                          src="./../../assets/icons/instagram-social-network-logo-of-photo-camera.svg"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="newsletter-container">
+                    <div class="footer-heading-text">Newsletter</div>
+                    <div class="card2-text center-vertically-margin-top">
+                      Stay up to date on the latest hunts
+                    </div>
+                    <input type="text" />
+                    <button class="ui-btn subscribe-btn">SUBSCRIBE</button>
+                  </div>
+                  <div class="copyright-container center-column">
+                    <div class="footer-address-text">
+                      XPLORAYL . 31 Moulton Road Street . Guestling Thorn . TN35
+                      4YX UK
+                    </div>
+                    <div class="footer-copyright-text">
+                      Copyright ©️ 2020 All Rights Reserved
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div id="tab-two" class="ui-content">
+              <div id="tab-two">
                 <!-- <h1 class="tab-heading">Favourites</h1> -->
                 <div class="pois-container">
                   <div class="poi">
@@ -445,7 +522,7 @@
                 </div>
               </div>
 
-              <div id="tab-three" class="ui-content">
+              <div id="tab-three">
                 <!-- <h1 class="tab-heading">Favourites</h1> -->
                 <div class="pois-container">
                   <div class="poi">
