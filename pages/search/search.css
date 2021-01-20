@@ -1,3 +1,5 @@
+
+
 .filter{
   margin-left: 611px;
         margin-bottom: 20px;
@@ -309,6 +311,34 @@ input[type=text] {
   font-size: 10px !important;
   color: #dbe2ed !important;
 }
+.blocker:before {
+
+  height: -1%!important;
+}
+.modal {
+display: flex;
+  width: 54%!important;
+  height: 73%!important;
+  padding: 17px 9px!important;
+}
+
+.list {
+
+  padding: 8px 2px 63px 4px;
+  height: 0px;
+}
+li{
+      height:unset;
+}
+ul {
+  display:block!important;
+
+}
+.blocker {
+  height: 90%!important;
+  padding: 29px 12px 16px 0px!important;
+}
+
   }
   
   /* iPhone landscape */
