@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   var  userObj = JSON.parse(localStorage.getItem("user"));
   console.log(userObj);
-  $('#points-value').text(userObj.totalPoints)
+  $('#total-points-value').text(userObj.totalPoints)
   $('#user-rank-position').text(userObj.position)
   $('#places-unlocked').text(userObj.placesUnlocked)
   $('#collected').text(userObj.collectables)
