@@ -174,31 +174,33 @@
                       top: 60%;
                     "
                   >
-                  <div style="display: grid; grid-template-columns: 30px 250px;">
-                    <img
-                      style="padding-right: 12px;"
-                      class="sidebar-nav-btn-content-active"
-                      src="./../../assets/icons/map-pin.svg"
-                      alt=""
-                    />
-                    <p id="hunt-location">
-                      London Eye
-                    </p>
+                    <div
+                      style="display: grid; grid-template-columns: 30px 250px"
+                    >
+                      <img
+                        style="padding-right: 12px"
+                        class="sidebar-nav-btn-content-active"
+                        src="./../../assets/icons/map-pin.svg"
+                        alt=""
+                      />
+                      <p id="hunt-location">London Eye</p>
+                    </div>
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: 30px 250px;
+                        margin-top: 3px;
+                      "
+                    >
+                      <img
+                        class="sidebar-nav-btn-content-active"
+                        src="./../../assets/images/calendar.png"
+                        alt=""
+                      />
+                      <p id="hunt-date">20th Sept 2020</p>
+                    </div>
                   </div>
-                  <div style="display: grid; grid-template-columns: 30px 250px; margin-top: 3px;">
-                    <img
-                      class="sidebar-nav-btn-content-active"
-                      src="./../../assets/images/calendar.png"
-                      alt=""
-                    />
-                    <p id="hunt-date">
-                      20th Sept 2020
-                    </p>
-                  </div>
-                  </div>
-                  <div
-                    class="scan-button"
-                  >
+                  <div class="scan-button">
                     <a href="#common-modal" rel="modal:open">
                       <button class="ui-btn">SCAN</button></a
                     >
@@ -206,12 +208,21 @@
                 </div>
                 <div class="body-content">
                   <div id="common-modal" class="modal ui-modal">
-                    <h1 class="center-column center-row" id="scan-ticket-heading">Scan Ticket</h1>
+                    <h1
+                      class="center-column center-row"
+                      id="scan-ticket-heading"
+                    >
+                      Scan Ticket
+                    </h1>
                     <p class="center-column center-row">
                       Scan the ticket at the station terminal
                     </p>
                     <div class="center-row center-column">
-                      <img src="/assets/images/qr-code.png" id="qr-code-size" alt="" />
+                      <img
+                        src="/assets/images/qr-code.png"
+                        id="qr-code-size"
+                        alt=""
+                      />
                     </div>
                     <a class="anchor-external" href="./my-hunts-final.html">
                       <button
@@ -223,7 +234,8 @@
                     </a>
                   </div>
                 </div>
-                <div class="footer ui-content" style="margin-top: 10px">
+                <!-- Footer start -->
+                <div class="footer ui-content">
                   <div class="footer-logo-container center-column">
                     <img
                       class="footer-logo"
@@ -275,7 +287,19 @@
                     <div class="card2-text center-vertically-margin-top">
                       Stay up to date on the latest hunts
                     </div>
-                    <input type="text" />
+
+                    <div class="form-group footerInput">
+                      <fieldset id="">
+                        <input
+                          type="text"
+                          name=""
+                          id="emailFooter"
+                          class="form-control placeholder-text"
+                          placeholder="example@email.com"
+                        />
+                      </fieldset>
+                    </div>
+
                     <button class="ui-btn subscribe-btn">SUBSCRIBE</button>
                   </div>
                   <div class="copyright-container center-column">
@@ -288,12 +312,12 @@
                     </div>
                   </div>
                 </div>
+                <!-- Footer end -->
               </div>
 
               <div id="tab-two">
                 <!-- <h1 class="tab-heading">Favourites</h1> -->
                 <div class="pois-container" id="upcoming-list">
-                  
                   <!-- <div class="poi">
                     <img
                       src="./../../assets/images/pois/buckingham-palace.jpg"
@@ -383,7 +407,6 @@
               <div id="tab-three">
                 <!-- <h1 class="tab-heading">Favourites</h1> -->
                 <div class="pois-container" id="past-list">
-
                   <!-- <div class="poi">
                     <img
                       src="./../../assets/images/pois/buckingham-palace.jpg"

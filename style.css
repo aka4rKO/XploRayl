@@ -8,6 +8,24 @@ white #fff
 red #ef5350
 green #7bed8d
 */
+.footerInput input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0px solid #ccc;
+  font-size: 16px;
+  background-color: #f0f4f8;
+  background-image: unset;
+  background-position: 20px 0px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0px 20px;
+}
+
+.footerInput fieldset {
+  margin: 1em 0;
+  height: unset;
+}
+
 html {
   scroll-behavior: smooth;
 }
