@@ -150,6 +150,8 @@ $(document).ready(function(){
 
 
       loadTaskList();
+      loadUpcoming();
+      loadPastHunts();
     }
     );
     
@@ -178,7 +180,96 @@ $(document).ready(function(){
       $("#task-list").append(cardsComp);
     }
   
+    function loadUpcoming(){
+      var cardsComp ='';
+      var user = JSON.parse(localStorage.getItem("user"));
+      upcomingList = user.upcomingHunts;
+
+      upcomingList.forEach(hunt=> {
+        cardsComp +=
     
+      `
+      <div class="poi">
+                    <img
+                      src=${hunt.img_url}
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">${hunt.name}</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;${hunt.location}</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;${hunt.rating}</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ ${hunt.price}</div>
+                      </div>
+                    </div>
+                  </div>` });
+                  $("#upcoming-list").append(cardsComp);
+
+    }
+    function loadPastHunts(){
+      var cardsComp ='';
+      var user = JSON.parse(localStorage.getItem("user"));
+      upcomingList = user.pastHunts;
+
+      upcomingList.forEach(hunt=> {
+        cardsComp +=
+    
+      `
+      <div class="poi">
+      <img
+        src="${hunt.img_url}"
+        alt=""
+      />
+      <div class="poi-info" >
+        <div>
+          <div class="card4-text">${hunt.name}</div>
+          <div class="center-vertically-margin-top">
+            <img
+              class="poi-img-icon-color"
+              src="./../../assets/icons/map-pin.svg"
+              alt=""
+            />
+            <span class="card2-text">&nbsp;${hunt.location}</span>
+          </div>
+          <div class="center-vertically-margin-top">
+            <img
+              class=""
+              src="./../../assets/icons/star.png"
+              alt=""
+            />
+            <span class="card2-text">&nbsp;${hunt.rating}</span>
+          </div>
+        </div>
+
+        <div class="left-column bottom-column">
+          <p style="color: white !important">Pts. earned</p>
+          <div class="card1-text">${hunt.pts}</div>
+        </div>
+      </div>
+    </div>` });
+
+
+                  
+                  $("#past-list").append(cardsComp);
+
+    }
   
   
   
