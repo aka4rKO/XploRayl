@@ -19,6 +19,8 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
   }
+
+
   
   function initMap() {
     var poiId = JSON.parse(sessionStorage.getItem("currentId"));
@@ -30,19 +32,17 @@ function myMap() {
       return obj.poiId == poiId;
     });
   
-    var poi = poi[0];
   
     var latitude = poi["lat"];
     var longitude = poi["lng"];
 
-    var dataObj = JSON.parse(localStorage.getItem("data"));
-    var pois = dataObj["poiObjs"][0];
-    var taskList = pois.tasks;
+    var taskList = poi[0].tasks;
+    console.log(">>>>>>",poi);
     center = { lat: Number(taskList[0].lat), lng: Number(taskList[0].lng) };
     
     const myLatLng = { lat: latitude, lng: longitude };
     const map = new google.maps.Map(document.getElementById("map-container"), {
-      zoom: 12,
+      zoom: 13,
       center: center,
     });
 
@@ -78,11 +78,36 @@ function myMap() {
 
 
 $(document).ready(function(){
+  var dataObj = JSON.parse(localStorage.getItem("data"));
+    var pois = dataObj["poiObjs"];
+  
+    var poi = pois.filter((obj) => {
+      return obj.poiId == poiId;
+    })
+
     $('.rating').rating();
   });
       
   
   $(document).ready(function(){
+
+    var poiId = JSON.parse(sessionStorage.getItem("currentId"));
+  
+    var dataObj = JSON.parse(localStorage.getItem("data"));
+    var pois = dataObj["poiObjs"];
+  
+    var poi = pois.filter((obj) => {
+      return obj.poiId == poiId;
+    });
+  
+
+    var taskList = poi[0].tasks;
+
+    $("#hunt-name").text(poi[0].name);
+    $("#hunt-location").text(poi[0].location);
+    $("#hunt-date").text(poi[0].date);
+    $('.hunt-home').css('background-image',`url(${poi[0].img})`)
+
       $("#review-btn" ).click(function() {
            var reviewMessage = $("#review-message").val();
            var ratings = $("#ratingSlider").val()
@@ -103,8 +128,6 @@ $(document).ready(function(){
            localStorage.setItem("reviews", JSON.stringify(ratingsArray));
            console.log(ratingsArray);
            window.location.href = "../profile/profile.html"
-
-  
           });
 
     });
@@ -118,6 +141,9 @@ $(document).ready(function(){
     });
   
     $(document).ready(function () {
+
+      currentId = sessionStorage.getItem("currentId");
+
       loadTaskList();
     }
     );
