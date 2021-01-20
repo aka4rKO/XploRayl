@@ -91,18 +91,50 @@
   ],
   "placesUnlocked": 4,
   "ranking": 4,
-  "upcomingHunts": [],
-  "pastHunts": [],
-  "reviews":[{
-    "name": "Nasif Nuha",
-    "rating": 3,
-    "review": "Nice"
-  },
-  {
-    "name": "Amjad Nazar",
-    "rating": 2,
-    "review": "Good experience"
-  }],
+  "upcomingHunts": [
+    {
+      "img_url": "./../../assets/images/pois/british-museum.jpg",
+      "name": "British Museum",
+      "location": "London",
+      "rating": 4.78,
+      "price": 100
+    },
+    {
+      "img_url": "./../../assets/images/pois/british-museum.jpg",
+      "name": "British Museum",
+      "location": "London",
+      "rating": 4.78,
+      "price": 100
+    }
+  ],
+  "pastHunts": [
+    {
+      "img_url": "./../../assets/images/pois/british-museum.jpg",
+      "name": "British Museum",
+      "location": "London",
+      "rating": 4.78,
+      "pts": 100
+    },
+    {
+      "img_url": "./../../assets/images/pois/british-museum.jpg",
+      "name": "British Museum",
+      "location": "London",
+      "rating": 4.78,
+      "pts": 100
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Nasif Nuha",
+      "rating": 3,
+      "review": "Nice"
+    },
+    {
+      "name": "Amjad Nazar",
+      "rating": 2,
+      "review": "Good experience"
+    }
+  ],
   "otherUsers": [
     {
       "name": "John Doyle",
