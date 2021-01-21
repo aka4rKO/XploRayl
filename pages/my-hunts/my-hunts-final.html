@@ -172,9 +172,9 @@
                 </ul>
               </div>
               <div id="tab-one" class="hunt-home">
-                <div  class="hunt-info-final">
+                <div class="hunt-info-final">
                   <h1
-                  id="hunt-name"
+                    id="hunt-name"
                     style="
                       position: relative;
                       color: white !important;
@@ -191,15 +191,30 @@
                       top: 60%;
                     "
                   >
-                    <p style="color: white !important;" id="hunt-location">London Eye</p>
-                    <div>
-                      <p style="color: white !important;" id="hunt-date">20th Sept 2020</p>
+                    <div style="display: grid; grid-template-columns: 30px 250px;">
+                      <img
+                        style="padding-right: 12px;"
+                        class="sidebar-nav-btn-content-active"
+                        src="./../../assets/icons/map-pin.svg"
+                        alt=""
+                      />
+                      <p id="hunt-location">
+                        London Eye
+                      </p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 30px 250px; margin-top: 3px;">
+                      <img
+                        class="sidebar-nav-btn-content-active"
+                        src="./../../assets/images/calendar.png"
+                        alt=""
+                      />
+                      <p id="hunt-date">
+                        20th Sept 2020
+                      </p>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="left-column scan-float-button"
-                >
+                <div class="left-column scan-float-button">
                   <a class="anchor-external" href="./ar-scan-ui/ar-scan.html">
                     <button class="ui-btn ar-scan-btn">
                       <img
@@ -221,8 +236,16 @@
                   </div>
 
                   <div class="center-column">
-                    <div id="common-modal" class="modal ui-modal add-review-modal">
-                      <h1 class="center-column center-row" id="add-review-heading">Add Review</h1>
+                    <div
+                      id="common-modal"
+                      class="modal ui-modal add-review-modal"
+                    >
+                      <h1
+                        class="center-column center-row"
+                        id="add-review-heading"
+                      >
+                        Add Review
+                      </h1>
                       <p class="center-column center-row">
                         Tell us about your hunt
                       </p>

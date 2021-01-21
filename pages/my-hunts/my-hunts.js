@@ -37,7 +37,6 @@ function myMap() {
     var longitude = poi["lng"];
 
     var taskList = poi[0].tasks;
-    console.log(">>>>>>",poi);
     center = { lat: Number(taskList[0].lat), lng: Number(taskList[0].lng) };
     
     const myLatLng = { lat: latitude, lng: longitude };
@@ -80,7 +79,8 @@ function myMap() {
 $(document).ready(function(){
   var dataObj = JSON.parse(localStorage.getItem("data"));
     var pois = dataObj["poiObjs"];
-  
+    poiId = sessionStorage.getItem("currentId");
+
     var poi = pois.filter((obj) => {
       return obj.poiId == poiId;
     })
@@ -101,8 +101,6 @@ $(document).ready(function(){
     });
   
 
-    var taskList = poi[0].tasks;
-
     $("#hunt-name").text(poi[0].name);
     $("#hunt-location").text(poi[0].location);
     $("#hunt-date").text(poi[0].date);
@@ -111,11 +109,13 @@ $(document).ready(function(){
       $("#review-btn" ).click(function() {
            var reviewMessage = $("#review-message").val();
            var ratings = $("#ratingSlider").val()
-  
+           var  userObj = JSON.parse(localStorage.getItem("user"));
+
            var postReqData = {
                id : 12,
-               reviewMessage : reviewMessage,
-               ratings:ratings
+               name: userObj.username,
+               review : reviewMessage,
+               rating:ratings
            }
   
            var ratingsList = JSON.parse(localStorage.getItem("reviews"))
@@ -126,7 +126,13 @@ $(document).ready(function(){
            }
            ratingsArray.push(postReqData)
            localStorage.setItem("reviews", JSON.stringify(ratingsArray));
-           console.log(ratingsArray);
+           
+           
+           poi[0].reviews.push(postReqData);
+           localStorage.setItem("data", JSON.stringify(dataObj));
+           
+
+
            window.location.href = "../profile/profile.html"
           });
 
@@ -142,9 +148,10 @@ $(document).ready(function(){
   
     $(document).ready(function () {
 
-      currentId = sessionStorage.getItem("currentId");
 
       loadTaskList();
+      loadUpcoming();
+      loadPastHunts();
     }
     );
     
@@ -173,7 +180,96 @@ $(document).ready(function(){
       $("#task-list").append(cardsComp);
     }
   
+    function loadUpcoming(){
+      var cardsComp ='';
+      var user = JSON.parse(localStorage.getItem("user"));
+      upcomingList = user.upcomingHunts;
+
+      upcomingList.forEach(hunt=> {
+        cardsComp +=
     
+      `
+      <div class="poi">
+                    <img
+                      src=${hunt.img_url}
+                      alt=""
+                    />
+                    <div class="poi-info">
+                      <div>
+                        <div class="card4-text">${hunt.name}</div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class="poi-img-icon-color"
+                            src="./../../assets/icons/map-pin.svg"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;${hunt.location}</span>
+                        </div>
+                        <div class="center-vertically-margin-top">
+                          <img
+                            class=""
+                            src="./../../assets/icons/star.png"
+                            alt=""
+                          />
+                          <span class="card2-text">&nbsp;${hunt.rating}</span>
+                        </div>
+                      </div>
+
+                      <div class="left-column bottom-column">
+                        <div class="card1-text">£ ${hunt.price}</div>
+                      </div>
+                    </div>
+                  </div>` });
+                  $("#upcoming-list").append(cardsComp);
+
+    }
+    function loadPastHunts(){
+      var cardsComp ='';
+      var user = JSON.parse(localStorage.getItem("user"));
+      upcomingList = user.pastHunts;
+
+      upcomingList.forEach(hunt=> {
+        cardsComp +=
+    
+      `
+      <div class="poi">
+      <img
+        src="${hunt.img_url}"
+        alt=""
+      />
+      <div class="poi-info" >
+        <div>
+          <div class="card4-text">${hunt.name}</div>
+          <div class="center-vertically-margin-top">
+            <img
+              class="poi-img-icon-color"
+              src="./../../assets/icons/map-pin.svg"
+              alt=""
+            />
+            <span class="card2-text">&nbsp;${hunt.location}</span>
+          </div>
+          <div class="center-vertically-margin-top">
+            <img
+              class=""
+              src="./../../assets/icons/star.png"
+              alt=""
+            />
+            <span class="card2-text">&nbsp;${hunt.rating}</span>
+          </div>
+        </div>
+
+        <div class="left-column bottom-column">
+          <p style="color: white !important">Pts. earned</p>
+          <div class="card1-text">${hunt.pts}</div>
+        </div>
+      </div>
+    </div>` });
+
+
+                  
+                  $("#past-list").append(cardsComp);
+
+    }
   
   
   

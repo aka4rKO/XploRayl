@@ -14,7 +14,7 @@
     "tab-item tab-item tab-item"
     "tabname tabname tabname";
 }
-#stats-data-value {
+.stats-data-value {
   margin: 1px;
   color: white !important;
 }
@@ -59,7 +59,7 @@
   margin-top: 5px !important;
   margin: auto;
 }
-#points-value {
+#total-points-value {
   color: #04d3d9 !important;
 }
 #points-title {

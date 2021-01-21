@@ -11,7 +11,6 @@
     />
     <link rel="stylesheet" href="./../../style.css" />
     <link rel="stylesheet" href="./profile.css" />
-
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -122,7 +121,7 @@
               alt="Profile Picture"
             />
             <div id="profile-header">
-              <h2>Orlando Smith</h2>
+              <h2 id="username">Orlando Smith</h2>
               <a>Edit Info</a>
             </div>
             <div id="signout">
@@ -136,15 +135,15 @@
             </div>
             <div class="stats-data">
               <div>
-                <h3 id="stats-data-value">40</h3>
+                <h3 class="stats-data-value" id="hunt-count">40</h3>
                 <p id="stats-data-name">Hunts</p>
               </div>
               <div>
-                <h3 id="stats-data-value">340</h3>
+                <h3 class="stats-data-value" id="points-value">340</h3>
                 <p id="stats-data-name">Points</p>
               </div>
               <div>
-                <h3 id="stats-data-value">41</h3>
+                <h3 class="stats-data-value" id="review-count">41</h3>
                 <p id="stats-data-name">Reviews</p>
               </div>
             </div>
@@ -341,7 +340,7 @@
                 <h1 class="tab-heading">Achievements</h1>
                 <div class="tab-item1">
                   <div style="margin-top: 110px">
-                    <h3 style="color: #04d3d9 !important; text-align: center">
+                    <h3 id="user-rank-position" style="color: #04d3d9 !important; text-align: center">
                       7th
                     </h3>
                     <h3
@@ -354,7 +353,7 @@
                     <div id="circle">
                       <div class="points">
                         <h3 id="points-title">TOTAL POINTS</h3>
-                        <h2 id="points-value">6,500</h2>
+                        <h2 id="total-points-value">6,500</h2>
                       </div>
                     </div>
                   </div>
@@ -374,12 +373,7 @@
                       href="#view-ranking-modal"
                       rel="modal:open"
                     >
-                      <h4
-                        style="
-                          color: #04d3d9 !important;
-                          text-align: right;
-                        "
-                      >
+                      <h4 style="color: #04d3d9 !important; text-align: right">
                         View Ranking
                       </h4>
                     </a>
@@ -458,36 +452,40 @@
 
                 <div class="tab-item2">
                   <div>
-                    <h3 style="color: #404e5a !important; margin: auto;">Player Stats</h3>
+                    <h3 style="color: #404e5a !important; margin: auto">
+                      Player Stats
+                    </h3>
                     <div class="player-stats">
                       <p id="stat-name">Places unlocked</p>
-                      <p style="margin: 1px; color: white !important">
-                        <b id="stat-value">10</b>
+                      <p id="places-unlocked" style="margin: 1px; ">
+                        <b >10</b>
                       </p>
 
                       <p id="stat-name">Collectables</p>
-                      <p style="margin: 1px; color: white !important">
-                        <b id="stat-value">10</b>
+                      <p  id="collected"style="margin: 1px; ">
+                        <b >10</b>
                       </p>
 
                       <p id="stat-name">Travel Distance</p>
-                      <p style="margin: 1px; color: white !important">
-                        <b id="stat-value">10</b>
+                      <p id="travel-distance" style="margin: 1px; ">
+                        <b >10</b>
                       </p>
 
                       <p id="stat-name">Task Completed</p>
-                      <p style="margin: 1px; color: white !important">
-                        <b id="stat-value">10</b>
+                      <p id="task-completed" style="margin: 1px; ">
+                        <b >10</b>
                       </p>
 
                       <p id="stat-name">Coupons</p>
-                      <p style="margin: 1px; color: white !important">
-                        <b id="stat-value">10</b>
+                      <p  id="coupons-count" style="margin: 1px; ">
+                        <b >10</b>
                       </p>
                     </div>
                   </div>
                   <div>
-                    <h3 style="color: #404e5a !important; margin: auto;">Collectables</h3>
+                    <h3 style="color: #404e5a !important; margin: auto">
+                      Collectables
+                    </h3>
                     <div>
                       <img
                         class="collectables"
@@ -839,98 +837,157 @@
               </div>
               <div id="tab-five" class="">
                 <h1 class="tab-heading">Payment methods</h1>
-                <div class="payment-grid">
-                  <a id="add-card-title" href="#add-card-img" rel="modal:open">
-                    <h3 style="color: black !important">ADD CARD</h3></a
-                  >
-                  <!-- ADD CARD MODAL START -->
-                  <div id="add-card-img" class="modal ui-modal">
-                    <h1 class="center-column center-row">Add Card</h1>
-                    <div class="card-details double-column">
-                      <div class="row">
-                        <div class="column">
-                          <div class="mr-2">
-                            <fieldset id="fcard-name">
-                              <legend>Cardholder Name</legend>
-                              <input
-                                type="text"
-                                name="card-name"
-                                id="card-name"
-                                value=""
-                                placeholder="John Doe"
-                              />
-                            </fieldset>
-                          </div>
-                          <div class="mr-2">
-                            <fieldset id="fexpiry-date">
-                              <legend>Expiry date</legend>
-                              <input
-                                type="date"
-                                name="expiry-date"
-                                id="expiry-date"
-                                value=""
-                                placeholder="22/07"
-                              />
-                            </fieldset>
-                            <p class="expDateErr"></p>
-                          </div>
-                        </div>
-                        <div class="mr-2">
-                          <div class="column">
-                            <div>
-                              <fieldset id="fcard-no">
-                                <legend>Card Number</legend>
+                <div class="booking-grid">
+                  <h1 class="center-row center-column">Payment</h1>
+                  <div class="booking-fields">
+                    <h3>Select a card</h3>
+                    <div
+                      class="order-field center-column center-row placeholder-text"
+                    >
+                      <div
+                        class="field-placeholder add-card-placeholder label-text center-column"
+                      >
+                        <img
+                          style="width: 4em"
+                          src="../../assets/icons/plus-circle.svg"
+                          class="icon-grey"
+                          alt=""
+                        />
+      
+                        <a href="#add-card-modal" rel="modal:open">
+                          <h3>ADD CARD</h3></a
+                        >
+      
+                        <!-- ADD CARD MODAL START -->
+                        <div id="add-card-modal" class="modal ui-modal">
+                          <h1 class="center-column center-row">Add Card</h1>
+      
+                          <div class="card-wrapper"></div>
+                          <!-- CSS is included via this JavaScript file -->
+                          <script src="./jquery.card.min.js"></script>
+                          <form>
+                            <!-- <input
+                              type="text"
+                              placeholder="Card No"
+                              id="cardNumber"
+                              name="number"
+                            />
+                            <input
+                              type="text"
+                              placeholder="Card Name"
+                              id="cardName"
+                              name="first-name"
+                            />
+                            <input
+                              type="text"
+                              placeholder="expiry date"
+                              id="expiryDate"
+                              name="expiry"
+                            />
+                            <input
+                              type="text"
+                              placeholder="cvc"
+                              name="cvc"
+                              id="cvc"
+                            />
+                            <p class="cardErr err-text"></p> -->
+      
+                            <div class="form-group cardNumInput">
+                              <!-- <p class="credentialErr err-text"></p> -->
+      
+                              <fieldset id="cardNumId">
+                                <legend class="label-text">Card Number</legend>
                                 <input
-                                  type="number"
-                                  name="card-no"
-                                  id="card-no"
-                                  value=""
-                                  placeholder="4216 ****"
+                                  type="text"
+                                  name="number"
+                                  id="cardNumber"
+                                  class="form-control placeholder-text"
+                                  placeholder=""
                                 />
                               </fieldset>
-                              <p class="card-noErr"></p>
+                              <!-- <p class="nameErr err-text"></p> -->
                             </div>
-                            <div class="mr-2">
-                              <fieldset id="fcvv">
-                                <legend>Security Code</legend>
+      
+                            <div class="form-group cardNameInput">
+                              <!-- <p class="credentialErr err-text"></p> -->
+      
+                              <fieldset id="cardNameId">
+                                <legend class="label-text">Card Name</legend>
                                 <input
-                                  type="number"
-                                  name="cvv"
-                                  id="cvv"
-                                  value=""
-                                  placeholder="123"
+                                  type="text"
+                                  name="first-name"
+                                  id="cardName"
+                                  class="form-control placeholder-text"
+                                  placeholder=""
                                 />
                               </fieldset>
-                              <p class="cvvErr"></p>
+                              <!-- <p class="nameErr err-text"></p> -->
                             </div>
+      
+                            <div class="form-group expiryDateInput">
+                              <!-- <p class="credentialErr err-text"></p> -->
+      
+                              <fieldset id="expiryDateId">
+                                <legend class="label-text">Expiry date</legend>
+                                <input
+                                  type="text"
+                                  name="expiry"
+                                  id="expiryDate"
+                                  class="form-control placeholder-text"
+                                  placeholder=""
+                                />
+                              </fieldset>
+                              <!-- <p class="nameErr err-text"></p> -->
+                            </div>
+      
+                            <div class="form-group cvcInput">
+                              <!-- <p class="credentialErr err-text"></p> -->
+      
+                              <fieldset id="cvcId">
+                                <legend class="label-text">CVC</legend>
+                                <input
+                                  type="text"
+                                  name="cvc"
+                                  id="cvc"
+                                  class="form-control placeholder-text"
+                                  placeholder=""
+                                />
+                              </fieldset>
+                              <!-- <p class="nameErr err-text"></p> -->
+                            </div>
+                            <p class="cardErr err-text"></p>
+                          </form>
+                          <script>
+                            var card = new Card({
+                              form: "form",
+                              container: ".card-wrapper",
+                              formSelectors: {
+                                nameInput:
+                                  'input[name="first-name"], input[name="last-name"]',
+                              },
+                            });
+                          </script>
+      
+                          <div class="center-column center-row">
+                            <a href="#" rel="modal:close">
+                              <button id="save-card" class="ui-btn" onclick="saveCard();">SAVE</button>
+                            </a>
                           </div>
                         </div>
+                        <!-- ADD CARD MODAL End -->
                       </div>
-
-                      <div class="center-column center-row">
-                        <button id="save-card" class="ui-btn">Save</button>
-                      </div>
+      
+                      <!-- Link to open the modal -->
                     </div>
-                    <!-- ADD CARD MODAL End -->
                   </div>
-                  <div id="debit-card-img">
-                    <img
-                      class="ticket-image"
-                      src="./../../assets/images/profile/debit-card.png"
-                      alt="Ticket"
-                    />
-                  </div>
-                  <div id="credit-card-img">
-                    <img
-                      class="ticket-image"
-                      src="./../../assets/images/profile/credit-card.png"
-                      alt="Ticket"
-                    />
-                  </div>
-                  <div id="card-select-btn">
-                    <button class="ui-btn subscribe-btn">SELECT</button>
+                  <div id="card-list" class="card-list pois-container"></div>
+      
+                  <div class="center-column">
+                    <button id="book-now" class="ui-btn">BOOK NOW</button>
                   </div>
                 </div>
+
+
                 <!-- Footer start -->
                 <div class="footer ui-content">
                   <div class="footer-logo-container center-column">

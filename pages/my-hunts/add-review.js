@@ -10,8 +10,9 @@ $(document).ready(function(){
 
          var postReqData = {
              id : 12,
-             reviewMessage : reviewMessage,
-             ratings:ratings
+             name:"Merian",
+             review : reviewMessage,
+             rating:ratings
          }
 
          var ratingsList = JSON.parse(localStorage.getItem("reviews"))
@@ -22,8 +23,11 @@ $(document).ready(function(){
          }
          ratingsArray.push(postReqData)
          localStorage.setItem("reviews", JSON.stringify(ratingsArray));
+         allData = localStorage.getItem("data")
+         allData.poiObjs[0].reviews.push(postReqData);
+         localStorage.setItem("data", JSON.stringify(allData));
          console.log(ratingsArray);
-
+         
 
         });
   });

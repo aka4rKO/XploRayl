@@ -19,6 +19,11 @@
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
   box-shadow: 1px 1px 3px 4px #ccc;
 }
+
+.acheivement-text{
+
+  color: #748a9d  !important;
+}
 #list-view {
   width: 140px !important;
   margin: 5px !important;
@@ -203,13 +208,53 @@ p {
   margin-right: 5px;
 }
 
-.coupon-image {
-  margin: 3px;
-}
+/* Coupon styles ---------------------------------------------------- */
 .coupons-grid {
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
+#coupon-card {
+  background-image: url("./../../../assets/images/coupon-bg.png");
+  background-size: 370px 100px;
+  margin-top: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 77px 200px 70px;
+  grid-template-rows: 28px 28px 28px;
+  grid-template-areas:
+    "coupon-img coupon-name coupon-price"
+    "coupon-img coupon-validity coupon-price"
+    "coupon-img coupon-code coupon-price";
+}
+#coupon-img {
+  grid-area: coupon-img;
+  margin: 5px;
+}
+#coupon-name {
+  grid-area: coupon-name;
+  color: #748a9d !important;
+  font-size: 20px !important;
+  margin: 5px;
+}
+#coupon-price {
+  grid-area: coupon-price;
+  color: #748a9d !important;
+  margin: auto;
+  font-size: 20px !important;
+}
+#coupon-validity {
+  grid-area: coupon-validity;
+  color: #748a9d !important;
+  margin: 5px;
+}
+#coupon-code {
+  grid-area: coupon-code;
+  color: #748a9d !important;
+  margin: 5px;
+}
+
 .payment-grid {
   text-align: center;
   margin-top: 8px;
@@ -284,6 +329,34 @@ p {
   font-family: "Poppins bold" !important;
   font-size: 25px !important;
   color: #fff !important;
+}
+
+.favourites {
+  height: 25px !important;
+  width: 30px !important;
+  /* margin-bottom: 105px;
+  margin-left: 280px; */
+}
+
+.footer {
+  z-index: 5 !important;
+}
+
+#snackbar {
+  font-size: 14px !important;
+  right: 1em;
+}
+
+/* .snackbar {
+  right: 12px;
+} */
+
+.email-share-btn {
+  width: 6em !important;
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 5;
 }
 
 /* asdasdasds ------------------------------- */

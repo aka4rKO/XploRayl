@@ -2,11 +2,11 @@
   "email": "arshad@gmail.com",
   "password": "arshad6969",
   "username": "Arshad Sameemdeen",
-  "totalPoints": 0,
-  "position": 0,
-  "collectables": 0,
-  "travelDistance": 0,
-  "taskCompleted": 0,
+  "totalPoints": 1000,
+  "position": 9,
+  "collectables": 2,
+  "travelDistance": "200 KM",
+  "taskCompleted": 3,
   "tickets": [
     {
       "ticketId": 1,
@@ -89,10 +89,52 @@
       "amount": 1500
     }
   ],
-  "placesUnlocked": 0,
+  "placesUnlocked": 4,
   "ranking": 4,
-  "upcomingHunts": [],
-  "pastHunts": [],
+  "upcomingHunts": [
+    {
+      "img_url": "./../../assets/images/pois/british-museum.jpg",
+      "name": "British Museum",
+      "location": "London",
+      "rating": 4.78,
+      "price": 100
+    },
+    {
+      "img_url": "./../../assets/images/pois/british-museum.jpg",
+      "name": "British Museum",
+      "location": "London",
+      "rating": 4.78,
+      "price": 100
+    }
+  ],
+  "pastHunts": [
+    {
+      "img_url": "./../../assets/images/pois/british-museum.jpg",
+      "name": "British Museum",
+      "location": "London",
+      "rating": 4.78,
+      "pts": 100
+    },
+    {
+      "img_url": "./../../assets/images/pois/british-museum.jpg",
+      "name": "British Museum",
+      "location": "London",
+      "rating": 4.78,
+      "pts": 100
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Nasif Nuha",
+      "rating": 3,
+      "review": "Nice"
+    },
+    {
+      "name": "Amjad Nazar",
+      "rating": 2,
+      "review": "Good experience"
+    }
+  ],
   "otherUsers": [
     {
       "name": "John Doyle",
