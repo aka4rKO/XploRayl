@@ -167,8 +167,9 @@ $(document).ready(function () {
     if (localStorage.getItem("cardList")) {
       cardList = localStorage.getItem("cardList");
     }
-    var card = JSON.parse(cardList)[cardList.length - 1];
-
+    var card = JSON.parse(cardList)[0];
+    var amount = sessionStorage.getItem("total");
+    var currency = sessionStorage.getItem("total");
     $.ajax({
       type: "POST",
       url: "https://api.stripe.com/v1/charges",
@@ -177,9 +178,9 @@ $(document).ready(function () {
           "Bearer sk_test_51HMs5AIDK6dRU6bAiHjaW1hU95a9VHqSWXzChedCrYm2Hb2I0vaotvmOQ8l1YgCy9vWbBQJ1ZvlSjz8w41MO25M500IZSSkvaC",
       },
       data: {
-        amount: 2000,
-        currency: "usd",
-        source: "tok_1IAlAEIDK6dRU6bAwLiVhYBT",
+        amount: amount,
+        currency: "GBP",
+        source: card.tokenId,
       },
       success: function (response) {
         console.log("Successfully Purchased: ", response);

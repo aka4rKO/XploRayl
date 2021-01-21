@@ -90,6 +90,7 @@ $(document).ready(function(){
       
   
   $(document).ready(function(){
+    $(".ui-input-text").css("border", "unset");
 
     var poiId = JSON.parse(sessionStorage.getItem("currentId"));
   
@@ -270,6 +271,6 @@ $(document).ready(function(){
                   $("#past-list").append(cardsComp);
 
     }
-  
+
   
   
