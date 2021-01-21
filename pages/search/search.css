@@ -297,7 +297,7 @@ input[type=text] {
   justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr!important;
-  grid-template-rows: 250px 250px 250px;
+  grid-template-rows: 250px 250px 250px 250px 250px 250px!important;
   margin: auto;
 
 }
@@ -337,6 +337,9 @@ ul {
 .blocker {
   height: 90%!important;
   padding: 29px 12px 16px 0px!important;
+}
+.ui-input-text input, .ui-input-search input, textarea.ui-input-text {
+  padding: 15px 74px !important;
 }
 
   }
