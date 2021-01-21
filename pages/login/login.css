@@ -400,6 +400,10 @@ body {
     margin-left: 142px !important;
   }
   .err-text {
-    /* margin-left: 144px; */
-  }
+    margin-left: 144px;
+}
+.snackbar {
+  left: 1em;
+  bottom: 14em;
+}
 }
