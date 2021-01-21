@@ -39,6 +39,13 @@
   overflow: auto;
 }
 
+.ui-content {
+  /* border-width: 0; */
+  overflow: unset;
+  overflow-x: unset;
+  /* padding: 1em; */
+}
+
 .coupon-card {
   background-image: url("./../../assets/images/coupon-bg.png");
   background-size: 370px 100px;
@@ -386,9 +393,9 @@ select {
 
 .dropdown-select:active,
 .dropdown-select.open {
-  background-color: #fff !important;
-  border-color: #bbb;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+  background-color: #f0f4f8 !important;
+  /* border-color: #bbb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset; */
 }
 
 .dropdown-select:after {
