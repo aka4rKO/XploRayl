@@ -10,48 +10,48 @@
   "tickets": [
     {
       "ticketId": 1,
-      "from": "Colombo",
-      "to": "Kandy",
+      "from": "Paddington",
+      "to": "Victoria",
       "departureDate": "01/05/2021",
       "seats": 2,
       "price": 20
     },
     {
       "ticketId": 2,
-      "from": "Colombo",
-      "to": "Kandy",
+      "from": "Paddington",
+      "to": "Victoria",
       "departureDate": "02/05/2021",
       "seats": 5,
       "price": 50
     },
     {
       "ticketId": 3,
-      "from": "Colombo",
-      "to": "Kandy",
+      "from": "Paddington",
+      "to": "Victoria",
       "departureDate": "01/05/2021",
       "seats": 2,
       "price": 20
     },
     {
       "ticketId": 4,
-      "from": "Colombo",
-      "to": "Kandy",
+      "from": "Paddington",
+      "to": "Victoria",
       "departureDate": "02/05/2021",
       "seats": 5,
       "price": 50
     },
     {
       "ticketId": 5,
-      "from": "Colombo",
-      "to": "Kandy",
+      "from": "Paddington",
+      "to": "Victoria",
       "departureDate": "01/05/2021",
       "seats": 2,
       "price": 20
     },
     {
       "ticketId": 6,
-      "from": "Colombo",
-      "to": "Kandy",
+      "from": "Paddington",
+      "to": "Victoria",
       "departureDate": "02/05/2021",
       "seats": 5,
       "price": 50
