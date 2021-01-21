@@ -598,11 +598,9 @@ p {
     padding: 10px;
     width: 110px !important;
     border-radius: 3em !important;
-    background-color: transparent !important;
     border: 1px transparent !important;
     font-family: "Poppins semibold" !important;
     font-size: 18px !important;
-    color: #04d3d9 !important;
     text-shadow: none !important;
   }
   .scan-float-button {
@@ -739,12 +737,10 @@ p {
     padding: 10px;
     width: 110px !important;
     border-radius: 3em !important;
-    background-color: transparent !important;
     border: 1px transparent !important;
     font-family: "Poppins semibold" !important;
     font-size: 18px !important;
-    color: #04d3d9 !important;
-    text-shadow: none !important;
+        text-shadow: none !important;
   }
   .hunt-header {
     z-index: 1;
@@ -835,6 +831,7 @@ p {
   .center-column {
     text-align: center;
   }
+
   #review-btn {
     margin: 0px !important;
     width: 240px !important;
