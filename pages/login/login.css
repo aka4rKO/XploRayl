@@ -241,6 +241,20 @@ body {
 
 /* iPhone portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .main {
+    /* grid-column-start: 2; */
+    display: unset;
+  }
+
+  .snackbar {
+    left: unset;
+    bottom: 1em;
+  }
+
+  .box-form {
+    min-height: 100vh;
+  }
+
   .box-left {
     grid-area: left;
     padding-left: 38px;
@@ -296,7 +310,7 @@ body {
     margin-top: 36px;
     margin-left: 13px;
   }
-  .snackbar{
+  .snackbar {
     left: 5em;
   }
   h1 {

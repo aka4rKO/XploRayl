@@ -97,6 +97,10 @@
 }
 
 /* Other */
+html {
+  scroll-behavior: smooth;
+}
+
 .categories {
   background: #fff;
 }
