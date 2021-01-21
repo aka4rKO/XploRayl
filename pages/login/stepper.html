@@ -19,7 +19,7 @@
   <body>
     <div data-role="page">
 
-        <div class="main" style="background-color: #f0f4f8">
+        <div class="main" style="background-color: #f0f4f8 !important">
           <!-- Header start -->
           <div class="header" data-role="header">
             <img
@@ -30,9 +30,9 @@
           </div>
           <!-- Header end -->
 
-          <div id="regForm center-column box-form" action="">
+          <div id="regForm center-column box-form" action="" style="background-color: white;">
             <!-- One "tab" for each step in the form: -->
-            <div class="tab">
+            <div class="tab" style="height: 350px;">
               <h2 style="text-align: center">
                 Check out the various places around England to visit
               </h2>
@@ -413,7 +413,7 @@
               <br />
             </div>
 
-            <div class="tab">
+            <div class="tab" style="height: 350px;">
               <h2 style="text-align: center">
                 Select a place you want to visit and book ticket
               </h2>
@@ -646,7 +646,7 @@
               <br />
             </div>
 
-            <div class="tab">
+            <div class="tab" style="height: 350px;">
               <h2 style="text-align: center">Play the game</h2>
 
               <br />
@@ -1457,7 +1457,19 @@
               <div class="card2-text center-vertically-margin-top">
                 Stay up to date on the latest hunts
               </div>
-              <input type="text" />
+              
+              <div class="form-group footerInput">
+                <fieldset id="">
+                  <input
+                    type="text"
+                    name=""
+                    id="emailFooter"
+                    class="form-control placeholder-text"
+                    placeholder="example@email.com"
+                  />
+                </fieldset>
+              </div>
+
               <button class="ui-btn subscribe-btn">SUBSCRIBE</button>
             </div>
             <div class="copyright-container center-column">

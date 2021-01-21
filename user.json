@@ -62,31 +62,31 @@
       "name": "Powder Monkey",
       "code": "POWM2021",
       "expiryDate": "02/05/2021",
-      "amount": 500
+      "amount": 20
     },
     {
       "name": "Ice Monkey",
       "code": "POWM2022",
       "expiryDate": "02/05/2021",
-      "amount": 800
+      "amount": 18
     },
     {
       "name": "New Monkey",
       "code": "POWM2021",
       "expiryDate": "02/05/2021",
-      "amount": 100
+      "amount": 10
     },
     {
       "name": "Awesome Monkey",
       "code": "POWM2081",
       "expiryDate": "02/05/2021",
-      "amount": 5000
+      "amount": 15
     },
     {
       "name": "Old Monkey",
       "code": "POWM2020",
       "expiryDate": "02/05/2021",
-      "amount": 1500
+      "amount": 20
     }
   ],
   "placesUnlocked": 4,

@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   var  userObj = JSON.parse(localStorage.getItem("user"));
   console.log(userObj);
-  $('#points-value').text(userObj.totalPoints)
+  $('#total-points-value').text(userObj.totalPoints)
   $('#user-rank-position').text(userObj.position)
   $('#places-unlocked').text(userObj.placesUnlocked)
   $('#collected').text(userObj.collectables)
@@ -238,27 +238,35 @@ function renderFavourites() {
   // console.log("favs pois");
   // console.log(favPois);
 
-  favPois.forEach(function (item) {
-    renderedFavourites += `
-    <div class="poi">
-      <img
-        src="${item.img}"
-        alt=""
-      />
-      <div class="poi-info">
-        <input class="check" type="checkbox" id="${item.poiId}" value="${item.poiId}" onclick="onSelect('${item.poiId}');">
+  if (favPois.length > 0) {
+    favPois.forEach(function (item) {
+      renderedFavourites += `
+      <div class="poi">
         <img
-          class="favourites"
-          src="./../../assets/images/profile/favourites.png"
+          src="${item.img}"
           alt=""
-          onclick="removeFavourite('${item.poiId}')"
         />
-        <div class="card1-text">${item.name}</div>
-        
+        <div class="poi-info">
+          <input class="check" type="checkbox" id="${item.poiId}" value="${item.poiId}" onclick="onSelect('${item.poiId}');">
+          <img
+            class="favourites"
+            src="./../../assets/images/profile/favourites.png"
+            alt=""
+            onclick="removeFavourite('${item.poiId}')"
+          />
+          <div class="card1-text">${item.name}</div>
+          
+        </div>
       </div>
-    </div>
+      `;
+    });
+  } else {
+    renderedFavourites = `
+    <div class="center-column no-favs"><p>No favourites added!</p></div>
     `;
-  });
+  }
+
+  
 
   // var button = `
   // <button

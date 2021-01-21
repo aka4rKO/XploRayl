@@ -15,14 +15,13 @@
     "tabname tabname tabname";
 }
 .side {
-  -moz-box-shadow: 1px 1px 3px 4px #ccc;
+  /* -moz-box-shadow: 1px 1px 3px 4px #ccc;
   -webkit-box-shadow: 1px 1px 3px 4px #ccc;
-  box-shadow: 1px 1px 3px 4px #ccc;
+  box-shadow: 1px 1px 3px 4px #ccc; */
 }
 
-.acheivement-text{
-
-  color: #748a9d  !important;
+.acheivement-text {
+  color: #748a9d !important;
 }
 #list-view {
   width: 140px !important;
@@ -107,7 +106,7 @@
 
 .player-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 146px 137px;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -157,6 +156,12 @@
   text-shadow: none !important;
 }
 
+.player-stats-values{
+    font-family: "Poppins regular" !important;
+    font-size: 16px !important;
+    color: #748a9d !important;
+    text-align: right;
+}
 #tabname {
   grid-area: tabname;
   margin-left: 20px;
@@ -207,6 +212,8 @@ p {
   margin-bottom: -10px;
   margin-right: 5px;
 }
+
+
 
 /* Coupon styles ---------------------------------------------------- */
 .coupons-grid {
@@ -289,6 +296,27 @@ p {
   grid-area: card-select-btn;
 }
 
+.no-favs {
+  width: 100%;
+  grid-column: 1/3;
+  height: 60vh !important;
+}
+
+#snackbar {
+  font-size: 16px !important;
+  margin-top: 0;
+  height: unset !important;
+}
+
+.snackbar {
+  right: 1em;
+}
+
+.no-favs p {
+  color: #748a9d !important;
+  margin-bottom: 1em !important;
+}
+
 .poi:before {
   border-radius: 1em;
   content: "";
@@ -313,13 +341,25 @@ p {
 }
 
 .poi .poi-info {
-  padding: 1em;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  /* padding: 1em; */
   position: absolute;
   z-index: 3;
   bottom: 0px;
   left: 0px;
+  /* min-width: 170px; */
+  /* max-width: 170px; */
+  height: 210px;
 }
-
+.poi-grid-style {
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 50px;
+}
 .poi .poi-info img {
   height: 18px;
   width: 110px;
@@ -327,8 +367,11 @@ p {
 
 .card1-text {
   font-family: "Poppins bold" !important;
-  font-size: 25px !important;
+  font-size: 15px !important;
   color: #fff !important;
+  margin-top: 50px;
+  margin-left: 10px;
+  padding-right: 20px;
 }
 
 .favourites {
@@ -345,8 +388,8 @@ p {
 #snackbar {
   font-size: 14px !important;
   right: 1em;
+  height: 10px;
 }
-
 /* .snackbar {
   right: 12px;
 } */
@@ -492,8 +535,9 @@ p {
     margin: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.4fr 0.4fr;
+    grid-template-rows: 0.4fr;
     margin-top: 17px;
+    min-height: 64vh;
   }
   #favourites {
     height: 25px;
@@ -511,9 +555,46 @@ p {
 }
 /* iPhone landscape ---------------------------------------------------------------------- */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .email-share-btn {
+    bottom: 3px;
+  }
+  
   .close-icon {
     margin-bottom: -40px;
     margin-right: 20px;
+  }
+  .poi .poi-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /* padding: 1em; */
+    position: absolute;
+    z-index: 3;
+    bottom: 0px;
+    left: 0px;
+    min-width: 300px;
+    max-width: 300px;
+    height: 180px;
+  }
+  .poi-grid-style {
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 0px;
+  }
+  .poi .poi-info img {
+    height: 18px;
+    width: 110px;
+  }
+
+  .card1-text {
+    font-family: "Poppins bold" !important;
+    font-size: 15px !important;
+    color: #fff !important;
+    margin-top: 50px;
+    margin-left: 10px;
+    padding-right: 20px;
   }
   #position-div {
     margin-top: 100px;
@@ -594,6 +675,11 @@ p {
     padding: 10px;
     grid-template-columns: 0.7fr 0.7fr;
     grid-template-rows: 0.4fr 0.4fr 0.4fr;
+  }
+  .player-stats {
+    display: grid;
+    grid-template-columns: 214px 114px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
   #favourites {
     height: 25px;

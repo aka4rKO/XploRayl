@@ -567,5 +567,15 @@
   ],
   "popularHunts": [1, 2, 3, 4, 5, 6],
   "topRatedHunts": [1, 2, 3, 5, 6, 7],
-  "mostVisitedHunts": [3, 7, 4, 5, 6]
+  "mostVisitedHunts": [3, 7, 4, 5, 6],
+  "trainStations":["Waterloo",
+    "Paddington",
+    "King's Cross",
+    "St Pancras",
+    "Euston",
+    "Charing Cross",
+    "Victoria",
+    "London Bridge",
+    "Fenchurch Street",
+    "Liverpool Street"]
 }
