@@ -107,7 +107,7 @@ li{
 }
 .active, .list:hover {
   background: #04d3d9;
-  color: white;
+  color: white!important;
 }
 
 input[type=text] {
@@ -241,6 +241,12 @@ input[type=text] {
     .hero-text {
       margin-top: 10em;
     }
+      li{
+            height:unset;
+      }
+/* .list {
+        height: 116px!important;
+    }  */
   }
   
   /* iPad landscape */

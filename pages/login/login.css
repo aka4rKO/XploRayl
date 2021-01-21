@@ -403,10 +403,13 @@ body {
     margin-left: 142px !important;
   }
   .err-text {
-    margin-left: 144px;
+    margin-left: 0px;
 }
 .snackbar {
   left: 1em;
   bottom: 14em;
 }
+.forgot-pass-err{
+  margin-left: 144px;
+
 }
