@@ -38,11 +38,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -85,11 +99,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -132,11 +160,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -179,11 +221,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -226,11 +282,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -273,11 +343,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -320,11 +404,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -334,7 +432,7 @@
       "name": "St. Paul's Cathedral",
       "location": "London",
       "date": "19th Mar 2021",
-      "lat": 51.513870,
+      "lat": 51.51387,
       "lng": -0.098362,
       "img": "/assets/images/pois/st-pauls-cathedral.jpg",
       "video": "https://www.youtube.com/embed/vxH0WyDtQBA",
@@ -367,11 +465,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -414,11 +526,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -429,7 +555,7 @@
       "location": "London",
       "date": "18th May 2021",
       "lat": 51.507553,
-      "lng": -0.129750,
+      "lng": -0.12975,
       "img": "/assets/images/pois/trafalgar+square.jpg",
       "video": "https://www.youtube.com/embed/9Lx7UO55i58",
       "price": 100,
@@ -461,11 +587,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -475,7 +615,7 @@
       "name": "Hyde Park",
       "location": "London",
       "date": "13th May 2021",
-      "lat": 51.508610,
+      "lat": 51.50861,
       "lng": -0.163611,
       "img": "/assets/images/pois/hyde_park.jpg",
       "video": "https://www.youtube.com/embed/B5C26pyeaCY",
@@ -508,11 +648,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -523,7 +677,7 @@
       "location": "London",
       "date": "13th May 2021",
       "lat": 51.504501,
-      "lng": -0.086500,
+      "lng": -0.0865,
       "img": "/assets/images/pois/shard.jpeg",
       "video": "https://www.youtube.com/embed/c3g5_7gDBBo",
       "price": 190,
@@ -555,11 +709,25 @@
       ],
       "tasks": [
         {
-          "name": "",
-          "points": 100,
-          "lat": "",
-          "lng": "",
+          "name": "Hunters Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1246",
           "isComplete": false
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4994",
+          "lng": "0.1248",
+          "isComplete": true
+        },
+        {
+          "name": "Santonian's Chest",
+          "points": 1500,
+          "lat": "51.4993",
+          "lng": "0.1248",
+          "isComplete": true
         }
       ],
       "status": ""
@@ -568,7 +736,8 @@
   "popularHunts": [1, 2, 3, 4, 5, 6],
   "topRatedHunts": [1, 2, 3, 5, 6, 7],
   "mostVisitedHunts": [3, 7, 4, 5, 6],
-  "trainStations":["Waterloo",
+  "trainStations": [
+    "Waterloo",
     "Paddington",
     "King's Cross",
     "St Pancras",
@@ -577,5 +746,6 @@
     "Victoria",
     "London Bridge",
     "Fenchurch Street",
-    "Liverpool Street"]
+    "Liverpool Street"
+  ]
 }
