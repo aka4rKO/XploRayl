@@ -507,6 +507,21 @@
 
 /* iPhone portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .container {
+    grid-template-areas:
+      "main-image-poi main-image-poi"
+      "rating-description rating-description"
+      "map map"
+      "hunt-details hunt-details"
+      "gallery gallery"
+      "ratings-reviews ratings-reviews"
+      "reviews reviews";
+  }
+
+  .vector {
+    display: none !important;
+  }
+
   .book-btn {
     bottom: 80px;
     right: 2.5em;

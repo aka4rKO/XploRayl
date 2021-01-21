@@ -52,10 +52,10 @@ h2 {
 /* iPhone portrait ---------------------------------------------------------------------- / */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
   .box-div {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: unset;
     border-radius: 30px;
     height: 667px;
-    width: 400px;
+    width: 375px;
     margin: 0px;
     justify-content: center;
   }
@@ -69,7 +69,7 @@ h2 {
 
   .treasure-img img {
     margin-top: 150px;
-    margin-right: -50px;
+    margin-right: -87px;
     height: 200px;
   }
 

@@ -26,10 +26,6 @@ green #7bed8d
   height: unset;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .snackbar {
   background-color: #404e5a;
   width: 69%;
