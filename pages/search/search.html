@@ -70,27 +70,27 @@
         />
       </div>
       <div>
-        <div class="sidebar-nav-btn-active">
-          <a href="#" class="anchor-external">
+        <div class="sidebar-nav-btn">
+          <a href="./../explore/explore.html" class="anchor-external">
             <div class="sidebar-nav-btn-contents">
               <img
-                class="sidebar-nav-btn-content-active"
+                class=""
                 src="./../../assets/icons/compass.svg"
                 alt=""
               />
-              <span class="sidebar-nav-btn-content-active">Explore</span>
+              <span >Explore</span>
             </div>
           </a>
         </div>
-        <div class="sidebar-nav-btn">
+        <div class="sidebar-nav-btn-active">
           <a
-            href="./../search/search.html"
+            href="#"
             data-prefetch="true"
             class="anchor-external"
           >
             <div class="sidebar-nav-btn-contents">
-              <img class="" src="./../../assets/icons/search.svg" alt="" />
-              <span>Search</span>
+              <img class="sidebar-nav-btn-content-active" src="./../../assets/icons/search.svg" alt="" />
+              <span class="sidebar-nav-btn-content-active">Search</span>
             </div>
           </a>
         </div>
@@ -150,7 +150,7 @@
         <!-- Header end -->
 
         <!-- START -->
-        
+
         <div class="form-search">
           <input type="text" id="search-item" style="font-size: large;" placeholder="what are you searching for?" />
         </div>
@@ -290,6 +290,76 @@
             <img src="./../../assets/images/pois/edinburgh-castle.jpg" alt="" />
             <div class="poi-info">
               <div class="card1-text">Edinburgh Castle</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="item poi  itemBox Art" data-search="the shard">
+            <a class="anchor-external" href="/pages/poi/poi.html" onclick="setCurrentId(12)"
+            data-prefetch="true">
+            <img src="./../../assets/images/pois/shard.jpeg" alt="" />
+            <div class="poi-info">
+              <div class="card1-text">The Shard</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="item poi  itemBox Art" data-search="the national gallery">
+            <a class="anchor-external" href="/pages/poi/poi.html" onclick="setCurrentId(9)"
+            data-prefetch="true">
+            <img src="./../../assets/images/pois/london-National-Gallery.jpg" alt="" />
+            <div class="poi-info">
+              <div class="card1-text">The National Gallery</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="item poi  itemBox Art" data-search="trafalgur square">
+            <a class="anchor-external" href="/pages/poi/poi.html" onclick="setCurrentId(10)"
+            data-prefetch="true">
+            <img src="./../../assets/images/pois/trafalgar+square.jpg" alt="" />
+            <div class="poi-info">
+              <div class="card1-text">Trafalgur Squarery</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="item poi  itemBox Art" data-search="st. paul's cathedral">
+            <a class="anchor-external" href="/pages/poi/poi.html" onclick="setCurrentId(8)"
+            data-prefetch="true">
+            <img src="./../../assets/images/pois/st-pauls-cathedral.jpg" alt="" />
+            <div class="poi-info">
+              <div class="card1-text">St. Paul's Cathedral</div>
+              <div class="center-vertically-margin-top">
+                <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
+                <span class="card2-text">&nbsp;London</span>
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="item poi  itemBox Art" data-search="hyde Park">
+            <a class="anchor-external" href="/pages/poi/poi.html" onclick="setCurrentId(11)"
+            data-prefetch="true">
+            <img src="./../../assets/images/pois/hyde_park.jpg" alt="" />
+            <div class="poi-info">
+              <div class="card1-text">Hyde Park</div>
               <div class="center-vertically-margin-top">
                 <img class="poi-img-icon-color" src="./../../assets/icons/map-pin.svg" alt="" />
                 <span class="card2-text">&nbsp;London</span>
@@ -446,6 +516,16 @@
         }
       })
     })
+
+    var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("list");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace("active", "");
+  this.className += "active";
+  });
+}
   </script>
 </body>
 
