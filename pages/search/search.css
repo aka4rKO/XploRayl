@@ -1,4 +1,20 @@
-
+#profile-header {
+  margin-top: 3px;
+  grid-area: profile-header;
+}
+.search-header {
+  z-index: 1;
+  background-image: url(/assets/images/headers/my\ hunts.png);
+  background-repeat: no-repeat;
+  height: 300px;
+  background-size: 800px 200px;
+}
+.search-tab-title {
+  color: white !important;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 50px;
+}
 
 .filter{
   margin-left: 611px;
@@ -19,15 +35,7 @@
     display: inline-block;
     max-width: none!important;
   }
-    .hunt-header{
-      
-  z-index: 1;
-  background-image: url('./../../assets/images/search.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
- 
 
-}
 .grid-container {
   display: grid;
   height: 100vh;
@@ -54,10 +62,7 @@ nav {
   background: #18ffff;
   grid-area: sidebar;
 }
-#profile-header {
-  margin-top: 50px;
-  grid-area: profile-header;
-}
+
 #profile-footer {
 
   grid-area: profile-footer;
